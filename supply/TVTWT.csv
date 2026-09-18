@@ -1,0 +1,25 @@
+MANDT,SPRAS,VTWEG,VTEXT
+20,E,SB,Sales -Gennova R&D
+20,E,SC,Commisson Sales
+20,E,SD,Sales - Direct
+20,E,SE,Sales Export JK
+20,E,SI,Sales - Indirect
+20,E,SJ,Sales -Jammu
+20,E,SM,Dubai Sales
+20,E,SR,Sales - R&D
+20,E,SS,Sales -State Excise
+20,E,SU,Sales - Indirect USA
+20,E,TP,Third Party Sale
+20,F,SB,Sales -Gennova R&D
+20,F,SC,Ventes à commission
+20,F,SD,Ventes de produits
+20,F,SE,Sales Export JK
+20,F,SI,Sales - Indirect
+20,F,SJ,Sales -Jammu
+20,F,SM,Dubai Sales
+20,F,SR,Sales - R&D
+20,F,SS,Sales -State Excise
+20,F,SU,Sales - Indirect USA
+20,F,TP,Third Party Sale
+20,I,SD,Vendite - Dirette
+20,S,SD,Venta directa

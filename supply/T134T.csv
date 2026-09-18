@@ -1,0 +1,286 @@
+MANDT,SPRAS,MTART,MTBEZ
+20,D,ABF,Abfall
+20,D,BUND,Produktpaket
+20,D,CBAU,Compatible unit
+20,D,CH00,CH Vertragsverwaltung
+20,D,CONT,KANBAN-Behälter
+20,D,COUP,Coupon
+20,D,DIEN,Rohstoff
+20,D,EFRT,Fertigerzeugnis
+20,D,EHLB,Halbfabrikat
+20,D,EKIT,Fertigerzeugnis
+20,D,EPA,Ausstattungspaket
+20,D,EROH,Rohstoff
+20,D,ERSA,Ersatzteile
+20,D,EVRP,Verpackung
+20,D,EZRP,Verpackung
+20,D,FERT,Fertigerzeugnis
+20,D,FFFC,Form-Fit-Function-Klasse
+20,D,FGTR,Getränke
+20,D,FHMI,Fertigungshilfsmittel
+20,D,FOOD,Food (excl. Frische)
+20,D,FRIP,Frischprodukte
+20,D,GBRA,ETM verwendbares Material
+20,D,HALB,Halbfabrikat
+20,D,HAWA,Handelsware
+20,D,HERB,Austauschbares Material
+20,D,HERS,Herstellerteil
+20,D,HIBE,Rohstoff
+20,D,IBAU,Instandhaltungs-Baugruppe
+20,D,INTR,Intramaterial
+20,D,IWIP,Ware in Arbeit
+20,D,KIT,Fertigerzeugnis
+20,D,KMAT,Konfigurierbares Material
+20,D,LEER,Leergut
+20,D,LEIH,Leihgut-Packmittel
+20,D,LGUT,Leergut Warenwirtschaft
+20,D,MODE,Mode (saisonal)
+20,D,MPO,Materialplanungsobjekt
+20,D,NLAG,Nichtlagermaterial
+20,D,NOF1,Non Food
+20,D,PIPE,Pipeline-Material
+20,D,PLAN,Handelsware (geplant)
+20,D,PROC,Prozeß-Material
+20,D,PROD,Produktgruppe
+20,D,ROH,Rohstoff
+20,D,SERV,Servicematerial
+20,D,SUBC,Subskript.-Sharing-Prod.
+20,D,SUBP,Subskriptionspartnerprod.
+20,D,SUBS,Subskriptionsprodukt
+20,D,UNBW,Unbewertetes Material
+20,D,VBRA,ETM Verbrauchsmaterial
+20,D,VEHI,Konfig. Fahrzeug
+20,D,VERP,Verpackung
+20,D,VKHM,Verkaufshilfsmittel
+20,D,VOLL,Vollgut
+20,D,VVGR,Wettbewerberprodukt
+20,D,WERB,Werbemittel
+20,D,WERT,Wertmaterial
+20,D,WETT,Wettbewerberprodukt
+20,D,ZERP,Verpackung
+20,D,ZNBW,Rohstoff
+20,D,ZPRM,Rohstoff
+20,E,ABF,Waste
+20,E,BUND,Bundle Product
+20,E,CBAU,Compatible Unit
+20,E,CH00,CH Contract Handling
+20,E,CONT,Kanban Container
+20,E,COUP,Coupons
+20,E,DIEN,Services
+20,E,EFRT,Exempted: Finished Goods
+20,E,EHLB,Exempted: Semifinished
+20,E,EKIT,Exempted KIT
+20,E,EPA,Equipment Package
+20,E,EROH,Exempted: Raw Materials
+20,E,ERSA," Spares"
+20,E,EVRP,Exempted: Packaging
+20,E,EZRP,Exempted: Pr.Packaging
+20,E,FERT,Finished products
+20,E,FFFC,Form-Fit-Function class
+20,E,FGTR,Beverages
+20,E,FHMI,Production Resource/Tool
+20,E,FOOD,Foods (excl. perishables)
+20,E,FRIP,Perishables
+20,E,GBRA,ETM usable material
+20,E,HALB,Semifinished products
+20,E,HAWA,Trading Goods
+20,E,HERB,Interchangeable part
+20,E,HERS,Manufacturer parts
+20,E,HIBE,Lab chemicals & Miscellen
+20,E,IBAU,Maintenance assemblies
+20,E,INTR,Intra materials
+20,E,IWIP,Work in Process
+20,E,KIT,FG : KIT
+20,E,KMAT,Configurable materials
+20,E,LEER,Empties
+20,E,LEIH,Returnable packaging
+20,E,LGUT,Empties (retail)
+20,E,MODE,Apparel (seasonal)
+20,E,MPO,Material Planning Object
+20,E,NLAG,Non-stock materials
+20,E,NOF1,Nonfoods
+20,E,PIPE,Pipeline materials
+20,E,PLAN,Trading goods (planned)
+20,E,PROC,Process materials
+20,E,PROD,Product groups
+20,E,ROH,Raw materials
+20,E,SERV,Service Materials
+20,E,SUBC,Subscription Sharing Prd.
+20,E,SUBP,Subscription Partner Prd.
+20,E,SUBS,Subscription Product
+20,E,UNBW,Capital Goods ( Non Val)
+20,E,VBRA,ETM consumption material
+20,E,VEHI,Vehicle config.
+20,E,VERP,Packaging
+20,E,VKHM,Additionals
+20,E,VOLL,Full products
+20,E,VVGR,Competitor Product
+20,E,WERB,Product catalogs
+20,E,WERT,Value-only materials
+20,E,WETT,Competitor products
+20,E,ZERP,Printed Packaging
+20,E,ZNBW,Non-Stock Items
+20,E,ZPRM,Promotional Materials
+20,F,ABF,Waste
+20,F,BUND,Bundle Product
+20,F,CBAU,Compatible Unit
+20,F,CH00,CH Contract Handling
+20,F,CONT,Kanban Container
+20,F,COUP,Coupons
+20,F,DIEN,Services Matériel
+20,F,EFRT,Exemptés : Produits finis
+20,F,EHLB,Exempted: Semifinished
+20,F,EKIT,Exempted KIT
+20,F,EPA,Equipment Package
+20,F,EROH,Exempted: Raw Materials
+20,F,ERSA," Spares"
+20,F,EVRP,Exempted: Packaging
+20,F,EZRP,Exempted: Pr.Packaging
+20,F,FERT,Produits finis
+20,F,FFFC,Form-Fit-Function class
+20,F,FGTR,Beverages
+20,F,FHMI,Production Resource/Tool
+20,F,FOOD,Foods (excl. perishables)
+20,F,FRIP,Perishables
+20,F,GBRA,ETM usable material
+20,F,HALB,Produits semi-finis
+20,F,HAWA,Trading Goods
+20,F,HERB,Interchangeable part
+20,F,HERS,Manufacturer parts
+20,F,HIBE,Lab chemicals & Miscellen
+20,F,IBAU,Maintenance assemblies
+20,F,INTR,Intra materials
+20,F,IWIP,Work in Process
+20,F,KIT,FG : KIT
+20,F,KMAT,Configurable materials
+20,F,LEER,Empties
+20,F,LEIH,Returnable packaging
+20,F,LGUT,Empties (retail)
+20,F,MODE,Apparel (seasonal)
+20,F,MPO,Material Planning Object
+20,F,NLAG,Non-stock materials
+20,F,NOF1,Nonfoods
+20,F,PIPE,Pipeline materials
+20,F,PLAN,Trading goods (planned)
+20,F,PROC,Process materials
+20,F,PROD,Product groups
+20,F,ROH,Raw materials
+20,F,SERV,Service Materials
+20,F,SUBC,Subscription Sharing Prd.
+20,F,SUBP,Subscription Partner Prd.
+20,F,SUBS,Subscription Product
+20,F,UNBW,Capital Goods ( Non Val)
+20,F,VBRA,ETM consumption material
+20,F,VEHI,Vehicle config.
+20,F,VERP,Matériau d’emballage
+20,F,VKHM,Additionals
+20,F,VOLL,Full products
+20,F,VVGR,Competitor Product
+20,F,WERB,Product catalogs
+20,F,WERT,Value-only materials
+20,F,WETT,Competitor products
+20,F,ZERP,Printed Packaging
+20,F,ZNBW,Articles hors stock
+20,F,ZPRM,Matériel promotionnel
+20,I,ABF,Rifiuti
+20,I,BUND,Prodotto pacchetto
+20,I,CBAU,Unità compatibile
+20,I,CH00,Gestione contratto CH
+20,I,CONT,Contenitore Kanban
+20,I,COUP,Coupon
+20,I,DIEN,Servizio
+20,I,EPA,Pacchetto di dotazioni
+20,I,ERSA,Pezzi di ricambio
+20,I,FERT,Prodotto finito
+20,I,FFFC,Classe Form Fit Function
+20,I,FGTR,Bevande
+20,I,FHMI,Mezzi/attr. di prod.
+20,I,FOOD,Alim. (escl.deperibili)
+20,I,FRIP,Deperibili
+20,I,GBRA,Materiale ETM utilizzab.
+20,I,HALB,Prod. semilavorato
+20,I,HAWA,Articoli commerciali
+20,I,HERB,Materiale intercambiabile
+20,I,HERS,Componente costruttore
+20,I,HIBE,Mat. ausil./Mat. es.
+20,I,IBAU,Assemblaggio manutenzione
+20,I,INTR,Intra material
+20,I,IWIP,Work in process
+20,I,KMAT,Materiale configurabile
+20,I,LEER,Vuoti
+20,I,LEIH,Mat. imb. vuoto a rend.
+20,I,LGUT,Vuoto Retail
+20,I,MODE,Moda (stagionale)
+20,I,MPO,Ogg. pian. materiale
+20,I,NLAG,Mat. non gest. a mag.
+20,I,NOF1,Non alimentare
+20,I,PIPE,Materiale pipeline
+20,I,PLAN,Articolo comm. (pian.)
+20,I,PROC,Materiale proc.
+20,I,PROD,Gruppo prodotti
+20,I,ROH,Materia prima
+20,I,SERV,Materiali di servizio
+20,I,SUBC,Sottoscr. prod. condiv.
+20,I,SUBP,Sottoscr. prod. partner
+20,I,SUBS,Prodotto sottoscrizione
+20,I,UNBW,Materiale non valor.
+20,I,VBRA,Materiale di consumo ETM
+20,I,VEHI,Config. veicolo
+20,I,VERP,Imballaggio
+20,I,VKHM,Supporto vendite
+20,I,VOLL,Art. + vuoto
+20,I,VVGR,Prodotto concorrenza
+20,I,WERB,Mezzo pubblicitario
+20,I,WERT,Materiale a valore
+20,I,WETT,Prodotto concorr.
+20,S,ABF,Residuos
+20,S,BUND,Producto de agrupación
+20,S,CBAU,Unidad compatible
+20,S,CH00,CH gestión de contratos
+20,S,CONT,Contenedor KANBAN
+20,S,COUP,Cupón
+20,S,DIEN,Servicio
+20,S,EPA,Paquete de equipamiento
+20,S,ERSA,Piezas de recambio
+20,S,FERT,Producto terminado
+20,S,FFFC,Clase Form Fit Function
+20,S,FGTR,Bebidas
+20,S,FHMI,Medios aux.fabricación
+20,S,FOOD,Comida (excl.perecederos)
+20,S,FRIP,Productos perecederos
+20,S,GBRA,ETM Material utilizable
+20,S,HALB,Producto semielaborado
+20,S,HAWA,Mercadería
+20,S,HERB,Material intercambiable
+20,S,HERS,Pieza del fabricante
+20,S,HIBE,Materias aux./combustible
+20,S,IBAU,Componente mantenimiento
+20,S,INTR,Intramaterial
+20,S,IWIP,Trabajo en proceso
+20,S,KMAT,Material configurable
+20,S,LEER,Envases
+20,S,LEIH,Mat.embalaje en préstamo
+20,S,LGUT,Envases: Gestión mcía.
+20,S,MODE,Confección (de temporada)
+20,S,MPO,Objeto planif.material
+20,S,NLAG,Material no de almacén
+20,S,NOF1,No comida
+20,S,PIPE,Material pipeline
+20,S,PLAN,Mercadería (planificada)
+20,S,PROC,Material de proceso
+20,S,PROD,Grupo de productos
+20,S,ROH,Materia prima
+20,S,SERV,Materiales de servicio
+20,S,SUBC,Prod.comp.suscripción
+20,S,SUBP,Prod.socio suscripción
+20,S,SUBS,Producto de suscripción
+20,S,UNBW,Material no valorado
+20,S,VBRA,ETM Material de consumo
+20,S,VEHI,Config.vehículo
+20,S,VERP,Embalaje
+20,S,VKHM,Accesorios de venta
+20,S,VOLL,Material completo
+20,S,VVGR,Producto competencia
+20,S,WERB,Material publicitario
+20,S,WERT,Material de valor
+20,S,WETT,Producto competencia

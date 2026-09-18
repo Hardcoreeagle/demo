@@ -1,0 +1,5518 @@
+MANDT,SPRAS,KVEWE,KAPPL,KSCHL,VTEXT
+20,E,A,V,ISTC,BR: ICMS Rate for ST
+20,E,A,V,ISTF,BR: Sub.Trib FixPric
+20,E,A,V,ISTM,BR: Sub.Trib MinPric
+20,E,A,V,ISTS,Brazil Tax Calc.
+20,E,A,V,ISTT,BR: Sub.Trib SurType
+20,E,A,V,ISTV,Brazil tax calc.
+20,E,A,V,ISV2,BR: ISS Amount<-ISVA
+20,E,A,V,ISVA,BR: ISS Amount
+20,E,A,V,IV01,Inter-company Price
+20,E,A,V,IV02,Inter-company %
+20,E,A,V,IZF2,ICMS Discount
+20,E,A,V,IZOF,BR: Franc Zone
+20,E,A,V,J1A1,GI Perc. Region 1
+20,E,A,V,J1A2,GI Perc. Region 2
+20,E,A,V,J1A3,GI Perc. Region 3
+20,E,A,V,J1AL,Exemption w. Credit
+20,E,A,V,J1AN,Exemption w/o Credit
+20,E,A,V,J1AP,VAT Perception I
+20,E,A,V,J1AQ,VAT Perception II
+20,E,A,V,J1AR,VAT Surcharge RNI
+20,E,A,V,J1AU,VAT
+20,E,A,V,J1AV,Internal Tax Sales
+20,E,A,V,J1AX,VAT II
+20,E,A,V,J1W1,Withholding Tax 1
+20,E,A,V,J1W2,Withholding Tax 2
+20,E,A,V,J1W3,Withholding tax 3
+20,E,A,V,J1X1,GI Perc. Region 1 II
+20,E,A,V,J1X2,GI Perc. Region 2 II
+20,E,A,V,J1X3,GI Perc. Region 3 II
+20,E,A,V,JA1X,A/R SEC&HR.ECS--
+20,E,A,V,JA1Y,A/R SEC&HR.ECS--
+20,E,A,V,JAED,IN: A/R AED
+20,E,A,V,JASS,IN A/R Assessable Va
+20,E,A,V,JCED,IN A/R CESS
+20,E,A,V,JCEP,IN A/R CESS %
+20,E,A,V,JCEQ,IN A/R CESS Qty
+20,E,A,V,JCES,IN A/R CESS
+20,E,A,V,JCET,IN A/R CESS total
+20,E,A,V,JCOS,IN:GST Comp.Cess-OP
+20,E,A,V,JCS1,IN A/R cst out
+20,E,A,V,JCS2,IN A/R cst out
+20,E,A,V,JCSR,IN A/R CST Surcharge
+20,E,A,V,JCST,IN A/R CST
+20,E,A,V,JEAP,IN A/R AED %
+20,E,A,V,JEAQ,IN A/R AED Qty
+20,E,A,V,JEAT,IN A/R AED total
+20,E,A,V,JECS,A/R Education Cess-
+20,E,A,V,JECX,A/R Education Cess--
+20,E,A,V,JESP,IN A/R SED %
+20,E,A,V,JEXP,IN A/R BED %
+20,E,A,V,JEXQ,IN A/R BED
+20,E,A,V,JEXS,IN A/R SED
+20,E,A,V,JEXT,IN A/R BED total
+20,E,A,V,JFCG,IN 100% discount
+20,E,A,V,JFRE,IN Frieght
+20,E,A,V,JIN1,IN A/R CST
+20,E,A,V,JIN2,IN A/R LST
+20,E,A,V,JIN4,IN A/R Surcharge
+20,E,A,V,JIN5,IN A/R LST Surchrg
+20,E,A,V,JIN6,IN A/R LST(VAT)
+20,E,A,V,JINS,IN Insurance
+20,E,A,V,JIV1,IN A/R VAT (Addl)
+20,E,A,V,JIV2,IN: A/R VAT Sur Addl
+20,E,A,V,JIVP,IN A/R VAT
+20,E,A,V,IST4,BR: Sub.Trib SurType
+20,E,A,V,ISTA,Sub. Trib Rate
+20,E,A,V,ISTB,Sub. Trib Base Value
+20,E,A,V,JR2,Tax Jur Code Level 2
+20,E,A,V,JR3,Tax Jur Code Level 3
+20,E,A,V,JR4,Tax Jur Code Level 4
+20,E,A,V,JRC1,Canadian GST
+20,E,A,V,JRC2,Canadian PST
+20,E,A,V,JRC3,Canadian PST(B+GST)
+20,E,A,V,JRC4,PST (Base+GST) Cdn
+20,E,A,V,JSED,IN A/R SED
+20,E,A,V,JTRD,IN Trade discount
+20,S,A,V,MWR2,Factur.IVN man.(RU)
+20,S,A,V,MWR3,Fact.IVN IngrMan(RU)
+20,S,A,V,MWR4,"IVN manual,local(RU)"
+20,S,A,V,DICF,Devido ICMS porte
+20,S,A,V,MWR5,IVN FactManLocal(RU)
+20,S,A,V,MWR6,IVN FactIngrLoc (RU)
+20,S,A,V,DIFF,Redondeo
+20,S,A,V,MWR7,GSM manual      (RU)
+20,S,A,V,MWR8,GSM fact.manual (RU)
+20,S,A,V,MWR9,GSM FactIngrMan (RU)
+20,S,A,V,MWSC,IVA repercutido CRM
+20,S,A,V,MWSV,IVA repercutido(PVt)
+20,S,A,V,MX01,I.E.P.S.  (MEXICO)
+20,S,A,V,NANG,Tasa de reembolso
+20,S,A,V,NAPG,Tasa de paquete
+20,S,A,V,DSUF,Devido SubTribPorte
+20,S,A,V,NAUE,Tasa transferencia
+20,S,A,V,DUPL,Condición a duplicar
+20,S,A,V,NET1,Val.neto IVA compl.
+20,S,A,V,ECCN,Val.parte de salida
+20,S,A,V,NET2,Val.neto IVA medio
+20,S,A,V,ED,Ex Duty-Own manu/ LL
+20,S,A,V,NETD,Compens.diferencias
+20,S,A,V,EDI1,Precio prev.cliente
+20,S,A,V,EDI2,Val.previsto cliente
+20,S,A,V,NETW,Valor mercancía
+20,S,A,V,EK01,Costes reales
+20,S,A,V,EK02,Costes calculados
+20,S,A,V,EK03,Gastos exped.calcul.
+20,S,A,V,NRAB,Bonificación especie
+20,S,A,V,EKNN,PC neto neto IS-R
+20,S,A,V,NTPS,Cuota neta precio
+20,E,A,V,JIVR,IN A/R VAT Sur
+20,E,A,V,JLS1,IN A/R LST out
+20,E,A,V,JLS2,IN A/R LST out
+20,E,A,V,JLSR,IN A/R LST Surcharge
+20,E,A,V,JLST,IN A/R LST
+20,E,A,V,JMAN,IN Manual excise
+20,E,A,V,JMOD,IN A/R BED
+20,E,A,V,JOC1,Octroi accrual
+20,E,A,V,JOC2,Octroi accrual
+20,E,A,V,JOCG,IN: Central GST
+20,E,A,V,JOIG,IN: Integrated GST
+20,E,A,V,JOSG,IN: State GST
+20,E,A,V,JPAL,IN Pallet Charges
+20,E,A,V,JR1,Tax Jur Code Level 1
+20,E,A,V,JESQ,IN A/R SED Qty
+20,E,A,V,JEST,IN A/R SED total
+20,E,A,V,JEX2,IN A/R BED
+20,E,A,V,JEXA,IN A/R AED
+20,E,A,V,AMIW,Minimum SalesOrdrVal
+20,E,A,V,AMIZ,Minimum ValueSurchrg
+20,E,A,V,ATX1,Output Tax
+20,E,A,V,AUFS,VKP Calcultn Surchrg
+20,E,A,V,AUFX,VKP Calcultn Surchrg
+20,E,A,V,AV,Assessable Value
+20,E,A,V,AZWR,Down Pay./Settlement
+20,E,A,V,BAS2,Brazil Expenses
+20,E,A,V,BASI,Brazil Expenses
+20,E,A,V,BI00,ICMS from SD
+20,E,A,V,BO01,Mat/Group Rebate
+20,E,A,V,BO02,Material Rebate
+20,E,A,V,BO03,Customer Rebate
+20,E,A,V,BO04,Hierarchy Rebate
+20,E,A,V,BO05,Hierarchy rebate/mat
+20,E,A,V,BO06,Sales Indpndt Rebate
+20,E,A,V,BOLL,Bollo in Fattura
+20,E,A,V,BOTX,Bon Ofr Base for Tax
+20,E,A,V,BRE0,Price+Tax (for NF)
+20,E,A,V,CCPC,CCPC Charges
+20,E,A,V,CITX,City Tax Sales Aud.
+20,E,A,V,CNTX,County Tax Sal. Aud.
+20,E,A,V,CP,Ceiling Price
+20,E,A,V,CTX1,GST (Canada)
+20,E,A,V,CTX2,PST (Canada)
+20,E,A,V,CTX3,PST (Base+GST) Cdn
+20,E,A,V,CTXJ,Tax Jurisdict.Code
+20,E,A,V,DIC2,ICMS Due <- DICM
+20,E,A,V,DIC3,ICMS Due <- DICM
+20,E,A,V,DICF,ICMS s/IPI Due
+20,E,A,V,DICM,ICMS Due
+20,E,A,V,DIFF,Rounding Off
+20,E,A,V,DIP2,BR: IPI<-DIPI Due
+20,E,A,V,DIP3,BR: IPI<-DIPI Due
+20,E,A,V,DIPI,BR: IPI Due
+20,E,A,V,DIS2,ICMS s/IPI<-DISI Due
+20,E,A,V,DIS3,ICMS s/IPI<-DISI Due
+20,E,A,V,DISI,ICMS s/IPI Due
+20,E,A,V,DISS,ISS Due
+20,E,A,V,DSS2,ISS <-DISS Due
+20,E,A,V,DSUB,Sub Trib Due
+20,E,A,V,DSUF,SubTribFreight Due
+20,E,A,V,DUPL,Cond.to Be Duplic.
+20,E,A,V,ECCN,Partial Value
+20,E,A,V,ED,Ex Duty-Own manu/ LL
+20,E,A,V,EDI1,Cust.expected price
+20,E,A,V,EDI2,Cust.expected value
+20,E,A,V,EK01,Actual Costs
+20,E,A,V,EK02,Calculated costs
+20,E,A,V,EK03,Calculated ship.cost
+20,E,A,V,EKNN,Net/Net PP IS-R
+20,E,A,V,EV00,Ret. Price Cust.ISR
+20,E,A,V,EVAU,Ret.Markup SP Calc.
+20,E,A,V,EVAX,Ret.Markup SP Calc.
+20,E,A,V,EVP0,Retail price
+20,E,A,V,EVP1,Ret. Price 1 ISR
+20,E,A,V,FTMO,FT: Market
+20,E,A,V,GRWR,Statistical value
+20,E,A,V,HA00,Percentage Discount
+20,E,A,V,HB00,Discount (Value)
+20,E,A,V,HD00,Freight
+20,E,A,V,HI01,Hierarchy
+20,E,A,V,HI02,Hierarchy/Material
+20,E,A,V,HM00,Order value
+20,E,A,V,I100,BR: ICMS Convenio100
+20,E,A,V,IBRA,Price Including Tax
+20,E,A,V,IBRT,Price Including Tax
+20,E,A,V,IBRX,Brazil Tax Calc.
+20,E,A,V,IC00,Zero Base Value
+20,E,A,V,IC0X,BR: ICMS 0 Excempt
+20,E,A,V,ICB2,ICMS Tax Base <-ICBS
+20,E,A,V,ICBS,ICMS Tax Base
+20,E,A,V,ICBX,IPI from SD
+20,E,A,V,ICCB,BR: ICMS Comp.Base
+20,E,A,V,ICCX,BR: ICMS Comp.Excmpt
+20,E,A,V,ICFR,BR: ICMS on Freight
+20,E,A,V,ICLW,BR: ICMS Law
+20,E,A,V,ICM1,ICMS from SD
+20,E,A,V,ICM2,ICMS from SD
+20,E,A,V,ICM3,ICMS from SD
+20,E,A,V,ICM4,ICMS from SD
+20,E,A,V,ICMF,ICMS from SD
+20,E,A,V,ICMI,Price+Tax (for NF)
+20,E,A,V,ICMO,ICMS offset
+20,E,A,V,ICMP,ICMS/ISS on price
+20,E,A,V,ICMR,Price+ICMS/ISS (NF)
+20,E,A,V,ICOB,BR: ICMS Other Base
+20,E,A,V,ICOP,ICMS from SD
+20,E,A,V,ICOX,ICMS from SD
+20,E,A,V,ICS1,Sub.Trib. from SD
+20,E,A,V,ICS2,Sub.Trib. from SD
+20,E,A,V,ICS3,Sub.Trib. from SD
+20,E,A,V,ICSO,ISS  offset
+20,E,A,V,ICV2,ICMS Tax Rate <-ICVA
+20,E,A,V,ICVA,ICMS Tax Rate
+20,E,A,V,ICZF,ADMS Disc. Zona Fr.
+20,E,A,V,IDM2,Output tax
+20,E,A,V,IDM3,Output tax
+20,E,A,V,IDMW,Output tax
+20,E,A,V,IDZF,BR: ICMS Discount ZF
+20,E,A,V,IFR1,ICMS ST Freight SD
+20,E,A,V,IFR3,ICMS on Freight SD
+20,E,A,V,IFS1,ICMS ST Freight SD
+20,E,A,V,IFS3,ICMS ST Freight SD
+20,E,A,V,INDX,Inflation Index
+20,E,A,V,IP0X,BR: IPI 0 Excempt
+20,E,A,V,IPB2,IPI from SD <-IPBS
+20,E,A,V,IPBO,IPI from SD
+20,E,A,V,IPBS,IPI from SD
+20,E,A,V,IPI1,IPI from SD
+20,E,A,V,IPI2,IPI from SD
+20,E,A,V,IPI3,IPI from SD
+20,E,A,V,IPI6,IPI from SD
+20,E,A,V,IPIA,Price+Tax (for NF)
+20,E,A,V,IPIB,Price+Tax (for NF)
+20,E,A,V,IPIC,Copy of IPI from SD
+20,E,A,V,IPIO,IPI offset
+20,E,A,V,IPIP,BR: IPI Pauta
+20,E,A,V,IPLW,BR: IPI Law
+20,E,A,V,IPOB,BR: IPI Other Base
+20,E,A,V,IPP2,BR: IPI Pauta
+20,E,A,V,IPV2,IPI from SD
+20,E,A,V,IPV3,IPI from SD
+20,E,A,V,IPVA,IPI from SD
+20,E,A,V,ISIC,BR: ICMS Rate for ST
+20,E,A,V,ISS3,ISS from SD
+20,E,A,V,IST2,BR: Sub.Trib 2
+20,E,A,V,IST3,BR: Sub.Trib SurType
+20,S,A,V,EV00,Ret. Price Cust.ISR
+20,S,A,V,NTRS,"Total desc., neto"
+20,S,A,V,EVAU,Cál.PV.rec.cons.fin.
+20,S,A,V,PB1,Determ.promoc.vtas.1
+20,S,A,V,EVAX,Cál.PV.rec.cons.fin.
+20,S,A,V,PB1D,Promoción ventas 1
+20,S,A,V,EVP0,Precio consum.final
+20,S,A,V,EVP1,Prec.cons.fin.1 ISR
+20,S,A,V,PBEW,Trasp.datos en venta
+20,S,A,V,FTMO,FT: Organiz.mercado
+20,S,A,V,PBFI,Traspaso de valores
+20,S,A,V,GRWR,Valor paso frontera
+20,S,A,V,PBP,Precio base (datos)
+20,S,A,V,PBU,Base libro precios
+20,S,A,V,PBUD,Base libro precios
+20,S,A,V,HD00,Porte
+20,S,A,V,PBUP,Prec.bruto libro pr.
+20,S,A,V,HI01,Jerarquía
+20,S,A,V,PC00,Valorac.ce.beneficio
+20,S,A,V,HI02,Jerarquía/Material
+20,S,A,V,PCAM,Gastos AMEX
+20,S,A,V,HM00,Valor del pedido
+20,S,A,V,PCDI,Gastos Diners
+20,S,A,V,I100,BR: ICMS Convenio100
+20,S,A,V,PCMC,Gastos Master
+20,S,A,V,PCVI,Gastos VISA
+20,S,A,V,PDIF,Valor difer.(propio)
+20,S,A,V,IC00,Valor base cero
+20,S,A,V,IC0X,BR: ICMS 0 exención
+20,S,A,V,PKAR,Prc.cab.liquid.
+20,S,A,V,ICB2,ICMS Base imp.<-ICBS
+20,S,A,V,PMIN,Precio mínimo
+20,E,A,V,JTX1,Tax Jurisdict.Code d
+20,E,A,V,JTX2,Tax Jurisdict.Code d
+20,E,A,V,JTX3,Tax Jurisdict.Code d
+20,E,A,V,JTX4,Tax Jurisdict.Code d
+20,E,A,V,JZBV,IN: Zero base
+20,E,A,V,K004,Material
+20,E,A,V,K005,Customer/Material
+20,E,A,V,K007,Customer Discount
+20,E,A,V,K020,Price Group
+20,E,A,V,K029,Material pricing grp
+20,E,A,V,K030,Customer/Mat.Pr.Grp
+20,E,A,V,K031,Price Grp/Mat.Pr.Grp
+20,E,A,V,K032,Price Group/Material
+20,E,A,V,K148,Product Hierarchy
+20,E,A,V,KA00,Sales deal
+20,E,A,V,KA02,Promo Discount % 1
+20,E,A,V,KA03,Promo Discount % 2
+20,E,A,V,KA04,Promo Discount MD 1
+20,E,A,V,KA05,Promo Discount MD 2
+20,E,A,V,KAD0,Material Costs(VKHM)
+20,E,A,V,KAD1,Handling Costs(VKHM)
+20,E,A,V,KBM1,Good Will/Guarantee
+20,E,A,V,KF00,Freight
+20,E,A,V,KP00,Pallet Discount
+20,E,A,V,KP01,Incomp.Pallet Surch.
+20,E,A,V,KP02,Mixed Pallet Disc.
+20,E,A,V,KP03,Mixed Pallet Surch.
+20,E,A,V,KUMU,Cumulation condition
+20,E,A,V,KV00,Sales Costs (ISR)
+20,E,A,V,KW00,Group Valuation
+20,E,A,V,LCFR,License - France
+20,E,A,V,LCIT,VAT License Italy
+20,E,A,V,MRP,M.R.P.
+20,E,A,V,MS15,Tax 15%
+20,E,A,V,MW01,Tax Trigger
+20,E,A,V,MW07,Tax 7%
+20,E,A,V,MW15,Factoring Disc. Tax
+20,E,A,V,MWB1,Berlin Procedure A1
+20,E,A,V,MWB2,Berlin Procedure A2
+20,E,A,V,MWBO,Opt.tax Bollo in Fat
+20,E,A,V,MWC0,VAT  (IVA)      (CO)
+20,E,A,V,MWC1,Impuesto consumo(CO)
+20,E,A,V,MWC2,ICA manual      (CO)
+20,E,A,V,MWEX,External VAT
+20,E,A,V,MWI1,Tax in the price
+20,E,A,V,MWI2,Tax in discounts
+20,E,A,V,MWIC,Output tax
+20,E,A,V,MWIG,Tax from hundred
+20,E,A,V,MWIS,Total tax
+20,E,A,V,MWR1,Sales Tax Manual
+20,E,A,V,MWR2,Sales Tax Sett. Man.
+20,E,A,V,MWR3,SlsTax Sett.Rev.Man.
+20,E,A,V,MWR4,Sls Tax Manual Local
+20,E,A,V,MWR5,SlsTax Sett.Man.Loc.
+20,E,A,V,MWR6,SlsTax Sett.Rev.Loc.
+20,E,A,V,MWR7,GSM Manual      (RU)
+20,E,A,V,MWR8,GSM cost manual (RU)
+20,E,A,V,MWR9,GSM costComp.man(RU)
+20,E,A,V,MWSC,CRM output tax
+20,E,A,V,MWSI,Output Tax
+20,E,A,V,MWST,Output Tax
+20,E,A,V,MWSV,Output VAT -SlsPrice
+20,E,A,V,MX01,I.E.P.S.  (MEXICO)
+20,E,A,V,NANG,Cash-On-Delivery Fee
+20,E,A,V,NAPG,Package Fee
+20,E,A,V,NAUE,Transfer Fee
+20,E,A,V,NET1,Net value full VAT
+20,E,A,V,NET2,Net value half VAT
+20,E,A,V,NETD,Diff. clearing
+20,E,A,V,NETP,Price
+20,E,A,V,NETW,Value of Goods
+20,E,A,V,NLNA,Output tax
+20,E,A,V,NLXN,Output tax
+20,E,A,V,NRAB,Free goods
+20,E,A,V,NTPS,Price Net Share
+20,E,A,V,NTRS,Total Net Discounts
+20,E,A,V,PB00,Price (Gross)
+20,E,A,V,PB1,SlsDeal 1 - Determ.
+20,E,A,V,PB1D,Sales Deal 1
+20,E,A,V,PBBS,Exercise Price
+20,E,A,V,PBEW,Value Transf. Sales
+20,E,A,V,PBFI,Value Transfer B.FI
+20,E,A,V,PBP,Basic Price (Data)
+20,E,A,V,PBU,Price book - determ.
+20,E,A,V,PBUD,Price book - Basis
+20,E,A,V,PBUP,Price book - GrossPr
+20,E,A,V,PC00,Profit ctr valuation
+20,E,A,V,PCAM,Charge AMEX
+20,E,A,V,PCDI,Charge Diners
+20,E,A,V,PCMC,Charge MasterCard
+20,E,A,V,PCVI,Charge VISA
+20,E,A,V,PDIF,Diff.value (own)
+20,E,A,V,PI01,Inter-company Price
+20,E,A,V,PI02,Inter-company %
+20,E,A,V,PKAR,Settlement Price Hdr
+20,E,A,V,PMIN,Minimum Price
+20,E,A,V,PN00,Price (net)
+20,E,A,V,PN10,Sales Price
+20,E,A,V,PNET,Net value
+20,E,A,V,PNTP,Net price
+20,E,A,V,PPAG,MatlGroup Price Item
+20,E,A,V,PPAR,Settlement Price Itm
+20,E,A,V,PPSG,Hierarchy Price Item
+20,E,A,V,PPSV,Service Price Item
+20,E,A,V,PR00,Price
+20,E,A,V,PR01,Price incl.Sales Tax
+20,E,A,V,PR02,Graduated Price
+20,E,A,V,PRA0,Promo SP wholesale 1
+20,E,A,V,PRA1,Promo SP wholesale 2
+20,E,A,V,PREF,Preference
+20,E,A,V,PRRP,Repair Price
+20,E,A,V,PSPM,Discount
+20,E,A,V,PSPR,Net Income
+20,E,A,V,PSVB,Sales price basis
+20,E,A,V,PTAM,American Express
+20,E,A,V,PTBL,Invoice amount
+20,E,A,V,PTCH,Payment Type - Check
+20,E,A,V,PTCS,Payment Type - Cash
+20,E,A,V,PTDI,Diners Card
+20,E,A,V,PTEU,Eurocard
+20,E,A,V,PTMC,Mastercard/Eurocard
+20,E,A,V,PTR,Price to Retailer
+20,E,A,V,PTS,Price to Stockist
+20,E,A,V,PTVI,VISA Card
+20,E,A,V,PTVO,Voucher
+20,E,A,V,R100,100% discount
+20,E,A,V,RA00,% Discount from Net
+20,E,A,V,RA01,% Disc.from Gross
+20,E,A,V,RB00,Discount (Value)
+20,E,A,V,RB10,Complaint Discount
+20,E,A,V,RB11,Cash and Carry Disc.
+20,E,A,V,RB19,Other Discounts
+20,E,A,V,RC00,Quantity Discount
+20,E,A,V,RD00,Weight Discount
+20,E,A,V,RH00,Percent in Hundreds
+20,E,A,V,RJ01,Rackjobbing-Picking
+20,E,A,V,RL00,Factoring Discount
+20,E,A,V,RNTM,Rounding diff.(min.)
+20,E,A,V,RNTP,Rounding diff.(plus)
+20,E,A,V,SKTO,Cash Discount
+20,E,A,V,SKTV,Cash Discount
+20,E,A,V,SP00,Sales Price
+20,E,A,V,STTX,State Tax Sales Aud.
+20,E,A,V,TED,Ex Duty-Trading prod
+20,E,A,V,TRIG,Event Trigger
+20,E,A,V,UTX1,State Sales Tax
+20,E,A,V,UTX2,County Sales Tax
+20,E,A,V,UTX3,City Sales Tax
+20,E,A,V,UTXC,Tax Jurisdict.Code
+20,E,A,V,UTXD,US Tax per document
+20,E,A,V,UTXE,US Tax per document
+20,E,A,V,UTXJ,Tax Jurisdict.Code
+20,E,A,V,VA00,Variant Price
+20,E,A,V,VA01,Variant Price
+20,E,A,V,VASE,Variant Price
+20,E,A,V,VKA0,Promo SP        IS-R
+20,E,A,V,VKA1,Other promo SP  IS-R
+20,E,A,V,VKAE,Parallel promo SP
+20,E,A,V,VKAG,Basic Price Action
+20,E,A,V,VKP0,Sales Price
+20,E,A,V,VKP1,Other Sales Pr. IS-R
+20,E,A,V,VKP2,Sales Price - VZ
+20,E,A,V,VKPE,Parallel SP    IS-R
+20,E,A,V,VKPG,Basic Price
+20,E,A,V,VKPM,Comp. price IS-R
+20,E,A,V,VPRS,Cost
+20,E,A,V,WIA1,Input Tax Dest. Ctry
+20,E,A,V,WIA2,Output Tax Dep. Ctry
+20,E,A,V,WIA3,Output Tax Dest.Ctry
+20,E,A,V,WK00,Targ.Val. Value Cont
+20,E,A,V,WUST,Sales Tax
+20,E,A,V,XR1,Tax Jur Code Level 1
+20,E,A,V,XR2,Tax Jur Code Level 2
+20,E,A,V,XR3,Tax Jur Code Level 3
+20,E,A,V,XR4,Tax Jur Code Level 4
+20,E,A,V,XR5,Tax Jur Code Level 5
+20,E,A,V,XR6,Tax Jur Code Level 6
+20,E,A,V,ZABT,Abatement Rate
+20,E,A,V,ZASB,ED Ass Val
+20,E,A,V,ZASU,IN A/R addl Surchrge
+20,E,A,V,ZBGT,FI/CO Budgets
+20,E,A,V,ZBOT,Bonus Offer %age
+20,E,A,V,ZBOV,Bonus Offer Value
+20,E,A,V,ZCES,Env.cess Scr Sale-SK
+20,E,A,V,ZCPC,FI/CO - CCPC Charges
+20,E,A,V,ZCST,CST Reimbursment
+20,E,A,V,ZDIS,Disc. On Sales Price
+20,E,A,V,ZED,Dummy Excise
+20,E,A,V,ZENT,IN A/R Entry Tax
+20,E,A,V,ZFED,Factory ED - CWH
+20,E,A,V,ZFOD,Tax-Food Prod.(Raj)
+20,E,A,V,ZJOI,GST Set off
+20,E,A,V,ZOCF,Octroi on Free
+20,E,A,V,ZOCT,Octroi Reimbursement
+20,E,A,V,ZOT1,Ordinary Terms
+20,E,A,V,ZOT2,OT Accurals
+20,E,A,V,ZOTH,Other Charges
+20,E,A,V,ZPA1,PA Percentage
+20,E,A,V,ZPA2,PA Percentage
+20,E,A,V,ZPRS,Planned Price 2
+20,E,A,V,ZRAT,Factory SP - CWH
+20,E,A,V,ZTCS,TCS on Scrap Sales
+20,E,A,V,ZTD1,Trade Discount
+20,E,A,V,ZTD2,Trade Discount
+20,E,A,V,ZTDS,TDS on Scrap Sales
+20,E,A,V,ZTOT,IN A/R TurnOver Tax
+20,E,A,V,PTS1,Price to Inst
+20,E,A,V,ZINS,Inst Margin
+20,E,A,V,JTC1,IN 206C(1H) Goods
+20,E,A,V,JTC2,IN:206C Others
+20,E,A,V,JTCB,IN: TCS Base
+20,E,A,V,ZPTS,Special Rate
+20,E,A,V,MWAS,Output Tax
+20,E,A,V,ZMIN,MIN Rate RC_Contract
+20,E,A,V,ZPE1,Withholding Tax 1
+20,E,A,V,ZRPE,100% discount
+20,E,A,V,ZPE2,Withholding Tax 1
+20,E,A,V,ZPE3,Withholding Tax 1
+20,E,A,V,ZNRV,NRV
+20,E,A,V,ZK07,Customer Discount
+20,E,A,V,ZBAS,Base
+20,E,A,V,ZBOL,BOLLO
+20,E,A,V,ZDS1,Fixed Discount
+20,E,A,V,ZDS2,% Discount
+20,E,A,V,ZDVT,VAT Disc FOC 100%
+20,E,A,V,ZFOC,FOC Discount
+20,E,A,V,ZPR0,Price
+20,E,A,V,ZSAM,Sample Discount
+20,E,A,V,ZSP0,Customer Price List
+20,E,A,V,ZVAT,Italy: VAT
+20,E,A,V,ZDSP,IT VAT SP 100% Disc
+20,E,A,V,ZSAL,IT Customer Sales
+20,E,A,V,ZVSP,IT VAT Split Payment
+20,E,A,V,SP01,Sales Price
+20,E,A,V,JOII,IGST Accrual
+20,E,A,V,JDIS,IN Discount
+20,E,A,V,FP00,Formulary Price
+20,E,A,V,ZPA3,PA Percentage-Mantra
+20,E,A,V,ZTD3,Trade Discount-Mantr
+20,E,A,V,ZOT3,Ordinary Terms-MNPI
+20,E,A,V,ZOT4,Tillomed Accrual
+20,E,A,V,ZDS3,Fixed Discount-EMKTG
+20,S,A,V,ATX1,IVA repercutido
+20,S,A,V,MWAS,IVA repercutido
+20,S,A,V,CTXJ,Cód.empl.fisc.(EEUU)
+20,S,A,V,MWSI,IVA repercutido
+20,S,A,V,MWST,IVA repercutido
+20,S,A,V,PNTP,Precio neto
+20,S,A,V,ICS3,Sub.Trib.de SD
+20,S,A,V,VKP0,Precio de venta
+20,S,A,V,ISTT,BR: SubTrib tp.rec.
+20,S,A,V,ISTV,Cálc.impto.Brasil
+20,S,A,V,VKPG,Precio base
+20,S,A,V,IV01,Prc.facturac.interna
+20,S,A,V,IV02,% prc.fact.interna
+20,S,A,V,IZOF,BR: Zona Franca
+20,S,A,V,J1AP,VAT Perception I
+20,S,A,V,J1AQ,VAT Perception II
+20,S,A,V,J1AU,IVA
+20,S,A,V,J1X1,GI Perc. Region 1 II
+20,S,A,V,J1X2,GI Perc. Region 2 II
+20,S,A,V,J1X3,GI Perc. Region 3 II
+20,S,A,V,JA1X,A/R SEC&HR.ECS--
+20,S,A,V,JA1Y,A/R SEC&HR.ECS--
+20,S,A,V,JCED,IN A/R CESS
+20,S,A,V,JCES,IN A/R CESS
+20,S,A,V,JCS1,IN A/R cst out
+20,S,A,V,JCS2,IN A/R cst out
+20,S,A,V,JCST,IN A/R CST
+20,S,A,V,JEX2,IN A/R BED
+20,S,A,V,JEXQ,IN A/R BED
+20,S,A,V,JIN1,IN A/R CST
+20,S,A,V,JIN2,IN A/R LST
+20,S,A,V,JLS1,IN A/R LST out
+20,S,A,V,JLS2,IN A/R LST out
+20,S,A,V,JLST,IN A/R LST
+20,S,A,V,JMOD,IN A/R BED
+20,S,A,V,JOC1,Octroi accrual
+20,S,A,V,JOC2,Octroi accrual
+20,S,A,V,JR1,Tax Jur Code Level 1
+20,F,A,V,WIA3,Output Tax Dest.Ctry
+20,F,A,V,WK00,Targ.Val. Value Cont
+20,F,A,V,WUST,Sales Tax
+20,F,A,V,XR1,Tax Jur Code Level 1
+20,F,A,V,XR2,Tax Jur Code Level 2
+20,F,A,V,XR3,Tax Jur Code Level 3
+20,F,A,V,XR4,Tax Jur Code Level 4
+20,F,A,V,XR5,Tax Jur Code Level 5
+20,F,A,V,XR6,Tax Jur Code Level 6
+20,F,A,V,ZABT,Abatement Rate
+20,F,A,V,ZASB,ED Ass Val
+20,F,A,V,ZASU,IN A/R addl Surchrge
+20,F,A,V,ZBAS,Base
+20,F,A,V,ZBGT,FI/CO Budgets
+20,F,A,V,ZBOL,BOLLO
+20,F,A,V,ZBOT,Bonus Offer %age
+20,F,A,V,ZBOV,Bonus Offer Value
+20,F,A,V,ZCES,Env.cess Scr Sale-SK
+20,F,A,V,ZCPC,FI/CO - CCPC Charges
+20,F,A,V,ZCST,CST Reimbursment
+20,F,A,V,ZDIS,Disc. On Sales Price
+20,F,A,V,ZDS1,Fixed Discount
+20,F,A,V,ZDS2,% Discount
+20,F,A,V,ZDS3,Fixed Discount-EMKTG
+20,F,A,V,ZDSP,IT VAT SP 100% Disc
+20,F,A,V,ZDVT,VAT Disc FOC 100%
+20,F,A,V,ZED,Dummy Excise
+20,F,A,V,ZENT,IN A/R Entry Tax
+20,F,A,V,ZFED,Factory ED - CWH
+20,F,A,V,ZFOC,FOC Discount
+20,F,A,V,ZFOD,Tax-Food Prod.(Raj)
+20,F,A,V,ZINS,Inst Margin
+20,F,A,V,ZJOI,GST Set off
+20,F,A,V,ZK07,Customer Discount
+20,F,A,V,ZMIN,MIN Rate RC_Contract
+20,F,A,V,ZNRV,NRV
+20,F,A,V,ZOCF,Octroi on Free
+20,F,A,V,ZOCT,Octroi Reimbursement
+20,F,A,V,ZOT1,Ordinary Terms
+20,F,A,V,ZOT2,OT Accurals
+20,F,A,V,ZOTH,Other Charges
+20,F,A,V,ZPA1,PA Percentage
+20,F,A,V,ZPA2,PA Percentage
+20,F,A,V,ZPE1,Withholding Tax 1
+20,F,A,V,ZPE2,Withholding Tax 1
+20,F,A,V,ZPE3,Withholding Tax 1
+20,F,A,V,ZPR0,Price
+20,F,A,V,ZPRS,Planned Price 2
+20,F,A,V,ZPTS,Special Rate
+20,F,A,V,ZRAT,Factory SP - CWH
+20,F,A,V,ZRPE,100% discount
+20,F,A,V,ZSAL,IT Customer Sales
+20,F,A,V,ZSAM,Sample Discount
+20,F,A,V,ZSP0,Customer Price List
+20,F,A,V,ZTCS,TCS on Scrap Sales
+20,F,A,V,ZTD1,Trade Discount
+20,F,A,V,ZTD2,Trade Discount
+20,F,A,V,ZTDS,TDS on Scrap Sales
+20,F,A,V,ZTOT,IN A/R TurnOver Tax
+20,F,A,V,ZVAT,Italy: VAT
+20,F,A,V,ZVSP,IT VAT Split Payment
+20,S,A,V,MWBO,IVArep.Bollo in Fat.
+20,S,A,V,PNET,Valor neto
+20,S,A,V,ISTM,BR: SubTrib PrcMín
+20,S,A,V,ISTS,SubTrib recargo
+20,S,A,V,VKP1,PV adicional IS-R
+20,S,A,V,VKP2,Precio venta; VZ
+20,S,A,V,VKPE,Prc.diar.vta.tienda
+20,S,A,V,ISV2,BR: Impte.ISS <-ISVA
+20,S,A,V,ISVA,BR: Importe ISS
+20,S,A,V,VKPM,Prc.compentenc.IS-R
+20,S,A,V,WIA1,IVA sop.país recept.
+20,S,A,V,WIA2,IVA rep.país salida
+20,S,A,V,IZF2,ICMS Descuento
+20,S,A,V,WIA3,IVA sop.país destino
+20,S,A,V,WK00,Contr.val.val.prev.
+20,S,A,V,J1A1,GI percep.región 1
+20,S,A,V,WUST,IVA comercial
+20,S,A,V,J1A2,GI percep.región 2GI
+20,S,A,V,XR1,Cód.domic.fiscal 1
+20,S,A,V,J1A3,GI percep.región 3
+20,S,A,V,XR2,Cód.domic.fiscal 2
+20,S,A,V,J1AL,Exención con bono
+20,S,A,V,XR3,Cód.domic.fiscal 3
+20,S,A,V,J1AN,Exención sin bono
+20,S,A,V,XR4,Cód.domic.fiscal 4
+20,S,A,V,XR5,Cód.domic.fiscal 5
+20,S,A,V,XR6,Cód.domic.fiscal 6
+20,S,A,V,J1AR,Recargo IVA RNI
+20,S,A,V,J1AV,ImpVolNeg interno
+20,S,A,V,J1AX,IVA II
+20,S,A,V,J1W1,Retención imto.1
+20,S,A,V,J1W2,Retención impto.2
+20,S,A,V,J1W3,Retención impto.3
+20,S,A,V,JAED,IN: A/R AED
+20,S,A,V,JASS,IN A/R Assessable Va
+20,S,A,V,JCEP,IN A/R CESS %
+20,S,A,V,JCEQ,IN A/R CESS Qty
+20,S,A,V,JCET,IN A/R CESS total
+20,S,A,V,JCOS,IN:GST Comp.Cess-OP
+20,S,A,V,JCSR,IN A/R CST Recargo
+20,S,A,V,JEAP,IN A/R AED %
+20,S,A,V,JEAQ,IN A/R AED Cantidad
+20,S,A,V,JEAT,IN A/R AED total
+20,S,A,V,JECS,A/R Education Cess-
+20,S,A,V,JECX,A/R Education Cess--
+20,S,A,V,JESP,IN A/R SED %
+20,S,A,V,JESQ,IN A/R SED Cantidad
+20,S,A,V,JEST,IN A/R SED total
+20,S,A,V,JEXA,IN A/R AED
+20,S,A,V,JEXP,IN: A/R BED %
+20,S,A,V,JEXS,IN A/R SED
+20,S,A,V,JEXT,IN A/R BED total
+20,S,A,V,JFCG,IN 100% descuento
+20,S,A,V,JFRE,En carga
+20,S,A,V,JIN4,IN A/R Surcharge
+20,S,A,V,JIN5,IN A/R LST Surchrg
+20,S,A,V,JIN6,IN A/R LST(VAT)
+20,S,A,V,JINS,IN Insurance
+20,S,A,V,JIV1,IN A/R VAT (Addl)
+20,S,A,V,JIV2,IN: A/R VAT Sur Addl
+20,S,A,V,JIVP,IN A/R VAT
+20,S,A,V,JIVR,IN A/R VAT Sur
+20,S,A,V,JLSR,IN A/R LST Surcharge
+20,S,A,V,JMAN,IN Manual excise
+20,S,A,V,JOCG,IN: Central GST
+20,S,A,V,JOIG,IN: Integrated GST
+20,S,A,V,JOSG,IN: State GST
+20,S,A,V,JPAL,IN Pallet Charges
+20,S,A,V,JRC1,Canadian GST
+20,S,A,V,JRC2,Canadian PST
+20,S,A,V,JRC3,Canadian PST(B+GST)
+20,S,A,V,JSED,IN 206C(1H
+20,S,A,V,JTC1,IN 206C(1H) Goods
+20,S,A,V,JTC2,IN:206C Others
+20,S,A,V,JTCB,IN: TCS Base
+20,S,A,V,JTRD,IN Trade discount
+20,S,A,V,JZBV,IN: Zero base
+20,S,A,V,K005,Cliente/Material
+20,S,A,V,K007,Descuento cliente
+20,S,A,V,K020,Grupo de precios
+20,S,A,V,K029,Grupo de materiales
+20,S,A,V,K030,Cliente/Gr.material
+20,S,A,V,K031,Gr.precios/Gr.mater.
+20,S,A,V,K032,Gr.precios/Material
+20,S,A,V,K148,Jerarquía productos
+20,S,A,V,JR2,Tax Jur Code Level 2
+20,S,A,V,JR3,Tax Jur Code Level 3
+20,S,A,V,JR4,Tax Jur Code Level 4
+20,S,A,V,JRC4,PST (Base+GST) Cdn
+20,S,A,V,JTX1,Tax Jurisdict.Code d
+20,S,A,V,JTX2,Tax Jurisdict.Code d
+20,S,A,V,JTX3,Tax Jurisdict.Code d
+20,S,A,V,JTX4,Tax Jurisdict.Code d
+20,S,A,V,K004,Material
+20,S,A,V,ZPR0,Precio
+20,S,A,V,ZVAT,IVA repercutido
+20,S,A,V,ZDSP,IVA repercutido
+20,S,A,V,ZVSP,IVA repercutido
+20,S,A,V,SP01,Dto.pronto pago
+20,S,A,V,JOII,Octroi accrual
+20,S,A,V,FP00,Precio
+20,S,A,V,AUFS,Recargo cálc.PV
+20,S,A,V,AUFX,Recargo cálc.PV
+20,S,A,V,BAS2,Brasil Gastos
+20,S,A,V,BASI,Brasil Gastos
+20,S,A,V,MWC1,Impuesto consumo(CO)
+20,S,A,V,BRE0,Prc.+impto.(p.NF)
+20,S,A,V,CITX,City Tax Sales Aud.
+20,S,A,V,MWIC,IVA repercutido
+20,S,A,V,CTX1,GST (Canada)
+20,S,A,V,CTX3,PST (Base+GST) Cdn
+20,S,A,V,DIC2,Devido ICMS <-DICM
+20,S,A,V,DIC3,Devido ICMS <-DICM
+20,S,A,V,DICM,Devido ICMS
+20,S,A,V,DIP2,BR: Devido IPI<-DIPI
+20,S,A,V,DIP3,BR: Devido IPI<-DIPI
+20,S,A,V,DIPI,BR: Devido IPI
+20,S,A,V,DIS2,Dev.ICMS s/IPI<-DISI
+20,S,A,V,DIS3,Dev.ICMS s/IPI<-DISI
+20,S,A,V,DISI,Devido ICMS s/IPI
+20,S,A,V,DISS,Devido ISS
+20,S,A,V,DSS2,Devido ISS <-DISS
+20,S,A,V,DSUB,Devido Sub Trib
+20,S,A,V,NETP,Precio
+20,S,A,V,NLNA,IVA repercutido
+20,S,A,V,NLXN,IVA repercutido
+20,S,A,V,PBBS,Precio base
+20,S,A,V,HA00,Descuento en %
+20,S,A,V,HB00,Descuento absoluto
+20,S,A,V,IBRA,"Precio, impto.incl."
+20,S,A,V,IBRT,"Precio, impto.incl."
+20,S,A,V,IBRX,Cálc.impto.Brasil
+20,S,A,V,PI01,Prc.facturac.interna
+20,S,A,V,PI02,% prc.fact.interna
+20,S,A,V,ICBS,ICMS Base imponible
+20,S,A,V,PN00,Precio neto
+20,S,A,V,ICBX,IPI de SD
+20,S,A,V,PN10,Precio de venta
+20,S,A,V,ICM1,ICMS de SD
+20,S,A,V,ICM2,ICMS de SD
+20,S,A,V,ICM3,ICMS de SD
+20,S,A,V,PR00,Precio
+20,S,A,V,ICM4,ICMS de SD
+20,S,A,V,ICMF,ICMS de SD
+20,S,A,V,ICMI,Prc.+impto.(p.NF)
+20,S,A,V,ICMO,ICMS offset
+20,S,A,V,ICOP,ICMS de SD
+20,S,A,V,ICOX,ICMS de SD
+20,S,A,V,ICS1,Sub.Trib.de SD
+20,S,A,V,PTAM,American Express
+20,S,A,V,ICS2,Sub.Trib.de SD
+20,S,A,V,ICSO,ISS  offset
+20,S,A,V,PTEU,Eurocard
+20,S,A,V,PTMC,Mastercard/Eurocard
+20,S,A,V,IDM2,IVA repercutido
+20,S,A,V,IDM3,IVA repercutido
+20,S,A,V,IDMW,IVA repercutido
+20,S,A,V,IFR1,ICMS ST porte SD
+20,S,A,V,IFS1,ICMS ST porte SD
+20,S,A,V,RB00,Descuento absoluto
+20,S,A,V,IFS3,ICMS ST porte SD
+20,S,A,V,IPBO,IPI de SD
+20,S,A,V,IPI1,IPI de SD
+20,S,A,V,IPI2,IPI de SD
+20,S,A,V,IPI3,IPI de SD
+20,S,A,V,IPI6,IPI de SD
+20,S,A,V,IPIA,Prc.+impto.(p.NF)
+20,S,A,V,IPIB,Prc.+impto.(p.NF)
+20,S,A,V,SP00,Dto.pronto pago
+20,S,A,V,IPIO,IPI offset
+20,S,A,V,STTX,Dto.pronto pago
+20,S,A,V,IPIP,BR: IPI Pauta
+20,S,A,V,UTX1,State Sales Tax
+20,S,A,V,IPP2,BR: IPI Pauta
+20,S,A,V,UTX2,County Sales Tax
+20,S,A,V,IPV2,IPI from SD
+20,S,A,V,UTX3,City Sales Tax
+20,S,A,V,IPV3,IPI from SD
+20,S,A,V,UTXC,Tax Jurisdict.Code
+20,S,A,V,IPVA,IPI from SD
+20,S,A,V,VA00,Precio variante
+20,S,A,V,IST3,BR: SubTrib tp.rec.
+20,S,A,V,VA01,Precio variante
+20,S,A,V,IST4,BR: SubTrib tp.rec.
+20,S,A,V,VASE,Precio variante
+20,D,A,V,AUFS,Aufschlag VKP-Kalk.
+20,D,A,V,AUFX,Aufschlag VKP-Kalk.
+20,D,A,V,AV,Preis
+20,D,A,V,BAS2,Brazil Expenses
+20,D,A,V,BASI,Brazil Expenses
+20,D,A,V,BI00,ICMS from SD
+20,D,A,V,BOLL,Bollo in Fattura
+20,D,A,V,BOTX,Preis
+20,D,A,V,BRE0,Price+Tax (for NF)
+20,D,A,V,CCPC,Preis
+20,D,A,V,CITX,City Tax Sales Aud.
+20,D,A,V,CNTX,County Tax Sal. Aud.
+20,D,A,V,CP,Preis
+20,D,A,V,CTX1,GST (Canada)
+20,D,A,V,DIC2,Devido ICMS <-DICM
+20,D,A,V,DIC3,Devido ICMS <-DICM
+20,D,A,V,DICF,Devido ICMS s/IPI
+20,D,A,V,DICM,Devido ICMS
+20,D,A,V,DIP2,BR: Devido IPI<-DIPI
+20,D,A,V,DIP3,BR: Devido IPI<-DIPI
+20,D,A,V,DIPI,BR: Devido IPI
+20,D,A,V,DIS2,Dev.ICMS s/IPI<-DISI
+20,D,A,V,DIS3,Dev.ICMS s/IPI<-DISI
+20,D,A,V,DISI,Devido ICMS s/IPI
+20,D,A,V,DISS,Devido ISS
+20,D,A,V,DSS2,Devido ISS <-DISS
+20,D,A,V,DSUB,Devido Sub Trib
+20,D,A,V,DSUF,Devido SubTribFracht
+20,D,A,V,DUPL,Duplikationskond.
+20,D,A,V,ED,Preis
+20,D,A,V,EDI1,Erwart. Kundenpreis
+20,D,A,V,EDI2,Erwart. Kundenwert
+20,D,A,V,EK01,Istkosten
+20,D,A,V,EKNN,EK-Netto-Netto IS-R
+20,D,A,V,EV00,EV-Preis Kunde  ISR
+20,D,A,V,EVAU,EV-Aufs. VKP-Kalk.
+20,D,A,V,EVAX,EV-Aufs. VKP-Kalk.
+20,D,A,V,EVP0,Endverbraucherpreis
+20,D,A,V,EVP1,Endverbr.Preis1 ISR
+20,D,A,V,FTMO,FT: Marktordnung
+20,D,A,V,HA00,Prozentrabatt
+20,D,A,V,HB00,Absolutrabatt
+20,D,A,V,HD00,Fracht
+20,D,A,V,I100,BR: ICMS Convênio100
+20,D,A,V,IBRA,Price including tax
+20,D,A,V,IBRT,Price including tax
+20,F,A,V,KP02,Mixed Pallet Disc.
+20,F,A,V,KP03,Mixed Pallet Surch.
+20,F,A,V,KUMU,Cumulation condition
+20,F,A,V,KV00,Sales Costs (ISR)
+20,F,A,V,KW00,Group Valuation
+20,F,A,V,LCFR,License - France
+20,F,A,V,LCIT,VAT License Italy
+20,F,A,V,MRP,M.R.P.
+20,F,A,V,MS15,Tax 15%
+20,F,A,V,MW01,Tax Trigger
+20,F,A,V,MW07,Tax 7%
+20,F,A,V,MW15,Factoring Disc. Tax
+20,F,A,V,MWAS,Output Tax
+20,F,A,V,MWB1,Berlin Procedure A1
+20,F,A,V,MWB2,Berlin Procedure A2
+20,F,A,V,MWBO,Opt.tax Bollo in Fat
+20,F,A,V,MWC0,VAT  (IVA)      (CO)
+20,F,A,V,MWC1,Impuesto consumo(CO)
+20,F,A,V,MWC2,ICA manual      (CO)
+20,F,A,V,MWEX,External VAT
+20,F,A,V,MWI1,Tax in the price
+20,F,A,V,MWI2,Tax in discounts
+20,F,A,V,MWIC,Output tax
+20,F,A,V,MWIG,Tax from hundred
+20,F,A,V,MWIS,Total tax
+20,F,A,V,MWR1,Sales Tax Manual
+20,F,A,V,MWR2,Sales Tax Sett. Man.
+20,F,A,V,MWR3,SlsTax Sett.Rev.Man.
+20,F,A,V,MWR4,Sls Tax Manual Local
+20,F,A,V,MWR5,SlsTax Sett.Man.Loc.
+20,F,A,V,MWR6,SlsTax Sett.Rev.Loc.
+20,F,A,V,MWR7,GSM Manual      (RU)
+20,F,A,V,MWR8,GSM cost manual (RU)
+20,F,A,V,MWR9,GSM costComp.man(RU)
+20,F,A,V,MWSC,CRM output tax
+20,F,A,V,MWSI,Output Tax
+20,F,A,V,MWST,Output Tax
+20,F,A,V,MWSV,Output VAT -SlsPrice
+20,F,A,V,MX01,I.E.P.S.  (MEXICO)
+20,F,A,V,NANG,Cash-On-Delivery Fee
+20,F,A,V,NAPG,Package Fee
+20,F,A,V,NAUE,Transfer Fee
+20,F,A,V,NET1,Net value full VAT
+20,F,A,V,NET2,Net value half VAT
+20,F,A,V,NETD,Diff. clearing
+20,F,A,V,NETP,Price
+20,F,A,V,NETW,Value of Goods
+20,F,A,V,NLNA,Output tax
+20,F,A,V,NLXN,Output tax
+20,F,A,V,NRAB,Free goods
+20,F,A,V,NTPS,Price Net Share
+20,F,A,V,NTRS,Total Net Discounts
+20,F,A,V,PB00,Price (Gross)
+20,F,A,V,PB1,SlsDeal 1 - Determ.
+20,F,A,V,PB1D,Sales Deal 1
+20,F,A,V,PBBS,Exercise Price
+20,F,A,V,PBEW,Value Transf. Sales
+20,F,A,V,PBFI,Value Transfer B.FI
+20,F,A,V,PBP,Basic Price (Data)
+20,F,A,V,PBU,Price book - determ.
+20,F,A,V,PBUD,Price book - Basis
+20,F,A,V,PBUP,Price book - GrossPr
+20,F,A,V,PC00,Profit ctr valuation
+20,F,A,V,PCAM,Charge AMEX
+20,F,A,V,PCDI,Charge Diners
+20,F,A,V,PCMC,Charge MasterCard
+20,F,A,V,PCVI,Charge VISA
+20,F,A,V,PDIF,Diff.value (own)
+20,F,A,V,PI01,Inter-company Price
+20,F,A,V,PI02,Inter-company %
+20,F,A,V,PKAR,Settlement Price Hdr
+20,F,A,V,PMIN,Minimum Price
+20,F,A,V,PN00,Price (net)
+20,F,A,V,PN10,Sales Price
+20,F,A,V,PNET,Net value
+20,F,A,V,PNTP,Net price
+20,F,A,V,PPAG,MatlGroup Price Item
+20,F,A,V,PPAR,Settlement Price Itm
+20,F,A,V,PPSG,Hierarchy Price Item
+20,F,A,V,PPSV,Service Price Item
+20,F,A,V,PR00,Price
+20,F,A,V,PR01,Price incl.Sales Tax
+20,F,A,V,PR02,Graduated Price
+20,F,A,V,PRA0,Promo SP wholesale 1
+20,F,A,V,PRA1,Promo SP wholesale 2
+20,F,A,V,PREF,Preference
+20,F,A,V,PRRP,Repair Price
+20,F,A,V,PSPM,Discount
+20,F,A,V,PSPR,Net Income
+20,F,A,V,PSVB,Sales price basis
+20,F,A,V,PTAM,American Express
+20,F,A,V,PTBL,Invoice amount
+20,F,A,V,PTCH,Payment Type - Check
+20,F,A,V,PTCS,Payment Type - Cash
+20,F,A,V,PTDI,Diners Card
+20,F,A,V,PTEU,Eurocard
+20,F,A,V,PTMC,Mastercard/Eurocard
+20,F,A,V,PTR,Price to Retailer
+20,F,A,V,PTS,Price to Stockist
+20,F,A,V,PTS1,Price to Inst
+20,F,A,V,PTVI,VISA Card
+20,F,A,V,PTVO,Voucher
+20,F,A,V,R100,100% discount
+20,F,A,V,RA00,% Discount from Net
+20,F,A,V,RA01,% Disc.from Gross
+20,F,A,V,RB00,Discount (Value)
+20,F,A,V,RB10,Complaint Discount
+20,F,A,V,RB11,Cash and Carry Disc.
+20,F,A,V,RB19,Other Discounts
+20,F,A,V,RC00,Quantity Discount
+20,F,A,V,RD00,Weight Discount
+20,F,A,V,RH00,Percent in Hundreds
+20,F,A,V,RJ01,Rackjobbing-Picking
+20,F,A,V,RL00,Factoring Discount
+20,F,A,V,RNTM,Rounding diff.(min.)
+20,F,A,V,RNTP,Rounding diff.(plus)
+20,F,A,V,SKTO,Cash Discount
+20,F,A,V,SKTV,Cash Discount
+20,F,A,V,SP00,Sales Price
+20,F,A,V,SP01,Sales Price
+20,F,A,V,STTX,State Tax Sales Aud.
+20,F,A,V,TED,Ex Duty-Trading prod
+20,F,A,V,TRIG,Event Trigger
+20,F,A,V,UTX1,State Sales Tax
+20,F,A,V,UTX2,County Sales Tax
+20,F,A,V,UTX3,City Sales Tax
+20,F,A,V,UTXC,Tax Jurisdict.Code
+20,F,A,V,UTXD,US Tax per document
+20,F,A,V,UTXE,US Tax per document
+20,F,A,V,UTXJ,Tax Jurisdict.Code
+20,F,A,V,VA00,Variant Price
+20,F,A,V,VA01,Variant Price
+20,F,A,V,VASE,Variant Price
+20,F,A,V,VKA0,Promo SP        IS-R
+20,F,A,V,VKA1,Other promo SP  IS-R
+20,F,A,V,VKAE,Parallel promo SP
+20,F,A,V,VKAG,Basic Price Action
+20,F,A,V,VKP0,Sales Price
+20,F,A,V,VKP1,Other Sales Pr. IS-R
+20,F,A,V,VKP2,Sales Price - VZ
+20,F,A,V,VKPE,Parallel SP    IS-R
+20,F,A,V,VKPG,Basic Price
+20,F,A,V,VKPM,Comp. price IS-R
+20,F,A,V,VPRS,Cost
+20,F,A,V,WIA1,Input Tax Dest. Ctry
+20,F,A,V,WIA2,Output Tax Dep. Ctry
+20,E,A,TX,GSTS,A/P GST self assess
+20,E,A,TX,GTI1,A/P GST
+20,E,A,TX,GTI2,A/P GST
+20,E,A,TX,GTO0,A/R GST
+20,E,A,TX,GTO1,A/R GST
+20,E,A,TX,GTO2,A/R GST
+20,E,A,TX,IC1C,ICMS Ind.Clearing
+20,E,A,TX,IC1O,ICMS Ind.Clear.Off.
+20,E,A,TX,ICM0,ICMS Ind.Clear.Off.
+20,E,A,TX,ICM1,ICMS Industr.    In
+20,E,A,TX,ICM2,ICMS Consumption In
+20,E,A,TX,ICM3,ICMS from SD    Out
+20,E,A,TX,ICM4,ICMS Consum Outgoing
+20,E,A,TX,ICMF,ICMS S.T. fr. offset
+20,E,A,TX,ICMO,ICMS Ind.Clear.Off.
+20,E,A,TX,ICMX,ICMS Active
+20,E,A,TX,ICMY,ICMS Active
+20,E,A,TX,ICMZ,ICMS Active
+20,E,A,TX,ICOX,ICMS complement 100
+20,E,A,TX,ICS1,Sub.Tributaria   In
+20,E,A,TX,ICS2,S.T. Consumption In
+20,E,A,TX,ICS3,Sub.Tributaria  Out
+20,E,A,TX,ICS4,S.T. Indus Not in NF
+20,E,A,TX,ICS5,S.T. Cons. Not in NF
+20,E,A,TX,ICS6,S.T. Cons.Offset
+20,E,A,TX,ICS7,S.T. Cons. Not in NF
+20,E,A,TX,ICS8,S.T. Cons. Not in NF
+20,E,A,TX,ICS9,S.T. Consumption In
+20,E,A,TX,ICZF,ICMS Reverse (Z.F.)
+20,E,A,TX,IFR1,ICMS on freight  In
+20,E,A,TX,IFR3,ICMS on freight  Out
+20,E,A,TX,IFS1,ICMS ST freight  In
+20,E,A,TX,IFS3,ICMS ST freight  Out
+20,E,A,TX,INSS,INSS Incoming
+20,E,A,TX,INSX,INSS offset (100-)
+20,E,A,TX,IP10,IPI Null Values NF
+20,E,A,TX,IP11,IPI  Industr.    In
+20,E,A,TX,IP12,IPI  Consumption In
+20,E,A,TX,IP13,IPI  Consumption In
+20,E,A,TX,IP1C,IPI  Ind.Clearing
+20,E,A,TX,IP1O,IPI  Ind.Clear.Off.
+20,E,A,TX,IPI0,IPI Null Values NF
+20,E,A,TX,IPI1,IPI  Industr.    In
+20,E,A,TX,IPI2,IPI  Consumption In
+20,E,A,TX,IPI3,IPI from SD     Out
+20,E,A,TX,IPI4,IPI -Split Vendor
+20,E,A,TX,IPI5,IPI  Consu. REF IPI2
+20,E,A,TX,IPI6,IPI  Consu. REF IPI2
+20,E,A,TX,IPIA,IPI Industr. Out
+20,E,A,TX,IPIB,IPI Consum Out
+20,E,A,TX,IPIO,IPI Null Values NF
+20,E,A,TX,IPIX,IPI  Active
+20,E,A,TX,IPIY,IPI  Active
+20,E,A,TX,IPIZ,IPI  Active
+20,E,A,TX,IRD1,ICMS Reimbursement
+20,E,A,TX,IRD2,ICMS Reimbur. Offset
+20,E,A,TX,IRD3,SUBT Reimbursement
+20,E,A,TX,IRD5,ICMS Reim.Offset NVV
+20,E,A,TX,ISS3,ISS from SD     Out
+20,E,A,TX,ISSO,ISS from SD     Out
+20,E,A,TX,IT01,ICMS Industr.    In
+20,E,A,TX,IT02,ICMS Industr.    In
+20,E,A,TX,IT03,ICMS Industr.    In
+20,E,A,TX,J1A1,GI surch. Region 1
+20,E,A,TX,J1A2,GI surch. Region 2
+20,E,A,TX,J1A3,GI surch. Region 3
+20,E,A,TX,J1AA,VAT Disc. Customs
+20,E,A,TX,J1AG,ET Disc. Customs
+20,E,A,TX,J1AI,Internal Purch. Tax
+20,E,A,TX,J1AL,Exemption w. Credit
+20,E,A,TX,J1AN,Exemption w/o Credit
+20,E,A,TX,J1AP,VAT discount
+20,E,A,TX,J1AR,VAT Surcharge RNI
+20,E,A,TX,J1AS,Surcharge No Categ.
+20,E,A,TX,J1AV,Internal Purch. Tax
+20,E,A,TX,J1AY,Not taxed
+20,E,A,TX,J2A1,ISC Perú
+20,E,A,TX,J2A2,IGV Perú - Adq.002
+20,E,A,TX,J2A3,IGV Perú - Adq.003
+20,E,A,TX,J2A4,Advalorem (Perú)
+20,E,A,TX,J2A5,IPM tax Peru
+20,E,A,TX,J3A1,Fuel tax (ded.)
+20,E,A,TX,J3A2,Fuel tax (nonded.)
+20,E,A,CQ,CQ01,Resource Prices
+20,E,A,CS,A-Z1,Vacation Bonus Paid
+20,E,A,CS,A-Z2,Yearly Bonus
+20,E,A,F,FB10,Per Diem/Flat Rate
+20,E,A,F,FB20,Price from Shipmt
+20,E,A,F,FD00,Margin
+20,E,A,F,FLTL,Partial Load/Zip
+20,E,A,F,SP00,Bulk. Grp Determin.
+20,E,A,KA,B090,Sales Plant Gen.
+20,E,A,KA,B100,Project Cost
+20,E,A,KA,C021,Manuf.OH/Plant
+20,E,A,KA,Y001,Yield Adjustment-Mat
+20,E,A,KA,Y002,Yield Adjustment-OH
+20,E,A,KA,Y010,Admin Overhead
+20,E,A,KA,Y011,Asha: OH Type / OH K
+20,E,A,M,CUDE,3rd Country Weight
+20,E,A,M,CUP1,Preference Qty Cust
+20,E,A,M,CUP2,Preference Wt Cust.
+20,E,A,M,IN02,Insurance value
+20,E,A,M,OTHR,Other Charges
+20,F,A,W,WWEP,Purchase Price
+20,F,A,W,WWRZ,Scheduled Surcharge
+20,F,A,W,WWV1,Sales Price 1
+20,F,A,W,WWV2,Sales Price 2
+20,F,A,W,WWV3,Sales Price 3
+20,F,A,W,WWV4,Sales Price 4
+20,F,A,KA,B000,Material
+20,F,A,KA,B001,Wages
+20,F,A,KA,B002,Salaries
+20,F,A,KA,B010,Production
+20,F,A,KA,B020,Material - Oth OH
+20,F,A,KA,B090,Sales Plant Gen.
+20,F,A,KA,B100,Project Cost
+20,F,A,KA,B101,Wage Cst Cntr/WgType
+20,F,A,KA,C000,Material OH
+20,F,A,KA,C001,Manufacturing OH
+20,F,A,KA,C002,Administration OH
+20,F,A,KA,C003,Sales OH
+20,F,A,KA,C010,Material OH/Surcharg
+20,F,A,KA,C011,Manuf.OH/OH Surch
+20,F,A,KA,C012,Manuf.OH/OH Surch
+20,F,A,KA,C013,Sales OH/OH Surch
+20,F,A,KA,C020,Material OH/Plant
+20,F,A,KA,C021,Manuf.OH/Plant
+20,F,A,KA,C022,Admin.OH/Plant
+20,F,A,KA,C023,Sales OH/Plant
+20,F,A,KA,C030,Material OH/CCode
+20,F,A,KA,C031,Manuf.OH/CCode
+20,F,A,KA,C032,Admin.OH/CCode
+20,F,A,KA,C033,Sales OH/CCode
+20,F,A,KA,C040,Material OH/BArea
+20,F,A,KA,C041,Manuf.OH/BArea
+20,F,A,KA,C042,Admin.OH/BArea
+20,F,A,KA,C043,Sales OH/BArea
+20,F,A,KA,C050,Material OH/OType
+20,F,A,KA,C051,Manuf.OH/OType
+20,F,A,KA,C052,Admin.OH/OType
+20,F,A,KA,C053,Sales OH/OType
+20,F,A,KA,C060,Material OH/OType
+20,F,A,KA,C061,Manuf.OH/OType
+20,F,A,KA,C062,Admin.OH/OType
+20,F,A,KA,C063,Sales OH/OType
+20,F,A,KA,C070,Material OH/Version
+20,F,A,TX,XP4E,A/P Sales Tax 4 Exp.
+20,F,A,TX,XP4I,A/P Sales Tax 4 Inv.
+20,F,A,TX,XP4U,A/P Sales Tax 4 Use
+20,F,A,TX,XP4X,A/P Sales Tax 4 Ext.
+20,F,A,TX,XP5E,A/P Sales Tax 5 Exp
+20,F,A,TX,XP5I,A/P Sales Tax 5 Inv.
+20,F,A,TX,XP5U,A/P Sales Tax 5 Use
+20,F,A,TX,XP6E,A/P Sales Tax 6 Exp
+20,F,A,TX,XP6I,A/P Sales Tax 6 Inv.
+20,F,A,TX,XP6U,A/P Sales Tax 6 Use
+20,F,A,TX,XR1,A/R Sales Tax 1
+20,F,A,TX,XR2,A/R Sales Tax 2
+20,F,A,TX,XR3,A/R Sales Tax 3
+20,F,A,TX,XR4,A/R Sales Tax 4
+20,F,A,TX,XR5,A/R Sales Tax 5
+20,F,A,TX,XR6,A/R Sales Tax 6
+20,F,A,TX,XWVS,Input Tax
+20,F,A,TX,YMIP,IN: BED inventory %
+20,F,A,TX,YMOP,IN: BED setoff %
+20,F,A,TX,YMX1,IN: A/P BED setoff
+20,F,A,TX,YMX2,IN: A/P BED inventor
+20,F,A,TX,YVCS,IN CST FOR FG - FORM
+20,F,A,TX,YVRD,VAT FG Deductible
+20,F,A,TX,YVRN,VAT FG NonDeduc.
+20,F,A,TX,Z000,IN:A/P Non Taxable
+20,F,A,TX,ZASU,IN A/R addl Surchrge
+20,F,A,TX,ZCRN,IN: RCM CGST Inv
+20,F,A,TX,ZENT,IN A/R Entry Tax
+20,F,A,TX,ZFOD,Tax-Food Prod.(Raj)
+20,F,A,TX,ZIRN,IN: RCM IGST Inv
+20,F,A,TX,ZJP6,A/P VAT RM Non-Dedu
+20,F,A,TX,ZRCM,IT: RCM Input Vat
+20,F,A,TX,ZRCN,IN: RCM CESS Inv
+20,F,A,TX,ZRCV,IT:Input VAT RCM
+20,F,A,TX,ZRO1,IT: RCM Output Vat
+20,F,A,TX,ZRO2,IT: RCM Output Vat
+20,F,A,TX,ZSRN,IN: RCM SGST Inv
+20,F,A,TX,ZTC1,AP-206C(1H)Goods+GST
+20,F,A,TX,ZTC3,AP-206C(1H)Goods
+20,F,A,TX,ZTDS,TDS on Scrap Sales
+20,F,A,TX,ZTOT,IN A/R TurnOver Tax
+20,F,A,TX,ZURN,IN: RCM UTGST Inv
+20,F,A,TX,ZVCS,IN CST SET OFF
+20,F,A,TX,ZVRD,A/P VAT Dedu.Adl.Tax
+20,E,A,M,ZFRV,Freight other Vendor
+20,F,A,M,ZFRV,Freight Value
+20,E,A,M,ZPC3,P&F%(basic+Discount)
+20,E,A,M,ZPC4,P&F val bef tax(B+D)
+20,F,A,M,ZPC3,P&F % on basic
+20,F,A,M,ZPC4,P&F value bef tax
+20,E,A,TX,ZCES,IN: Cess Charges
+20,F,A,TX,ZCES,IN: State GST
+20,E,A,KA,Y030,Other OH -Plant_EP05
+20,E,A,KA,Y031,Other OH -Plant_EP09
+20,F,A,KA,Y030,Other OH -Plant_EP16
+20,F,A,KA,Y031,Other OH -Plant_EP16
+20,E,A,M,ZTLD,"Tool,Label & Dev fee"
+20,F,A,M,ZTLD,PFVal calc after Tax
+20,F,A,PB,9000,Valuation CRM
+20,F,A,ST,BSWR,Base Value
+20,F,A,ST,MWAS,Output Tax
+20,F,A,TP,TP01,Tranfer Price (fix)
+20,F,A,TP,TP02,Markup (percentage)
+20,F,A,TP,TPB1,Material Price (ML)
+20,F,A,TP,TPB2,Costing Basis
+20,F,A,TX,B100,Convenio 100
+20,F,A,TX,BCI1,ICMS Complement Base
+20,F,A,TX,BCI2,ICMS Complem. Exempt
+20,F,A,TX,BCI3,ICMS Complement Rate
+20,F,A,TX,BDIS,Discounting
+20,F,A,TX,BFRE,Freight
+20,F,A,TX,BI00,IPI / ICMS Zero Tax
+20,F,A,TX,BIC0,ICMS Rate
+20,F,A,TX,BIC1,ICMS Base Reduction
+20,F,A,TX,BIC2,ICMS Other Base Flag
+20,F,A,TX,BIC3,ICMS Rate * Base
+20,F,A,TX,BIC5,ICMS Rate * 10^n
+20,F,A,TX,BIC6,ICMS Base
+20,F,A,TX,BIC7,ICMS Exclude Base
+20,F,A,TX,BIC9,ICMS Ind.Calc.Base
+20,F,A,TX,BICA,ICMS Ind.Calc.Base
+20,F,A,TX,BICB,ICMS Ref BIC1
+20,F,A,TX,BICC,ICMS Conv.100 Flag
+20,F,A,TX,BICD,ICMS Ex.Base Con.
+20,F,A,TX,BICE,ICMS Con.Calc.Base
+20,F,A,TX,BICF,ICMS Other Base Flag
+20,F,A,TX,BICG,ICMS Rate SF=ST
+20,F,A,TX,BICH,ICMS Rate SF=ST
+20,F,A,TX,BICX,ICMS Exempt
+20,F,A,TX,BICY,ICMS Exempt Ref BICX
+20,F,A,TX,BIF0,ICMS on Freight
+20,F,A,TX,BIP0,IPI Rate
+20,F,A,TX,BIP1,IPI Base Reduction
+20,F,A,TX,BIP2,IPI Other Base Flag
+20,F,A,TX,BIP3,IPI Rate * Base
+20,F,A,TX,BIP4,IPI Rate Ref BIP0
+20,F,A,TX,BIP5,IPI Rate * 10^n
+20,F,A,TX,BIP7,IPI  Exclude Base In
+20,F,A,TX,BIP9,IPI Calculation Base
+20,F,A,TX,BIPA,IPI Rate Ref BIP0
+20,F,A,TX,BIPB,IPI Ref. Base
+20,F,A,TX,BIPC,IPI Other Base Flag
+20,F,A,TX,BIPD,IPI  Exclude Base Co
+20,F,A,TX,BIPE,Calculate Excl./Oth.
+20,F,A,TX,BIPP,IPI Pauta Amount
+20,F,A,TX,BIPS,IPI -Split Vendor
+20,F,A,TX,BIPT,IPI -Split Vendor PO
+20,F,A,TX,BIPU,IPI -Split Vendor IV
+20,F,A,TX,BIPX,IPI Exempt
+20,F,A,TX,BIPY,IPI Exempt Ref BIPX
+20,F,A,TX,BIS0,ISS Rate
+20,F,A,TX,BLIC,Tax Laws for ICMS
+20,F,A,TX,BLIP,Tax Laws for IPI
+20,F,A,TX,BSF0,Subtrib. Rate
+20,F,A,TX,BSF1,ICMS Rate SF=ST
+20,F,A,TX,BST0,Subtrib. Rate
+20,F,A,TX,BST1,Subtrib. Surch. Type
+20,F,A,TX,BST2,Subtrib. Minprice
+20,F,A,TX,BST3,Subtrib. Fix Price
+20,F,A,TX,BST5,Subtrib Icms Rate
+20,F,A,TX,BST6,Subtrib. Reduction 1
+20,F,A,TX,BST7,Subtrib. Reduction 2
+20,F,A,TX,BST8,Subtrib. Base Reduct
+20,F,A,TX,BST9,Subtrib. Calc.Base
+20,F,A,TX,BSTA,Subtrib. Surch. Type
+20,F,A,TX,BSTB,Subtrib. Surch. Type
+20,F,A,TX,CNSC,Service Tax Cred. CN
+20,F,A,TX,CNSD,Service Tax Deb. CN
+20,F,A,TX,CONC,Consumption tax Cre.
+20,F,A,TX,COND,Consumption tax Deb.
+20,F,A,TX,GSTS,A/P GST self assess
+20,F,A,TX,GTO0,A/R GST
+20,F,A,TX,IC1C,ICMS Ind.Clearing
+20,F,A,TX,IC1O,ICMS Ind.Clear.Off.
+20,F,A,TX,ICM0,ICMS Ind.Clear.Off.
+20,F,A,TX,ICM1,ICMS Industr.    In
+20,F,A,TX,ICM2,ICMS Consumption In
+20,F,A,TX,ICM3,ICMS from SD    Out
+20,F,A,TX,ICM4,ICMS Consum Outgoing
+20,F,A,TX,ICMF,ICMS S.T. fr. offset
+20,F,A,TX,ICMO,ICMS Ind.Clear.Off.
+20,F,A,TX,ICMX,ICMS Active
+20,F,A,TX,ICMY,ICMS Active
+20,F,A,TX,ICMZ,ICMS Active
+20,F,A,TX,ICOP,ICMS complement
+20,F,A,TX,ICOX,ICMS complement 100
+20,S,A,M,LP03,Mixed Pallet Surch.
+20,S,A,M,46082,Neutral % Accruals
+20,S,A,M,MM00,Minimum Qty (Amount)
+20,S,A,M,MM01,Minimum Qty (%)
+20,S,A,M,MP01,Market Price
+20,S,A,M,MTAX,Tax on differential
+20,S,A,M,MVK0,Sales Price inc. Tax
+20,S,A,M,MVK1,Sales Price excl.Tax
+20,S,A,M,MVK2,Sales Price excl.Tax
+20,S,A,M,MWAS,Output tax manually
+20,S,A,M,MWST,Input tax
+20,S,A,M,MWVS,Input tax manually
+20,S,A,M,NAVM,Non-Deductible Tax
+20,S,A,M,NAVS,Non-Deductible Tax
+20,S,A,M,NETP,Net Price Picking
+20,S,A,M,NTRG,Net Value Payer Doc.
+20,S,A,M,OTHR,Otros cargos
+20,S,A,M,P000,Precio Bruto
+20,S,A,M,P001,Precio Bruto
+20,S,A,M,P002,Precio Bruto
+20,S,A,M,P100,Trans.Pr.Supply.Plnt
+20,S,A,M,P101,Val.Price Supply.Pln
+20,S,A,M,PA00,Precio de Promoción
+20,S,A,M,PA01,Precio Promoción 2
+20,S,A,M,PB00,Precio bruto
+20,S,A,M,PBXX,Precio bruto
+20,S,A,M,PNN0,Purch. Net/Net
+20,S,A,M,R000,Discount % after tax
+20,S,A,M,R001,Dscto./Cantidad
+20,S,A,M,R002,Absolute discount
+20,S,A,M,R003,Discount % on Net
+20,S,A,M,R004,Descuento % AFT impt
+20,S,A,M,R005,Dscto % AFT impt
+20,S,A,M,RA00,Discount % on Net
+20,S,A,M,RA01,Discount % on Gross
+20,S,A,M,RA02,Dscto. Promo % 1
+20,S,A,M,RA03,Dscto. Promo % 2
+20,S,A,M,RA04,Promo. Disc. Deduct.
+20,S,A,M,RA05,Promo. Disc. Deduct.
+20,S,A,M,RB00,Absolute discount
+20,S,A,M,RC00,Discount/Quantity
+20,S,A,M,REST,Account Discount %
+20,S,A,M,RL00,Factoring Discount
+20,S,A,M,RL01,Vendor Discount %
+20,S,A,M,RL02,Pick.Agency Bus.Cust
+20,S,A,M,RL03,Pick.Agency Bus.Vend
+20,S,A,M,RUB1,Neutr.Accruals(Val.)
+20,S,A,M,RUC1,Neutral Accruals/Qty
+20,S,A,M,RUE1,Neutral % Accruals
+20,S,A,M,S000,Calculated Revenues
+20,S,A,M,SAD1,Special Adl Duty
+20,S,A,M,SBCB,Basis
+20,S,A,M,SKTO,Cash Discount
+20,S,A,M,TRIG,Event Trigger
+20,S,A,M,VA00,Variants/Quantity
+20,S,A,M,VA01,Variants %
+20,S,A,M,VKP0,Sales Price inc. Tax
+20,S,A,M,VKP1,Sales Price excl.Tax
+20,S,A,M,VS00,Tax trigger
+20,S,A,M,VS01,Agency Tax
+20,S,A,M,VS15,Factoring Disc. Tax
+20,S,A,M,VSRG,Tax Amount Payer
+20,S,A,M,YCV1,IN CVD
+20,S,A,M,ZA00,Recargo % sobre Neto
+20,S,A,M,ZA01,Recargo % sobre Brut
+20,S,A,M,ZABT,MRP-disminución
+20,S,A,M,ZADC,Addln.Deber Cliente
+20,S,A,M,ZAF1,Transporte Aire %
+20,S,A,M,ZAF2,Transp. Aire - Valor
+20,S,A,M,ZANT,Anti-Dump. Cliente %
+20,S,A,M,ZAPI,Valor API-MPI
+20,S,A,M,ZB00,Recargo (Valor)
+20,S,A,M,ZBXX,Precio bruto
+20,S,A,M,ZC00,Recargo/Cantidad
+20,S,A,M,ZCBD,Aduanas Bási. - DEPB
+20,S,A,M,ZCD1,Cliente básico - %
+20,S,A,M,ZCDB,Cliente Bás. - Valor
+20,S,A,M,ZCES,Cess - Derechos Adua
+20,S,A,M,ZCIF,CIF - Manual
+20,S,A,M,ZCLR,Cargos compensación
+20,S,A,M,ZCS,Cess - Derechos Adua
+20,S,A,M,ZCS1,Cess - Servicio Tota
+20,S,A,M,ZCS2,SCH serv. a pagar
+20,S,A,M,ZCS3,Cess - SIKKIM
+20,S,A,M,ZCU1,Cliente - BEF impto.
+20,S,A,M,ZCUS,Clientes - Orchid
+20,S,A,M,ZCV1,CVD - sin clave ACCR
+20,S,A,M,ZCV2,CVD - CESS
+20,S,A,M,ZCV8,SCH 1 %-on CVD
+20,S,A,M,ZCV9,Cus-SCH en Ed.Cess
+20,S,A,M,ZCVD,CESS en CVD
+20,S,A,M,ZDDP,DDP cargos - Valor
+20,S,A,M,ZDIF,MRP-para reclutar
+20,S,A,M,ZDIS,Descuento
+20,S,A,M,ZED,Descuento ED
+20,S,A,M,ZED1,Descuento ED - Orchi
+20,S,A,M,ZED2,Suma ED
+20,S,A,M,ZEX1,Exc. Manual Cant. ba
+20,S,A,M,ZEX2,IN Man. de impto. es
+20,S,A,M,ZEXC,Valor de impto manua
+20,S,A,M,ZEXF,Exc. Manual Cant. ba
+20,S,A,M,ZF10,Flete/cantdd AFT imp
+20,S,A,M,ZF11,Flete/cantdd BEF imp
+20,S,A,M,ZF15,Impto sobre vlor fle
+20,S,A,M,ZF16,Frgt ratio/ctdd.-Bf
+20,S,A,M,ZFOB,FOB - Manual
+20,S,A,M,ZFR1,Tsprt.(val)aft.impto
+20,S,A,M,ZFR2,Tsprt.% calc.BEF.IVA
+20,S,A,M,ZFR3,Tsprt% for B V
+20,S,A,M,ZFR4,Inland trsprt - Val
+20,S,A,M,ZFR5,Trsprt interior :%
+20,S,A,M,ZFR6,Valor de flete
+20,S,A,M,ZFR8,Cargos comunes [Val]
+20,S,A,M,ZFR9,Cargos de comisión
+20,S,A,M,ZFRM,Frt/qty aft tax -MPI
+20,S,A,M,ZG01,Entrg de marc. centr
+20,S,A,M,ZHCG,Handling(val)aft tax
+20,D,A,CQ,CQ01,Ressourcenpreise
+20,D,A,CS,A-B1,Löhne
+20,D,A,CS,A-B2,Gehälter
+20,D,A,CS,A-Z1,tarifl. Urlaubsgeld
+20,D,A,CS,A-Z2,tarifl. Jahresprämie
+20,D,A,CS,A-Z3,sonst.Personalkosten
+20,D,A,CS,SAPB,Vorlage: Basis
+20,D,A,CS,SAPZ,Vorlage: Zuschläge
+20,D,A,F,FB00,Güterklasse / Gew
+20,D,A,F,FB10,Pauschale
+20,D,A,F,FB20,Preis aus Transport
+20,D,A,F,FD00,Marge
+20,D,A,F,FD10,Marge absolut
+20,D,A,F,FLTL,Teilladung/Postleit.
+20,D,A,M,ZFRV,Zoll Antidumping Mng
+20,S,A,M,ZFRV,Valor de flete
+20,D,A,M,ZPC3,Zoll Antidumping Mng
+20,D,A,M,ZPC4,Zoll Antidumping Mng
+20,S,A,M,ZPC3,P&F % sobre base
+20,S,A,M,ZPC4,P&F valor BEF impto
+20,D,A,M,ZTLD,Zoll Antidumping Mng
+20,S,A,M,ZTLD,PFVal. calc. AFT imp
+20,D,A,F,FS00,Container
+20,D,A,F,FS01,Container/Gew/Entf.
+20,D,A,F,FT00,Vorsteuer
+20,D,A,F,MB00,Gew/Entfernung
+20,D,A,F,MB01,Gew/Entf. Schnittgew
+20,D,A,F,SP00,Findung SperrigGrp
+20,D,A,KA,B000,Material
+20,O,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,O,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,O,A,TX,JP4U,A/P Sales Tax 4 Use
+20,O,A,TX,JR1,A/R Sales Tax 1
+20,O,A,TX,JR2,A/R Sales Tax 2
+20,O,A,TX,JR3,A/R Sales Tax 3
+20,O,A,TX,JR4,A/R Sales Tax 4
+20,O,A,TX,KPXX,Utgående moms (test)
+20,O,A,TX,MWAA,Utligningsmoms
+20,O,A,TX,MWAL,Luksusskatt
+20,O,A,TX,MWAR,Utgående moms-avrund
+20,O,A,TX,MWAS,Utgående moms
+20,O,A,TX,MWRK,Reisekostn. (fra H)
+20,O,A,TX,MWS1,Delbeløp
+20,O,A,TX,MWST,Utgående moms
+20,O,A,TX,MWVN,"InngMoms,ikke fradr."
+20,O,A,TX,MWVR,Inng.moms - avrund.
+20,O,A,TX,MWVS,Inng. moms
+20,O,A,TX,MWVY,"InngMoms,ikke fradr."
+20,O,A,TX,MWVZ,"InngMoms,ikke fradr."
+20,O,A,TX,MWZG,Motpost - investAvg
+20,O,A,TX,MWZU,Investment Tax Norw.
+20,O,A,TX,NLXA,Skatt v/ansk. - utg.
+20,O,A,TX,NLXV,Skatt v/ansk. - inng
+20,O,A,TX,PST,Provincial Sales Tax
+20,O,A,TX,PTI1,A/P PST distributed
+20,O,A,TX,PTI2,A/P PST seperate GL
+20,V,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,V,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,V,A,TX,AP1U,A/P Sales Tax 1 Use
+20,V,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,V,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,V,A,TX,AP2U,A/P Sales Tax 2 Use
+20,V,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,V,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,V,A,TX,AP3U,A/P Sales Tax 3 Use
+20,V,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,V,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,V,A,TX,AP4U,A/P Sales Tax 4 Use
+20,V,A,TX,AR1,A/R Sales Tax 1
+20,V,A,TX,AR2,A/R Sales Tax 2
+20,V,A,TX,AR3,A/R Sales Tax 3
+20,V,A,TX,AR4,A/R Sales Tax 4
+20,V,A,TX,ARSD,Sales tax SD gräns
+20,V,A,TX,BASB,Basbelopp
+20,V,A,TX,BASI,Basbelopp
+20,V,A,TX,GTI1,A/P GST
+20,V,A,TX,GTI2,A/P GST
+20,V,A,TX,GTO1,A/R GST
+20,V,A,TX,GTO2,A/R GST
+20,V,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,V,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,V,A,TX,JP1U,A/P Sales Tax 1 Use
+20,V,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,V,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,V,A,TX,JP2U,A/P Sales Tax 2 Use
+20,V,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,V,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,V,A,TX,JP3U,A/P Sales Tax 3 Use
+20,V,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,V,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,V,A,TX,JP4U,A/P Sales Tax 4 Use
+20,V,A,TX,JR1,A/R Sales Tax 1
+20,V,A,TX,JR2,A/R Sales Tax 2
+20,V,A,TX,JR3,A/R Sales Tax 3
+20,V,A,TX,JR4,A/R Sales Tax 4
+20,V,A,TX,KPXX,Utgående moms test
+20,V,A,TX,MWAA,Kompensationsskatt
+20,V,A,TX,MWAL,Luxus-Steuer
+20,V,A,TX,MWAR,"Utgå.moms, avrundn."
+20,V,A,TX,MWAS,Utgående moms
+20,V,A,TX,MWRK,Traktamenten
+20,V,A,TX,MWS1,Delbelopp
+20,V,A,TX,MWST,Utgående moms
+20,V,A,TX,MWVN,Vorst. n. abz. n. zu
+20,V,A,TX,MWVR,"Ingå.moms, avrundn."
+20,V,A,TX,MWVS,Ingående moms
+20,V,A,TX,MWVY,Vorst.n.abz.zuord-Ab
+20,덆,A,KA,Y030,Other OH -Plant_EP16
+20,덆,A,KA,Y031,Other OH -Plant_EP16
+20,덆,A,M,ZTLD,PFVal calc after Tax
+20,V,A,TX,MWVZ,Vorst. n. abz. zuord
+20,V,A,TX,MWZG,Gegenpos.Investm.Tax
+20,V,A,TX,MWZU,Investment Tax Norw.
+20,V,A,TX,NLXA,Förvärvsskatt kredit
+20,V,A,TX,NLXV,Förvärvsskatt debet
+20,V,A,TX,PST,Provincial Sales Tax
+20,V,A,TX,PTI1,A/P PST distributed
+20,V,A,TX,PTI2,A/P PST seperate GL
+20,K,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,K,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,K,A,TX,AP1U,A/P Sales Tax 1 Use
+20,K,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,K,A,TX,AR3,A/R Sales Tax 3
+20,K,A,TX,AR4,A/R Sales Tax 4
+20,K,A,TX,ARSD,Sales Tax SD Interfa
+20,K,A,TX,BASB,Basisbeløb
+20,K,A,TX,BASI,Basisbeløb
+20,K,A,TX,GTI1,A/P GST
+20,K,A,TX,GTI2,A/P GST
+20,K,A,TX,GTO1,A/R GST
+20,K,A,TX,GTO2,A/R GST
+20,K,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,K,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,K,A,TX,JP1U,A/P Sales Tax 1 Use
+20,K,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,K,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,K,A,TX,JP2U,A/P Sales Tax 2 Use
+20,K,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,K,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,K,A,TX,JP3U,A/P Sales Tax 3 Use
+20,K,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,K,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,K,A,TX,JP4U,A/P Sales Tax 4 Use
+20,K,A,TX,JR1,A/R Sales Tax 1
+20,K,A,TX,JR2,A/R Sales Tax 2
+20,K,A,TX,JR3,A/R Sales Tax 3
+20,K,A,TX,JR4,A/R Sales Tax 4
+20,K,A,TX,KPXX,Salgsmoms - test
+20,K,A,TX,MWAA,Udligningsmoms
+20,K,A,TX,MWAL,Luksusafgift
+20,K,A,TX,MWAR,salgsmoms afrundet
+20,K,A,TX,MWAS,Salgsmoms
+20,K,A,TX,MWRK,Rejseomkostn. %
+20,K,A,TX,MWS1,Mellemtotal
+20,K,A,TX,MWST,Salgsmoms
+20,K,A,TX,MWVN,Ej frdBer. ej all.KM
+20,K,A,TX,MWVR,Købsmoms afrundet
+20,K,A,TX,MWVS,Købsmoms
+20,K,A,TX,MWVY,Ej frdBer. ej all.KM
+20,K,A,TX,MWVZ,Ej frdBer. ej all.KM
+20,K,A,TX,MWZG,Modpos. invest.afg.
+20,K,A,TX,MWZU,Invest.afg. Norw.
+20,K,A,TX,NLXA,Erhverv.moms udg.
+20,D,B,W1,RTB2,Akt.-Bekannt. Abfra.
+20,D,B,W1,RTB3,akt.-Bek. Abfr. Best
+20,D,B,W1,RTB5,Anmahnung Rückmeld.
+20,D,B,WA,RTA1,Aufteiler-AVIS
+20,D,B,WA,RTA2,Abfrage-AVIS
+20,D,B,WA,RTA3,Bestätigungs-AVIS
+20,D,B,WA,RTA4,AVIS Verteilzentrum
+20,D,B,WA,RTA5,Mahnung Rückmeldung
+20,D,B,WB,RTB1,A-Bekanntmachung
+20,D,B,WB,RTB2,A-Bekannt. Abfrage
+20,D,B,WB,RTB5,Anmahnung Rückmeld.
+20,D,B,WE,ET01,Materialetikett
+20,D,A,V,IBRX,Brazil tax calc.
+20,D,A,V,IC00,Zero Base value
+20,D,A,V,IC0X,BR: ICMS 0 excempt
+20,D,A,V,ICB2,ICMS Tax Base <-ICBS
+20,D,A,V,ICBS,ICMS Tax Base
+20,D,A,V,ICBX,IPI from SD
+20,D,A,V,ICCB,BR: ICMS comp.base
+20,D,A,V,ICCX,BR: ICMS comp.excmpt
+20,D,A,V,ICFR,BR: ICMS on freight
+20,D,A,V,ICLW,BR: ICMS Law
+20,D,A,V,ICM1,ICMS from SD
+20,D,A,V,ICM2,ICMS from SD
+20,D,A,V,ICM3,ICMS from SD
+20,D,A,V,ICM4,ICMS from SD
+20,D,A,V,ICMF,ICMS from SD
+20,D,A,V,ICMI,Price+Tax (for NF)
+20,D,A,V,ICMO,ICMS offset
+20,D,A,V,ICMP,ICMS/ISS on price
+20,D,A,V,ICMR,Price+ICMS/ISS (NF)
+20,D,A,V,ICOB,BR: ICMS other base
+20,D,A,V,ICOP,ICMS from SD
+20,D,A,V,ICOX,ICMS from SD
+20,D,A,V,ICS1,Sub.Trib. from SD
+20,D,A,V,ICS2,Sub.Trib. from SD
+20,D,A,V,ICSO,ISS  offset
+20,D,A,V,ICV2,ICMS Tax Rate <-ICVA
+20,D,A,V,ICVA,ICMS Tax Rate
+20,D,A,V,ICZF,ICMS Disc. Zona Fr.
+20,D,A,V,IDM2,Ausgangssteuer
+20,D,A,V,IDM3,Ausgangssteuer
+20,D,A,V,IDMW,Ausgangssteuer
+20,D,A,V,IDZF,BR: ICMS Discount ZF
+20,D,A,V,IFR1,ICMS ST freight  SD
+20,D,A,V,IFR3,ICMS on freight  SD
+20,D,A,V,IFS1,ICMS ST freight  SD
+20,D,A,V,IFS3,ICMS ST freight  SD
+20,D,A,V,INDX,Inflation Index
+20,D,A,V,IP0X,BR: IPI 0 excempt
+20,D,A,V,IPB2,IPI from SD <-IPBS
+20,D,A,V,IPBO,IPI from SD
+20,D,A,V,IPBS,IPI from SD
+20,D,A,V,IPI1,IPI from SD
+20,D,A,V,IPI2,IPI from SD
+20,D,A,V,IPI3,IPI from SD
+20,D,A,V,IPI6,IPI from SD
+20,D,A,V,IPIA,Price+Tax (for NF)
+20,D,A,V,IPIB,Price+Tax (for NF)
+20,D,A,V,IPIC,Copy of IPI from SD
+20,D,A,V,IPIO,IPI offset
+20,D,A,V,IPIP,BR: IPI Pauta
+20,D,A,V,IPLW,BR: IPI Law
+20,D,A,V,IPOB,BR: IPI other base
+20,D,A,V,IPP2,BR: IPI Pauta
+20,D,A,V,IPV2,IPI from SD
+20,D,A,V,IPV3,IPI from SD
+20,D,A,V,IPVA,IPI from SD
+20,D,A,V,ISS3,ISS from SD
+20,D,A,V,IST3,BR: Sub.Trib SurType
+20,D,A,V,IST4,BR: Sub.Trib SurType
+20,D,A,V,ISTA,Sub. Trib Rate
+20,D,A,V,ISTB,Sub. Trib Base Value
+20,D,A,V,ISTF,BR: Sub.Trib FixPric
+20,D,A,V,ISTM,BR: Sub.Trib MinPric
+20,D,A,V,ISTS,Brazil tax calc.
+20,D,A,V,ISTT,BR: Sub.Trib SurType
+20,D,A,V,ISTV,Brazil tax calc.
+20,D,A,V,ISV2,BR: ISS amount<-ISVA
+20,D,A,V,ISVA,BR: ISS amount
+20,D,A,V,IV01,PreisInterneVerrechn
+20,D,A,V,IV02,PreisInterneVerrProz
+20,D,A,V,IZF2,ICMS Discount
+20,D,A,V,IZOF,BR: Zona Franca
+20,D,A,V,J1A1,GI Percep. Region 1
+20,D,A,V,J1A2,GI Percep. Region 2
+20,D,A,V,J1A3,GI Percep. Region 3
+20,D,A,V,J1AP,VAT Perception I
+20,D,A,V,J1AQ,VAT Perception II
+20,D,A,V,J1AU,VAT
+20,D,A,V,J1AV,Interne Umsatzsteuer
+20,D,A,V,J1AX,VAT II
+20,D,A,V,J1W1,Quellensteuer 1
+20,D,A,V,J1X1,GI Perc. Region 1 II
+20,D,A,V,J1X2,GI Perc. Region 2 II
+20,D,A,V,J1X3,GI Perc. Region 3 II
+20,D,A,V,JR1,Tax Jur Code Level 1
+20,D,A,V,JR2,Tax Jur Code Level 2
+20,D,A,V,JR3,Tax Jur Code Level 3
+20,D,A,V,JR4,Tax Jur Code Level 4
+20,D,A,V,K004,Material
+20,D,A,V,K005,Kunde/Material
+20,D,A,V,K007,Kundenrabatt
+20,D,A,V,KF00,Fracht
+20,D,A,V,MRP,Preis
+20,D,A,V,MWC1,Impuesto consumo(CO)
+20,D,A,V,MWC2,ICA-manuell     (CO)
+20,D,A,V,MWEX,Externer MWST
+20,D,A,V,MWIC,Ausgangssteuer
+20,D,A,V,MX01,I.E.P.S.  (MEXIKO)
+20,D,A,V,NETD,Differenzenausgleich
+20,D,A,V,NETP,Preis
+20,D,A,V,NLNA,Ausgangssteuer
+20,D,A,V,NLXN,Ausgangssteuer
+20,D,A,V,PBUD,Preisbuch-Basis
+20,D,A,V,PCAM,Gebühren AMEX
+20,D,A,V,PDIF,Differenzwert(eigen)
+20,D,A,V,PI01,PreisInterneVerrechn
+20,D,A,V,PI02,PreisInterneVerrProz
+20,D,A,V,PR00,Preis
+20,D,A,V,PSPM,Marge
+20,D,A,V,PTAM,American Express
+20,D,A,V,PTDI,Diners Card
+20,D,A,V,PTEU,Eurocard
+20,D,A,V,PTR,Preis
+20,D,A,V,PTS,Preis
+20,D,A,V,PTVI,VISA Card
+20,D,A,V,R100,100%-Abschlag
+20,D,A,V,RB00,Absolutrabatt
+20,D,A,V,RL00,Delkredere
+20,D,A,V,SKTO,Skonto
+20,D,A,V,ATX1,Ausgangssteuer
+20,D,A,V,CTX2,PST (Canada)
+20,D,A,V,CTXJ,TacJurDictioncode
+20,D,A,V,ICS3,Sub.Trib. from SD
+20,D,A,V,MWSI,Ausgangssteuer
+20,D,A,V,MWST,Ausgangssteuer
+20,D,A,V,PNTP,Nettopreis
+20,D,A,V,MWAS,Ausgangssteuer
+20,F,A,V,K005,Customer/Material
+20,F,A,V,K007,Customer Discount
+20,F,A,V,K020,Price Group
+20,F,A,V,K029,Material pricing grp
+20,F,A,V,K030,Customer/Mat.Pr.Grp
+20,F,A,V,K031,Price Grp/Mat.Pr.Grp
+20,F,A,V,K032,Price Group/Material
+20,F,A,V,K148,Product Hierarchy
+20,F,A,V,KA00,Sales deal
+20,F,A,V,KA02,Promo Discount % 1
+20,F,A,V,KA03,Promo Discount % 2
+20,F,A,V,KA04,Promo Discount MD 1
+20,F,A,V,KA05,Promo Discount MD 2
+20,F,A,V,KAD0,Material Costs(VKHM)
+20,F,A,V,KAD1,Handling Costs(VKHM)
+20,F,A,V,KBM1,Good Will/Guarantee
+20,F,A,V,KF00,Freight
+20,F,A,V,KP00,Pallet Discount
+20,F,A,V,KP01,Incomp.Pallet Surch.
+20,F,A,V,JR2,Tax Jur Code Level 2
+20,F,A,V,JR3,Tax Jur Code Level 3
+20,F,A,V,JR4,Tax Jur Code Level 4
+20,F,A,V,JRC1,Canadian GST
+20,F,A,V,JRC2,Canadian PST
+20,F,A,V,JRC3,Canadian PST(B+GST)
+20,F,A,V,JRC4,PST (Base+GST) Cdn
+20,F,A,V,JSED,IN A/R SED
+20,F,A,V,JTC1,IN 206C(1H) Goods
+20,F,A,V,JTC2,IN:206C Others
+20,F,A,V,JTCB,IN: TCS Base
+20,F,A,V,JTRD,IN Trade discount
+20,F,A,V,JTX1,Tax Jurisdict.Code d
+20,F,A,V,JTX2,Tax Jurisdict.Code d
+20,F,A,V,JTX3,Tax Jurisdict.Code d
+20,F,A,V,JTX4,Tax Jurisdict.Code d
+20,F,A,V,JZBV,IN: Zero base
+20,F,A,V,K004,Material
+20,D,A,V,FP00,Preis
+20,D,A,V,ZPA3,Preisbuch-Basis
+20,D,A,V,ZTD3,Preisbuch-Basis
+20,F,A,V,FP00,Prix ​​du formulaire
+20,F,A,V,ZPA3,Pourcentage PA
+20,F,A,V,ZTD3,Remise commerciale
+20,S,A,V,ZPA3,Porcentaje PA
+20,S,A,V,ZTD3,Descuento comercial
+20,D,A,V,ZOT3,Kundenrabatt
+20,F,A,V,ZOT3,Ordinary Terms
+20,S,A,V,ZOT3,Términos ordinarios
+20,D,A,V,ZOT4,Kundenrabatt
+20,F,A,V,ZOT4,Ordinary Terms
+20,S,A,V,ZOT4,Términos ordinarios
+20,D,A,V,SKTV,Skonto
+20,D,A,V,SP00,Preis
+20,D,A,V,STTX,State Tax Sales Aud.
+20,D,A,V,TED,Preis
+20,D,A,V,TRIG,Ereignis Trigger
+20,D,A,V,UTX1,State Sales Tax
+20,D,A,V,UTX2,County Sales Tax
+20,D,A,V,UTX3,City Sales Tax
+20,D,A,V,UTXD,US-Tax pro Beleg
+20,D,A,V,UTXE,US-Tax pro Beleg
+20,D,A,V,VA00,Variantenpreis
+20,D,A,V,VA01,Variantenpreis
+20,D,A,V,VASE,Variantenpreis
+20,D,A,V,VPRS,Verrechnungspreis
+20,D,A,V,XR1,Tax Jur Code Level 1
+20,D,A,V,XR2,Tax Jur Code Level 2
+20,D,A,V,XR3,Tax Jur Code Level 3
+20,D,A,V,XR4,Tax Jur Code Level 4
+20,D,A,V,XR5,Tax Jur Code Level 5
+20,D,A,V,XR6,Tax Jur Code Level 6
+20,D,A,V,ZABT,Preis
+20,D,A,V,ZBOT,Preis
+20,D,A,V,ZBOV,Preis
+20,D,A,V,ZCPC,Preis
+20,D,A,V,ZDIS,Preisbuch-Basis
+20,D,A,V,ZED,Preis
+20,D,A,V,ZFED,Preis
+20,D,A,V,ZJOI,Preis
+20,D,A,V,ZOCT,Preisbuch-Basis
+20,D,A,V,ZOT1,Kundenrabatt
+20,D,A,V,ZOT2,Preisbuch-Basis
+20,D,A,V,ZOTH,Fracht
+20,D,A,V,ZPA1,Preisbuch-Basis
+20,D,A,V,ZPA2,Preisbuch-Basis
+20,D,A,V,ZPRS,Verrechnungspreis
+20,D,A,V,ZRAT,Preis
+20,D,A,V,ZTD1,Preisbuch-Basis
+20,D,A,V,ZTD2,Preisbuch-Basis
+20,D,A,V,PTS1,Preis
+20,D,A,V,ZINS,Preisbuch-Basis
+20,D,A,V,ZPTS,Preis
+20,D,A,V,ZPE1,Quellensteuer 1
+20,D,A,V,ZRPE,100%-Abschlag
+20,D,A,V,ZPE2,Quellensteuer 1
+20,S,A,V,AMIW,Valor mínimo pedido
+20,D,A,V,ZPE3,Quellensteuer 1
+20,S,A,V,AMIZ,Recargo val.mínimo
+20,S,A,V,KW00,Valoración del grupo
+20,S,A,V,AV,Valor evaluable
+20,S,A,V,LCFR,LicencFiscal Francia
+20,S,A,V,AZWR,Anticipo/Compensac.
+20,S,A,V,LCIT,Licencia IVA Italia
+20,S,A,V,MRP,M.R.P.
+20,S,A,V,MS15,Impuesto 15%
+20,S,A,V,BI00,Ficticio no estadís.
+20,S,A,V,MW01,Causante impuestos
+20,S,A,V,BO01,Rappel mat./grupos
+20,S,A,V,MW07,Impuesto 7%
+20,S,A,V,BO02,Rappel material
+20,S,A,V,MW15,Impto.dto.factoring
+20,S,A,V,BO03,Rappel cliente
+20,S,A,V,BO04,Rappel jerarquía
+20,S,A,V,MWB1,Procedim.Berlín A1
+20,S,A,V,BO05,Rappel jerarq./Mat.
+20,S,A,V,MWB2,Procedim.Berlín A2
+20,S,A,V,BO06,Rappel ind.vol.neg.
+20,S,A,V,BOLL,Sello de factura
+20,S,A,V,MWC0,IVA             (CO)
+20,S,A,V,BOTX,Bon Ofr Base para im
+20,S,A,V,MWC2,ICA manual      (CO)
+20,S,A,V,CCPC,Cargos CCPC
+20,S,A,V,MWEX,IVA externo
+20,S,A,V,MWI1,Impto.incl.en prc.
+20,S,A,V,CNTX,County Tax Sal.Aud.
+20,S,A,V,MWI2,Impto.en descuentos
+20,S,A,V,CP,Precio tope
+20,S,A,V,MWIG,Impto.
+20,S,A,V,CTX2,PST (Canadá)
+20,S,A,V,MWIS,Total impto.
+20,S,A,V,MWR1,ImptoVolNeg man.(RU)
+20,E,A,W,WWV3,Sales Price 3
+20,E,A,TX,JTC1,IN 206C(1H) Goods
+20,E,A,TX,JTCS,IN 206C(1H) Goods
+20,E,A,KA,Y023,Other OH -Plant_EP16
+20,E,A,TX,JVME,VAT RM Deductible
+20,E,A,TX,ZRO1,IT: RCM Output Vat
+20,E,A,TX,ZRO2,IT: RCM Output Vat
+20,E,A,TX,JRC5,A/R Sales HST
+20,E,A,M,RUB1,Neutr.Accruals(Val.)
+20,E,A,M,RUC1,Neutral Accruals/Qty
+20,E,A,M,RUE1,Neutral % Accruals
+20,E,A,M,S000,Calculated Revenues
+20,E,A,M,SAD1,Special Adl Duty
+20,E,A,M,SBCB,Basis
+20,E,A,M,SKTO,Cash Discount
+20,E,A,M,TRIG,Event Trigger
+20,E,A,M,VA00,Variants/Quantity
+20,E,A,M,VA01,Variants %
+20,E,A,M,VKP0,Sales Price inc. Tax
+20,E,A,M,VKP1,Sales Price excl.Tax
+20,E,A,M,VS00,Tax trigger
+20,E,A,M,VS01,Agency Tax
+20,E,A,M,VS15,Factoring Disc. Tax
+20,E,A,M,VSRG,Tax Amount Payer
+20,E,A,M,YCV1,IN CVD
+20,E,A,M,ZA00,Surcharge % on Net
+20,E,A,M,ZA01,Surcharge % on Gross
+20,E,A,M,ZADC,Addln.Duty of Custom
+20,E,A,M,ZANT,Anti-Dumping Cust %
+20,E,A,M,ZB00,Surcharge (Value)
+20,E,A,M,ZBXX,Gross Price
+20,E,A,M,ZC00,Surcharge/Quantity
+20,E,A,M,ZCD1,Basic customs - %
+20,E,A,M,ZCES,Cess - Customs Duty
+20,E,A,TX,JEX2,A/P ECS Inv Total
+20,E,A,TX,JHX1,A/P SEcess Setoff
+20,E,A,TX,JHX2,A/P ShECS Invent Tot
+20,E,A,TX,JHZ1,A/P SHEcs Setoff Tot
+20,E,A,TX,JICG,IN: Central GST
+20,E,A,TX,JICN,IN: Central GST -ND
+20,E,A,TX,JICR,IN: RCM CGST
+20,E,A,TX,JIDC,IN:GST Comp.Cess-IMP
+20,E,A,TX,JIIG,IN: Integrated GST
+20,E,A,TX,JIIN,IN:Integrated GST-ND
+20,E,A,TX,JIIR,IN:RCM IGST
+20,E,A,TX,JIMD,IN:Import GST deduct
+20,E,A,TX,JIMN,IN:Import GST ND
+20,E,A,TX,JIN6,A/R VAT Payable
+20,E,A,TX,JIN7,A/R CST Payable-VAT
+20,E,A,TX,JIN8,A/R CST Surchrg -VAT
+20,E,A,TX,JINC,IN:GST Comp.Cess-ND
+20,E,A,TX,JIP4,A/P CST Non deductib
+20,E,A,TX,JIP5,A/P VAT RM Deductibl
+20,E,A,TX,JIP7,A/P VAT CG Deductib
+20,E,A,TX,JIP8,A/P VAT CG Non-Deduc
+20,E,A,TX,JIP9,IN:A/P LST T.O.T
+20,E,A,TX,JIPA,IN:A/P LST Surcharge
+20,E,A,TX,JIPB,IN:A/PLST Resale Tax
+20,E,A,TX,JIPD,IN:A/P CST Surcharge
+20,E,A,TX,JISN,IN: State GST - ND
+20,E,A,TX,JISR,IN: RCM SGST
+20,E,A,TX,JIUG,IN: Union Ter. GST
+20,E,A,TX,JIUN,IN:Union Ter. GST ND
+20,E,A,TX,JIUR,IN: RCM UTGST
+20,E,A,TX,JKK1,IN:AP KK RCM
+20,E,A,TX,JKK2,IN:KKC RCM offset
+20,E,A,TX,JKKP,IN:AP KK Cess
+20,E,A,TX,JOCG,IN: Central GST- OP
+20,E,A,TX,JOIG,IN: Integratd GST-OP
+20,E,A,TX,JOSG,IN: State GST- OP
+20,E,A,TX,JOUG,IN: Union Ter GST OP
+20,E,A,TX,JS11,A/P STax Exp Out
+20,E,A,TX,JSA1,IN: Service Tax Aba1
+20,E,A,TX,JSA2,Service Tax Aba2
+20,E,A,TX,JSB1,IN:A/P SB Service
+20,E,A,TX,JSB2,IN: OP SB Cess
+20,E,A,TX,JSB3,IN:A/P SB ST RCM
+20,E,A,TX,JSB4,IN: SB ST RCM offset
+20,E,A,TX,JSEI,A/P SECess inven
+20,E,A,TX,JSEP,A/P SECess setoff
+20,E,A,TX,JSRT,A/P Service Tax
+20,E,A,TX,JSTE,ECS on Service Tax
+20,E,A,TX,JSTS,SECes on Service Tax
+20,E,A,TX,JVCD,VAT CG Deductible
+20,E,A,TX,JVCN,VAT CG NonDeduc.
+20,E,A,TX,JVCS,IN CST Against Form
+20,E,A,TX,JVRN,VAT RM NonDeduc.
+20,E,A,TX,JVSD,Service Tax Debit
+20,E,A,TX,KPXX,Output Tax (test)
+20,E,A,TX,MSKA,Output tax SK
+20,E,A,TX,MSKV,Input tax SK
+20,E,A,TX,MWAA,Clearing Tax
+20,E,A,TX,MWAL,Sumptuary Tax
+20,E,A,TX,MWAR,Round.Down OutputTax
+20,E,A,TX,MWR1,Sales Tax Credit(RU)
+20,E,A,TX,MWR2,Sales Tax Debit Rev
+20,E,A,TX,MWR3,Sales Tax Credit Rev
+20,E,A,TX,MWR7,GSM Credit      (RU)
+20,E,A,TX,MWRK,Travel Expenses (%)
+20,E,A,TX,MWST,Output Tax-GB
+20,E,A,TX,MWVR,Round Off Input Tax
+20,E,A,TX,MWZG,Offsett.Item-Inv.Tax
+20,E,A,TX,YVCS,IN CST FOR FG - FORM
+20,E,A,TX,YVRD,VAT FG Deductible
+20,E,A,TX,YVRN,VAT FG NonDeduc.
+20,E,A,TX,Z000,IN:A/P Non Taxable
+20,E,A,TX,ZASU,IN A/R addl Surchrge
+20,E,A,TX,ZCRN,IN: RCM CGST Inv
+20,E,A,TX,ZENT,IN A/R Entry Tax
+20,E,A,TX,ZFOD,Tax-Food Prod.(Raj)
+20,E,A,TX,ZIRN,IN: RCM IGST Inv
+20,E,A,TX,ZRCN,IN: RCM CESS Inv
+20,E,A,TX,ZSRN,IN: RCM SGST Inv
+20,E,A,TX,ZTDS,TDS on Scrap Sales
+20,E,A,TX,ZTOT,IN A/R TurnOver Tax
+20,E,A,TX,ZURN,IN: RCM UTGST Inv
+20,E,A,TX,ZVCS,IN CST SET OFF
+20,E,A,TX,ZVRD,A/P VAT Dedu.Adl.Tax
+20,E,A,W,WWV4,Sales Price 4
+20,E,A,TX,JTC2,IN 206C(1H) Others
+20,E,A,TX,ZTC1,AP-206C(1H)Goods+GST
+20,E,A,TX,ZTC3,AP-206C(1H)Goods
+20,E,A,M,ZF15,Freight Value-Bf tax
+20,E,A,M,ZCU1,Customs - bef tax
+20,E,A,M,ZDDP,DDP charges -value
+20,E,A,KA,B020,Material - Oth OH
+20,E,A,KA,Y020,Other OH -LL Plant
+20,E,A,KA,Y021,Other OH -Plant_EP04
+20,E,A,KA,Y022,Other OH -Plant_EP18
+20,E,A,KA,Y024,Other OH -Plant_EP24
+20,E,A,KA,Y025,Other OH -Plant_EP26
+20,E,A,KA,Y026,Other OH -Plant_EP27
+20,E,A,M,ZENS,Energy Surcharge
+20,E,A,TX,ZRCM,IT: RCM Input Vat
+20,E,A,TX,ZRCV,IT:Input VAT RCM
+20,E,A,KA,Y027,Other OH -Plant_EP22
+20,E,A,KA,Y028,Other OH -Plant_EP28
+20,E,A,M,ZCLI,Clearing Charg othr
+20,E,A,M,ZHSS,Health Cess
+20,E,A,M,ZINT,Interest Amount
+20,E,A,M,ZPNT,Penalty Condition
+20,E,A,KE,ZSTP,Std Cost for COPA
+20,F,A,TX,MWNI,N.d.input tax
+20,F,A,TX,MWPI,Round.Up Output Tax
+20,F,A,TX,MWR1,Sales Tax Credit(RU)
+20,F,A,TX,MWR2,Sales Tax Debit Rev
+20,F,A,TX,MWR3,Sales Tax Credit Rev
+20,F,A,TX,MWR4,Local SalesTax Cred.
+20,F,A,TX,MWR5,Local Debit Rev.(RU)
+20,F,A,TX,MWR6,Local Credit Rev.
+20,F,A,TX,MWR7,GSM Credit      (RU)
+20,F,A,TX,MWR8,GSM Debit Rev.  (RU)
+20,F,A,TX,MWR9,GSM Credit Rev. (RU)
+20,F,A,TX,MWVI,Input Tax Round.up
+20,F,A,TX,MWWS,Simplif. Tax Output
+20,F,A,TX,MWZB,Invst.Tax Norw.Basis
+20,F,A,TX,MWZI,Non-ded.InputTax -RU
+20,F,A,TX,MWZS,Simplif. Tax Input
+20,F,A,TX,NLAI,Acqu.Tax Outgoing-RU
+20,F,A,TX,NLNA,Non-ded  Acqu. Tax
+20,F,A,TX,NLVI,Acqu.Tax Inc.- Ro.up
+20,F,A,TX,NLXN,Non-ded. Acqu. Tax
+20,F,A,TX,NZE1,NZ Entertain-GST inv
+20,F,A,TX,NZE2,NZ Entertainment Tax
+20,F,A,TX,PTI3,A/P PST Separate GL
+20,F,A,TX,PTI4,A/P PST Sep. B+GST
+20,F,A,TX,PTU1,A/P Usage
+20,F,A,TX,PTU2,A/P Usage B+GST
+20,F,A,TX,XP1E,A/P Sales Tax 1 Exp.
+20,F,A,TX,XP1I,A/P Sales Tax 1 Inv.
+20,F,A,TX,XP1U,A/P Sales Tax 1 Use
+20,F,A,TX,XP1X,A/P Sales Tax 1 Ext.
+20,F,A,TX,XP2E,A/P Sales Tax 2 Exp.
+20,F,A,TX,XP2I,A/P Sales Tax 2 Inv.
+20,F,A,TX,XP2U,A/P Sales Tax 2 Use
+20,F,A,TX,XP2X,A/P Sales Tax 2 Ext.
+20,F,A,TX,XP3E,A/P Sales Tax 3 Exp.
+20,F,A,TX,XP3I,A/P Sales Tax 3 Inv.
+20,F,A,TX,XP3U,A/P Sales Tax 3 Use
+20,F,A,TX,XP3X,A/P Sales Tax 3 Ext.
+20,F,A,TX,JIPA,IN:A/P LST Surcharge
+20,F,A,TX,JIPB,IN:A/PLST Resale Tax
+20,F,A,TX,JIPC,IN C Sales tax inv.
+20,F,A,TX,JIPD,IN:A/P CST Surcharge
+20,F,A,TX,JIPL,IN L Sales tax inv.
+20,F,A,TX,JIPS,IN Sales tax setoff
+20,F,A,TX,JISG,IN: State GST
+20,F,A,TX,JISN,IN: State GST - ND
+20,F,A,TX,JISR,IN: RCM SGST
+20,F,A,TX,JIUG,IN: Union Ter. GST
+20,F,A,TX,JIUN,IN:Union Ter. GST ND
+20,F,A,TX,JIUR,IN: RCM UTGST
+20,F,A,TX,JKK1,IN:AP KK RCM
+20,F,A,TX,JKK2,IN:KKC RCM offset
+20,F,A,TX,JKKP,IN:AP KK Cess
+20,F,A,TX,JLS1,IN A/P LST out
+20,F,A,TX,JLS2,IN A/P LST Surc out
+20,F,A,TX,JMIP,IN: BED inventory %
+20,F,A,TX,JMIQ,IN: BED inventory Qt
+20,F,A,TX,JMO1,IN: A/P BED deductib
+20,F,A,TX,JMO2,IN: A/P BED non dedu
+20,F,A,TX,JMOD,IN: A/R BED
+20,F,A,TX,JMOP,IN: BED setoff %
+20,F,A,TX,JMOQ,IN: BED setoff Qty
+20,F,A,TX,JMX1,IN: A/P BED setoff
+20,F,A,TX,JMX2,IN: A/P BED inventor
+20,F,A,TX,JOCG,IN: Central GST- OP
+20,F,A,TX,JOIG,IN: Integratd GST-OP
+20,F,A,TX,JOSG,IN: State GST- OP
+20,F,A,TX,JOUG,IN: Union Ter GST OP
+20,F,A,TX,JRC1,A/R Sales GST
+20,F,A,TX,JRC2,A/R Sales PST
+20,F,A,TX,JRC3,A/R Sales PST B +PST
+20,F,A,TX,JRC4,A/R Sales PST B +PST
+20,F,A,TX,JS11,A/P STax Exp Out
+20,F,A,TX,JSA1,IN: Service Tax Aba1
+20,F,A,TX,JSA2,Service Tax Aba2
+20,F,A,TX,JSB1,IN:A/P SB Service
+20,F,A,TX,JSB2,IN: OP SB Cess
+20,F,A,TX,JSB3,IN:A/P SB ST RCM
+20,F,A,TX,JSB4,IN: SB ST RCM offset
+20,F,A,TX,JSED,IN: A/R SED
+20,F,A,TX,JSEI,A/P SECess inven
+20,F,A,TX,JSEP,A/P SECess setoff
+20,F,A,TX,JSER,IN: Service tax
+20,F,A,TX,JSIP,IN SED inventory %
+20,F,A,TX,JSIQ,IN SED inventory Qty
+20,F,A,TX,JSO1,IN: A/P SED deductib
+20,F,A,TX,JSO2,IN:A/P SED non deduc
+20,F,A,TX,JSOP,IN: SED setoff %
+20,F,A,TX,JSOQ,IN: SED setoff Qty
+20,F,A,TX,JSRT,A/P Service Tax
+20,F,A,TX,JSTE,ECS on Service Tax
+20,F,A,TX,JSTS,SECes on Service Tax
+20,F,A,TX,JSVD,IN:Service tax debit
+20,F,A,TX,JSX1,IN: A/P SED setoff
+20,F,A,TX,JSX2,IN: A/P SED inventor
+20,F,A,TX,JTC1,IN 206C(1H) Goods
+20,F,A,TX,JTC2,IN 206C(1H) Others
+20,F,A,TX,JTCS,IN 206C(1H) Goods
+20,F,A,TX,JVCD,VAT CG Deductible
+20,F,A,TX,JVCN,VAT CG NonDeduc.
+20,F,A,TX,JVCS,IN CST Against Form
+20,F,A,TX,JVME,VAT RM Deductible
+20,F,A,TX,JVRD,VAT RM Deductible
+20,F,A,TX,JVRN,VAT RM NonDeduc.
+20,F,A,TX,JVSD,Service Tax Debit
+20,F,A,TX,KRIC,Construc. Inp Tax KR
+20,F,A,TX,KRIT,Input Tax KR
+20,F,A,TX,KRNI,Issue Exemption
+20,F,A,TX,KRNT,Non-ded.Input Tax KR
+20,F,A,TX,KROT,Output Tax KR
+20,F,A,TX,KRPP,Payment by proxy KR
+20,F,A,TX,MAR,A/P Maritime
+20,F,A,TX,46082,A/R Maritime
+20,F,A,TX,MSKA,Output tax SK
+20,F,A,TX,MSKV,Input tax SK
+20,F,A,TX,MW01,Tax Trigger RU
+20,F,A,TX,MWAI,Round.Up Output Tax
+20,F,A,TX,MWAN,N.d. Output Tax
+20,F,A,TX,MWCN,Flat-rate Tax China
+20,E,A,M,ZABT,MRP-abatement
+20,E,A,M,ZAF1,Air  Frt %
+20,E,A,M,ZAF2,Air  Frt - Value
+20,E,A,M,ZAPI,API Value-MPI
+20,E,A,M,ZCBD,Basic Customs - DEPB
+20,E,A,M,ZCDB,Basic  Cust - Value
+20,E,A,M,ZCLR,Clearing Charges
+20,E,A,M,ZCS1,Cess - on Total Duty
+20,E,A,M,ZCS2,SCH on dut y payable
+20,E,A,M,ZCS3,Cess - SIKKIM
+20,E,A,M,ZCUS,Customs - Orchid
+20,E,A,M,ZCV1,CVD - w/o accrl key
+20,E,A,M,ZCV9,Cus-SCH on Ed.Cess
+20,E,A,M,ZCVD,CESS on CVD
+20,E,A,M,ZDIF,MRP-For Recalculatn
+20,E,A,M,ZED,ED-Discount
+20,E,A,M,ZED1,ED discount - Orchid
+20,E,A,M,ZED2,ED addition
+20,E,A,M,ZEXC,Manual Excise Value
+20,E,A,M,ZF10,Freight/Qty aft tax
+20,E,A,M,ZF11,Freight/Qty bef tax
+20,E,A,M,ZFOB,FOB- Manual
+20,E,A,M,ZFR1,Freight (val)aft tax
+20,E,A,M,ZFR2,Frt % calc after tax
+20,E,A,M,ZFR3,Freight % for B V
+20,E,A,M,ZFR4,Inland frt - Value
+20,E,A,M,ZFR5,Inland frt :%
+20,E,A,M,ZFR8,Commin charges [Val]
+20,E,A,M,ZFR9,Commission charges
+20,E,A,M,ZIGS,Basic custom
+20,E,A,M,ZIN2,Insurance - Value
+20,E,A,M,ZIN3,Insurance - Customs
+20,E,A,M,ZIN4,Inland Insuarance %
+20,E,A,M,ZIN5,Inland Insur - Value
+20,E,A,M,ZISG,SGST(Statistical)
+20,E,A,M,ZLNC,Landing Charges
+20,E,A,M,ZMRP,Max Retailing Price
+20,E,A,M,ZNT1,Anti Dump. - Value
+20,E,A,M,ZOF1,Ocean Frt %
+20,E,A,M,ZOF2,Ocean Frt - Value
+20,E,A,M,ZPB1,FOC Price
+20,E,A,M,ZPC2,P&F value bef tax
+20,E,A,M,ZPK2,P&F& Pallet char-Fix
+20,E,A,M,ZPTP,PF% calc after tax
+20,E,A,M,ZRES,Resale Tax
+20,E,A,M,ZSET,IN: A/P Set Off
+20,E,A,M,ZSTX,Sub Total fr FG P2P
+20,E,A,M,ZVA1,VAT amount USA
+20,E,A,M,ZVAT,VAT Value
+20,E,A,ST,BSWR,Base Value
+20,E,A,TX,ARSD,Sls Tax SD Interface
+20,E,A,TX,BIF0,ICMS on Freight
+20,E,A,TX,BIPE,Calculate Excl./Oth.
+20,E,A,TX,ICOP,ICMS complement
+20,E,A,TX,IRD4,SUBT Reimbur. Offset
+20,E,A,TX,IRD6,SUBT Reim.Offset NVV
+20,E,A,TX,JA1I,A/R SEcess Invent-
+20,E,A,TX,JA1S,A/R SEcess setoff-
+20,E,A,TX,JA1X,A/R Secon&Hr.ECS-
+20,E,A,TX,JAE1,IN: ECS  for Abate
+20,F,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,F,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,F,A,TX,AP1U,A/P Sales Tax 1 Use
+20,F,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,F,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,D,A,KA,B001,Löhne
+20,D,A,KA,B002,Gehälter
+20,D,A,KA,B010,Fertigung
+20,D,A,KA,B090,Verkauf Eigenerzeug.
+20,D,A,KA,B101,Löhne Kostenst/LArt
+20,D,A,KA,C000,GK-Material
+20,D,A,KA,C001,GK-Fertigung
+20,D,A,KA,C002,GK-Verwaltung
+20,D,A,KA,C003,GK-Vertrieb
+20,D,A,KA,C010,GK-Material/Zschl
+20,D,A,KA,C011,GK-Fertigung/Zschl
+20,D,A,KA,C012,GK-Verwaltung/Zschl
+20,D,A,KA,C013,GK-Vertrieb/Zschl
+20,D,A,KA,C020,GK-Material/Werk
+20,D,A,KA,C021,GK-Fertigung/Werk
+20,D,A,KA,C022,GK-Verwaltung/Werk
+20,D,A,KA,C023,GK-Vertrieb/Werk
+20,D,A,KA,C030,GK-Material/BuKrs
+20,D,A,KA,C031,GK-Fertigung/BuKrs
+20,D,A,KA,C032,GK-Verwaltung/BuKrs
+20,D,A,KA,C033,GK-Vertrieb/BuKrs
+20,D,A,KA,C040,GK-Material/Gsber
+20,D,A,KA,C041,GK-Fertigung/Gsber
+20,D,A,KA,C042,GK-Verwaltung/Gsber
+20,D,A,KA,C043,GK-Vertrieb/Gsber
+20,D,A,KA,C050,GK-Material/AArt
+20,D,A,KA,C051,GK-Fertigung/AArt
+20,D,A,KA,C052,GK-Verwaltung/AArt
+20,D,A,KA,C053,GK-Vertrieb/AArt
+20,D,A,KA,C060,GK-Material/ATyp
+20,D,A,KA,C061,GK-Fertigung/ATyp
+20,D,A,KA,C062,GK-Verwaltung/ATyp
+20,D,A,KA,C063,GK-Vertrieb/ATyp
+20,D,A,KA,C070,GK-Material/Version
+20,D,A,KA,C080,GK-Mat./Profit Ctr.
+20,D,A,KA,C100,GK-Material
+20,D,A,KA,C110,GK-Material/Zschl
+20,D,A,KA,C120,GK-Material/Werk
+20,D,A,KA,C130,GK-Material/BuKrs
+20,D,A,KA,C140,GK-Material/Gsber
+20,D,A,KA,C150,GK-Material/AArt
+20,D,A,KA,C160,GK-Material/ATyp
+20,D,A,KA,C170,GK-Material/Version
+20,D,A,KA,C180,GK-Mat./Profit Ctr.
+20,D,A,KA,Y011,GK-Material/Zschl
+20,D,A,M,A001,Bonus
+20,D,A,M,A002,Materialbonus
+20,D,A,M,A003,Hierarchie-Bonus
+20,D,A,M,A004,Hierarchiebonus/Mat
+20,D,A,M,AK01,Kundenbonus
+20,D,A,M,AMO1,Amo % intern
+20,D,A,M,AMO2,Amo/Menge intern
+20,D,A,M,CU00,Bruttopreis-Zollsim.
+20,D,A,M,CUAC,Zoll Antidumping Mng
+20,D,A,M,CUAD,Zoll Antidumping %
+20,D,A,M,CUAE,Zoll Antidumping Gew
+20,D,A,M,CUAS,Zoll Aussetzung %
+20,D,A,M,CUDC,Zoll Drittland Menge
+20,D,A,M,CUDE,Zoll Drittland Gew.
+20,D,A,M,CUDL,Zoll Drittland %
+20,D,A,M,CUFR,Zoll Fracht Menge
+20,D,A,M,CUIN,Zoll Versicherung
+20,D,A,M,CUP1,Zoll Präferenz Menge
+20,D,A,M,CUP2,Zoll Präferenz Gew.
+20,D,A,M,CUPC,Zoll ph. Erzeug Meng
+20,D,A,M,CUPE,Zoll ph. Erzeug %
+20,D,A,M,CUPF,Zoll ph. Erzeug Gew.
+20,D,A,M,CUPZ,Zoll Präferenz %
+20,D,A,M,CURB,Zoll Rabatt absolut
+20,D,A,M,CUZ1,Zoll Plafonds Menge
+20,D,A,M,CUZ2,Zoll Plafonds Gew.
+20,D,A,M,CUZC,Zoll Kontigent Menge
+20,D,A,M,CUZE,Zoll Kontigent Gew.
+20,D,A,M,CUZK,Zoll Kontigent %
+20,D,A,M,CUZP,Zoll Plafonds %
+20,D,A,M,DIS1,Rabatt % vom Brutto
+20,D,A,M,EDI1,Bestätigter Preis
+20,D,A,M,EDI2,Wertabweichung
+20,D,A,M,FRA1,Fracht %
+20,D,A,M,FRA2,Fracht %
+20,D,A,M,FRB1,Fracht absolut
+20,D,A,M,FRB2,Fracht absolut
+20,D,A,M,FRC1,Fracht/Menge
+20,D,A,M,FRC2,Fracht/Menge
+20,D,A,M,GAU1,enthalt. Goldpreis
+20,D,A,M,GAU2,aktueller Goldpreis
+20,D,A,M,GWLB,Grenzwert LB-Kompon.
+20,D,A,M,HB01,Kopfrabatt absolut
+20,D,A,M,K000,Kontraktkopfrab. %
+20,D,A,M,KAD0,Sachkosten  (VKHM)
+20,D,A,M,KAD1,Handlingsk. (VKHM)
+20,D,A,M,KR00,Kopfrabatt absolut
+20,D,A,M,LH01,LiefHierarchie
+20,D,A,M,LH02,LiefHier/Material
+20,D,A,M,LP00,Palettenrabatt
+20,D,A,M,LP01,Anbruchzuschlag
+20,D,A,M,LP02,Mixpalettenrabatt
+20,D,A,M,LP03,MixAnbruchzuschlag
+20,D,A,M,MM00,Mindermenge (/Menge)
+20,D,A,M,MM01,Mindermenge (proz)
+20,D,A,M,MP01,Marktpreis
+20,D,A,M,MTAX,Vorsteuer
+20,D,A,M,MVK0,VKP incl. Steuer
+20,D,A,M,MVK1,VKP excl. Steuer
+20,D,A,M,MVK2,VKP excl. Steuer
+20,D,A,M,NTRG,Nettowert ReguBeleg
+20,D,A,M,OTHR,EK-Netto/Nett0
+20,D,A,M,P000,Bruttopreis
+20,D,A,M,P001,Bruttopreis
+20,D,A,M,P002,Bruttopreis
+20,D,A,M,P100,Abgabepr. Lieferwerk
+20,D,A,M,P101,Bewertungspr. Liefw.
+20,D,A,M,PA00,Aktionspreis
+20,D,A,M,PA01,Aktionspreis 2
+20,D,A,M,PB00,Bruttopreis
+20,D,A,M,PBXX,Bruttopreis
+20,D,A,M,PNN0,EK-Netto/Nett0
+20,D,A,M,R000,Rabatt % vom Brutto
+20,D,A,M,R001,Rabatt / Menge
+20,D,A,M,R002,Rabatt absolut
+20,D,A,M,R003,Rabatt % vom Netto
+20,D,A,M,R004,Rabatt % vom Brutto
+20,D,A,M,R005,Rabatt % vom Brutto
+20,D,A,M,RA00,Rabatt % vom Netto
+20,D,A,M,RA01,Rabatt % vom Brutto
+20,D,A,M,RA02,Aktionsrabatt % 1
+20,D,A,M,RA03,Aktionsrabatt % 2
+20,D,A,M,RA04,Aktionsrabatt abs.
+20,D,A,M,RA05,Aktionsrabatt abs.
+20,D,A,M,RB00,Rabatt absolut
+20,D,A,M,RC00,Rabatt / Menge
+20,D,A,M,REST,Kontorrabatt %
+20,D,A,M,RL00,Delkredere
+20,D,A,M,RL01,Lieferantenrabatt %
+20,D,A,M,RL02,KomisAgenturgesKunde
+20,D,A,M,RL03,KomisAgenturGeLiefer
+20,D,A,M,RUB1,Neutrale abs. Rück.
+20,D,A,M,RUC1,Neutrale Rück./Menge
+20,D,A,M,RUE1,Neutrale % Rückstel.
+20,D,A,M,S000,Abgerechnete Erträge
+20,D,A,M,SAD1,Zoll %
+20,D,A,M,SBCB,Basis
+20,D,A,M,TRIG,Ereignis Trigger
+20,D,A,M,VA00,Varianten/Menge
+20,D,A,M,VA01,Varianten %
+20,D,A,M,VKP0,VKP incl. Steuer
+20,D,C,V,KOFI,Kontenfindung
+20,D,C,VD,A001,Standard
+20,D,D,V,A001,Eingegebenes Mat.
+20,D,G,V,A001,Listung
+20,E,B,CF,PROT,Error log
+20,E,B,DB,AF00,Inquiry Confirmation
+20,E,B,DB,AN00,Quotation Confirmat.
+20,E,B,DB,AUSJ,Export Report
+20,E,B,DB,BA00,Order Confirmation
+20,E,B,DB,KO00,Contract Confirmat.
+20,E,B,DB,LD00,Delivery Note
+20,E,B,DB,LP00,Schd.Agmt.Confirm.
+20,E,B,DB,RD00,Invoice
+20,E,B,E1,CFPR,Frgt plann. shippng
+20,E,B,E1,CHKL,Count List
+20,E,B,EA,MAHN,Reminder
+20,E,B,EA,NEU,RFQ
+20,E,B,EF,ACE1,Import declaration
+20,E,B,EF,AUFB,Dunning ord confirm
+20,E,B,EF,ET01,Material label
+20,E,B,EF,MAHN,Dunning
+20,E,B,EF,NEU,Purchase order
+20,E,B,EF,WEZL,GR count list
+20,E,B,EL,LPE2,SchAgrmtSchedLi-noGR
+20,E,B,EL,LPET,SA schedule line
+20,E,B,EL,LPF2,SchAgrmtCumQty-no GR
+20,E,B,EL,LPFZ,SchAgrmt Cum. Qty
+20,E,B,EL,LPH1,ForecastDlv schedule
+20,E,B,EL,LPH2,ForecastDlv schedule
+20,E,B,EL,LPJ1,JIT Delivery Sched.
+20,E,B,EL,LPJ2,JIT Delivery Sched.
+20,E,B,EL,LPMA,SchedAgrmt Dunning
+20,E,B,EL,LPMF,Dunning SchAgr CumQt
+20,E,B,ES,NEU,Entry of Srvc Prfrmd
+20,E,B,EV,AUFB,Dunning Ord Confirm
+20,E,B,EV,NEU,Outline agreement
+20,E,B,K1,MAAK,Direct Mailing
+20,E,B,K1,MAIL,Mail to Employees
+20,E,B,K1,MAIN,Internet mailing
+20,E,B,K1,MAK1,Print Sales Letter
+20,E,B,K1,MAK2,Print Sales Activity
+20,E,B,K1,MAK3,Print Activity/CstM.
+20,E,B,K1,MAKO,Create Contracts
+20,E,B,M1,CHKL,Count List
+20,E,B,MD,MAL1,Direct Supply Mail 1
+20,E,B,MD,MAL2,Direct Supply Mail 2
+20,E,B,MD,MAL3,Direct Supply Mail 3
+20,E,B,MD,MAL4,Direct Supply Mail 4
+20,E,B,ME,ET01,Material label
+20,E,B,ME,WA01,GI Note Vers.1
+20,E,B,ME,WA02,GI Note Vers.2
+20,E,B,ME,WA03,GI Note Vers.3
+20,E,B,ME,WAE1,GI Label Vers.1
+20,E,B,ME,WAE2,GI Label Vers.2
+20,E,B,ME,WAE3,GI Label Vers.3
+20,E,B,ME,WE01,GR Note Vers.1
+20,E,B,ME,WE02,GR Note Vers.2
+20,E,B,ME,WE03,GR Note Vers.3
+20,E,B,ME,WEE1,GR Label Vers.1
+20,E,B,ME,WEE2,GR Label Vers.2
+20,E,B,ME,WEE3,GR Label Vers.3
+20,E,B,ME,WEK1,Kanban Card 1
+20,E,B,ME,WF01,GR Prod. Ord. Vers.1
+20,E,B,ME,WF02,GR Prod. Ord. Vers.2
+20,E,B,MR,KON6,Consignment  EDI
+20,E,B,MR,KONS,Consignment
+20,E,B,MR,RAP,New Value Method
+20,E,B,MR,RAP6,New valuation EDI
+20,E,B,P1,MAL1,DirectProdctn Mail 1
+20,E,B,P1,MAL2,DirectProdctn Mail 2
+20,E,B,P1,MAL3,DirectProdctn Mail 3
+20,E,B,P1,MAL4,DirectProdctn Mail 4
+20,E,B,PA,MAED,QRelease (EDI)
+20,E,B,PA,MAFO,QRelease Print Form
+20,E,B,V1,AF00,Inquiry
+20,E,B,V1,AN00,Quotation
+20,E,B,V1,BA00,Order Confirmation
+20,E,B,V1,KO00,Contract
+20,E,B,V1,KRML,Credit Processing
+20,E,B,V1,LP00,Scheduling Agreement
+20,E,B,V1,MAIL,Internal Output
+20,E,B,V1,SDB,MatSafetyDataSheet
+20,E,B,V2,CFPR,Frgt plann. shippng
+20,E,B,V2,ET01,Material label
+20,E,B,V2,KRML,Credit Processing
+20,E,B,V2,LALE,ShipNotifctn to SP
+20,E,B,V2,LAVA,Outg. ship.notifica.
+20,E,B,V2,LD00,Delivery Note
+20,E,B,V2,LD01,Delivr Note DIN4994
+20,E,B,V2,LDS0,Delivery note (SMFS)
+20,E,B,V2,LQCA,Q cert. goods recip.
+20,E,B,V2,LQCB,Q cert. sold-to par.
+20,E,B,V2,LRUE,Decentr.Confirmation
+20,E,B,V2,MAIL,Mail
+20,E,B,V2,SDB,MatSafetyDataSheet
+20,E,B,V2,SPAT,Forwarding Order
+20,E,B,V2,TRM,Tremcard output
+20,E,B,V2,WA00,Material Tags 4902/3
+20,E,B,V2,WABS,GR/GI slip
+20,E,B,V3,AUS1,Sample - EDI
+20,E,B,V3,AUS2,Sample - Export dec.
+20,E,B,V3,AUSJ,Sample ExportRep. JP
+20,E,B,V3,LR00,Invoice list
+20,E,B,V3,MAIL,Mail
+20,E,B,V3,RD00,Invoice
+20,E,B,V5,LL00,Freight list
+20,E,B,V6,1,Handling unit
+20,E,B,V7,ALTR,Shipment:general doc
+20,E,B,V7,SPAT,Forwarding Order
+20,E,B,V7,TRM,Tremcard output
+20,E,B,V7,WABS,GR/GI slip
+20,E,B,W0,RTA1,Alloc tbl notifn
+20,E,B,W0,RTA2,Request notification
+20,E,B,W0,RTA3,Conf. notification
+20,E,B,W0,RTA4,AdviceNoteDistribCen
+20,E,B,W0,RTA5,Conf. of Dunning
+20,E,B,W1,RTB1,Notification
+20,E,B,W1,RTB2,Promo Announc. Req.
+20,E,B,W1,RTB3,Promo Announc. Conf.
+20,E,B,W1,RTB5,Conf. of Dunning
+20,E,B,WA,RTA1,Alloc Tbl Notifn
+20,E,B,WA,RTA2,Request Notification
+20,E,B,WA,RTA3,Conf. Notification
+20,E,B,WA,RTA4,AdviceNoteDistribCen
+20,E,B,WA,RTA5,Conf. of Dunning
+20,E,B,WB,RTB1,Promo Announcement
+20,E,B,WB,RTB2,Promo Announcmt Req.
+20,E,B,WB,RTB3,Promo Announc. Conf.
+20,E,B,WB,RTB5,Conf. of Dunning
+20,E,B,WE,ET01,Material label
+20,E,C,V,KOFI,Acct determination
+20,E,C,V,KOFK,Acct Determ.with CO
+20,E,C,VD,A001,Standard
+20,E,D,V,A001,Material Entered
+20,E,G,V,A001,Listing
+20,E,I,QC,QCA1,Copy Assgnmt.
+20,F,B,CF,MSG,Error Message
+20,F,B,CF,PROT,Error log
+20,F,B,CV,STAT,Document Statuses
+20,F,B,DB,AF00,Inquiry Confirmation
+20,F,B,DB,AN00,Quotation Confirmat.
+20,F,B,DB,AUSJ,Export Report
+20,F,B,DB,BA00,Order Confirmation
+20,F,B,DB,KO00,Contract Confirmat.
+20,F,B,DB,LD00,Delivery Note
+20,F,B,DB,LP00,Schd.Agmt.Confirm.
+20,D,A,V,NET2,Nettowert halbe MwSt
+20,D,A,V,NETW,Warenwert
+20,D,A,V,NRAB,Naturalrabatt
+20,D,A,V,NTPS,Preis Nettoanteil
+20,D,A,V,NTRS,Summe Rabatte Netto
+20,D,A,V,PB00,Preis Brutto
+20,D,A,V,PB1,VerkAktion1-Findung
+20,D,A,V,PB1D,VerkAktion1
+20,D,A,V,PBBS,Basispreis
+20,D,A,V,PBEW,Wertübernahme B.VK
+20,D,A,V,PBFI,Wertübernahme B.FI
+20,D,A,V,PBP,Grundpreis (Daten)
+20,D,A,V,PBU,Preisbuch-Findung
+20,D,A,V,PBUP,Preisbuch-BruttoPrs
+20,D,A,V,PC00,Profit Center Bew.
+20,D,A,V,PCDI,Gebühren Diners
+20,D,A,V,PCMC,Gebühren Master
+20,D,A,V,PCVI,Gebühren VISA
+20,D,A,V,PKAR,Preis Kopf Abrechng.
+20,D,A,V,PMIN,Mindestpreis
+20,D,A,V,PN00,Preis Netto
+20,D,A,V,PN10,Abverkaufspreis
+20,D,A,V,PPAG,Preis Pos. MatGruppe
+20,D,A,V,PPAR,Preis Pos. Abrechng.
+20,D,A,V,PPSG,Preis Pos.Hierarchie
+20,D,A,V,PPSV,Preis Pos. Service
+20,D,A,V,PR01,Preis incl. MWST
+20,D,A,V,PR02,Preis gesteigert
+20,D,A,V,PRA0,Aktions-VKP-GH 1
+20,D,A,V,PRA1,Aktions-VKP-GH 2
+20,D,A,V,PREF,Präferenz
+20,D,A,V,PRRP,Reparaturpreis
+20,D,A,V,PSPR,Gewinn
+20,D,A,V,PSVB,Verkaufspreisbasis
+20,D,A,V,PTBL,Rechnungsbetrag
+20,D,A,V,PTCH,Zahlungsart Scheck
+20,D,A,V,PTCS,Zahlungsart Cash
+20,D,A,V,PTMC,Master-/Eurocard
+20,D,A,V,PTVO,Gutschein
+20,D,A,V,RA00,Proz. v. verm.
+20,D,A,V,RA01,Proz. v. Brutto
+20,D,A,V,RB10,Reklamations-Rabatt
+20,D,A,V,RB11,Mitnahme-Rabatt
+20,D,A,V,RB19,sonstige Rabatte
+20,D,A,V,RC00,Mengenrabatt
+20,D,A,V,RD00,Gewichtsrabatt
+20,D,A,V,RH00,Proz im Hundert
+20,D,A,V,RJ01,Rackjobbing-Kommiss.
+20,D,A,V,RNTM,Rundungsdiff.(Minus)
+20,D,A,V,RNTP,Rundungsdiff. (Plus)
+20,D,A,V,MWBO,Bollo in fatt.-Ausg.
+20,D,A,V,PNET,Nettowert
+20,N,A,V,ATX1,Belastingen
+20,N,A,V,MWSI,Belastingen
+20,N,A,V,MWST,Belastingen
+20,N,A,V,MWAS,Belastingen
+20,I,A,V,MWBO,Opt.tax Bollo in Fat
+20,I,A,V,ZBAS,Tassa Base
+20,I,A,V,ZBOL,BOLLI
+20,I,A,V,ZDS1,Sconto Fisso
+20,I,A,V,ZDS2,% di sconto
+20,I,A,V,ZDVT,Sconto IVA FOC 100%
+20,I,A,V,ZFOC,Sconto FOC
+20,I,A,V,ZPR0,Prezzo
+20,I,A,V,ZSAM,Sconto Campione
+20,I,A,V,ZSP0,Listino Cliente
+20,I,A,V,ZVAT,Italia: IVA
+20,N,A,V,ZVAT,Belastingen
+20,I,A,V,ZDSP,IT IVA SP 100% Disc
+20,I,A,V,ZSAL,IT Vendite Cliente
+20,I,A,V,ZVSP,IT IVA Split Payment
+20,N,A,V,ZDSP,Belastingen
+20,N,A,V,ZVSP,Belastingen
+20,덆,A,V,ZOT4,Ordinary Terms
+20,D,A,V,UTXC,TaxJurDictionCode
+20,D,A,V,UTXJ,TaxJurDictionCode
+20,D,A,V,VKA0,Aktions-VKP    IS-R
+20,D,A,V,VKA1,Weiterer A-VKP IS-R
+20,D,A,V,VKAE,Parallel A-VKP IS-R
+20,D,A,V,VKAG,Grundpreis Aktion
+20,D,A,V,VKP0,Verkaufspreis
+20,D,A,V,VKP1,Weiterer VKP   IS-R
+20,D,A,V,VKP2,Verkaufspreis - VZ
+20,D,A,V,VKPE,Parallel VKP   IS-R
+20,D,A,V,VKPG,Grundpreis
+20,D,A,V,VKPM,Mitbewerberpr. IS-R
+20,D,A,V,WIA1,Vorsteu.belief.Land
+20,D,A,V,WIA2,Ausg.steu.Abgangslnd
+20,D,A,V,WIA3,Ausg.steu. bel.Land
+20,D,A,V,WK00,Zielwert Wertkontr.
+20,D,A,V,WUST,Warenumsatzsteuer
+20,E,A,CS,A-B1,Wages
+20,E,A,CS,A-B2,Salaries
+20,E,A,CS,A-Z3,Misc.Personnel Costs
+20,E,A,CS,SAPB,Reference: Basis
+20,E,A,CS,SAPZ,Reference: Overhead
+20,E,A,F,FB00,Freight Class/Weight
+20,E,A,F,FD10,Absolute Margin
+20,E,A,F,FS00,Container
+20,E,A,F,FS01,Container/Wei/Dist.
+20,E,A,F,FT00,Input Tax
+20,E,A,F,MB00,Weight/Removal
+20,E,A,F,MB01,Weight/Removal BW
+20,E,A,KA,B000,Material
+20,E,A,KA,B001,Wages
+20,E,A,KA,B002,Salaries
+20,E,A,KA,B010,Production
+20,E,A,KA,B101,Wage Cst Cntr/WgType
+20,E,A,KA,C000,Material OH
+20,E,A,KA,C001,Manufacturing OH
+20,E,A,KA,C002,Administration OH
+20,E,A,KA,C003,Sales OH
+20,E,A,KA,C010,Material OH/Surcharg
+20,E,A,KA,C011,Manuf.OH/OH Surch
+20,E,A,KA,C012,Manuf.OH/OH Surch
+20,E,A,KA,C013,Sales OH/OH Surch
+20,E,A,KA,C020,Material OH/Plant
+20,E,A,KA,C022,Admin.OH/Plant
+20,E,A,KA,C023,Sales OH/Plant
+20,E,A,KA,C030,Material OH/CCode
+20,E,A,KA,C031,Manuf.OH/CCode
+20,E,A,KA,C032,Admin.OH/CCode
+20,E,A,KA,C033,Sales OH/CCode
+20,E,A,KA,C040,Material OH/BArea
+20,E,A,KA,C041,Manuf.OH/BArea
+20,E,A,KA,C042,Admin.OH/BArea
+20,E,A,KA,C043,Sales OH/BArea
+20,E,A,KA,C050,Material OH/OType
+20,E,A,KA,C051,Manuf.OH/OType
+20,E,A,KA,C052,Admin.OH/OType
+20,E,A,KA,C053,Sales OH/OType
+20,E,A,KA,C060,Material OH/OType
+20,E,A,KA,C061,Manuf.OH/OType
+20,E,A,KA,C062,Admin.OH/OType
+20,E,A,KA,C063,Sales OH/OType
+20,E,A,KA,C070,Material OH/Version
+20,E,A,KA,C080,Mat-OH/Profit Ctr.
+20,E,A,KA,C100,Material OH
+20,E,A,KA,C110,Material OH/Surcharg
+20,E,A,KA,C120,Material OH/Plant
+20,E,A,KA,C130,Material OH/CCode
+20,E,A,KA,C140,Material OH/BArea
+20,E,A,KA,C150,Material OH/OType
+20,E,A,KA,C160,Material OH/OType
+20,E,A,KA,C170,Material OH/Version
+20,E,A,KA,C180,Mat-OH/Profit Ctr.
+20,S,A,V,KA00,Promoción de ventas
+20,S,A,V,KA02,% desc.promoción 1
+20,S,A,V,KA03,% desc.promoción 2
+20,S,A,V,KA04,Rechaz.desc.promoc.1
+20,S,A,V,KA05,Rechaz.desc.promoc.2
+20,S,A,V,KAD0,Cost.mat.(acc.vta.)
+20,S,A,V,KAD1,Cost.manip.(AccVta)
+20,S,A,V,KBM1,Facilidades/Garantía
+20,S,A,V,KF00,Recargo Flete
+20,S,A,V,KP00,Descuento por palet
+20,S,A,V,KP01,Recargo por apertura
+20,S,A,V,KP02,Descuento palet mix.
+20,S,A,V,KP03,Recar.palet.mix.inc.
+20,S,A,V,KUMU,Cond.de acumulación
+20,S,A,V,KV00,Costes venta (IS-R)
+20,S,A,V,PB00,Precio (bruto)
+20,S,A,V,PTS,Precio Stock
+20,S,A,V,R100,Reducción 100%
+20,S,A,V,VPRS,Costo
+20,S,A,V,ZABT,Tasa de reducción
+20,S,A,V,ZASB,ED Ass Val
+20,S,A,V,ZASU,IN A/R addl Surchrge
+20,S,A,V,ZBAS,Precio base para imp
+20,S,A,V,ZBGT,Presupuestos FI/CO
+20,S,A,V,ZBOT,Oferta bonificación
+20,S,A,V,ZBOV,Valor oferta bonific
+20,S,A,V,ZCES,Env.cess Scr Venta-S
+20,S,A,V,ZCPC,FI/CO - Cargos CCPC
+20,S,A,V,ZCST,Reembolso de CST
+20,S,A,V,ZDES,Costo de destrucción
+20,S,A,V,ZDIS,Desc sobre preciovta
+20,S,A,V,ZDS1,TII-Cust descto fijo
+20,S,A,V,ZDS2,TII-Cust. % desct
+20,S,A,V,ZDVT,Descuento TII-IVA
+20,S,A,V,ZED,Impto. espcial ficti
+20,S,A,V,ZENT,Impuesto de Entrada
+20,S,A,V,ZFED,Fábrica ED-CWH
+20,S,A,V,ZFOC,Descuento TII-FOC
+20,S,A,V,ZFOD,Impto prd. alimento
+20,S,A,V,ZINS,Margen instantáneo
+20,S,A,V,ZJOI,GST Compensado
+20,S,A,V,ZMIN,Tarifa MIN RC_Contra
+20,S,A,V,ZNRV,NRV
+20,S,A,V,ZOCF,Octroi Gratis
+20,S,A,V,ZOCT,Reembolso de Octroi
+20,S,A,V,ZOT1,Términos ordinarios
+20,S,A,V,ZOT2,Acumulaciones de OT
+20,S,A,V,ZOTH,Otros cargos
+20,S,A,V,ZPA1,Porcentaje PA
+20,S,A,V,ZPA2,Porcentaje PA
+20,S,A,V,ZPRS,Precio Planificado 2
+20,S,A,V,ZPTS,Tarifa especial
+20,S,A,V,ZRAT,SP de fábrica - CWH
+20,S,A,V,ZRPE,Reducción 100% PE
+20,S,A,V,ZSP0,TII- Precio de Venta
+20,S,A,V,ZTCS,TCS sobre vtas de ch
+20,S,A,V,ZTD1,Descuento comercial
+20,S,A,V,ZTD2,Descuento comercial
+20,S,A,V,ZTDS,TDS sobre vtas de ch
+20,S,A,V,ZTOT,IN A/R Impto vol vta
+20,S,A,V,ZPE1,Detracciones
+20,S,A,V,ZPE2,Ret. Imp. a la Renta
+20,S,A,V,ZPE3,Otras Retenciones
+20,D,A,V,ZK07,Kundenrabatt
+20,S,A,V,ZK07,Corrige precio
+20,S,A,V,ZPR1,Precio manual
+20,S,A,V,ZPR2,Precio manual
+20,D,A,V,ZBOL,Fracht
+20,D,A,V,ZPR0,Preis
+20,D,A,V,ZVAT,Ausgangssteuer
+20,S,A,V,ZBOL,Otros cargos
+20,S,A,V,ZSAM,Descuento TII-FOC
+20,D,A,V,ZDSP,Ausgangssteuer
+20,D,A,V,ZVSP,Ausgangssteuer
+20,S,A,V,ZSAL,Precio base para imp
+20,D,A,V,SP01,Preis
+20,S,A,V,JDIS,En carga
+20,F,A,V,AMIW,Minimum SalesOrdrVal
+20,F,A,V,AMIZ,Minimum ValueSurchrg
+20,F,A,V,ATX1,Output Tax
+20,F,A,V,AUFS,VKP Calcultn Surchrg
+20,F,A,V,AUFX,VKP Calcultn Surchrg
+20,F,A,V,AV,Assessable Value
+20,F,A,V,AZWR,Down Pay./Settlement
+20,F,A,V,BAS2,Brazil Expenses
+20,F,A,V,BASI,Brazil Expenses
+20,F,A,V,BI00,ICMS from SD
+20,F,A,V,BO01,Mat/Group Rebate
+20,F,A,V,BO02,Material Rebate
+20,F,A,V,BO03,Customer Rebate
+20,F,A,V,BO04,Hierarchy Rebate
+20,F,A,V,BO05,Hierarchy rebate/mat
+20,F,A,V,BO06,Sales Indpndt Rebate
+20,F,A,V,BOLL,Bollo in Fattura
+20,F,A,V,BOTX,Bon Ofr Base for Tax
+20,F,A,V,BRE0,Price+Tax (for NF)
+20,F,A,V,CCPC,CCPC Charges
+20,F,A,V,CITX,City Tax Sales Aud.
+20,F,A,V,CNTX,County Tax Sal. Aud.
+20,F,A,V,CP,Ceiling Price
+20,F,A,V,CTX1,GST (Canada)
+20,F,A,V,CTX2,PST (Canada)
+20,F,A,V,CTX3,PST (Base+GST) Cdn
+20,F,A,V,CTXJ,Tax Jurisdict.Code
+20,F,A,V,DIC2,ICMS Due <- DICM
+20,F,A,V,DIC3,ICMS Due <- DICM
+20,F,A,V,DICF,ICMS s/IPI Due
+20,F,A,V,DICM,ICMS Due
+20,F,A,V,DIFF,Rounding Off
+20,F,A,V,DIP2,BR: IPI<-DIPI Due
+20,F,A,V,DIP3,BR: IPI<-DIPI Due
+20,F,A,V,DIPI,BR: IPI Due
+20,F,A,V,DIS2,ICMS s/IPI<-DISI Due
+20,F,A,V,DIS3,ICMS s/IPI<-DISI Due
+20,F,A,V,DISI,ICMS s/IPI Due
+20,F,A,V,DISS,ISS Due
+20,F,A,V,DSS2,ISS <-DISS Due
+20,F,A,V,DSUB,Sub Trib Due
+20,F,A,V,DSUF,SubTribFreight Due
+20,F,A,V,DUPL,Cond.to Be Duplic.
+20,F,A,V,ECCN,Partial Value
+20,F,A,V,ED,Ex Duty-Own manu/ LL
+20,F,A,V,EDI1,Cust.expected price
+20,F,A,V,EDI2,Cust.expected value
+20,F,A,V,EK01,Actual Costs
+20,F,A,V,EK02,Calculated costs
+20,F,A,V,EK03,Calculated ship.cost
+20,F,A,V,EKNN,Net/Net PP IS-R
+20,F,A,V,EV00,Ret. Price Cust.ISR
+20,F,A,V,EVAU,Ret.Markup SP Calc.
+20,F,A,V,EVAX,Ret.Markup SP Calc.
+20,F,A,V,EVP0,Retail price
+20,F,A,V,EVP1,Ret. Price 1 ISR
+20,F,A,V,FTMO,FT: Market
+20,F,A,V,GRWR,Statistical value
+20,F,A,V,HA00,Percentage Discount
+20,F,A,V,HB00,Discount (Value)
+20,F,A,V,HD00,Freight
+20,F,A,V,HI01,Hierarchy
+20,F,A,V,HI02,Hierarchy/Material
+20,F,A,V,HM00,Order value
+20,F,A,V,I100,BR: ICMS Convenio100
+20,F,A,V,IBRA,Price Including Tax
+20,F,A,V,IBRT,Price Including Tax
+20,F,A,V,IBRX,Brazil Tax Calc.
+20,F,A,V,IC00,Zero Base Value
+20,F,A,M,VKP1,Sales Price excl.Tax
+20,F,A,M,VS00,Tax trigger
+20,F,A,M,VS01,Agency Tax
+20,F,A,M,VS15,Factoring Disc. Tax
+20,F,A,M,VSRG,Tax Amount Payer
+20,F,A,M,YCV1,IN CVD
+20,F,A,M,ZA00,Surcharge % on Net
+20,F,A,M,ZA01,Surcharge % on Gross
+20,F,A,M,ZABT,MRP-abatement
+20,F,A,M,ZADC,Addln.Duty of Custom
+20,F,A,M,ZAF1,Air  Frt %
+20,F,A,M,ZAF2,Air  Frt - Value
+20,F,A,M,ZANT,Anti-Dumping Cust %
+20,F,A,M,ZAPI,API Value-MPI
+20,F,A,M,ZB00,Surcharge (Value)
+20,F,A,M,ZBXX,Gross Price
+20,F,A,M,ZC00,Surcharge/Quantity
+20,F,A,M,ZCBD,Basic Customs - DEPB
+20,F,A,M,ZCD1,Basic customs - %
+20,F,A,M,ZCDB,Basic  Cust - Value
+20,F,A,M,ZCES,Cess - Customs Duty
+20,F,A,M,ZCIF,CIF - Manual
+20,F,A,M,ZCLI,Clearing Charg othr
+20,F,A,M,ZCLR,Clearing Charges
+20,F,A,M,ZCS,Cess - Customs Duty
+20,F,A,M,ZCS1,Cess - on Total Duty
+20,F,A,M,ZCS2,SCH on dut y payable
+20,F,A,M,ZCS3,Cess - SIKKIM
+20,F,A,M,ZCU1,Customs - bef tax
+20,F,A,M,ZCUS,Customs - Orchid
+20,F,A,M,ZCV1,CVD - w/o accrl key
+20,F,A,M,ZCV2,CVD - CESS
+20,F,A,M,ZCV8,SCH 1 %-on CVD
+20,F,A,M,ZCV9,Cus-SCH on Ed.Cess
+20,F,A,M,ZCVD,CESS on CVD
+20,F,A,M,ZD02,Abs discnt befre Tax
+20,F,A,M,ZD04,Discnt % before tax
+20,F,A,M,ZDDP,DDP charges -value
+20,F,A,M,ZDIF,MRP-For Recalculatn
+20,F,A,M,ZDIS,Discount
+20,F,A,M,ZED,ED-Discount
+20,F,A,M,ZED1,ED discount - Orchid
+20,F,A,M,ZED2,ED addition
+20,F,A,M,ZENS,Energy Surcharge
+20,F,A,M,ZEX1,Manual Exc. Qty base
+20,F,A,M,ZEX2,IN Manual Excise
+20,F,A,M,ZEXC,Manual Excise Value
+20,F,A,M,ZEXF,Manual Exc. Qty base
+20,F,A,M,ZF10,Freight/Qty aft tax
+20,F,A,M,ZF11,Freight/Qty bef tax
+20,F,A,M,ZF15,Freight Value-Bf tax
+20,F,A,M,ZFOB,FOB- Manual
+20,F,A,M,ZFR1,Freight (val)aft tax
+20,F,A,M,ZFR2,Frt % calc after tax
+20,F,A,M,ZFR3,Freight % for B V
+20,F,A,M,ZFR4,Inland frt - Value
+20,F,A,M,ZFR5,Inland frt :%
+20,F,A,M,ZFR6,Freight Value
+20,F,A,M,ZFR8,Commin charges [Val]
+20,F,A,M,ZFR9,Commission charges
+20,F,A,M,ZFRM,Frt/qty aft tax -MPI
+20,F,A,M,ZG01,Markup Deliv. Plant
+20,F,A,M,ZHCG,Handling(val)aft tax
+20,F,A,M,ZHSS,Health Cess
+20,F,A,M,ZICG,CGST(Statistical)
+20,F,A,M,ZIGS,Basic custom
+20,F,A,M,ZIIG,IGST(Statistical)
+20,F,A,M,ZIN1,Insurance %
+20,F,A,M,ZIN2,Insurance - Value
+20,F,A,M,ZIN3,Insurance - Customs
+20,F,A,M,ZIN4,Inland Insuarance %
+20,F,A,M,ZIN5,Inland Insur - Value
+20,F,A,M,ZINT,Interest Amount
+20,F,A,M,ZISG,SGST(Statistical)
+20,F,A,M,ZLNC,Landing Charges
+20,F,A,M,ZMR1,MRP-TAKSAL
+20,F,A,M,ZMRP,Max Retailing Price
+20,F,A,M,ZMRR,Diff MRP & SP
+20,F,A,M,ZMRX,% MRP for ED base
+20,F,A,M,ZNT1,Anti Dump. - Value
+20,F,A,M,ZOA1,Customs %
+20,F,A,M,ZOB1,Customs (Value)
+20,F,A,M,ZOC1,Customs/Quantity
+20,F,A,M,ZOCM,IN Octroi
+20,F,A,M,ZOF1,Ocean Frt %
+20,F,A,M,ZOF2,Ocean Frt - Value
+20,F,A,M,ZORC,ORCHID - 50 % DUTY
+20,F,A,M,ZOTH,Misc. charges-MPI
+20,F,A,M,ZPB0,Gross Price
+20,F,A,M,ZPB1,FOC Price
+20,F,A,M,ZPB2,Gross Price
+20,F,A,M,ZPC1,P&F % on basic
+20,F,A,M,ZPC2,P&F value bef tax
+20,F,A,M,ZPK1,P & F charges /Qty
+20,F,A,M,ZPK2,P&F& Pallet char-Fix
+20,F,A,M,ZPKF,P&F %
+20,F,A,M,ZPKG,Devlopments Charges
+20,F,A,M,ZPNT,Penalty Condition
+20,F,A,M,ZPRF,profit share rev-MPI
+20,F,A,M,ZPTP,PF% calc after tax
+20,F,A,M,ZPTV,PFVal calc after Tax
+20,F,A,M,ZRES,Resale Tax
+20,F,A,M,ZRST,IN: A/P Resale Tax
+20,F,A,M,ZSAD,Special Adl Duty
+20,F,A,M,ZSD2,SAD - ORCHID
+20,F,A,M,ZSET,IN: A/P Set Off
+20,F,A,M,ZSTT,ST Sub Total fr fm31
+20,F,A,M,ZSTX,Sub Total fr FG P2P
+20,F,A,M,ZVA1,VAT amount USA
+20,F,A,M,ZVAT,VAT Value
+20,F,A,M,ZXCI,EXCISE - ORCHID
+20,F,A,MS,GPRO,Percent. from Limits
+20,F,A,MS,KR01,Header Discount
+20,F,A,MS,KRB1,Header Discount Doc.
+20,F,A,MS,KZ01,Header Surcharge
+20,F,A,MS,KZB1,Header Surch. Doc.
+20,F,A,MS,NAVM,Non-Deductible Tax
+20,F,A,MS,NAVS,Non-Deductible Tax
+20,F,A,MS,PRS,Total Price
+20,F,A,MS,PRS0,Price comp.-Labour
+20,F,A,MS,PRS1,Price comp.-Material
+20,F,A,MS,PRS2,Price comp.-Overhead
+20,F,A,MS,PRS3,Price comp.-Miscell.
+20,F,A,MS,PRS4,Relevant Value
+20,F,A,MS,PRSX,Total Price
+20,F,A,MS,ZA00,Surcharge % on Net
+20,F,A,P,8000,Remuneration FSCS
+20,F,A,P,8100,Stock FSCS
+20,F,A,P,9001,CRM Commission
+20,F,A,P,9090,CRM Bonus
+20,F,A,PB,8000,Evaluation FSCS
+20,F,A,PB,8100,Stock FSCS
+20,E,A,TX,JAE2,Offset for ECS Abet
+20,E,A,TX,JAS1,SECEss for Abet
+20,E,A,TX,JAS2,Offset SECess Abet
+20,E,A,TX,JC1R,PST Self-assess-Rev
+20,E,A,TX,JCIN,IN: GST Comp.Cess-ND
+20,E,A,TX,JCIR,IN: RCM Comp. CESS
+20,E,A,TX,JCIS,IN: GST Comp. Cess
+20,E,A,TX,JEC1,A/R Ecess - setoff-
+20,E,A,TX,JEC2,A/R Ecess - Invent-
+20,E,A,TX,JEC3,A/P ECS for ST
+20,E,A,TX,JECS,A/R Education Cess--
+20,E,A,TX,JES3,A/P SECess for ST
+20,E,A,TX,JES5,SECess on Service Ta
+20,E,A,TX,JEX1,A/P Ecess Setoff
+20,D,A,TX,JR1,A/R Sales Tax 1
+20,D,A,TX,JR2,A/R Sales Tax 2
+20,D,A,TX,JR3,A/R Sales Tax 3
+20,D,A,TX,JR4,A/R Sales Tax 4
+20,D,A,TX,KPXX,Ausgangssteuer Test
+20,D,A,TX,46082,A/R Maritime
+20,D,A,TX,MWAA,Ausgleichs-Steuer
+20,D,A,TX,MWAL,Zusatzsteuer
+20,D,A,TX,MWAR,Ausgangssteuer-Abrun
+20,D,A,TX,MWAS,Ausgangssteuer
+20,D,A,TX,MWRK,Reisekosten (Pausch)
+20,D,A,TX,MWS1,Zwischensumme
+20,D,A,TX,MWST,Ausgangssteuer
+20,D,A,TX,MWVN,Vorst. n. abz. n. zu
+20,D,A,TX,MWVR,Vorsteuer-Abrundung
+20,D,A,TX,MWVS,Vorsteuer
+20,D,A,TX,MWVY,Vorst.n.abz.zuord-Ab
+20,D,A,TX,MWVZ,Vorst. n. abz. zuord
+20,D,A,TX,MWZG,Gegenpos.Investm.Tax
+20,D,A,TX,MWZU,Investment Tax Norw.
+20,D,A,TX,NLXA,Erwerbsteuer Ausgang
+20,D,A,TX,NLXV,Erwerbsteuer Eingang
+20,D,A,TX,PST,A/P PST & QST
+20,D,A,TX,PST1,A/R PST & QST
+20,D,A,TX,PTI1,A/P PST distributed
+20,D,A,TX,PTI2,A/P PST seperate GL
+20,D,A,TX,XP1E,A/P Sales Tax 1 Exp.
+20,D,A,TX,XP1I,A/P Sales Tax 1 Inv.
+20,D,A,TX,XP1U,A/P Sales Tax 1 Use
+20,D,A,TX,XP2E,A/P Sales Tax 2 Exp.
+20,D,A,TX,XP2I,A/P Sales Tax 2 Inv.
+20,D,A,TX,XP2U,A/P Sales Tax 2 Use
+20,D,A,TX,XP3E,A/P Sales Tax 3 Exp.
+20,D,A,TX,XP3I,A/P Sales Tax 3 Inv.
+20,D,A,TX,XP3U,A/P Sales Tax 3 Use
+20,D,A,TX,XP4E,A/P Sales Tax 4 Exp.
+20,D,A,TX,XP4I,A/P Sales Tax 4 Inv.
+20,D,A,TX,XP4U,A/P Sales Tax 4 Use
+20,D,A,TX,XP5E,A/P Sales Tax 5 Exp.
+20,D,A,TX,XP5I,A/P Sales Tax 5 Inv.
+20,D,A,TX,XP5U,A/P Sales Tax 5 Use
+20,D,A,TX,XP6E,A/P Sales Tax 6 Exp.
+20,D,A,TX,XP6I,A/P Sales Tax 6 Inv.
+20,D,A,TX,XP6U,A/P Sales Tax 6 Use
+20,D,A,TX,XR1,A/R Sales Tax 1
+20,D,A,TX,XR2,A/R Sales Tax 2
+20,S,A,M,ZICG,CGST(Statistical)
+20,S,A,M,ZIGS,Cliente básico
+20,S,A,M,ZIIG,IGST(Statistical)
+20,S,A,M,ZIN1,Seguro %
+20,S,A,M,ZIN2,Valor del seguro
+20,S,A,M,ZIN3,Seguro - Aduanas
+20,S,A,M,ZIN4,Seguro Interior %
+20,S,A,M,ZIN5,Inland Insur - Valor
+20,S,A,M,ZISG,SGST (estadística)
+20,S,A,M,ZLNC,Cargos de aterrizaje
+20,S,A,M,ZMR1,MRP-TAKSAL
+20,S,A,M,ZMRP,Precio minorista máx
+20,S,A,M,ZMRR,Diff MRP & SP
+20,S,A,M,ZMRX,% MRP for ED base
+20,S,A,M,ZNT1,Anti volcado. - Valo
+20,S,A,M,ZOA1,Aduanas %
+20,S,A,M,ZOB1,Adunas (valor)
+20,S,A,M,ZOC1,Adunas (ctdd)
+20,S,A,M,ZOCM,IN Octroi
+20,S,A,M,ZOF1,Trsprt oceano - %
+20,S,A,M,ZOF2,Trsprt oceano - Valo
+20,S,A,M,ZORC,ORCHID - 50 % DUTY
+20,S,A,M,ZOTH,Misc. charges-MPI
+20,S,A,M,ZPB0,Precio bruto
+20,S,A,M,ZPB1,Precio FOC
+20,S,A,M,ZPB2,Precio bruto
+20,S,A,M,ZPC1,P&F % sobre base
+20,S,A,M,ZPC2,P&F valor BEF impto
+20,S,A,M,ZPK1,P & F charges /Qty
+20,S,A,M,ZPK2,P&F& Pallet char-Fix
+20,S,A,M,ZPKF,P&F %
+20,S,A,M,ZPRF,profit share rev-MPI
+20,S,A,M,ZPTP,PF% calc. AFT impto.
+20,S,A,M,ZPTV,PFVal. calc. AFT imp
+20,S,A,M,ZRES,Impuesto de reventa
+20,S,A,M,ZRST,IN: A/P Resale Tax
+20,S,A,M,ZSAD,Special Adl Duty
+20,S,A,M,ZSD2,SAD - ORCHID
+20,S,A,M,ZSET,IN: A/P Activar
+20,S,A,M,ZSTT,ST Sub Total fr fm31
+20,S,A,M,ZSTX,Sub Total Trs FG P2P
+20,S,A,M,ZVA1,Valor IVA USA
+20,S,A,M,ZVAT,Valor IVA
+20,S,A,M,ZXCI,EXCISE - ORCHID
+20,D,A,M,ZENS,Zoll Antidumping Mng
+20,S,A,M,ZENS,P & F charges /Qty
+20,D,A,M,ZPKG,Zoll Antidumping Mng
+20,S,A,M,ZPKG,Flete/cantdd BEF imp
+20,I,A,TX,ZRCM,IT: RCM Ingresso Iva
+20,I,A,TX,ZRCV,IT:Imposta IVA RCM
+20,D,A,TX,ZRCM,Vorsteuer-Aufrundung
+20,D,A,TX,ZRCV,Vorsteuer-Aufrundung
+20,D,A,TX,ZRO1,Vorsteuer-Aufrundung
+20,I,A,TX,MWAI,Imposta di uscita
+20,I,A,TX,MWNI,N.d.imposta a monte
+20,I,A,TX,MWVI,Imposta di ingresso
+20,I,A,TX,ZRO1,IT: RCM Uscita Iva
+20,I,A,TX,ZRO2,IT: RCM Uscita Iva
+20,D,A,M,ZCLI,Zoll %
+20,D,A,M,ZINT,Zoll %
+20,D,A,M,ZPNT,Zoll %
+20,S,A,M,ZCLI,Cargos compensación
+20,S,A,M,ZHSS,IN Special customs
+20,S,A,M,ZINT,Cargos compensación
+20,S,A,M,ZPNT,Cargos compensación
+20,N,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,N,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,N,A,TX,AP1U,A/P Sales Tax 1 Use
+20,N,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,N,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,N,A,TX,AP2U,A/P Sales Tax 2 Use
+20,N,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,N,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,N,A,TX,AP3U,A/P Sales Tax 3 Use
+20,N,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,N,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,N,A,TX,AP4U,A/P Sales Tax 4 Use
+20,N,A,TX,AR1,A/R Sales Tax 1
+20,N,A,TX,AR2,A/R Sales Tax 2
+20,N,A,TX,AR3,A/R Sales Tax 3
+20,N,A,TX,AR4,A/R Sales Tax 4
+20,N,A,TX,ARSD,Sales Tax SD Interfa
+20,N,A,TX,BASB,Basisbedrag
+20,N,A,TX,BASI,Basisbedrag
+20,N,A,TX,GST,Goods and services T
+20,N,A,TX,GST1,Goods and services T
+20,N,A,TX,GTI1,A/P GST
+20,N,A,TX,GTI2,A/P GST
+20,N,A,TX,GTO1,A/R GST
+20,N,A,TX,GTO2,A/R GST
+20,N,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,N,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,N,A,TX,JP1U,A/P Sales Tax 1 Use
+20,N,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,N,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,N,A,TX,JP2U,A/P Sales Tax 2 Use
+20,N,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,N,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,N,A,TX,JP3U,A/P Sales Tax 3 Use
+20,N,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,D,A,TX,XP1X,A/P Sales Tax 1 ext.
+20,D,A,TX,XP2X,A/P Sales Tax 2 ext.
+20,D,A,TX,XP3X,A/P Sales Tax 3 ext.
+20,D,A,TX,XP4X,A/P Sales Tax 4 ext.
+20,D,A,TX,XR3,A/R Sales Tax 3
+20,D,A,TX,XR4,A/R Sales Tax 4
+20,D,A,TX,XR5,A/R Sales Tax 5
+20,D,A,TX,XR6,A/R Sales Tax 6
+20,D,A,TX,XWVS,Vorsteuer
+20,D,A,TX,ZJP6,IN A/P Setoff
+20,D,A,W,WWEP,Einkaufspreis
+20,D,A,W,WWRZ,Regiezuschlag
+20,D,A,W,WWV1,Verkaufspreis 1
+20,D,A,W,WWV2,Verkaufspreis 2
+20,D,A,W,WWV3,Verkaufspreis 3
+20,D,A,W,WWV4,Verkaufspreis 4
+20,F,A,TX,MWZG,Contrep.taxe invest.
+20,I,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,I,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,I,A,TX,AP1U,A/P Sales Tax 1 Use
+20,I,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,I,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,I,A,TX,AP2U,A/P Sales Tax 2 Use
+20,I,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,I,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,I,A,TX,AP3U,A/P Sales Tax 3 Use
+20,I,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,I,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,I,A,TX,AP4U,A/P Sales Tax 4 Use
+20,I,A,TX,AR1,A/R Sales Tax 1
+20,I,A,TX,AR2,A/R Sales Tax 2
+20,I,A,TX,AR3,A/R Sales Tax 3
+20,I,A,TX,AR4,A/R Sales Tax 4
+20,I,A,TX,ARSD,Sales Tax SD Interf.
+20,I,A,TX,BASB,Importo base
+20,I,A,TX,BASI,Importo base
+20,I,A,TX,GST,Beni e servizi test
+20,I,A,TX,GST1,Beni e servizi test
+20,I,A,TX,GTI1,A/P GST
+20,I,A,TX,GTI2,A/P GST
+20,I,A,TX,GTO1,A/R GST
+20,I,A,TX,GTO2,A/R GST
+20,I,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,I,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,I,A,TX,JP1U,A/P Sales Tax 1 Use
+20,I,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,I,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,I,A,TX,JP2U,A/P Sales Tax 2 Use
+20,I,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,I,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,I,A,TX,JP3U,A/P Sales Tax 3 Use
+20,I,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,I,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,I,A,TX,JP4U,A/P Sales Tax 4 Use
+20,I,A,TX,JR1,A/R Sales Tax 1
+20,I,A,TX,JR2,A/R Sales Tax 2
+20,I,A,TX,JR3,A/R Sales Tax 3
+20,I,A,TX,JR4,A/R Sales Tax 4
+20,I,A,TX,KPXX,IVA vendite Test
+20,I,A,TX,MWAA,Imposta di pareggio
+20,I,A,TX,MWAL,Imp.su beni di lusso
+20,I,A,TX,MWAR,Arrot.per dif.IVA vn
+20,I,A,TX,MWAS,IVA vendite
+20,I,A,TX,MWRK,Spese  trasf.(%)
+20,I,A,TX,MWS1,Totale parziale
+20,I,A,TX,MWST,IVA vendite
+20,I,A,TX,MWVN,IVA acq.n.deduc.attr
+20,I,A,TX,MWVR,Arrot.per dif.IVA ac
+20,I,A,TX,MWVS,IVA acquisti
+20,I,A,TX,MWVY,Input Tax
+20,I,A,TX,MWVZ,IVA acq.n.deduc.attr
+20,I,A,TX,MWZG,Tassa inv. controp.
+20,I,A,TX,MWZU,Investment Tax Norw.
+20,I,A,TX,NLXA,Patrimoniale cred.
+20,I,A,TX,NLXV,Patrimoniale deb.
+20,I,A,TX,PST,Provincial Sales Tax
+20,I,A,TX,PST1,Provincial Sales Tax
+20,I,A,TX,PTI1,A/P PST distributed
+20,I,A,TX,PTI2,A/P PST seperate GL
+20,D,A,M,ZD02,Rabatt absolut
+20,D,A,M,ZD04,Rabatt % vom Brutto
+20,S,A,M,ZD02,Absolute discount
+20,S,A,M,ZD04,Descuento % AFT impt
+20,D,A,M,ZPG1,Zoll Antidumping Mng
+20,D,A,M,ZPG2,Zoll Antidumping Mng
+20,S,A,M,ZPG1,Flete/cantdd BEF imp
+20,S,A,M,ZPG2,Flete/cantdd BEF imp
+20,K,A,TX,NLXV,Erhverv.moms indg.
+20,K,A,TX,PST,Provincial Sales Tax
+20,K,A,TX,PTI1,A/P PST distributed
+20,K,A,TX,PTI2,A/P PST seperate GL
+20,N,A,ST,BSWR,Basiswaarde
+20,N,A,ST,MWAS,Te betalen BTW
+20,N,A,TX,KPXX,Te-betal.belast test
+20,N,A,TX,MWAL,LUX-BTW Belgie
+20,N,A,TX,MWAR,Af te dragen BTW-afr
+20,N,A,TX,MWRK,Reiskosten (van H)
+20,N,A,TX,MWS1,Tussentotaal
+20,N,A,TX,MWVN,Niet-aftr.BTW n.toew
+20,N,A,TX,MWVR,Te verrek.BTW-afrond
+20,N,A,TX,MWVS,Te-verrekenen BTW
+20,N,A,TX,MWZG,Tegenpos.invest.tax
+20,N,A,TX,MWZU,Invest.tax Noorwegen
+20,N,A,TX,NLXA,ICL-belasting
+20,K,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,K,A,TX,AP2U,A/P Sales Tax 2 Use
+20,K,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,K,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,K,A,TX,AP3U,A/P Sales Tax 3 Use
+20,K,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,K,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,K,A,TX,AP4U,A/P Sales Tax 4 Use
+20,K,A,TX,AR1,A/R Sales Tax 1
+20,K,A,TX,AR2,A/R Sales Tax 2
+20,O,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,O,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,O,A,TX,AP1U,A/P Sales Tax 1 Use
+20,O,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,O,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,O,A,TX,AP2U,A/P Sales Tax 2 Use
+20,O,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,O,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,O,A,TX,AP3U,A/P Sales Tax 3 Use
+20,O,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,O,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,O,A,TX,AP4U,A/P Sales Tax 4 Use
+20,O,A,TX,AR1,A/R Sales Tax 1
+20,O,A,TX,AR2,A/R Sales Tax 2
+20,O,A,TX,AR3,A/R Sales Tax 3
+20,O,A,TX,AR4,A/R Sales Tax 4
+20,O,A,TX,ARSD,Sales Tax SD Interfa
+20,O,A,TX,BASB,Basisbeløp
+20,O,A,TX,BASI,Basisbeløp
+20,O,A,TX,GTI1,A/P GST
+20,O,A,TX,GTI2,A/P GST
+20,O,A,TX,GTO1,A/R GST
+20,O,A,TX,GTO2,A/R GST
+20,O,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,O,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,O,A,TX,JP1U,A/P Sales Tax 1 Use
+20,O,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,O,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,O,A,TX,JP2U,A/P Sales Tax 2 Use
+20,O,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,O,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,O,A,TX,JP3U,A/P Sales Tax 3 Use
+20,F,B,V2,WA00,Material Tags 4902/3
+20,F,B,V2,WABS,GR/GI slip
+20,F,B,V2,WMTA,Automatic TA
+20,F,B,V2,WSOR,Stock order
+20,F,B,V2,WTAD,Additionals
+20,F,B,V2,ZDLV,Marcan Delivery EDI
+20,F,B,V2,ZEDI,Marcan EDI
+20,F,B,V3,AES1,Autom. Export System
+20,F,B,V3,AES2,AES - Option 2
+20,F,B,V3,AES3,AES - Option 3
+20,F,B,V3,AES4,AES - Option 4
+20,F,B,V3,AUS1,Sample - EDI
+20,F,B,V3,AUS2,Sample - Export dec.
+20,F,B,V3,AUS3,Sample - Mvmnt cert.
+20,F,B,V3,AUSJ,Sample ExportRep. JP
+20,F,B,V3,FEAG,Req. Export License
+20,F,B,V3,FEAN,Nat. Export License
+20,F,B,V3,FECO,Cert. of Origin EU
+20,F,B,V3,FEEA,EU export refund
+20,F,B,V3,FEEU,EUR1 document
+20,F,B,V3,FEEV,VAR (Switzerland)
+20,F,B,V3,FEEX,Export declaration
+20,F,B,V3,FET1,Shipping decl. T1
+20,F,B,V3,FET2,Shipping decl. T2
+20,F,B,V3,FET5,T5 Document
+20,F,B,V3,FETR,A.TR. document
+20,F,B,V3,FIN0,Send Link Immediat.
+20,F,B,V3,FIN1,Send Link per Job
+20,F,B,V3,FIN2,Send Link per Job
+20,F,B,V3,FJCI,Export Invoice - JP
+20,F,B,V3,FJCO,Cert. of Orig. Osaka
+20,F,B,V3,FJCT,Cert. or Orig. Tokyo
+20,F,B,V3,FJEP,Pack. List Export JP
+20,F,B,V3,FJER,Export Report Japan
+20,F,B,V3,FKIV,Intercompany Billing
+20,F,B,V3,FUCI,Commercial Inv. USA
+20,F,B,V3,FUCO,U.S. Cert. of Origin
+20,F,B,V3,FUEP,Export Packing List
+20,F,B,V3,FUPI,Proforma Inv. USA
+20,F,B,V3,FUSD,Shipper's Exp. Decl.
+20,F,B,V3,FUSI,Ship. Letters Instr.
+20,F,B,V3,J1I0,Excise Invoice IN
+20,F,B,V3,LR00,Invoice list
+20,F,B,V3,MAIL,Mail
+20,F,B,V3,RD00,Invoice
+20,F,B,V3,RD01,SingleInv.f.InvList
+20,F,B,V3,RD02,Invoice VDA
+20,F,B,V3,RD04,Invoice Receipt MM
+20,F,B,V3,RDES,POR invoice
+20,F,B,V4,EK00,Picking List
+20,F,B,V4,EK01,Picking Label
+20,F,B,V4,EKSU,Subsystem Pick List
+20,F,B,V5,LL00,Freight list
+20,F,B,V5,SK00,Coll.Picking List
+20,F,B,V5,SK01,Coll.Pick.List 1
+20,F,B,V6,1,Handling unit
+20,F,B,V6,E128,EAN128 sticker
+20,F,B,V6,ILAB,Int. material tag
+20,F,B,V6,ILBM,Internet labels
+20,F,B,V6,ILBS,Internet labels
+20,F,B,V6,KEP6,Express serv. label
+20,F,B,V6,MALB,Material label
+20,F,B,V7,ALTR,Shipment:general doc
+20,F,B,V7,BOL1,Do not use
+20,F,B,V7,CIM1,Do not use
+20,F,B,V7,CMR1,CMR Bill of Lading
+20,F,B,V7,CMR2,Do not use
+20,F,B,V7,CPAC,Status confirmation
+20,F,B,V7,FORI,Forwarding Order
+20,F,B,V7,SEDI,Trans.EDI: General
+20,F,B,V7,SHAD,Ship. notification
+20,F,B,V7,SPAT,Forwarding Order
+20,F,B,V7,TNCF,Tender confirmation
+20,F,B,V7,TNCN,Tender - cancel
+20,F,B,V7,TNDR,Tender - new offer
+20,F,B,V7,TRM,Tremcard output
+20,F,B,V7,WABS,GR/GI slip
+20,F,B,W0,RTA1,Alloc tbl notifn
+20,F,B,W0,RTA2,Request notification
+20,F,B,W0,RTA3,Conf. notification
+20,F,B,W0,RTA4,AdviceNoteDistribCen
+20,F,B,W0,RTA5,Conf. of Dunning
+20,F,B,W1,RTB1,Notification
+20,F,B,W1,RTB2,Promo Announc. Req.
+20,F,B,W1,RTB3,Promo Announc. Conf.
+20,F,B,W1,RTB4,Promo Announcmnt DC
+20,F,B,W1,RTB5,Conf. of Dunning
+20,F,B,WA,RTA1,Alloc Tbl Notifn
+20,F,B,WA,RTA2,Request Notification
+20,F,B,WA,RTA3,Conf. Notification
+20,F,B,WA,RTA4,AdviceNoteDistribCen
+20,F,B,WA,RTA5,Conf. of Dunning
+20,F,B,WB,RTB1,Promo Announcement
+20,F,B,WB,RTB2,Promo Announcmt Req.
+20,F,B,WB,RTB3,Promo Announc. Conf.
+20,F,B,WB,RTB5,Conf. of Dunning
+20,F,B,WE,ET01,Material label
+20,F,B,WE,ET02,Shelf-edge label
+20,F,B,WN,WNAD,Sett. Cust. Agrmt
+20,F,B,WN,WNAK,Sett. Crdt Agrmt
+20,F,B,WR,WKAM,"Hdr, DR w. log data"
+20,F,B,WR,WKAO,"Hdr, DR w/o log data"
+20,F,B,WR,WKBM,"Hdr, SSR w. log data"
+20,F,B,WR,WKBO,"Hdr, SSR w/o log dat"
+20,F,B,WR,WKCM,"Hdr, p/list with log"
+20,F,B,WR,WKCO,"Hdr, p/list w/o log"
+20,F,B,WR,WKDM,"Hdr, SRL, with log"
+20,F,B,WR,WKDO,"Hdr, SRL, w/o log"
+20,F,B,WR,WKEM,"SRL, VBB, with LD"
+20,F,B,WR,WKEO,"SRL, VBD, w/o LD"
+20,F,B,WR,WKFM,"SRL, SSR, list w.log"
+20,F,B,WR,WKFN,"SRL, SSR, cus. w.log"
+20,F,B,WR,WKFO,"SRL, SSR, del, w.log"
+20,F,B,WR,WKFQ,"SRL, SSR,cus.w/o log"
+20,F,B,WR,WPAM,"Item, del, w. LD"
+20,F,B,WR,WPAO,"Item, del, w/o LD"
+20,F,B,WR,WPBM,"Item, SSR with LD"
+20,F,B,WR,WPBO,"Item, SSR w/o LD"
+20,F,B,WR,WPCM,"Item, PL, with log"
+20,F,B,WR,WPCO,"Item, PL, w/o log"
+20,F,B,WR,WPDM,"Item, SRL with log"
+20,F,B,WR,WPDO,"Item, PL w/o log"
+20,F,B,WS,WSDD,"Print. agmt, cust."
+20,F,B,WS,WSDK,"Print. agmt, cred."
+20,F,C,V,KOFI,Acct determination
+20,F,C,V,KOFK,Acct Determ.with CO
+20,F,C,VB,KOAB,Standard
+20,F,C,VC,CASH,Standard
+20,F,C,VD,A001,Standard
+20,F,D,V,A001,Material Entered
+20,F,D,VS,CS01,Cross selling
+20,F,G,V,A001,Listing
+20,F,G,V,B001,Exclusion
+20,F,H,CO,CO01,OrdType/Plnt/Matl
+20,F,H,CO,CO02,ProdMaterial
+20,F,H,ME,ME01,MovType/Plnt/MatlNo.
+20,F,H,ME,ME02,Plant
+20,F,H,V,SD01,Customer/Material
+20,F,H,V,SD02,Customer/Matl/Plant
+20,F,H,V,SD03,CountryOfDest/MatGrp
+20,F,H,V,SD04,Customer hierarchy
+20,F,H,V,SD05,Cust. hier./mat.
+20,F,H,WM,WM01,Warehouse Number
+20,F,H,WM,WM02,WarehouseNo./MovTyp
+20,F,I,QC,QCA1,Copy Assgnmt.
+20,F,N,M,NR00,Free Goods (M)
+20,E,B,ME,WLB2,GI Note RP Vers.2
+20,E,B,ME,WLB3,GI Note RP Vers.3
+20,E,B,MR,EINK,Mail to Purchasing
+20,E,B,MR,ERS,ERS Procedure
+20,E,B,MR,ERS6,ERS Procedure EDI
+20,E,B,MR,INS,Invoice plan
+20,E,B,MR,MLPP,Mail Price Deviation
+20,E,B,MR,REKL,Complaint
+20,E,B,NF,NF01,Form 1
+20,E,B,NF,NF02,Form 2
+20,E,B,RS,ACS6,Bank Statement Outbx
+20,E,B,RS,ACSP,Bank Statemt Printo.
+20,E,B,V1,BAV0,Order confirm.  VMI
+20,E,B,V1,ESYM,Internal Output
+20,E,B,V1,JEXC,IN:Excise Invoice
+20,E,B,V1,RD03,Cash Sale
+20,E,B,V2,CANO,Forwarding Notific.
+20,E,B,V2,KEP2,Express serv. label
+20,E,B,V2,PL00,Packing list
+20,E,B,V2,SHOR,Shipping Order
+20,E,B,V2,TPS0,Delivery to Ext. TPS
+20,E,B,V2,WMTA,Automatic TA
+20,E,B,V2,WSOR,Stock order
+20,E,B,V2,WTAD,Additionals
+20,E,B,V3,AES1,Autom. Export System
+20,E,B,V3,AES2,AES - Option 2
+20,E,B,V3,AES3,AES - Option 3
+20,E,B,V3,AES4,AES - Option 4
+20,E,B,V3,AUS3,Sample - Mvmnt cert.
+20,E,B,V3,FEAG,Req. Export License
+20,E,B,V3,FEAN,Nat. Export License
+20,E,B,V3,FECO,Cert. of Origin EU
+20,E,B,V3,FEEA,EU export refund
+20,E,B,V3,FEEU,EUR1 document
+20,E,B,V3,FEEV,VAR (Switzerland)
+20,E,B,V3,FEEX,Export declaration
+20,E,B,V3,FET1,Shipping decl. T1
+20,E,B,V3,FET2,Shipping decl. T2
+20,E,B,V3,FET5,T5 Document
+20,E,B,V3,FETR,A.TR. document
+20,E,B,V3,FIN0,Send Link Immediat.
+20,E,B,V3,FIN1,Send Link per Job
+20,E,B,V3,FIN2,Send Link per Job
+20,E,B,V3,FJCI,Export Invoice - JP
+20,E,B,V3,FJCO,Cert. of Orig. Osaka
+20,E,B,V3,FJCT,Cert. or Orig. Tokyo
+20,E,B,V3,FJEP,Pack. List Export JP
+20,E,B,V3,FJER,Export Report Japan
+20,E,B,V3,FKIV,Intercompany Billing
+20,E,B,V3,FUCI,Commercial Inv. USA
+20,E,B,V3,FUCO,U.S. Cert. of Origin
+20,E,B,V3,FUEP,Export Packing List
+20,E,B,V3,FUPI,Proforma Inv. USA
+20,E,B,V3,FUSD,Shipper's Exp. Decl.
+20,E,B,V3,FUSI,Ship. Letters Instr.
+20,E,B,V3,J1I0,Excise Invoice IN
+20,E,B,V3,RD01,SingleInv.f.InvList
+20,E,B,V3,RD02,Invoice VDA
+20,E,B,V3,RD04,Invoice Receipt MM
+20,E,B,V3,RDES,POR invoice
+20,E,B,V4,EK00,Picking List
+20,E,B,V4,EK01,Picking Label
+20,E,B,V4,EKSU,Subsystem Pick List
+20,E,B,V5,SK00,Coll.Picking List
+20,E,B,V5,SK01,Coll.Pick.List 1
+20,E,B,V6,E128,EAN128 sticker
+20,E,B,V6,ILAB,Int. material tag
+20,E,B,V6,ILBM,Internet labels
+20,E,B,V6,ILBS,Internet labels
+20,E,B,V6,KEP6,Express serv. label
+20,E,B,V6,MALB,Material label
+20,E,B,V7,BOL1,Do not use
+20,E,B,V7,CIM1,Do not use
+20,E,B,V7,CMR1,CMR Bill of Lading
+20,E,B,V7,CMR2,Do not use
+20,E,B,V7,CPAC,Status confirmation
+20,E,B,V7,FORI,Forwarding Order
+20,E,B,V7,SEDI,Trans.EDI: General
+20,E,B,V7,SHAD,Ship. notification
+20,E,B,V7,TNCF,Tender confirmation
+20,E,B,V7,TNCN,Tender - cancel
+20,E,B,V7,TNDR,Tender - new offer
+20,E,B,W1,RTB4,Promo Announcmnt DC
+20,E,B,WE,ET02,Shelf-edge label
+20,E,B,WN,WNAD,Sett. Cust. Agrmt
+20,E,B,WN,WNAK,Sett. Crdt Agrmt
+20,E,B,WR,WKAM,"Hdr, DR w. log data"
+20,E,B,WR,WKAO,"Hdr, DR w/o log data"
+20,E,B,WR,WKBM,"Hdr, SSR w. log data"
+20,E,B,WR,WKBO,"Hdr, SSR w/o log dat"
+20,E,B,WR,WKCM,"Hdr, p/list with log"
+20,E,B,WR,WKCO,"Hdr, p/list w/o log"
+20,E,B,WR,WKDM,"Hdr, SRL, with log"
+20,E,B,WR,WKDO,"Hdr, SRL, w/o log"
+20,E,B,WR,WKEM,"SRL, VBB, with LD"
+20,E,B,WR,WKEO,"SRL, VBD, w/o LD"
+20,E,B,WR,WKFM,"SRL, SSR, list w.log"
+20,E,B,WR,WKFN,"SRL, SSR, cus. w.log"
+20,E,B,WR,WKFO,"SRL, SSR, del, w.log"
+20,E,B,WR,WKFQ,"SRL, SSR,cus.w/o log"
+20,E,B,WR,WPAM,"Item, del, w. LD"
+20,E,B,WR,WPAO,"Item, del, w/o LD"
+20,E,B,WR,WPBM,"Item, SSR with LD"
+20,E,B,WR,WPBO,"Item, SSR w/o LD"
+20,E,B,WR,WPCM,"Item, PL, with log"
+20,E,B,WR,WPCO,"Item, PL, w/o log"
+20,E,B,WR,WPDM,"Item, SRL with log"
+20,E,B,WR,WPDO,"Item, PL w/o log"
+20,E,B,WS,WSDD,"Print. agmt, cust."
+20,E,B,WS,WSDK,"Print. agmt, cred."
+20,E,C,VB,KOAB,Standard
+20,E,C,VC,CASH,Standard
+20,E,D,VS,CS01,Cross selling
+20,E,G,V,B001,Exclusion
+20,E,H,CO,CO01,OrdType/Plnt/Matl
+20,E,H,CO,CO02,ProdMaterial
+20,E,H,ME,ME01,MovType/Plnt/MatlNo.
+20,E,H,ME,ME02,Plant
+20,E,H,V,SD01,Customer/Material
+20,E,H,V,SD02,Customer/Matl/Plant
+20,E,H,V,SD03,CountryOfDest/MatGrp
+20,E,H,V,SD04,Customer hierarchy
+20,E,H,V,SD05,Cust. hier./mat.
+20,E,H,WM,WM01,Warehouse Number
+20,E,H,WM,WM02,WarehouseNo./MovTyp
+20,E,N,M,NR00,Free Goods (M)
+20,E,N,V,FREE,Bonus Offer Free Gds
+20,E,N,V,NA00,Free Goods SD
+20,E,N,VP,BB01,Bonus buy: Price
+20,E,N,VP,BB02,Bonus buy: abs. disc
+20,E,N,VP,BB03,Bonus buy: % disc.
+20,E,N,VP,BB04,Bonus buy: fr. goods
+20,E,P,PO,RCPT,In. del. pack. ins.
+20,E,P,PO,RMA2,Mat./Link to RMATP
+20,E,P,PO,RMA3,"1.MATNR, 2.RMATP"
+20,E,P,PO,SHIP,Ship. Pack. Inst.
+20,E,P,PO,STOC,Whse Pack. Inst.
+20,E,R,DR,BDR1,MatNumber / MatType
+20,E,R,DS,BDS1,Send.mat. / Rec.mat.
+20,D,B,V2,ZDLV,Lieferschein
+20,E,B,V2,ZDLV,Marcan Delivery EDI
+20,D,B,V2,ZEDI,Lieferschein
+20,E,B,V2,ZEDI,Marcan EDI
+20,E,B,V1,ZORD,Marcan Order EDI
+20,D,B,V3,ZCRD,Rechnung
+20,D,B,V3,ZEDI,Rechnung
+20,F,A,V,IC0X,BR: ICMS 0 Excempt
+20,F,A,V,ICB2,ICMS Tax Base <-ICBS
+20,F,A,V,ICBS,ICMS Tax Base
+20,F,A,V,ICBX,IPI from SD
+20,F,A,V,ICCB,BR: ICMS Comp.Base
+20,F,A,V,ICCX,BR: ICMS Comp.Excmpt
+20,F,A,V,ICFR,BR: ICMS on Freight
+20,F,A,V,ICLW,BR: ICMS Law
+20,F,A,V,ICM1,ICMS from SD
+20,F,A,V,ICM2,ICMS from SD
+20,F,A,V,ICM3,ICMS from SD
+20,F,A,V,ICM4,ICMS from SD
+20,F,A,V,ICMF,ICMS from SD
+20,F,A,V,ICMI,Price+Tax (for NF)
+20,F,A,V,ICMO,ICMS offset
+20,F,A,V,ICMP,ICMS/ISS on price
+20,F,A,V,ICMR,Price+ICMS/ISS (NF)
+20,F,A,V,ICOB,BR: ICMS Other Base
+20,F,A,V,ICOP,ICMS from SD
+20,F,A,V,ICOX,ICMS from SD
+20,F,A,V,ICS1,Sub.Trib. from SD
+20,F,A,V,ICS2,Sub.Trib. from SD
+20,F,A,V,ICS3,Sub.Trib. from SD
+20,F,A,V,ICSO,ISS  offset
+20,F,A,V,ICV2,ICMS Tax Rate <-ICVA
+20,F,A,V,ICVA,ICMS Tax Rate
+20,F,A,V,ICZF,ADMS Disc. Zona Fr.
+20,F,A,V,IDM2,Output tax
+20,F,A,V,IDM3,Output tax
+20,F,A,V,IDMW,Output tax
+20,F,A,V,IDZF,BR: ICMS Discount ZF
+20,F,A,V,IFR1,ICMS ST Freight SD
+20,F,A,V,IFR3,ICMS on Freight SD
+20,F,A,V,IFS1,ICMS ST Freight SD
+20,F,A,V,IFS3,ICMS ST Freight SD
+20,F,A,V,INDX,Inflation Index
+20,F,A,V,IP0X,BR: IPI 0 Excempt
+20,F,A,V,IPB2,IPI from SD <-IPBS
+20,F,A,V,IPBO,IPI from SD
+20,F,A,V,IPBS,IPI from SD
+20,F,A,V,IPI1,IPI from SD
+20,F,A,V,IPI2,IPI from SD
+20,F,A,V,IPI3,IPI from SD
+20,F,A,V,IPI6,IPI from SD
+20,F,A,V,IPIA,Price+Tax (for NF)
+20,F,A,V,IPIB,Price+Tax (for NF)
+20,F,A,V,IPIC,Copy of IPI from SD
+20,F,A,V,IPIO,IPI offset
+20,F,A,V,IPIP,BR: IPI Pauta
+20,F,A,V,IPLW,BR: IPI Law
+20,F,A,V,IPOB,BR: IPI Other Base
+20,F,A,V,IPP2,BR: IPI Pauta
+20,F,A,V,IPV2,IPI from SD
+20,F,A,V,IPV3,IPI from SD
+20,F,A,V,IPVA,IPI from SD
+20,F,A,V,ISIC,BR: ICMS Rate for ST
+20,F,A,V,ISS3,ISS from SD
+20,F,A,V,IST2,BR: Sub.Trib 2
+20,F,A,V,IST3,BR: Sub.Trib SurType
+20,F,A,V,IST4,BR: Sub.Trib SurType
+20,F,A,V,ISTA,Sub. Trib Rate
+20,F,A,V,ISTB,Sub. Trib Base Value
+20,F,A,V,ISTC,BR: ICMS Rate for ST
+20,F,A,V,ISTF,BR: Sub.Trib FixPric
+20,F,A,V,ISTM,BR: Sub.Trib MinPric
+20,F,A,V,ISTS,Brazil Tax Calc.
+20,F,A,V,ISTT,BR: Sub.Trib SurType
+20,F,A,V,ISTV,Brazil tax calc.
+20,F,A,V,ISV2,BR: ISS Amount<-ISVA
+20,F,A,V,ISVA,BR: ISS Amount
+20,F,A,V,IV01,Inter-company Price
+20,F,A,V,IV02,Inter-company %
+20,F,A,V,IZF2,ICMS Discount
+20,F,A,V,IZOF,BR: Franc Zone
+20,F,A,V,J1A1,GI Perc. Region 1
+20,F,A,V,J1A2,GI Perc. Region 2
+20,F,A,V,J1A3,GI Perc. Region 3
+20,F,A,V,J1AL,Exemption w. Credit
+20,F,A,V,J1AN,Exemption w/o Credit
+20,F,A,V,J1AP,VAT Perception I
+20,F,A,V,J1AQ,VAT Perception II
+20,F,A,V,J1AR,VAT Surcharge RNI
+20,F,A,V,J1AU,VAT
+20,F,A,V,J1AV,Internal Tax Sales
+20,F,A,V,J1AX,VAT II
+20,F,A,V,J1W1,Withholding Tax 1
+20,F,A,V,J1W2,Withholding Tax 2
+20,F,A,V,J1W3,Withholding tax 3
+20,F,A,V,J1X1,GI Perc. Region 1 II
+20,F,A,V,J1X2,GI Perc. Region 2 II
+20,F,A,V,J1X3,GI Perc. Region 3 II
+20,F,A,V,JA1X,A/R SEC&HR.ECS--
+20,F,A,V,JA1Y,A/R SEC&HR.ECS--
+20,F,A,V,JAED,IN: A/R AED
+20,F,A,V,JASS,IN A/R Assessable Va
+20,F,A,V,JCED,IN A/R CESS
+20,F,A,V,JCEP,IN A/R CESS %
+20,F,A,V,JCEQ,IN A/R CESS Qty
+20,F,A,V,JCES,IN A/R CESS
+20,F,A,V,JCET,IN A/R CESS total
+20,F,A,V,JCOS,IN:GST Comp.Cess-OP
+20,F,A,V,JCS1,IN A/R cst out
+20,F,A,V,JCS2,IN A/R cst out
+20,F,A,V,JCSR,IN A/R CST Surcharge
+20,F,A,V,JCST,IN A/R CST
+20,F,A,V,JDIS,IN Discount
+20,F,A,V,JEAP,IN A/R AED %
+20,F,A,V,JEAQ,IN A/R AED Qty
+20,F,A,V,JEAT,IN A/R AED total
+20,F,A,V,JECS,A/R Education Cess-
+20,F,A,V,JECX,A/R Education Cess--
+20,F,A,V,JESP,IN A/R SED %
+20,F,A,V,JESQ,IN A/R SED Qty
+20,F,A,V,JEST,IN A/R SED total
+20,F,A,V,JEX2,IN A/R BED
+20,F,A,V,JEXA,IN A/R AED
+20,F,A,V,JEXP,IN A/R BED %
+20,F,A,V,JEXQ,IN A/R BED
+20,F,A,V,JEXS,IN A/R SED
+20,F,A,V,JEXT,IN A/R BED total
+20,F,A,V,JFCG,IN 100% discount
+20,F,A,V,JFRE,IN Frieght
+20,F,A,V,JIN1,IN A/R CST
+20,F,A,V,JIN2,IN A/R LST
+20,F,A,V,JIN4,IN A/R Surcharge
+20,F,A,V,JIN5,IN A/R LST Surchrg
+20,F,A,V,JIN6,IN A/R LST(VAT)
+20,F,A,V,JINS,IN Insurance
+20,F,A,V,JIV1,IN A/R VAT (Addl)
+20,F,A,V,JIV2,IN: A/R VAT Sur Addl
+20,F,A,V,JIVP,IN A/R VAT
+20,F,A,V,JIVR,IN A/R VAT Sur
+20,F,A,V,JLS1,IN A/R LST out
+20,F,A,V,JLS2,IN A/R LST out
+20,F,A,V,JLSR,IN A/R LST Surcharge
+20,F,A,V,JLST,IN A/R LST
+20,F,A,V,JMAN,IN Manual excise
+20,F,A,V,JMOD,IN A/R BED
+20,F,A,V,JOC1,Octroi accrual
+20,F,A,V,JOC2,Octroi accrual
+20,F,A,V,JOCG,IN: Central GST
+20,F,A,V,JOIG,IN: Integrated GST
+20,F,A,V,JOII,IGST Accrual
+20,F,A,V,JOSG,IN: State GST
+20,F,A,V,JPAL,IN Pallet Charges
+20,F,A,V,JR1,Tax Jur Code Level 1
+20,F,A,KA,C080,Mat-OH/Profit Ctr.
+20,F,A,KA,C100,Material OH
+20,F,A,KA,C110,Material OH/Surcharg
+20,F,A,KA,C120,Material OH/Plant
+20,F,A,KA,C130,Material OH/CCode
+20,F,A,KA,C140,Material OH/BArea
+20,F,A,KA,C150,Material OH/OType
+20,F,A,KA,C160,Material OH/OType
+20,F,A,KA,C170,Material OH/Version
+20,F,A,KA,C180,Mat-OH/Profit Ctr.
+20,F,A,KA,Y001,Yield Adjustment-Mat
+20,F,A,KA,Y002,Yield Adjustment-OH
+20,F,A,KA,Y010,Admin Overhead
+20,F,A,KA,Y011,Asha: OH Type / OH K
+20,F,A,KA,Y020,Other OH -LL Plant
+20,F,A,KA,Y021,Other OH -Plant_EP04
+20,F,A,KA,Y022,Other OH -Plant_EP18
+20,F,A,KA,Y023,Other OH -Plant_EP16
+20,F,A,KA,Y024,Other OH -Plant_EP24
+20,F,A,KA,Y025,Other OH -Plant_EP26
+20,F,A,KA,Y026,Other OH -Plant_EP27
+20,F,A,KA,Y027,Other OH -Plant_EP22
+20,F,A,KA,Y028,Other OH -Plant_EP28
+20,F,A,KE,ZSTP,Std Cost for COPA
+20,F,A,M,A001,Rebates
+20,F,A,M,A002,Material Rebate
+20,F,A,M,A003,Hierarchy Rebate
+20,F,A,M,A004,Hierarchy Rebate/Mat
+20,F,A,M,AK01,Customer Rebate
+20,F,A,M,AMO1,Internal Amort. %
+20,F,A,M,AMO2,Internal Amort./Qty
+20,F,A,M,CU00,Gross Price Cust.Sim
+20,F,A,M,CUAC,Antidumping Cus.Qty
+20,F,A,M,CUAD,Anti-Dumping Cust %
+20,F,A,M,CUAE,Antidumping Cust.Wt
+20,F,A,M,CUAS,Customs Exemption %
+20,F,A,M,CUDC,3rd Country Cust Qty
+20,F,A,M,CUDE,3rd Country Weight
+20,F,A,M,CUDL,3rd Country Cust %
+20,F,A,M,CUFR,Freight Qty Customs
+20,F,A,M,CUIN,Insurance Customs
+20,F,A,M,CUP1,Preference Qty Cust
+20,F,A,M,CUP2,Preference Wt Cust.
+20,F,A,M,CUPC,Cust Phys Creat. Qty
+20,F,A,M,CUPE,Cust. Pharm. Prd %
+20,F,A,M,CUPF,Cust. Ph. Prod. Wgt
+20,F,A,M,CUPZ,Cust. preference %
+20,F,A,M,CURB,Absolute disc. cust.
+20,F,A,M,CUZ1,Customs max. quant.
+20,F,A,M,CUZ2,Customs max. wgt
+20,F,A,M,CUZC,Customs alloc. qty
+20,F,A,M,CUZE,Customs alloc. wgt
+20,F,A,M,CUZK,Customs alloc. &
+20,F,A,M,CUZP,Customs max. %
+20,F,A,M,DIS1,Discount % on Gross
+20,F,A,M,EDI1,Confirmed Price
+20,F,A,M,EDI2,Value variance
+20,F,A,M,FRA1,Freight %
+20,F,A,M,FRA2,Freight %
+20,F,A,M,FRB1,Freight (Value)
+20,F,A,M,FRB2,Freight (Value)
+20,F,A,M,FRC1,Freight/Quantity
+20,F,A,M,FRC2,Freight/Quantity
+20,F,A,M,GAU1,Orignl Price of Gold
+20,F,A,M,GAU2,Actual Price of Gold
+20,F,A,M,GRWR,Statistical Value
+20,F,A,M,GWLB,Stat. Val. LB-Comp.
+20,F,A,M,HB00,Header Surch.(Value)
+20,F,A,M,HB01,Header Disc.(Value)
+20,F,A,M,IN01,Insurance %
+20,F,A,M,IN02,Insurance value
+20,F,A,M,IN03,Insurance % on total
+20,F,A,M,JADC,Addln.Duty of Custom
+20,F,A,M,JASS,Assessable Value
+20,F,A,M,JCDB,Basic customs - %
+20,F,A,M,JCDS,IN Special customs
+20,F,A,M,JCV1,IN CVD
+20,F,A,M,JEXC,IN Manual Excise
+20,F,A,M,JEXS,Taxes on the PO
+20,F,A,M,JOCM,Manual Octroi
+20,F,A,M,K000,Contrct HeaderDisc %
+20,F,A,M,KAD0,Mat. Costs  (VKHM)
+20,F,A,M,KAD1,Handling Costs(VKHM)
+20,F,A,M,KR00,Header Disc.(Value)
+20,F,A,M,LH01,Delivery Hierarchy
+20,F,A,M,LH02,Deliv.Hier/Material
+20,F,A,M,LP00,Pallet Discount
+20,F,A,M,LP01,Incomp.Pallet Surch.
+20,F,A,M,LP02,Mixed Pallet Disc.
+20,F,A,M,LP03,Mixed Pallet Surch.
+20,F,A,M,46082,Neutral % Accruals
+20,F,A,M,MM00,Minimum Qty (Amount)
+20,F,A,M,MM01,Minimum Qty (%)
+20,F,A,M,MP01,Market Price
+20,F,A,M,MTAX,Tax on differential
+20,F,A,M,MVK0,Sales Price inc. Tax
+20,F,A,M,MVK1,Sales Price excl.Tax
+20,F,A,M,MVK2,Sales Price excl.Tax
+20,F,A,M,MWAS,Output tax manually
+20,F,A,M,MWST,Input tax
+20,F,A,M,MWVS,Input tax manually
+20,F,A,M,NAVM,Non-Deductible Tax
+20,F,A,M,NAVS,Non-Deductible Tax
+20,F,A,M,NETP,Net Price Picking
+20,F,A,M,NTRG,Net Value Payer Doc.
+20,F,A,M,OTHR,Other Charges
+20,F,A,M,P000,Gross Price
+20,F,A,M,P001,Gross Price
+20,F,A,M,P002,Gross Price
+20,F,A,M,P100,Trans.Pr.Supply.Plnt
+20,F,A,M,P101,Val.Price Supply.Pln
+20,F,A,M,PA00,Promotion Price
+20,F,A,M,PA01,Promo Price 2
+20,F,A,M,PB00,Gross Price
+20,F,A,M,PBXX,Gross Price
+20,F,A,M,PNN0,Purch. Net/Net
+20,F,A,M,R000,Discount % after tax
+20,F,A,M,R001,Discount/Quantity
+20,F,A,M,R002,Absolute discount
+20,F,A,M,R003,Discount % on Net
+20,F,A,M,R004,Discount % after tax
+20,F,A,M,R005,Discount % after tax
+20,F,A,M,RA00,Discount % on Net
+20,F,A,M,RA01,Discount % on Gross
+20,F,A,M,RA02,Promo Discount % 1
+20,F,A,M,RA03,Promo Discount % 2
+20,F,A,M,RA04,Promo. Disc. Deduct.
+20,F,A,M,RA05,Promo. Disc. Deduct.
+20,F,A,M,RB00,Absolute discount
+20,F,A,M,RC00,Discount/Quantity
+20,F,A,M,REST,Account Discount %
+20,F,A,M,RL00,Factoring Discount
+20,F,A,M,RL01,Vendor Discount %
+20,F,A,M,RL02,Pick.Agency Bus.Cust
+20,F,A,M,RL03,Pick.Agency Bus.Vend
+20,F,A,M,RUB1,Neutr.Accruals(Val.)
+20,F,A,M,RUC1,Neutral Accruals/Qty
+20,F,A,M,RUE1,Neutral % Accruals
+20,F,A,M,S000,Calculated Revenues
+20,F,A,M,SAD1,Special Adl Duty
+20,F,A,M,SBCB,Basis
+20,F,A,M,SKTO,Cash Discount
+20,F,A,M,TRIG,Event Trigger
+20,F,A,M,VA00,Variants/Quantity
+20,F,A,M,VA01,Variants %
+20,F,A,M,VKP0,Sales Price inc. Tax
+20,F,A,TX,AP2U,A/P Sales Tax 2 Use
+20,F,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,F,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,F,A,TX,AP3U,A/P Sales Tax 3 Use
+20,F,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,F,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,F,A,TX,AP4U,A/P Sales Tax 4 Use
+20,F,A,TX,AR1,A/P Sales Tax 1
+20,F,A,TX,AR2,A/R Sales Tax 2
+20,F,A,TX,AR3,A/R Sales Tax 3
+20,F,A,TX,AR4,A/R Sales Tax 4
+20,F,A,TX,ARSD,Sales Tax SD Interfa
+20,F,A,TX,BASB,Montant de base
+20,F,A,TX,BASI,Montant de base
+20,F,A,TX,GST,Goods and Services T
+20,F,A,TX,GST1,Goods and Services T
+20,F,A,TX,GTI1,A/P GST
+20,F,A,TX,GTI2,A/P GST
+20,F,A,TX,GTO1,A/R GST
+20,F,A,TX,GTO2,A/R GST
+20,F,A,TX,JP1E,_
+20,F,A,TX,JP1I,_
+20,F,A,TX,JP1U,_
+20,F,A,TX,JP2E,_
+20,F,A,TX,JP2I,_
+20,F,A,TX,JP2U,_
+20,F,A,TX,JP3E,_
+20,F,A,TX,JP3I,_
+20,F,A,TX,JP3U,_
+20,F,A,TX,JP4E,_
+20,F,A,TX,JP4I,_
+20,F,A,TX,JP4U,_
+20,F,A,TX,JR1,A/P Sales Tax 1
+20,F,A,TX,JR2,A/R Sales Tax 2
+20,F,A,TX,JR3,A/R Sales Tax 3
+20,F,A,TX,JR4,A/R Sales Tax 4
+20,F,A,TX,KPXX,TVA collectée Test
+20,F,A,TX,MWAA,Taxe d'égalisation
+20,F,A,TX,MWAL,Taxe articles luxe
+20,F,A,TX,MWAR,_
+20,F,A,TX,MWAS,TVA collectée
+20,F,A,TX,MWRK,Frais déplacement
+20,F,A,TX,MWS1,Total intermédiaire
+20,F,A,TX,MWST,TVA collectée
+20,F,A,TX,MWVN,TVA déd.n.réc.n.aff.
+20,F,A,TX,MWVR,_
+20,F,A,TX,MWVS,TVA déductible
+20,F,A,TX,MWVY,_
+20,F,A,TX,MWVZ,TVA déd.n.réc.affec.
+20,F,A,TX,MWZU,Taxe invest.Norvège
+20,F,A,TX,NLXA,Taxe acquisit.clts
+20,F,A,TX,NLXV,Taxe acquisit.fourn.
+20,F,A,TX,PST,Provincial Sales Tax
+20,F,A,TX,PST1,Provincial Sales Tax
+20,F,A,TX,PTI1,A/P PST distributed
+20,F,A,TX,PTI2,A/P PST seperate GL
+20,E,A,M,ZD02,Abs discnt befre Tax
+20,E,A,M,ZD04,Discnt % before tax
+20,E,A,KA,Y029,Other OH -Plant_EP29
+20,F,A,KA,Y029,Other OH -Plant_EP16
+20,E,A,M,ZPG1,Cal Dev Charges
+20,E,A,M,ZPG2,DCGR Dev Charges
+20,E,A,M,ZPKG,Devlopments Charges
+20,F,A,M,ZPG1,Development Charges
+20,F,A,M,ZPG2,Development Charges
+20,F,A,CQ,CQ01,Resource Prices
+20,F,A,CS,A-B1,Wages
+20,F,A,CS,A-B2,Salaries
+20,F,A,CS,A-Z1,Vacation Bonus Paid
+20,F,A,CS,A-Z2,Yearly Bonus
+20,F,A,CS,A-Z3,Misc.Personnel Costs
+20,F,A,CS,SAPB,Reference: Basis
+20,F,A,CS,SAPZ,Reference: Overhead
+20,F,A,F,FB00,Freight Class/Weight
+20,F,A,F,FB10,Per Diem/Flat Rate
+20,F,A,F,FB20,Price from Shipmt
+20,F,A,F,FD00,Margin
+20,F,A,F,FD10,Absolute Margin
+20,F,A,F,FLTL,Partial Load/Zip
+20,F,A,F,FS00,Container
+20,F,A,F,FS01,Container/Wei/Dist.
+20,F,A,F,FT00,Input Tax
+20,F,A,F,MB00,Weight/Removal
+20,F,A,F,MB01,Weight/Removal BW
+20,F,A,F,SP00,Bulk. Grp Determin.
+20,D,A,M,GRWR,Grenzübergangswert
+20,D,A,M,HB00,Kopfzuschlag absolut
+20,D,A,M,46082,Neutrale % Rückstel.
+20,D,A,M,MWAS,Ausgangssteuer man.
+20,D,A,M,MWST,Vorsteuer
+20,D,A,M,MWVS,Vorsteuer manuell
+20,D,A,M,NAVM,Nicht abz. Vorsteuer
+20,D,A,M,NAVS,Nicht abz. Vorsteuer
+20,D,A,M,NETP,Nettopreis Kommiss.
+20,D,A,M,SKTO,Skonto
+20,D,A,M,VS01,Steuer Agentur
+20,D,A,M,ZA00,Zuschlag % vom Netto
+20,D,A,MS,NAVM,Nicht abz. Vorsteuer
+20,D,A,MS,NAVS,Nicht abz. Vorsteuer
+20,D,A,MS,PRS1,Preisteil Material
+20,D,A,MS,PRS2,Preisteil Gem.kosten
+20,D,A,MS,PRS3,Preisteil sonstiges
+20,D,A,MS,PRS4,relevanter Wert
+20,D,A,MS,ZA00,Zuschlag % vom Netto
+20,D,A,P,8000,Vergütung FSCS
+20,D,A,P,8100,Bestand FSCS
+20,D,A,PB,8000,Bewertung FSCS
+20,D,A,PB,8100,Bestand FSCS
+20,D,A,ST,MWAS,Ausgangssteuer
+20,D,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,D,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,D,A,TX,AP1U,A/P Sales Tax 1 Use
+20,D,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,D,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,D,A,TX,AP2U,A/P Sales Tax 2 Use
+20,D,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,D,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,D,A,TX,AP3U,A/P Sales Tax 3 Use
+20,D,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,D,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,D,A,TX,AP4U,A/P Sales Tax 4 Use
+20,D,A,TX,AR1,A/R Sales Tax 1
+20,D,A,TX,AR2,A/R Sales Tax 2
+20,D,A,TX,AR3,A/R Sales Tax 3
+20,D,A,TX,AR4,A/R Sales Tax 4
+20,D,A,TX,ARSD,Sales Tax SD Interfa
+20,D,A,TX,BASB,Basisbetrag
+20,D,A,TX,BASI,Basisbetrag
+20,D,A,TX,GST,A/P GST
+20,D,A,TX,GST1,A/R GST
+20,D,A,TX,GTI1,A/P GST
+20,D,A,TX,GTI2,A/P GST
+20,D,A,TX,GTO1,A/R GST
+20,D,A,TX,GTO2,A/R GST
+20,D,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,D,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,D,A,TX,JP1U,A/P Sales Tax 1 Use
+20,D,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,D,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,D,A,TX,JP2U,A/P Sales Tax 2 Use
+20,D,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,D,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,D,A,TX,JP3U,A/P Sales Tax 3 Use
+20,D,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,D,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,D,A,TX,JP4U,A/P Sales Tax 4 Use
+20,D,A,TX,ICS2,S.T. Consumption In
+20,D,A,TX,ICS3,Sub.Tributaria  Out
+20,D,A,TX,ICS4,S.T. Indus not in NF
+20,D,A,TX,ICS5,S.T. Cons. not in NF
+20,D,A,TX,ICS6,S.T. Cons.offset
+20,D,A,TX,ICS7,S.T. Cons. not in NF
+20,D,A,TX,ICS8,S.T. Cons. not in NF
+20,D,A,TX,ICS9,S.T. Consumption In
+20,D,A,TX,ICZF,ICMS Reverse (Z.F.)
+20,D,A,TX,IFR1,ICMS on freight  In
+20,D,A,TX,IFR3,ICMS on freight  Out
+20,D,A,TX,IFS1,ICMS ST freight  In
+20,D,A,TX,IFS3,ICMS ST freight  Out
+20,D,A,TX,INSS,INSS Incoming
+20,D,A,TX,INSX,INSS offset (100-)
+20,D,A,TX,IP10,IPI nullvalues NF
+20,D,A,TX,IP11,IPI  Industr.    In
+20,D,A,TX,IP12,IPI  Consumption In
+20,D,A,TX,IP13,IPI  Consumption In
+20,D,A,TX,IP1C,IPI  Ind.Clearing
+20,D,A,TX,IP1O,IPI  Ind.Clear.Off.
+20,D,A,TX,IPI0,IPI nullvalues NF
+20,D,A,TX,IPI1,IPI  Industr.    In
+20,D,A,TX,IPI2,IPI  Consumption In
+20,D,A,TX,IPI3,IPI from SD     Out
+20,D,A,TX,IPI4,IPI -Split Vendor
+20,D,A,TX,IPI5,IPI  Consu. REF IPI2
+20,D,A,TX,IPI6,IPI  Consu. REF IPI2
+20,D,A,TX,IPIA,IPI industr. out
+20,D,A,TX,IPIB,IPI consum out
+20,D,A,TX,IPIO,IPI nullvalues NF
+20,D,A,TX,IPIX,IPI  active
+20,D,A,TX,IPIY,IPI  active
+20,D,A,TX,IPIZ,IPI  active
+20,D,A,TX,IRD1,ICMS Reimbursement
+20,D,A,TX,IRD2,ICMS Reimbur. offset
+20,D,A,TX,IRD3,SUBT Reimbursement
+20,D,A,TX,IRD4,SUBT Reimbur. offset
+20,D,A,TX,IRD5,ICMS Reim.offset NVV
+20,D,A,TX,IRD6,SUBT Reim.offset NVV
+20,D,A,TX,ISS3,ISS from SD     Out
+20,D,A,TX,ISSO,ISS from SD     Out
+20,D,A,TX,IT01,ICMS Industr.    In
+20,D,A,TX,IT02,ICMS Industr.    In
+20,D,A,TX,IT03,ICMS Industr.    In
+20,D,A,TX,J1A1,GI Zuschlag Region 1
+20,D,A,TX,J1A2,GI Zuschlag Region 2
+20,D,A,TX,J1A3,GI Zuschlag Region 3
+20,D,A,TX,J1AA,Mwst. Zuschlag Zoll
+20,D,A,TX,J1AG,ET Zuschlag Zoll
+20,D,A,TX,J1AI,Interne Einkaufssteu
+20,D,A,TX,J1AL,Befrei. mit Gutschr.
+20,D,A,TX,J1AN,Befrei. ohne Gutschr
+20,D,A,TX,J1AP,Mwst. Zuschlag
+20,D,A,TX,J1AR,Mwst. Abschlag RNI
+20,D,A,TX,J1AS,Zuschlag No Categor.
+20,D,A,TX,J1AV,Interne Einkaufssteu
+20,D,A,TX,J1AY,Nicht besteuert
+20,D,A,TX,J2A1,ISC Perú
+20,D,A,TX,J2A2,IGV Perú - Adq.002
+20,D,A,TX,J2A3,IGV Perú - Adq.003
+20,D,A,TX,J2A4,Advalorem (Perú)
+20,D,A,TX,J2A5,IPM-Steuer Perú
+20,D,A,TX,J3A1,"Brennst., abzfg. CL"
+20,D,A,TX,J3A2,Brennst.n.abzfg. CL
+20,D,A,TX,JAO1,IN A/P AED Ded.
+20,D,A,TX,JAO2,IN A/P AED Inv.
+20,D,A,TX,JC1E,A/P GST Recoverable
+20,D,A,TX,JC1I,A/P PST Distributed
+20,D,A,TX,JC1R,A/P PST Self-assess
+20,D,A,TX,JC1S,A/P Recoverable
+20,D,A,TX,JC1T,A/P PST Self-assess
+20,D,A,TX,JC1U,A/P PST Self-assess
+20,D,A,TX,JC2E,A/P GST Distributed
+20,D,A,TX,JC2I,A/P Prov. (B+GST)
+20,D,A,TX,JC2S,A/P Recov. (B+GST)
+20,D,A,TX,JC2T,A/P PST Self-assess
+20,D,A,TX,JC2U,A/P Assess (B+GST)
+20,D,A,TX,JC3I,A/P Prov. (B+GST)
+20,D,A,TX,JC3S,A/P Recov. (B+GST)
+20,D,A,TX,JC3T,A/P PST Self-assess
+20,D,A,TX,JC3U,A/P Assess (B+GST)
+20,D,A,TX,JC4I,A/P Prov. (B+GST)
+20,D,A,TX,JC4S,A/P Recov. (B+GST)
+20,D,A,TX,JC4U,A/P Assess (B+GST)
+20,D,A,TX,JC5S,A/P Recov. (B+GST)
+20,D,A,TX,JC5U,A/P Assess (B+GST)
+20,D,A,TX,JEC3,IN A/P SED Inv.
+20,D,A,TX,JES3,IN A/P SED Inv.
+20,D,A,TX,JES5,IN A/P SED Inv.
+20,D,A,TX,JGST,A/P GST
+20,D,A,TX,JIP3,IN A/P Setoff
+20,D,A,TX,JIP4,IN A/P Surcharge
+20,D,A,TX,JIP6,IN A/P Setoff
+20,D,A,TX,JIP8,IN A/P Surcharge
+20,D,A,TX,JMO1,IN A/P BED Ded.
+20,D,A,TX,JMO2,IN A/P BED Inv.
+20,D,A,TX,JRC1,A/R Sales GST
+20,D,A,TX,JRC2,A/R Sales PST
+20,D,A,TX,JRC3,A/R Sales PST B +PST
+20,D,A,TX,JRC4,A/R Sales PST B +PST
+20,D,A,TX,JS11,IN A/P SED Inv.
+20,D,A,TX,JSER,IN A/P SED Inv.
+20,D,A,TX,JSO1,IN A/P SED Ded.
+20,D,A,TX,JSO2,IN A/P SED Inv.
+20,D,A,TX,JSRT,IN A/P SED Inv.
+20,D,A,TX,JSVD,IN A/P SED Inv.
+20,D,A,TX,KRIC,Construc. Inp Tax KR
+20,D,A,TX,KRIT,Input Tax KR
+20,D,A,TX,KRNI,Issue Exemption
+20,D,A,TX,KRNT,Non-ded.Input Tax KR
+20,D,A,TX,KROT,Output Tax KR
+20,D,A,TX,KRPP,Payment by proxy KR
+20,D,A,TX,MAR,A/P Maritime
+20,D,A,TX,MSKA,Ausgangssteuer SK
+20,D,A,TX,MSKV,Vorsteuer SK
+20,D,A,TX,MW01,Steuerausl#ser RU
+20,D,A,TX,MWAI,Ausgangsst.-Aufr. LP
+20,D,A,TX,MWAN,Ausgangsst.n.abz.
+20,D,A,TX,MWCN,Pauschalsteuer China
+20,D,A,TX,MWNI,Vorst.n.abz.n.zu-Auf
+20,D,A,TX,MWPI,Ausgangssteuer-Aufr.
+20,D,A,TX,MWR1,USt Haben       (RU)
+20,D,A,TX,MWR2,USt Soll Erl.   (RU)
+20,D,A,TX,MWR3,Ust Haben Erl.  (RU)
+20,D,A,TX,MWR4,Lokal USt  Haben(RU)
+20,D,A,TX,MWR5,Lokal Soll  Erl.(RU)
+20,D,A,TX,MWR6,Lokal Haben Erl.(RU)
+20,D,A,TX,MWR7,GSM Haben       (RU)
+20,D,A,TX,MWR8,GSM Soll  Erl.  (RU)
+20,D,A,TX,MWR9,GSM Haben Erl.  (RU)
+20,D,A,TX,MWVI,Vorsteuer-Aufrundung
+20,D,A,TX,MWWS,Vereinf.St.-Ausgang
+20,D,A,TX,MWZB,Basis Invt.Tax Norw.
+20,D,A,TX,MWZI,Vorst.n.abz.zuo.-Auf
+20,D,A,TX,MWZS,Vereinf.St.-Eingang
+20,D,A,TX,NLAI,Erwerbst.Ausgang-Auf
+20,D,A,TX,NLNA,Erwerb.n. abz. zuord
+20,D,A,TX,NLVI,Erwerbst.Eingang-Auf
+20,D,A,TX,NLXN,Erwerb.n. abz.n. Zu.
+20,D,A,TX,NZE1,NZ Entertain-GST inv
+20,D,A,TX,NZE2,NZ Entertainment Tax
+20,D,A,TX,PTI3,A/P PST Separate GL
+20,D,A,TX,PTI4,A/P PST Sep. B+GST
+20,D,A,TX,PTU1,A/P Usage
+20,D,A,TX,PTU2,A/P Usage B+GST
+20,S,A,V,ICCB,BR: ICMS base cons.
+20,S,A,V,ICCX,BR: ICMS exen.comp.
+20,S,A,V,ICFR,BR: ICMS sobre porte
+20,S,A,V,PPAG,Prc.pos.gr.mat.
+20,S,A,V,ICLW,BR: ICMS Ley
+20,S,A,V,PPAR,Prc.pos.liquid.
+20,S,A,V,PPSG,Prc.pos.jerarquía
+20,S,A,V,PPSV,Prc.pos.servicio
+20,S,A,V,PR01,Precio IVA incl.
+20,S,A,V,PR02,Precio incrementado
+20,S,A,V,PRA0,PV prom.com.may.1
+20,S,A,V,PRA1,PV prom.com.may.2
+20,S,A,V,ICMP,ICMS/ISS sobre prec.
+20,S,A,V,PREF,Preferencia
+20,S,A,V,ICMR,Prec.+ICMS/ISS (NF)
+20,S,A,V,PRRP,Precio de reparación
+20,S,A,V,ICOB,BR: ICMS otra base
+20,S,A,V,PSPM,Margen
+20,S,A,V,PSPR,Ganancias
+20,S,A,V,PSVB,Base precio venta
+20,S,A,V,PTBL,Importe de factura
+20,S,A,V,PTCH,Cheque vía de pago
+20,S,A,V,PTCS,Caja de vía de pago
+20,S,A,V,ICV2,ICMS Tp.impos.<-ICVA
+20,S,A,V,PTDI,Tarjeta Diners
+20,S,A,V,ICVA,ICMS Tp.impositivo
+20,S,A,V,ICZF,ICMS desc.zona fr.
+20,S,A,V,PTR,Price to Retailer
+20,S,A,V,PTS1,Price to Inst
+20,S,A,V,PTVI,Tarjeta VISA
+20,S,A,V,IDZF,BR: ICMS DescuentoZF
+20,S,A,V,PTVO,Voucher
+20,S,A,V,RA00,Porcentaje
+20,S,A,V,IFR3,ICMS sobre porte SD
+20,S,A,V,RA01,Porcentaje bruto
+20,S,A,V,RB10,Desc.reclamación
+20,S,A,V,INDX,Índice de inflación
+20,S,A,V,RB11,Desc.merc.ret.compr.
+20,S,A,V,IP0X,BR: IPI 0 exención
+20,S,A,V,RB19,Otros descuentos
+20,S,A,V,IPB2,IPI de SD <-IPBS
+20,S,A,V,RC00,Desc.merc.ret.compr.
+20,S,A,V,RD00,Otros descuentos
+20,S,A,V,IPBS,IPI base impon.
+20,S,A,V,RH00,Descuento por ctd.
+20,S,A,V,RJ01,Descuento por peso
+20,S,A,V,RL00,Porcentaje en centen
+20,S,A,V,RNTM,Comis.merchandising
+20,S,A,V,RNTP,Descuento factoring
+20,S,A,V,SKTO,Descuento efectivo
+20,S,A,V,SKTV,Dif.redond.(posit.)
+20,S,A,V,IPIC,Copia de IPI de SD
+20,S,A,V,TED,Ex Duty-Trading prod
+20,S,A,V,IPLW,BR: IPI Ley
+20,S,A,V,TRIG,Event Trigger
+20,S,A,V,IPOB,BR: IPI otra base
+20,S,A,V,UTXD,US Tax per document
+20,S,A,V,ISIC,ICMS Tipo SF=ST
+20,S,A,V,UTXE,Impto.EEUU p/doc.
+20,S,A,V,ISS3,ISS de SD
+20,S,A,V,UTXJ,Cód.domicilio fiscal
+20,S,A,V,IST2,BR: Sub.Trib base 2
+20,S,A,V,ISTA,Tasa Sub.Trib.
+20,S,A,V,VKA0,PrcPromVentas IS-R
+20,S,A,V,ISTB,Valor base Sub.Trib.
+20,S,A,V,VKA1,PV prom.adic. IS-R
+20,S,A,V,ISTC,Reduc.base SubTrib
+20,S,A,V,VKAE,PV.paralelo A IS-R
+20,S,A,V,ISTF,BR: SubTrib PrcFijo
+20,S,A,V,VKAG,Precio base PromVta
+20,D,A,V,ZDS3,Preisbuch-Basis
+20,S,A,V,ZDS3,Desc sobre preciovta
+20,D,A,V,AMIW,Mindestauftragswert
+20,D,A,V,AMIZ,Mindestwertzuschlag
+20,D,A,V,AZWR,Anzahlung/Verrechng.
+20,D,A,V,BO01,Mat-/Gruppenbonus
+20,D,A,V,BO02,Materialbonus
+20,D,A,V,BO03,Kundenbonus
+20,D,A,V,BO04,Hierarchiebonus
+20,D,A,V,BO05,Hierarchiebonus/Mat
+20,D,A,V,BO06,Umsatzunabhäng-Bonus
+20,D,A,V,DIFF,Rundung
+20,D,A,V,ECCN,Ausl.anteilswert
+20,D,A,V,EK02,Kalkulierte Kosten
+20,D,A,V,EK03,Kalkulierte FxKosten
+20,D,A,V,GRWR,Grenzübergangswert
+20,D,A,V,HI01,Hierarchie
+20,D,A,V,HI02,Hierarchie/Material
+20,D,A,V,HM00,Auftragswert
+20,D,A,V,ISIC,BR: ICMS rate for ST
+20,D,A,V,IST2,BR: Sub.Trib 2
+20,D,A,V,ISTC,BR: ICMS rate for ST
+20,D,A,V,J1AL,Befrei. mit Gutsch.
+20,D,A,V,J1AN,Befrei. ohne Gutsch.
+20,D,A,V,J1AR,VAT Surcharge RNI
+20,D,A,V,J1W2,Quellensteuer 2
+20,D,A,V,J1W3,Quellensteuer 3
+20,D,A,V,K020,Preisgruppe
+20,D,A,V,K029,Materialgruppe
+20,D,A,V,K030,Kunde/MatGrp
+20,D,A,V,K031,Preisgrp/MatGrp
+20,D,A,V,K032,Preisgrp/Mat
+20,D,A,V,K148,Produkthierarchie
+20,D,A,V,KA00,Aktion
+20,D,A,V,KA02,Aktionsrabatt % 1
+20,D,A,V,KA03,Aktionsrabatt % 2
+20,D,A,V,KA04,Aktionsrabatt abs.1
+20,D,A,V,KA05,Aktionsrabatt abs.2
+20,D,A,V,KAD0,Sachkosten (VKHM)
+20,D,A,V,KAD1,Handlingsk. (VKHM)
+20,D,A,V,KBM1,Kulanz/Garantie
+20,D,A,V,KP00,Palettenrabatt
+20,D,A,V,KP01,Anbruchzuschlag
+20,D,A,V,KP02,Mixpalettenrabatt
+20,D,A,V,KP03,MixAnbruchzuschlag
+20,D,A,V,KUMU,Kumulationskond.
+20,D,A,V,KV00,Verkaufskosten (ISR)
+20,D,A,V,KW00,Konzernbewertung
+20,D,A,V,LCFR,Steuerlizenz Frankr
+20,D,A,V,LCIT,MwSt-Lizenz Italien
+20,D,A,V,MS15,Steuer 15%
+20,D,A,V,MW01,Steuerausloeser
+20,D,A,V,MW07,Steuer 7%
+20,D,A,V,MW15,Steuer Delkredere
+20,D,A,V,MWB1,Berlin Verfahren A1
+20,D,A,V,MWB2,Berlin Verfahren A2
+20,D,A,V,MWC0,MWST (IVA)      (CO)
+20,D,A,V,MWI1,Steuer im Preis
+20,D,A,V,MWI2,Steuer in Rabatten
+20,D,A,V,MWIG,Steuer vom Hundert
+20,D,A,V,MWIS,Steuer gesamt
+20,D,A,V,MWR1,UST manuell     (RU)
+20,D,A,V,MWR2,UST-Verr.manuell(RU)
+20,D,A,V,MWR3,UST-Verr.Erl.man(RU)
+20,D,A,V,MWR4,"UST-manuell,lok.(RU)"
+20,D,A,V,MWR5,UST-Verr.man.lok(RU)
+20,D,A,V,MWR6,UST-Verr.Erl.lok(RU)
+20,D,A,V,MWR7,GSM manuell     (RU)
+20,D,A,V,MWR8,GSM-Verr.manuell(RU)
+20,D,A,V,MWR9,GSM-Verr.Erl.man(RU)
+20,D,A,V,MWSC,Ausgangssteuer CRM
+20,D,A,V,MWSV,Ausgangssteuer (VKP)
+20,D,A,V,NANG,Nachnahmegebühr
+20,D,A,V,NAPG,Paketgebühr
+20,D,A,V,NAUE,Überweisungsgebühr
+20,D,A,V,NET1,Nettowert volle MwSt
+20,E,A,M,ZCIF,CIF - Manual
+20,E,A,M,ZCS,Cess - Customs Duty
+20,E,A,M,ZCV2,CVD - CESS
+20,E,A,M,ZCV8,SCH 1 %-on CVD
+20,E,A,M,ZDIS,Discount
+20,E,A,M,ZEX1,Manual Exc. Qty base
+20,E,A,M,ZEX2,IN Manual Excise
+20,E,A,M,ZEXF,Manual Exc. Qty base
+20,E,A,M,ZFR6,Freight Value
+20,E,A,M,ZFRM,Frt/qty aft tax -MPI
+20,E,A,M,ZG01,Markup Deliv. Plant
+20,E,A,M,ZHCG,Handling(val)aft tax
+20,E,A,M,ZICG,CGST(Statistical)
+20,E,A,M,ZIIG,IGST(Statistical)
+20,E,A,M,ZIN1,Insurance %
+20,E,A,M,ZMR1,MRP-TAKSAL
+20,E,A,M,ZMRR,Diff MRP & SP
+20,E,A,M,ZMRX,% MRP for ED base
+20,E,A,M,ZOA1,Customs %
+20,E,A,M,ZOB1,Customs (Value)
+20,E,A,M,ZOC1,Customs/Quantity
+20,E,A,M,ZOCM,IN Octroi
+20,E,A,M,ZORC,ORCHID - 50 % DUTY
+20,E,A,M,ZOTH,Misc. charges-MPI
+20,E,A,M,ZPB0,Gross Price
+20,E,A,M,ZPB2,Gross Price
+20,E,A,M,ZPC1,P&F % on basic
+20,E,A,M,ZPK1,P & F charges /Qty
+20,E,A,M,ZPKF,P&F %
+20,E,A,M,ZPRF,profit share rev-MPI
+20,E,A,M,ZPTV,PFVal calc after Tax
+20,E,A,M,ZRST,IN: A/P Resale Tax
+20,E,A,M,ZSAD,Special Adl Duty
+20,E,A,M,ZSD2,SAD - ORCHID
+20,E,A,M,ZSTT,ST Sub Total fr fm31
+20,E,A,M,ZXCI,EXCISE - ORCHID
+20,E,A,MS,GPRO,Percent. from Limits
+20,E,A,MS,KR01,Header Discount
+20,E,A,MS,KRB1,Header Discount Doc.
+20,E,A,MS,KZ01,Header Surcharge
+20,E,A,MS,KZB1,Header Surch. Doc.
+20,E,A,MS,NAVM,Non-Deductible Tax
+20,E,A,MS,NAVS,Non-Deductible Tax
+20,E,A,MS,PRS,Total Price
+20,E,A,MS,PRS0,Price comp.-Labour
+20,E,A,MS,PRS1,Price comp.-Material
+20,E,A,MS,PRS2,Price comp.-Overhead
+20,E,A,MS,PRS3,Price comp.-Miscell.
+20,E,A,MS,PRS4,Relevant Value
+20,E,A,MS,PRSX,Total Price
+20,E,A,MS,ZA00,Surcharge % on Net
+20,E,A,P,8000,Remuneration FSCS
+20,E,A,P,8100,Stock FSCS
+20,E,A,P,9001,CRM Commission
+20,E,A,P,9090,CRM Bonus
+20,E,A,PB,8000,Evaluation FSCS
+20,E,A,PB,8100,Stock FSCS
+20,E,A,PB,9000,Valuation CRM
+20,E,A,ST,MWAS,Output Tax
+20,E,A,TP,TP01,Tranfer Price (fix)
+20,E,A,TP,TP02,Markup (percentage)
+20,E,A,TP,TPB1,Material Price (ML)
+20,E,A,TP,TPB2,Costing Basis
+20,E,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,E,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,E,A,TX,AP1U,A/P Sales Tax 1 Use
+20,E,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,E,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,E,A,TX,AP2U,A/P Sales Tax 2 Use
+20,E,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,E,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,E,A,TX,AP3U,A/P Sales Tax 3 Use
+20,E,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,E,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,E,A,TX,AP4U,A/P Sales Tax 4 Use
+20,E,A,TX,AR1,A/R Sales Tax 1
+20,E,A,TX,AR2,A/R Sales Tax 2
+20,E,A,TX,AR3,A/R Sales Tax 3
+20,E,A,TX,AR4,A/R Sales Tax 4
+20,E,A,TX,B100,Convenio 100
+20,E,A,TX,BASB,Base Amount
+20,E,A,TX,BASI,Base Amount
+20,E,A,TX,BCI1,ICMS Complement Base
+20,E,A,TX,BCI2,ICMS Complem. Exempt
+20,E,A,TX,BCI3,ICMS Complement Rate
+20,E,A,TX,BDIS,Discounting
+20,E,A,TX,BFRE,Freight
+20,E,A,TX,BI00,IPI / ICMS Zero Tax
+20,E,A,TX,BIC0,ICMS Rate
+20,E,A,TX,BIC1,ICMS Base Reduction
+20,E,A,TX,BIC2,ICMS Other Base Flag
+20,E,A,TX,BIC3,ICMS Rate * Base
+20,E,A,TX,BIC5,ICMS Rate * 10^n
+20,E,A,TX,BIC6,ICMS Base
+20,E,A,TX,BIC7,ICMS Exclude Base
+20,E,A,TX,BIC9,ICMS Ind.Calc.Base
+20,E,A,TX,BICA,ICMS Ind.Calc.Base
+20,E,A,TX,BICB,ICMS Ref BIC1
+20,E,A,TX,BICC,ICMS Conv.100 Flag
+20,E,A,TX,BICD,ICMS Ex.Base Con.
+20,E,A,TX,BICE,ICMS Con.Calc.Base
+20,E,A,TX,BICF,ICMS Other Base Flag
+20,E,A,TX,BICG,ICMS Rate SF=ST
+20,E,A,TX,BICH,ICMS Rate SF=ST
+20,E,A,TX,BICX,ICMS Exempt
+20,E,A,TX,BICY,ICMS Exempt Ref BICX
+20,E,A,TX,BIP0,IPI Rate
+20,E,A,TX,BIP1,IPI Base Reduction
+20,E,A,TX,BIP2,IPI Other Base Flag
+20,E,A,TX,BIP3,IPI Rate * Base
+20,E,A,TX,BIP4,IPI Rate Ref BIP0
+20,E,A,TX,BIP5,IPI Rate * 10^n
+20,E,A,TX,BIP7,IPI  Exclude Base In
+20,E,A,TX,BIP9,IPI Calculation Base
+20,E,A,TX,BIPA,IPI Rate Ref BIP0
+20,E,A,TX,BIPB,IPI Ref. Base
+20,E,A,TX,BIPC,IPI Other Base Flag
+20,E,A,TX,BIPD,IPI  Exclude Base Co
+20,E,A,TX,BIPP,IPI Pauta Amount
+20,E,A,TX,BIPS,IPI -Split Vendor
+20,E,A,TX,BIPT,IPI -Split Vendor PO
+20,E,A,TX,BIPU,IPI -Split Vendor IV
+20,E,A,TX,BIPX,IPI Exempt
+20,E,A,TX,BIPY,IPI Exempt Ref BIPX
+20,E,A,TX,BIS0,ISS Rate
+20,E,A,TX,BLIC,Tax Laws for ICMS
+20,E,A,TX,BLIP,Tax Laws for IPI
+20,E,A,TX,BSF0,Subtrib. Rate
+20,E,A,TX,BSF1,ICMS Rate SF=ST
+20,E,A,TX,BST0,Subtrib. Rate
+20,E,A,TX,BST1,Subtrib. Surch. Type
+20,E,A,TX,BST2,Subtrib. Minprice
+20,E,A,TX,BST3,Subtrib. Fix Price
+20,E,A,TX,BST5,Subtrib Icms Rate
+20,E,A,TX,BST6,Subtrib. Reduction 1
+20,E,A,TX,BST7,Subtrib. Reduction 2
+20,E,A,TX,BST8,Subtrib. Base Reduct
+20,E,A,TX,BST9,Subtrib. Calc.Base
+20,E,A,TX,BSTA,Subtrib. Surch. Type
+20,E,A,TX,BSTB,Subtrib. Surch. Type
+20,E,A,TX,CNSC,Service Tax Cred. CN
+20,E,A,TX,CNSD,Service Tax Deb. CN
+20,E,A,TX,CONC,Consumption tax Cre.
+20,E,A,TX,COND,Consumption tax Deb.
+20,E,A,TX,GST,A/P GST
+20,E,A,TX,GST1,A/R GST
+20,F,A,TX,ICS1,Sub.Tributaria   In
+20,F,A,TX,ICS2,S.T. Consumption In
+20,F,A,TX,ICS3,Sub.Tributaria  Out
+20,F,A,TX,ICS4,S.T. Indus Not in NF
+20,F,A,TX,ICS5,S.T. Cons. Not in NF
+20,F,A,TX,ICS6,S.T. Cons.Offset
+20,F,A,TX,ICS7,S.T. Cons. Not in NF
+20,F,A,TX,ICS8,S.T. Cons. Not in NF
+20,F,A,TX,ICS9,S.T. Consumption In
+20,F,A,TX,ICZF,ICMS Reverse (Z.F.)
+20,F,A,TX,IFR1,ICMS on freight  In
+20,F,A,TX,IFR3,ICMS on freight  Out
+20,F,A,TX,IFS1,ICMS ST freight  In
+20,F,A,TX,IFS3,ICMS ST freight  Out
+20,F,A,TX,INSS,INSS Incoming
+20,F,A,TX,INSX,INSS offset (100-)
+20,F,A,TX,IP10,IPI Null Values NF
+20,F,A,TX,IP11,IPI  Industr.    In
+20,F,A,TX,IP12,IPI  Consumption In
+20,F,A,TX,IP13,IPI  Consumption In
+20,F,A,TX,IP1C,IPI  Ind.Clearing
+20,F,A,TX,IP1O,IPI  Ind.Clear.Off.
+20,F,A,TX,IPI0,IPI Null Values NF
+20,F,A,TX,IPI1,IPI  Industr.    In
+20,F,A,TX,IPI2,IPI  Consumption In
+20,F,A,TX,IPI3,IPI from SD     Out
+20,F,A,TX,IPI4,IPI -Split Vendor
+20,F,A,TX,IPI5,IPI  Consu. REF IPI2
+20,F,A,TX,IPI6,IPI  Consu. REF IPI2
+20,F,A,TX,IPIA,IPI Industr. Out
+20,F,A,TX,IPIB,IPI Consum Out
+20,F,A,TX,IPIO,IPI Null Values NF
+20,F,A,TX,IPIX,IPI  Active
+20,F,A,TX,IPIY,IPI  Active
+20,F,A,TX,IPIZ,IPI  Active
+20,F,A,TX,IRD1,ICMS Reimbursement
+20,F,A,TX,IRD2,ICMS Reimbur. Offset
+20,F,A,TX,IRD3,SUBT Reimbursement
+20,F,A,TX,IRD4,SUBT Reimbur. Offset
+20,F,A,TX,IRD5,ICMS Reim.Offset NVV
+20,F,A,TX,IRD6,SUBT Reim.Offset NVV
+20,F,A,TX,ISS3,ISS from SD     Out
+20,F,A,TX,ISSO,ISS from SD     Out
+20,F,A,TX,IT01,ICMS Industr.    In
+20,F,A,TX,IT02,ICMS Industr.    In
+20,F,A,TX,IT03,ICMS Industr.    In
+20,F,A,TX,J1A1,GI surch. Region 1
+20,F,A,TX,J1A2,GI surch. Region 2
+20,F,A,TX,J1A3,GI surch. Region 3
+20,F,A,TX,J1AA,VAT Disc. Customs
+20,F,A,TX,J1AG,ET Disc. Customs
+20,F,A,TX,J1AI,Internal Purch. Tax
+20,F,A,TX,J1AL,Exemption w. Credit
+20,F,A,TX,J1AN,Exemption w/o Credit
+20,F,A,TX,J1AP,VAT discount
+20,F,A,TX,J1AR,VAT Surcharge RNI
+20,F,A,TX,J1AS,Surcharge No Categ.
+20,F,A,TX,J1AV,Internal Purch. Tax
+20,F,A,TX,J1AY,Not taxed
+20,F,A,TX,J2A1,ISC Perú
+20,F,A,TX,J2A2,IGV Perú - Adq.002
+20,F,A,TX,J2A3,IGV Perú - Adq.003
+20,F,A,TX,J2A4,Advalorem (Perú)
+20,F,A,TX,J2A5,IPM tax Peru
+20,F,A,TX,J3A1,Fuel tax (ded.)
+20,F,A,TX,J3A2,Fuel tax (nonded.)
+20,F,A,TX,JA1I,A/R SEcess Invent-
+20,F,A,TX,JA1S,A/R SEcess setoff-
+20,F,A,TX,JA1X,A/R Secon&Hr.ECS-
+20,F,A,TX,JAE1,IN: ECS  for Abate
+20,F,A,TX,JAE2,Offset for ECS Abet
+20,F,A,TX,JAED,IN: A/R AED
+20,F,A,TX,JAIP,IN AED inventory %
+20,F,A,TX,JAIQ,IN AED inventory Qty
+20,F,A,TX,JAO1,IN: A/P AED deductib
+20,F,A,TX,JAO2,IN:A/P AED nondeduct
+20,F,A,TX,JAOP,IN: AED setoff %
+20,F,A,TX,JAOQ,IN: AED setoff Qty
+20,F,A,TX,JAS1,SECEss for Abet
+20,F,A,TX,JAS2,Offset SECess Abet
+20,F,A,TX,JAX1,IN: A/P AED setoff
+20,F,A,TX,JAX2,IN: A/P AED inventor
+20,F,A,TX,JC1E,A/P GST Recoverable
+20,F,A,TX,JC1I,A/P PST distributed
+20,F,A,TX,JC1R,PST Self-assess-Rev
+20,F,A,TX,JC1S,A/P recoverable
+20,F,A,TX,JC1T,A/P PST Self-assess
+20,F,A,TX,JC1U,A/P PST Self-assess
+20,F,A,TX,JC2E,A/P GST distributed
+20,F,A,TX,JC2I,A/P prov. (B+GST)
+20,F,A,TX,JC2S,A/P Recov. B + GST
+20,F,A,TX,JC2T,A/P PST Self-assess
+20,F,A,TX,JC2U,A/P assess B + GST
+20,F,A,TX,JC3I,A/P prov. (B+GST)
+20,F,A,TX,JC3S,A/P Recov. B + GST
+20,F,A,TX,JC3T,A/P PST Self-assess
+20,F,A,TX,JC3U,A/P assess B + GST
+20,F,A,TX,JC4I,A/P prov. (B+GST)
+20,F,A,TX,JC4S,A/P Recov. B + GST
+20,F,A,TX,JC4U,A/P assess B + GST
+20,F,A,TX,JC5S,A/P Recov. B + GST
+20,F,A,TX,JC5U,A/P assess B + GST
+20,F,A,TX,JCES,IN: A/R Cess
+20,F,A,TX,JCIN,IN: GST Comp.Cess-ND
+20,F,A,TX,JCIR,IN: RCM Comp. CESS
+20,F,A,TX,JCIS,IN: GST Comp. Cess
+20,F,A,TX,JCS1,IN A/R CST out
+20,F,A,TX,JCS2,IN A/R Sur out
+20,F,A,TX,JEC1,A/R Ecess - setoff-
+20,F,A,TX,JEC2,A/R Ecess - Invent-
+20,F,A,TX,JEC3,A/P ECS for ST
+20,F,A,TX,JECS,A/R Education Cess--
+20,F,A,TX,JES3,A/P SECess for ST
+20,F,A,TX,JES5,SECess on Service Ta
+20,F,A,TX,JEX1,A/P Ecess Setoff
+20,F,A,TX,JEX2,A/P ECS Inv Total
+20,F,A,TX,JGST,A/P GST
+20,F,A,TX,JHX1,A/P SEcess Setoff
+20,F,A,TX,JHX2,A/P ShECS Invent Tot
+20,F,A,TX,JHZ1,A/P SHEcs Setoff Tot
+20,F,A,TX,JICG,IN: Central GST
+20,F,A,TX,JICN,IN: Central GST -ND
+20,F,A,TX,JICR,IN: RCM CGST
+20,F,A,TX,JIDC,IN:GST Comp.Cess-IMP
+20,F,A,TX,JIIG,IN: Integrated GST
+20,F,A,TX,JIIN,IN:Integrated GST-ND
+20,F,A,TX,JIIR,IN:RCM IGST
+20,F,A,TX,JIMD,IN:Import GST deduct
+20,F,A,TX,JIMN,IN:Import GST ND
+20,F,A,TX,JIN1,IN: A/R CST
+20,F,A,TX,JIN2,IN: AR LST
+20,F,A,TX,JIN4,IN: A/R CST Surcharg
+20,F,A,TX,JIN5,IN: AR LST Surcharg
+20,F,A,TX,JIN6,A/R VAT Payable
+20,F,A,TX,JIN7,A/R CST Payable-VAT
+20,F,A,TX,JIN8,A/R CST Surchrg -VAT
+20,F,A,TX,JINC,IN:GST Comp.Cess-ND
+20,F,A,TX,JIP1,IN:A/P CST
+20,F,A,TX,JIP2,IN:A/P LST
+20,F,A,TX,JIP3,IN: A/P ST setoff
+20,F,A,TX,JIP4,A/P CST Non deductib
+20,F,A,TX,JIP5,A/P VAT RM Deductibl
+20,F,A,TX,JIP6,A/P VAT RM Non-Dedu
+20,F,A,TX,JIP7,A/P VAT CG Deductib
+20,F,A,TX,JIP8,A/P VAT CG Non-Deduc
+20,F,A,TX,JIP9,IN:A/P LST T.O.T
+20,N,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,N,A,TX,JP4U,A/P Sales Tax 4 Use
+20,N,A,TX,JR1,A/R Sales Tax 1
+20,N,A,TX,JR2,A/R Sales Tax 2
+20,N,A,TX,JR3,A/R Sales Tax 3
+20,N,A,TX,JR4,A/R Sales Tax 4
+20,N,A,TX,MWAA,Vereffeningsbelast.
+20,N,A,TX,MWAS,Te-betalen BTW
+20,N,A,TX,MWST,Te-betalen BTW
+20,N,A,TX,MWVY,Ver.BTW na aftr.toew
+20,N,A,TX,MWVZ,Niet-aftr.BTW toewyz
+20,N,A,TX,NLXV,ICV-belasting
+20,N,A,TX,PST,Provincial Sales Tax
+20,N,A,TX,PST1,Provincial Sales Tax
+20,N,A,TX,PTI1,A/P PST distributed
+20,N,A,TX,PTI2,A/P PST seperate GL
+20,S,A,TX,AP1E,A/P Sales Tax 1 Exp.
+20,S,A,TX,AP1I,A/P Sales Tax 1 Inv.
+20,S,A,TX,AP1U,A/P Sales Tax 1 Use
+20,S,A,TX,AP2E,A/P Sales Tax 2 Exp.
+20,S,A,TX,AP2I,A/P Sales Tax 2 Inv.
+20,S,A,TX,AP2U,A/P Sales Tax 2 Use
+20,S,A,TX,AP3E,A/P Sales Tax 3 Exp.
+20,S,A,TX,AP3I,A/P Sales Tax 3 Inv.
+20,S,A,TX,AP3U,A/P Sales Tax 3 Use
+20,S,A,TX,AP4E,A/P Sales Tax 4 Exp.
+20,S,A,TX,AP4I,A/P Sales Tax 4 Inv.
+20,S,A,TX,AP4U,A/P Sales Tax 4 Use
+20,S,A,TX,AR1,A/R Sales Tax 1
+20,S,A,TX,AR2,A/R Sales Tax 2
+20,S,A,TX,AR3,A/R Sales Tax 3
+20,S,A,TX,AR4,A/R Sales Tax 4
+20,S,A,TX,ARSD,Sales Tax SD Interfa
+20,S,A,TX,BASB,Importe base
+20,S,A,TX,BASI,Importe base
+20,S,A,TX,GST,Goods and Services T
+20,S,A,TX,GST1,Goods and Services T
+20,S,A,TX,GTI1,A/P GST
+20,S,A,TX,GTI2,A/P GST
+20,S,A,TX,GTO1,A/R GST
+20,S,A,TX,GTO2,A/R GST
+20,S,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,S,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,S,A,TX,JP1U,A/P Sales Tax 1 Use
+20,S,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,S,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,S,A,TX,JP2U,A/P Sales Tax 2 Use
+20,S,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,S,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,S,A,TX,JP3U,A/P Sales Tax 3 Use
+20,S,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,S,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,S,A,TX,JP4U,A/P Sales Tax 4 Use
+20,S,A,TX,JR1,A/R Sales Tax 1
+20,S,A,TX,JR2,A/R Sales Tax 2
+20,S,A,TX,JR3,A/R Sales Tax 3
+20,S,A,TX,JR4,A/R Sales Tax 4
+20,S,A,TX,KPXX,Test
+20,S,A,TX,MWAA,Recargo equival.
+20,S,A,TX,MWAL,Impuesto suntuario
+20,S,A,TX,MWAR,IVA repercutido-red.
+20,S,A,TX,MWAS,IVA repercutido
+20,S,A,TX,MWRK,Gastos-desplaz.
+20,S,A,TX,MWS1,Suma parcial
+20,S,A,TX,MWST,IVA repercutido
+20,S,A,TX,MWVN,IVA sop.n.ded.n.asig
+20,S,A,TX,MWVR,IVA soportado redond
+20,S,A,TX,MWVS,IVA soportado
+20,S,A,TX,MWVY,_
+20,S,A,TX,MWVZ,IVA sop.n.ded. asig.
+20,S,A,TX,MWZG,Impuestos
+20,S,A,TX,MWZU,Investment Tax Norw.
+20,S,A,TX,NLXA,IVA adquis.CE deveng
+20,S,A,TX,NLXV,IVA adquis.CE soport
+20,S,A,TX,PST,Provincial Sales Tax
+20,S,A,TX,PST1,Provincial Sales Tax
+20,S,A,TX,PTI1,A/P PST distributed
+20,S,A,TX,PTI2,A/P PST seperate GL
+20,D,A,M,ZF15,Zoll Antidumping Mng
+20,D,A,M,ZDDP,Zoll Antidumping Mng
+20,D,A,KA,B020,Material
+20,S,A,M,A001,Rebates
+20,S,A,M,A002,Material Rebate
+20,S,A,M,A003,Hierarchy Rebate
+20,S,A,M,A004,Hierarchy Rebate/Mat
+20,S,A,M,AK01,Customer Rebate
+20,S,A,M,AMO1,Internal Amort. %
+20,S,A,M,AMO2,Internal Amort./Qty
+20,S,A,M,CU00,Gross Price Cust.Sim
+20,S,A,M,CUAC,Antidumping Cus.Qty
+20,S,A,M,CUAD,Anti-Dumping Cust %
+20,S,A,M,CUAE,Antidumping Cust.Wt
+20,S,A,M,CUAS,Customs Exemption %
+20,S,A,M,CUDC,3rd Country Cust Qty
+20,S,A,M,CUDE,3rd Country Weight
+20,S,A,M,CUDL,3rd Country Cust %
+20,S,A,M,CUFR,Freight Qty Customs
+20,S,A,M,CUIN,Insurance Customs
+20,S,A,M,CUP1,Preference Qty Cust
+20,S,A,M,CUP2,Preference Wt Cust.
+20,S,A,M,CUPC,Cust Phys Creat. Qty
+20,S,A,M,CUPE,Cust. Pharm. Prd %
+20,S,A,M,CUPF,Cust. Ph. Prod. Wgt
+20,S,A,M,CUPZ,Cust. preference %
+20,S,A,M,CURB,Absolute disc. cust.
+20,S,A,M,CUZ1,Customs max. quant.
+20,S,A,M,CUZ2,Customs max. wgt
+20,S,A,M,CUZC,Customs alloc. qty
+20,S,A,M,CUZE,Customs alloc. wgt
+20,S,A,M,CUZK,Customs alloc. &
+20,S,A,M,CUZP,Customs max. %
+20,S,A,M,DIS1,Dscto. % Bruto
+20,S,A,M,EDI1,Confirmed Price
+20,S,A,M,EDI2,Value variance
+20,S,A,M,FRA1,Freight %
+20,S,A,M,FRA2,Freight %
+20,S,A,M,FRB1,Freight (Value)
+20,S,A,M,FRB2,Freight (Value)
+20,S,A,M,FRC1,Freight/Quantity
+20,S,A,M,FRC2,Freight/Quantity
+20,S,A,M,GAU1,Orignl Price of Gold
+20,S,A,M,GAU2,Actual Price of Gold
+20,S,A,M,GRWR,Statistical Value
+20,S,A,M,GWLB,Stat. Val. LB-Comp.
+20,S,A,M,HB00,Header Surch.(Value)
+20,S,A,M,HB01,Header Disc.(Value)
+20,S,A,M,IN01,Seguro %
+20,S,A,M,IN02,Seguro - Valor
+20,S,A,M,IN03,Insurance % on total
+20,S,A,M,JADC,Addln.Duty of Custom
+20,S,A,M,JASS,Assessable Value
+20,S,A,M,JCDB,Basic customs - %
+20,S,A,M,JCDS,IN Special customs
+20,S,A,M,JCV1,IN CVD
+20,S,A,M,JEXC,IN Manual Excise
+20,S,A,M,JEXS,Imptos. en la OC
+20,S,A,M,JOCM,Manual Octroi
+20,S,A,M,K000,Contrct HeaderDisc %
+20,S,A,M,KAD0,Mat. Costs  (VKHM)
+20,S,A,M,KAD1,Handling Costs(VKHM)
+20,S,A,M,KR00,Header Disc.(Value)
+20,S,A,M,LH01,Delivery Hierarchy
+20,S,A,M,LH02,Deliv.Hier/Material
+20,S,A,M,LP00,Pallet Discount
+20,S,A,M,LP01,Incomp.Pallet Surch.
+20,S,A,M,LP02,Mixed Pallet Disc.
+20,D,A,M,VKP1,VKP excl. Steuer
+20,D,A,M,VS00,Steuerauslöser
+20,D,A,M,VS15,Steuer Delkredere
+20,D,A,M,VSRG,Steuerbetrag Regu.
+20,D,A,M,ZA01,Zuschlag % v. Brutto
+20,D,A,M,ZAF1,Zoll Antidumping Mng
+20,D,A,M,ZAF2,Zoll Antidumping Mng
+20,D,A,M,ZANT,Zoll Antidumping %
+20,D,A,M,ZB00,Zuschlag absolut
+20,D,A,M,ZBXX,Bruttopreis
+20,D,A,M,ZC00,Zuschlag / Menge
+20,D,A,M,ZCIF,Bruttopreis
+20,D,A,M,ZCLR,Zoll %
+20,D,A,M,ZF10,Zoll Antidumping Mng
+20,D,A,M,ZF11,Zoll Antidumping Mng
+20,D,A,M,ZFOB,Bruttopreis
+20,D,A,M,ZFR1,Zoll Antidumping Mng
+20,D,A,M,ZFR2,Zoll Antidumping Mng
+20,D,A,M,ZFR3,Fracht %
+20,D,A,M,ZFR4,Zoll Antidumping Mng
+20,D,A,M,ZFR5,Zoll Antidumping Mng
+20,D,A,M,ZFR6,Zoll Antidumping Mng
+20,D,A,M,ZFR8,Zoll Antidumping Mng
+20,D,A,M,ZFR9,Zoll Antidumping Mng
+20,D,A,M,ZFRM,Zoll Antidumping Mng
+20,D,A,M,ZG01,Aufschlag Lieferwerk
+20,D,A,M,ZHCG,Zoll Antidumping Mng
+20,D,A,M,ZLNC,Zoll Antidumping Mng
+20,D,A,M,ZNT1,Zoll Antidumping %
+20,D,A,M,ZOA1,Zoll %
+20,D,A,M,ZOB1,Zoll absolut
+20,D,A,M,ZOC1,Zoll/Menge
+20,D,A,M,ZOF1,Zoll Antidumping Mng
+20,D,A,M,ZOF2,Zoll Antidumping Mng
+20,D,A,M,ZPB0,Bruttopreis
+20,D,A,M,ZPB1,Bruttopreis
+20,D,A,M,ZPB2,Bruttopreis
+20,D,A,M,ZPC1,Zoll Antidumping Mng
+20,D,A,M,ZPC2,Zoll Antidumping Mng
+20,D,A,M,ZPK1,Zoll Antidumping Mng
+20,D,A,M,ZPK2,Zoll Antidumping Mng
+20,D,A,M,ZPKF,Zoll Antidumping Mng
+20,D,A,M,ZPRF,Zoll Antidumping Mng
+20,D,A,M,ZPTP,Zoll Antidumping Mng
+20,D,A,M,ZPTV,Zoll Antidumping Mng
+20,D,A,M,ZRST,Zoll Antidumping Mng
+20,D,A,M,ZSAD,Zoll %
+20,D,A,M,ZSET,Zoll Antidumping Mng
+20,D,A,MS,GPRO,Prozente aus Limits
+20,D,A,MS,KR01,Kopfrabatt
+20,D,A,MS,KRB1,Kopfrabatt Beleg
+20,D,A,MS,KZ01,Kopfzuschlag
+20,D,A,MS,KZB1,Kopfzuschlag Beleg
+20,D,A,MS,PRS,Gesamtpreis
+20,D,A,MS,PRS0,Preisteil Lohn
+20,D,A,MS,PRSX,Gesamtpreis
+20,D,A,P,9001,CRM-Provision
+20,D,A,P,9090,CRM-Bonifikation
+20,D,A,PB,9000,Bewertung CRM
+20,D,A,ST,BSWR,Basiswert
+20,D,A,TP,TP01,Transferpreis (fix)
+20,D,A,TP,TP02,Aufschlag prozent.
+20,D,A,TP,TPB1,Materialpreis (ML)
+20,D,A,TP,TPB2,Kalkulationsbasis
+20,D,A,TX,B100,Convênio 100
+20,D,A,TX,BCI1,ICMS Complement Base
+20,D,A,TX,BCI2,ICMS Complem. Exempt
+20,D,A,TX,BCI3,ICMS complement Rate
+20,D,A,TX,BDIS,Discount
+20,D,A,TX,BFRE,Freight
+20,D,A,TX,BI00,IPI / ICMS Zero Tax
+20,D,A,TX,BIC0,ICMS Rate
+20,D,A,TX,BIC1,ICMS Base Reduction
+20,D,A,TX,BIC2,ICMS Other Base Flag
+20,D,A,TX,BIC3,ICMS Rate * Base
+20,D,A,TX,BIC5,ICMS Rate * 10^n
+20,D,A,TX,BIC6,ICMS Base
+20,D,A,TX,BIC7,ICMS exclude Base
+20,D,A,TX,BIC9,ICMS Ind.Calc.Base
+20,D,A,TX,BICA,ICMS Ind.Calc.Base
+20,D,A,TX,BICB,ICMS Ref BIC1
+20,D,A,TX,BICC,ICMS Conv.100 Flag
+20,D,A,TX,BICD,ICMS Ex.Base Con.
+20,D,A,TX,BICE,ICMS Con.Calc.Base
+20,D,A,TX,BICF,ICMS Other Base Flag
+20,D,A,TX,BICG,ICMS Rate SF=ST
+20,D,A,TX,BICH,ICMS Rate SF=ST
+20,D,A,TX,BICX,ICMS exempt
+20,D,A,TX,BICY,ICMS exempt ref BICX
+20,D,A,TX,BIF0,ICMS on freight
+20,D,A,TX,BIP0,IPI Rate
+20,D,A,TX,BIP1,IPI Base Reduction
+20,D,A,TX,BIP2,IPI Other Base Flag
+20,D,A,TX,BIP3,IPI Rate * Base
+20,D,A,TX,BIP4,IPI Rate ref BIP0
+20,D,A,TX,BIP5,IPI Rate * 10^n
+20,D,A,TX,BIP7,IPI  exclude Base In
+20,D,A,TX,BIP9,IPI Calculation Base
+20,D,A,TX,BIPA,IPI Rate ref BIP0
+20,D,A,TX,BIPB,IPI ref. Base
+20,D,A,TX,BIPC,IPI Other Base Flag
+20,D,A,TX,BIPD,IPI  exclude Base Co
+20,D,A,TX,BIPE,Calculate excl./oth.
+20,D,A,TX,BIPP,IPI Pauta Amount
+20,D,A,TX,BIPS,IPI -Split Vendor
+20,D,A,TX,BIPT,IPI -Split Vendor PO
+20,D,A,TX,BIPU,IPI -Split Vendor IV
+20,D,A,TX,BIPX,IPI exempt
+20,D,A,TX,BIPY,IPI exempt ref BIPX
+20,D,A,TX,BIS0,ISS Rate
+20,D,A,TX,BLIC,Steuergesetz ICMS
+20,D,A,TX,BLIP,Steuergesetz IPI
+20,D,A,TX,BSF0,Subtrib. Rate
+20,D,A,TX,BSF1,ICMS Rate SF=ST
+20,D,A,TX,BST0,Subtrib. Rate
+20,D,A,TX,BST1,Subtrib. surch. type
+20,D,A,TX,BST2,Subtrib. Minprice
+20,D,A,TX,BST3,Subtrib. Fixprice
+20,D,A,TX,BST5,Subtrib Icms Rate
+20,D,A,TX,BST6,Subtrib. reduction 1
+20,D,A,TX,BST7,Subtrib. reduction 2
+20,D,A,TX,BST8,Subtrib. base reduct
+20,D,A,TX,BST9,Subtrib. calc.Base
+20,D,A,TX,BSTA,Subtrib. surch. type
+20,D,A,TX,BSTB,Subtrib. surch. type
+20,D,A,TX,CNSC,Service Tax Cred. CN
+20,D,A,TX,CNSD,Service Tax Deb. CN
+20,D,A,TX,CONC,Luxussteuer Haben
+20,D,A,TX,COND,Luxussteuer Soll
+20,D,A,TX,GSTS,A/P GST self assess
+20,D,A,TX,GTO0,A/R GST
+20,D,A,TX,IC1C,ICMS Ind.Clearing
+20,D,A,TX,IC1O,ICMS Ind.Clear.Off.
+20,D,A,TX,ICM0,ICMS nullvalues NF
+20,D,A,TX,ICM1,ICMS Industr.    In
+20,D,A,TX,ICM2,ICMS Consumption In
+20,D,A,TX,ICM3,ICMS from SD    Out
+20,D,A,TX,ICM4,ICMS consum outgoing
+20,D,A,TX,ICMF,ICMS S.T. fr. offset
+20,D,A,TX,ICMO,ICMS nullvalues NF
+20,D,A,TX,ICMX,ICMS active
+20,D,A,TX,ICMY,ICMS active
+20,D,A,TX,ICMZ,ICMS active
+20,D,A,TX,ICOP,ICMS complement
+20,D,A,TX,ICOX,ICMS complement 100
+20,D,A,TX,ICS1,Sub.Tributaria   In
+20,F,B,DB,RD00,Invoice
+20,F,B,DB,RDA0,Invoice AR (origin.)
+20,F,B,DB,RDA1,Invoice AR -1st copy
+20,F,B,DB,RDA2,Invoice AR (2.cop.)
+20,F,B,E1,CFPR,Frgt plann. shippng
+20,F,B,E1,CHKL,Count List
+20,F,B,E1,INDL,Internet delivery
+20,F,B,E1,OPOD,POD confirmed
+20,F,B,EA,ABSA,Quotation Rejection
+20,F,B,EA,MAHN,Reminder
+20,F,B,EA,NEU,RFQ
+20,F,B,EB,EBPR,Purchasing
+20,F,B,EF,ACE1,Import declaration
+20,F,B,EF,AUFB,Dunning ord confirm
+20,F,B,EF,ET01,Material label
+20,F,B,EF,MAHN,Dunning
+20,F,B,EF,NEU,Purchase order
+20,F,B,EF,WEZL,GR count list
+20,F,B,EL,LPE2,SchAgrmtSchedLi-noGR
+20,F,B,EL,LPET,SA schedule line
+20,F,B,EL,LPF2,SchAgrmtCumQty-no GR
+20,F,B,EL,LPFZ,SchAgrmt Cum. Qty
+20,F,B,EL,LPH1,ForecastDlv schedule
+20,F,B,EL,LPH2,ForecastDlv schedule
+20,F,B,EL,LPJ1,JIT Delivery Sched.
+20,F,B,EL,LPJ2,JIT Delivery Sched.
+20,F,B,EL,LPMA,SchedAgrmt Dunning
+20,F,B,EL,LPMF,Dunning SchAgr CumQt
+20,F,B,ES,NEU,Entry of Srvc Prfrmd
+20,F,B,EV,AUFB,Dunning Ord Confirm
+20,F,B,EV,NEU,Outline agreement
+20,F,B,EV,VNEU,Distribtd Contracts
+20,F,B,K1,MAAK,Direct Mailing
+20,F,B,K1,MAIL,Mail to Employees
+20,F,B,K1,MAIN,Internet mailing
+20,F,B,K1,MAK1,Print Sales Letter
+20,F,B,K1,MAK2,Print Sales Activity
+20,F,B,K1,MAK3,Print Activity/CstM.
+20,F,B,K1,MAKO,Create Contracts
+20,F,B,M1,CHKL,Count List
+20,F,B,M1,GRPL,Pallet Sticker
+20,F,B,MD,MAL1,Direct Supply Mail 1
+20,F,B,MD,MAL2,Direct Supply Mail 2
+20,F,B,MD,MAL3,Direct Supply Mail 3
+20,F,B,MD,MAL4,Direct Supply Mail 4
+20,F,B,MD,MAL5,Direct Supply Mail 5
+20,F,B,ME,ET01,Material label
+20,F,B,ME,J1IB,Excise Bonding ARE
+20,F,B,ME,J1IF,Subcontract Challan
+20,F,B,ME,MLFH,GR Missing Parts Msg
+20,F,B,ME,MLGR,GR Message
+20,F,B,ME,MLMD,GR Qty Deviation
+20,F,B,ME,MLUD,GR under/Over deliv.
+20,F,B,ME,WA01,GI Note Vers.1
+20,F,B,ME,WA02,GI Note Vers.2
+20,F,B,ME,WA03,GI Note Vers.3
+20,F,B,ME,WAE1,GI Label Vers.1
+20,F,B,ME,WAE2,GI Label Vers.2
+20,F,B,ME,WAE3,GI Label Vers.3
+20,F,B,ME,WE01,GR Note Vers.1
+20,F,B,ME,WE02,GR Note Vers.2
+20,F,B,ME,WE03,GR Note Vers.3
+20,F,B,ME,WEE1,GR Label Vers.1
+20,F,B,ME,WEE2,GR Label Vers.2
+20,F,B,ME,WEE3,GR Label Vers.3
+20,F,B,ME,WEK1,Kanban Card 1
+20,F,B,ME,WF01,GR Prod. Ord. Vers.1
+20,F,B,ME,WF02,GR Prod. Ord. Vers.2
+20,F,B,ME,WLB1,GI Note RP Vers.1
+20,F,B,ME,WLB2,GI Note RP Vers.2
+20,F,B,ME,WLB3,GI Note RP Vers.3
+20,F,B,MR,EINK,Mail to Purchasing
+20,F,B,MR,ERS,ERS Procedure
+20,D,B,CF,PROT,Fehlerprotokoll
+20,D,B,DB,AF00,Anfragebestätigung
+20,D,B,DB,AN00,Angebotsbestätigung
+20,D,B,DB,AUSJ,Export Report
+20,D,B,DB,BA00,Auftragsbestätigung
+20,D,B,DB,LD00,Lieferschein
+20,D,B,DB,LP00,Lieferplanbestätig.
+20,D,B,DB,RD00,Rechnung
+20,D,B,E1,CFPR,Frachtplanung Sped.
+20,D,B,E1,CHKL,Zählliste
+20,D,B,EA,MAHN,Erinnerung
+20,D,B,EA,NEU,Anfrage
+20,D,B,EF,ACE1,Importmeldung
+20,D,B,EF,AUFB,Auftragsbest.mahnung
+20,D,B,EF,ET01,Materialetikett
+20,D,B,EF,MAHN,Mahnung
+20,D,B,EF,NEU,Bestellung
+20,D,B,EL,LPET,LP-Einteilung
+20,D,B,EL,LPH1,Lieferabruf (LAB)
+20,D,B,EL,LPH2,Lieferabruf (LAB)
+20,D,B,EL,LPJ1,Feinabruf (FAB)
+20,D,B,EL,LPJ2,Feinabruf (FAB)
+20,D,B,EV,AUFB,Auftragsbest.mahnung
+20,D,B,EV,NEU,Rahmenvertrag
+20,D,B,K1,MAIL,Mail an Mitarbeiter
+20,D,B,K1,MAIN,Internet-Mailing
+20,D,B,M1,CHKL,Zählliste
+20,D,B,ME,ET01,Materialetikett
+20,D,B,ME,WA01,WA-Schein Vers.1
+20,D,B,ME,WA02,WA-Schein Vers.2
+20,D,B,ME,WA03,WA-Schein Vers.3
+20,D,B,ME,WAE1,WA-Etikett Vers.1
+20,D,B,ME,WAE2,WA-Etikett Vers.2
+20,D,B,ME,WAE3,WA-Etikett Vers.3
+20,D,B,ME,WE01,WE-Schein Vers.1
+20,D,B,ME,WE02,WE-Schein Vers.2
+20,D,B,ME,WEE1,WE-Etikett Vers.1
+20,D,B,ME,WEE2,WE-Etikett Vers.2
+20,D,B,ME,WEE3,WE-Etikett Vers.3
+20,D,B,ME,WEK1,Kanbankarte 1
+20,D,B,ME,WF01,WE-FertAuftr. Vers.1
+20,D,B,ME,WF02,WE-FertAuftr. Vers.2
+20,D,B,MR,KON6,Konsignation  - EDI
+20,D,B,MR,KONS,Konsignation
+20,D,B,MR,RAP,Neubewertung
+20,D,B,MR,RAP6,Neubewertung  - EDI
+20,D,B,P1,MAL1,Direktfert. Mail 1
+20,D,B,PA,MAED,MAbrufe (EDI)
+20,D,B,PA,MAFO,MAbruf Druckformular
+20,D,B,V1,AF00,Anfrage
+20,D,B,V1,AN00,Angebot
+20,D,B,V1,BA00,Auftragsbestätigung
+20,D,B,V1,KRML,Kreditbearbeitung
+20,D,B,V1,LP00,Lieferplan
+20,D,B,V1,MAIL,interne Nachricht
+20,D,B,V1,SDB,Sicherheitsdatenbl.
+20,D,B,V2,CFPR,Frachtplanung Sped.
+20,D,B,V2,ET01,Materialetikett
+20,D,B,V2,KRML,Kreditbearbeitung
+20,D,B,V2,LALE,Lieferavis an AG
+20,D,B,V2,LAVA,Lieferavis Ausgang
+20,D,B,V2,LD00,Lieferschein
+20,D,B,V2,LD01,Lieferschein DIN4994
+20,D,B,V2,LDS0,Lieferschein (SMFS)
+20,D,B,V2,LQCA,QZeugnis Warenempf.
+20,D,B,V2,LQCB,QZeugn. Auftraggeber
+20,D,B,V2,LRUE,Rückmeldung dezentr.
+20,D,B,V2,MAIL,Mail
+20,D,B,V2,SDB,Sicherheitsdatenbl.
+20,D,B,V2,SPAT,Speditionsauftrag
+20,D,B,V2,TRM,UMB-Ausgabe
+20,D,B,V2,WA00,Warenanhänger 4902/3
+20,D,B,V2,WABS,Warenbegleitschein
+20,E,A,M,A001,Rebates
+20,E,A,M,A002,Material Rebate
+20,E,A,M,A003,Hierarchy Rebate
+20,E,A,M,A004,Hierarchy Rebate/Mat
+20,E,A,M,AK01,Customer Rebate
+20,E,A,M,AMO1,Internal Amort. %
+20,E,A,M,AMO2,Internal Amort./Qty
+20,E,A,M,CU00,Gross Price Cust.Sim
+20,E,A,M,CUAC,Antidumping Cus.Qty
+20,E,A,M,CUAD,Anti-Dumping Cust %
+20,E,A,M,CUAE,Antidumping Cust.Wt
+20,E,A,M,CUAS,Customs Exemption %
+20,E,A,M,CUDC,3rd Country Cust Qty
+20,E,A,M,CUDL,3rd Country Cust %
+20,E,A,M,CUFR,Freight Qty Customs
+20,E,A,M,CUIN,Insurance Customs
+20,E,A,M,CUPC,Cust Phys Creat. Qty
+20,E,A,M,CUPE,Cust. Pharm. Prd %
+20,E,A,M,CUPF,Cust. Ph. Prod. Wgt
+20,E,A,M,CUPZ,Cust. preference %
+20,E,A,M,CURB,Absolute disc. cust.
+20,E,A,M,CUZ1,Customs max. quant.
+20,E,A,M,CUZ2,Customs max. wgt
+20,E,A,M,CUZC,Customs alloc. qty
+20,E,A,M,CUZE,Customs alloc. wgt
+20,E,A,M,CUZK,Customs alloc. &
+20,E,A,M,CUZP,Customs max. %
+20,E,A,M,DIS1,Discount % on Gross
+20,E,A,M,EDI1,Confirmed Price
+20,E,A,M,EDI2,Value variance
+20,E,A,M,FRA1,Freight %
+20,E,A,M,FRA2,Freight %
+20,E,A,M,FRB1,Freight (Value)
+20,E,A,M,FRB2,Freight (Value)
+20,E,A,M,FRC1,Freight/Quantity
+20,E,A,M,FRC2,Freight/Quantity
+20,E,A,M,GAU1,Orignl Price of Gold
+20,E,A,M,GAU2,Actual Price of Gold
+20,E,A,M,GRWR,Statistical Value
+20,E,A,M,GWLB,Stat. Val. LB-Comp.
+20,E,A,M,HB00,Header Surch.(Value)
+20,E,A,M,HB01,Header Disc.(Value)
+20,E,A,M,IN01,Insurance %
+20,E,A,M,IN03,Insurance % on total
+20,E,A,M,JADC,Addln.Duty of Custom
+20,E,A,M,JASS,Assessable Value
+20,E,A,M,JCDB,Basic customs - %
+20,E,A,M,JCDS,IN Special customs
+20,E,A,M,JCV1,IN CVD
+20,E,A,M,JEXC,IN Manual Excise
+20,E,A,M,JEXS,Taxes on the PO
+20,E,A,M,JOCM,Manual Octroi
+20,E,A,M,K000,Contrct HeaderDisc %
+20,E,A,M,KAD0,Mat. Costs  (VKHM)
+20,E,A,M,KAD1,Handling Costs(VKHM)
+20,E,A,M,KR00,Header Disc.(Value)
+20,E,A,M,LH01,Delivery Hierarchy
+20,E,A,M,LH02,Deliv.Hier/Material
+20,E,A,M,LP00,Pallet Discount
+20,E,A,M,LP01,Incomp.Pallet Surch.
+20,E,A,M,LP02,Mixed Pallet Disc.
+20,E,A,M,LP03,Mixed Pallet Surch.
+20,E,A,M,46082,Neutral % Accruals
+20,E,A,M,MM00,Minimum Qty (Amount)
+20,E,A,M,MM01,Minimum Qty (%)
+20,E,A,M,MP01,Market Price
+20,E,A,M,MTAX,Tax on differential
+20,E,A,M,MVK0,Sales Price inc. Tax
+20,E,A,M,MVK1,Sales Price excl.Tax
+20,E,A,M,MVK2,Sales Price excl.Tax
+20,E,A,M,MWAS,Output tax manually
+20,E,A,M,MWST,Input tax
+20,E,A,M,MWVS,Input tax manually
+20,E,A,M,NAVM,Non-Deductible Tax
+20,E,A,M,NAVS,Non-Deductible Tax
+20,E,A,M,NETP,Net Price Picking
+20,E,A,M,NTRG,Net Value Payer Doc.
+20,E,A,M,P000,Gross Price
+20,E,A,M,P001,Gross Price
+20,E,A,M,P002,Gross Price
+20,E,A,M,P100,Trans.Pr.Supply.Plnt
+20,E,A,M,P101,Val.Price Supply.Pln
+20,E,A,M,PA00,Promotion Price
+20,E,A,M,PA01,Promo Price 2
+20,E,A,M,PB00,Gross Price
+20,E,A,M,PBXX,Gross Price
+20,E,A,M,PNN0,Purch. Net/Net
+20,E,A,M,R000,Discount % after tax
+20,E,A,M,R001,Discount/Quantity
+20,E,A,M,R002,Absolute discount
+20,E,A,M,R003,Discount % on Net
+20,E,A,M,R004,Discount % after tax
+20,E,A,M,R005,Discount % after tax
+20,E,A,M,RA00,Discount % on Net
+20,E,A,M,RA01,Discount % on Gross
+20,E,A,M,RA02,Promo Discount % 1
+20,E,A,M,RA03,Promo Discount % 2
+20,E,A,M,RA04,Promo. Disc. Deduct.
+20,E,A,M,RA05,Promo. Disc. Deduct.
+20,E,A,M,RB00,Absolute discount
+20,E,A,M,RC00,Discount/Quantity
+20,E,A,M,REST,Account Discount %
+20,E,A,M,RL00,Factoring Discount
+20,E,A,M,RL01,Vendor Discount %
+20,E,A,M,RL02,Pick.Agency Bus.Cust
+20,E,A,M,RL03,Pick.Agency Bus.Vend
+20,E,A,TX,JAED,IN: A/R AED
+20,E,A,TX,JAIP,IN AED inventory %
+20,E,A,TX,JAIQ,IN AED inventory Qty
+20,E,A,TX,JAO1,IN: A/P AED deductib
+20,E,A,TX,JAO2,IN:A/P AED nondeduct
+20,E,A,TX,JAOP,IN: AED setoff %
+20,E,A,TX,JAOQ,IN: AED setoff Qty
+20,E,A,TX,JAX1,IN: A/P AED setoff
+20,E,A,TX,JAX2,IN: A/P AED inventor
+20,E,A,TX,JC1E,A/P GST Recoverable
+20,E,A,TX,JC1I,A/P PST distributed
+20,E,A,TX,JC1S,A/P recoverable
+20,E,A,TX,JC1T,A/P PST Self-assess
+20,E,A,TX,JC1U,A/P PST Self-assess
+20,E,A,TX,JC2E,A/P GST distributed
+20,E,A,TX,JC2I,A/P prov. (B+GST)
+20,E,A,TX,JC2S,A/P Recov. B + GST
+20,E,A,TX,JC2T,A/P PST Self-assess
+20,E,A,TX,JC2U,A/P assess B + GST
+20,E,A,TX,JC3I,A/P prov. (B+GST)
+20,E,A,TX,JC3S,A/P Recov. B + GST
+20,E,A,TX,JC3T,A/P PST Self-assess
+20,E,A,TX,JC3U,A/P assess B + GST
+20,E,A,TX,JC4I,A/P prov. (B+GST)
+20,E,A,TX,JC4S,A/P Recov. B + GST
+20,E,A,TX,JC4U,A/P assess B + GST
+20,E,A,TX,JC5S,A/P Recov. B + GST
+20,E,A,TX,JC5U,A/P assess B + GST
+20,E,A,TX,JCES,IN: A/R Cess
+20,E,A,TX,JCS1,IN A/R CST out
+20,E,A,TX,JCS2,IN A/R Sur out
+20,E,A,TX,JGST,A/P GST
+20,E,A,TX,JIN1,IN: A/R CST
+20,E,A,TX,JIN2,IN: AR LST
+20,E,A,TX,JIN4,IN: A/R CST Surcharg
+20,E,A,TX,JIN5,IN: AR LST Surcharg
+20,E,A,TX,JIP1,IN:A/P CST
+20,E,A,TX,JIP2,IN:A/P LST
+20,E,A,TX,JIP3,IN: A/P ST setoff
+20,E,A,TX,JIP6,A/P VAT RM Non-Dedu
+20,D,B,V3,MAIL,Mail
+20,D,B,V3,RD00,Rechnung
+20,D,B,V6,1,Handling Unit
+20,D,B,V7,ALTR,Transport: allgemein
+20,D,B,V7,SPAT,Speditionsauftrag
+20,D,B,V7,TRM,UMB-Ausgabe
+20,D,B,V7,WABS,Warenbegleitschein
+20,D,B,W0,RTA1,Aufteiler-AVIS
+20,D,B,W0,RTA2,Abfrage-AVIS
+20,D,B,W0,RTA3,Bestätigungs-AVIS
+20,D,B,W0,RTA4,AVIS Verteilzentrum
+20,D,B,W0,RTA5,Mahnung Rückmeldung
+20,D,B,W1,RTB1,Bekanntmachung
+20,D,B,CF,MSG,Fehlermeldung
+20,D,B,DB,RDA0,Rechnung AR (Orgin.)
+20,D,B,DB,RDA1,Rechnung AR (1.Kop.)
+20,D,B,DB,RDA2,Rechnung AR (2.Kop.)
+20,D,B,E1,INDL,Intenet Lieferung
+20,D,B,E1,OPOD,Lieferempf.bestät.
+20,D,B,EA,ABSA,Angebotsabsage
+20,D,B,EB,EBPR,Einkauf
+20,D,B,EV,VNEU,Verteilte Kontrakte
+20,D,B,M1,GRPL,Palettenaufkleber
+20,D,B,ME,MLFH,WE Fehlteilemeldung
+20,D,B,ME,MLGR,WE-Meldung
+20,D,B,ME,MLMD,WE-Mengenabweichung
+20,D,B,ME,MLUD,WE Unter-/Überlief.
+20,D,B,ME,WLB1,WA-Schein LB Vers.1
+20,D,B,ME,WLB2,WA-Schein LB Vers.2
+20,D,B,ME,WLB3,WA-Schein LB Vers.3
+20,D,B,MR,EINK,Mail an Einkauf
+20,D,B,MR,ERS,ERS-Verfahren
+20,D,B,MR,ERS6,ERS-Verfahren - EDI
+20,D,B,MR,MLPP,Mail Preisabweichung
+20,D,B,V1,BAIN,
+20,D,B,V1,BAV0,Auftragsbestät. VMI
+20,D,B,V1,ESYM,interne Nachricht
+20,D,B,V1,RD03,Barverkauf
+20,D,B,V2,CANO,Speditionsbenachr.
+20,D,B,V2,KEP2,Expressdienstetikett
+20,D,B,V2,PL00,Packliste
+20,D,B,V2,SHOR,Versandauftrag
+20,D,B,V2,TPS0,Liefung an ext. TPS
+20,D,B,V2,WMTA,Automatischer TA
+20,D,B,V2,WTAD,Verkaufshilfsmittel
+20,D,B,V3,AES1,Autom. Export System
+20,D,B,V3,AES2,AES - Option 2
+20,D,B,V3,AES3,AES - Option 3
+20,D,B,V3,AES4,AES - Option 4
+20,D,B,V3,FEAG,Antrag Ausf.Genehm.
+20,D,B,V3,FEAN,Nation. Ausf.Genehm.
+20,D,B,V3,FECO,Ursprungszeugnis EU
+20,D,B,V3,FEEA,EG Ausfuhrerstattung
+20,D,B,V3,FEEU,Warenverkehrsb. EUR1
+20,D,B,V3,FEEV,Vereinf. Ausfuhranm.
+20,D,B,V3,FEEX,Ausfuhranmeldung
+20,D,B,V3,FET1,Versandanmeldung T1
+20,D,B,V3,FET2,Versandanmeldung T2
+20,D,B,V3,FET5,T5 Dokument
+20,D,B,V3,FETR,A.TR. Dokument
+20,D,B,V3,FIN0,"Link senden, sofort"
+20,D,B,V3,FIN1,Link senden per Job
+20,D,B,V3,FIN2,Link senden per Job
+20,D,B,V3,FJCI,Exportfaktura - JP
+20,D,B,V3,FJCO,Urspr.Zeugnis Osaka
+20,D,B,V3,FJCT,Urspr.Zeugnis Tokyo
+20,D,B,V3,FJEP,Packliste Export- JP
+20,D,B,V3,FJER,Export Report Japan
+20,D,B,V3,FKIV,Interne Verrechnung
+20,D,B,V3,FUCI,Commercial Inv. USA
+20,D,B,V3,FUCO,U.S. Cert. of Origin
+20,D,B,V3,FUEP,Export Packing List
+20,D,B,V3,FUPI,Proforma Inv. USA
+20,D,B,V3,FUSD,Shipper's Exp. Decl.
+20,D,B,V3,FUSI,Ship. Letters Instr.
+20,D,B,V3,RD01,Einzelrechnung reli
+20,D,B,V3,RDES,ESR-Rechnung
+20,D,B,V4,EK00,Kommiliste
+20,D,B,V4,EK01,Kommissionieretikett
+20,D,B,V4,EKSU,Subsystemkommission.
+20,D,B,V5,SK00,Sammelkommiliste
+20,D,B,V5,SK01,Sammelkommiliste_1st
+20,D,B,V6,E128,EAN128-Etikett
+20,D,B,V6,ILAB,intern.Warenanhänger
+20,D,B,V6,ILBM,Internetlabels
+20,D,B,V6,ILBS,Internetlabels
+20,D,B,V6,KEP6,Expressdienstetikett
+20,D,B,V6,MALB,Materialetikett
+20,D,B,V7,BOL1,Bitte nicht benutzen
+20,D,B,V7,CIM1,Bitte nicht benutzen
+20,D,B,V7,CMR1,CMR-Frachtbrief
+20,D,B,V7,CMR2,Bitte nicht benutzen
+20,D,B,V7,CPAC,Statusbestätigung
+20,D,B,V7,FORI,Speditionsauftrag
+20,D,B,V7,SEDI,Trans.EDI: allgemein
+20,F,B,MR,ERS6,ERS Procedure EDI
+20,F,B,MR,INS,Invoice plan
+20,F,B,MR,KON6,Consignment  EDI
+20,F,B,MR,KONS,Consignment
+20,F,B,MR,MLPP,Mail Price Deviation
+20,F,B,MR,RAP,New Value Method
+20,F,B,MR,RAP6,New valuation EDI
+20,F,B,MR,REKL,Complaint
+20,F,B,NF,NF01,Form 1
+20,F,B,NF,NF02,Form 2
+20,F,B,P1,MAL1,DirectProdctn Mail 1
+20,F,B,P1,MAL2,DirectProdctn Mail 2
+20,F,B,P1,MAL3,DirectProdctn Mail 3
+20,F,B,P1,MAL4,DirectProdctn Mail 4
+20,F,B,PA,MAED,QRelease (EDI)
+20,F,B,PA,MAFO,QRelease Print Form
+20,F,B,RS,ACS6,Bank Statement Outbx
+20,F,B,RS,ACSP,Bank Statemt Printo.
+20,F,B,V1,AF00,Inquiry
+20,F,B,V1,AN00,Quotation
+20,F,B,V1,BA00,Order Confirmation
+20,F,B,V1,BAV0,Order confirm.  VMI
+20,F,B,V1,ESYM,Internal Output
+20,F,B,V1,JEXC,IN:Excise Invoice
+20,F,B,V1,KO00,Contract
+20,F,B,V1,KRML,Credit Processing
+20,F,B,V1,LP00,Scheduling Agreement
+20,F,B,V1,MAIL,Internal Output
+20,F,B,V1,RD03,Cash Sale
+20,F,B,V1,SDB,MatSafetyDataSheet
+20,F,B,V1,ZORD,Marcan Order EDI
+20,F,B,V2,CANO,Forwarding Notific.
+20,F,B,V2,CFPR,Frgt plann. shippng
+20,F,B,V2,ET01,Material label
+20,F,B,V2,KEP2,Express serv. label
+20,F,B,V2,KRML,Credit Processing
+20,F,B,V2,LALE,ShipNotifctn to SP
+20,F,B,V2,LAVA,Outg. ship.notifica.
+20,F,B,V2,LD00,Delivery Note
+20,F,B,V2,LD01,Delivr Note DIN4994
+20,F,B,V2,LDS0,Delivery note (SMFS)
+20,F,B,V2,LQCA,Q cert. goods recip.
+20,F,B,V2,LQCB,Q cert. sold-to par.
+20,F,B,V2,LRUE,Decentr.Confirmation
+20,F,B,V2,MAIL,Mail
+20,F,B,V2,PL00,Packing list
+20,F,B,V2,SDB,MatSafetyDataSheet
+20,F,B,V2,SHOR,Shipping Order
+20,F,B,V2,SPAT,Forwarding Order
+20,F,B,V2,TPS0,Delivery to Ext. TPS
+20,F,B,V2,TRM,Tremcard output
+20,F,N,V,FREE,Bonus Offer Free Gds
+20,F,N,V,NA00,Free Goods SD
+20,F,N,VP,BB01,Bonus buy: Price
+20,F,N,VP,BB02,Bonus buy: abs. disc
+20,F,N,VP,BB03,Bonus buy: % disc.
+20,F,N,VP,BB04,Bonus buy: fr. goods
+20,F,P,PO,RCPT,In. del. pack. ins.
+20,F,P,PO,RMA2,Mat./Link to RMATP
+20,F,P,PO,RMA3,"1.MATNR, 2.RMATP"
+20,F,P,PO,SHIP,Ship. Pack. Inst.
+20,F,P,PO,STOC,Whse Pack. Inst.
+20,F,R,DR,BDR1,MatNumber / MatType
+20,F,R,DS,BDS1,Send.mat. / Rec.mat.
+20,D,B,V7,SHAD,Transportavis
+20,D,B,V7,TNCF,Tender confirmation
+20,D,B,V7,TNCN,Tender - cancel
+20,D,B,V7,TNDR,Tender - new offer
+20,D,B,W1,RTB4,Akt.-Bek. für VZ
+20,D,B,WN,WNAD,Abrechn. deb. Abspr.
+20,D,B,WN,WNAK,Abrechn. kred. Abspr
+20,D,B,WR,WPAM,"Pos, LF, m. Log-Dat."
+20,D,B,WR,WPAO,"Pos, LF, o. Log.-Dat"
+20,D,B,WR,WPBM,"Pos., RA, m. Log-Dat"
+20,D,B,WR,WPBO,"Pos., RA, o. Log-Dat"
+20,D,B,WR,WPCM,"Pos, BuLi, mit Log."
+20,D,B,WR,WPCO,"Pos., BuLi, o. Log."
+20,D,B,WR,WPDM,"Pos, ReguLi, mit Log"
+20,D,B,WR,WPDO,"Pos, ReguLi, o. Log"
+20,D,C,VB,KOAB,Standard
+20,D,C,VC,CASH,Standard
+20,D,D,VS,CS01,Cross-Selling
+20,D,H,CO,CO01,Au-Art/Werk/Material
+20,D,H,CO,CO02,Prodmaterial
+20,D,H,ME,ME01,Bew-Art/Werk/Mat-Nr.
+20,D,H,ME,ME02,Werk
+20,D,H,V,SD03,Empf-Land/Warengrp.
+20,D,H,V,SD05,Kd-Hierar./Material
+20,D,N,M,NR00,Naturalrabatt (M)
+20,D,N,V,FREE,Naturalrabatt SD
+20,D,N,V,NA00,Naturalrabatt SD
+20,D,N,VP,BB01,Bonuskauf:Preis
+20,D,N,VP,BB02,Bonuskauf:abs.Rabatt
+20,D,N,VP,BB03,Bonuskauf:%-Rabatt
+20,D,N,VP,BB04,Bonuskauf:Nat.Rabatt
+20,D,P,PO,RCPT,Anliefer-Packvorschr
+20,D,P,PO,RMA2,Mat./Link zu RMATP
+20,D,P,PO,RMA3,"1.MATNR, 2.RMATP"
+20,D,P,PO,RMAT,RMATP
+20,D,P,PO,SHIP,Versand-Packvorschr.
+20,D,R,DR,BDR1,Mat.Nummer / Mat.Art
+20,D,R,DS,BDS1,SenderMat./Empf.Mat.
+20,E,B,CF,MSG,Error Message
+20,E,B,CV,STAT,Document Statuses
+20,E,B,DB,RDA0,Invoice AR (origin.)
+20,E,B,DB,RDA1,Invoice AR -1st copy
+20,E,B,DB,RDA2,Invoice AR (2.cop.)
+20,E,B,E1,INDL,Internet delivery
+20,E,B,E1,OPOD,POD confirmed
+20,E,B,EA,ABSA,Quotation Rejection
+20,E,B,EB,EBPR,Purchasing
+20,E,B,EV,VNEU,Distribtd Contracts
+20,E,B,M1,GRPL,Pallet Sticker
+20,E,B,MD,MAL5,Direct Supply Mail 5
+20,E,B,ME,J1IB,Excise Bonding ARE
+20,E,B,ME,J1IF,Subcontract Challan
+20,E,B,ME,MLFH,GR Missing Parts Msg
+20,E,B,ME,MLGR,GR Message
+20,E,B,ME,MLMD,GR Qty Deviation
+20,E,B,ME,MLUD,GR under/Over deliv.
+20,E,B,ME,WLB1,GI Note RP Vers.1
+20,E,A,TX,JIPC,IN C Sales tax inv.
+20,E,A,TX,JIPL,IN L Sales tax inv.
+20,E,A,TX,JIPS,IN Sales tax setoff
+20,E,A,TX,JISG,IN: State GST
+20,E,A,TX,JLS1,IN A/P LST out
+20,E,A,TX,JLS2,IN A/P LST Surc out
+20,E,A,TX,JMIP,IN: BED inventory %
+20,E,A,TX,JMIQ,IN: BED inventory Qt
+20,E,A,TX,JMO1,IN: A/P BED deductib
+20,E,A,TX,JMO2,IN: A/P BED non dedu
+20,E,A,TX,JMOD,IN: A/R BED
+20,E,A,TX,JMOP,IN: BED setoff %
+20,E,A,TX,JMOQ,IN: BED setoff Qty
+20,E,A,TX,JMX1,IN: A/P BED setoff
+20,E,A,TX,JMX2,IN: A/P BED inventor
+20,E,A,TX,JP1E,A/P Sales Tax 1 Exp.
+20,E,A,TX,JP1I,A/P Sales Tax 1 Inv.
+20,E,A,TX,JP1U,A/P Sales Tax 1 Use
+20,E,A,TX,JP2E,A/P Sales Tax 2 Exp.
+20,E,A,TX,JP2I,A/P Sales Tax 2 Inv.
+20,E,A,TX,JP2U,A/P Sales Tax 2 Use
+20,E,A,TX,JP3E,A/P Sales Tax 3 Exp.
+20,E,A,TX,JP3I,A/P Sales Tax 3 Inv.
+20,E,A,TX,JP3U,A/P Sales Tax 3 Use
+20,E,A,TX,JP4E,A/P Sales Tax 4 Exp.
+20,E,A,TX,JP4I,A/P Sales Tax 4 Inv.
+20,E,A,TX,JP4U,A/P Sales Tax 4 Use
+20,E,A,TX,JR1,A/R Sales Tax 1
+20,E,A,TX,JR2,A/R Sales Tax 2
+20,E,A,TX,JR3,A/R Sales Tax 3
+20,E,A,TX,JR4,A/R Sales Tax 4
+20,E,A,TX,JRC1,A/R Sales GST
+20,E,A,TX,JRC2,A/R Sales PST
+20,E,A,TX,JRC3,A/R Sales PST B +PST
+20,E,A,TX,JRC4,A/R Sales PST B +PST
+20,E,A,TX,JSED,IN: A/R SED
+20,E,A,TX,JSER,IN: Service tax
+20,E,A,TX,JSIP,IN SED inventory %
+20,E,A,TX,JSIQ,IN SED inventory Qty
+20,E,A,TX,JSO1,IN: A/P SED deductib
+20,E,A,TX,JSO2,IN:A/P SED non deduc
+20,E,A,TX,JSOP,IN: SED setoff %
+20,E,A,TX,JSOQ,IN: SED setoff Qty
+20,E,A,TX,JSVD,IN:Service tax debit
+20,E,A,TX,JSX1,IN: A/P SED setoff
+20,E,A,TX,JSX2,IN: A/P SED inventor
+20,E,A,TX,JVRD,VAT RM Deductible
+20,E,A,TX,KRIC,Construc. Inp Tax KR
+20,E,A,TX,KRIT,Input Tax KR
+20,E,A,TX,KRNI,Issue Exemption
+20,E,A,TX,KRNT,Non-ded.Input Tax KR
+20,E,A,TX,KROT,Output Tax KR
+20,E,A,TX,KRPP,Payment by proxy KR
+20,E,A,TX,MAR,A/P Maritime
+20,E,A,TX,46082,A/R Maritime
+20,E,A,TX,MW01,Tax Trigger RU
+20,E,A,TX,MWAI,Round.Up Output Tax
+20,E,A,TX,MWAN,N.d. Output Tax
+20,E,A,TX,MWAS,Output Tax
+20,E,A,TX,MWCN,Flat-rate Tax China
+20,E,A,TX,MWNI,N.d.input tax
+20,E,A,TX,MWPI,Round.Up Output Tax
+20,E,A,TX,MWR4,Local SalesTax Cred.
+20,E,A,TX,MWR5,Local Debit Rev.(RU)
+20,E,A,TX,MWR6,Local Credit Rev.
+20,E,A,TX,MWR8,GSM Debit Rev.  (RU)
+20,E,A,TX,MWR9,GSM Credit Rev. (RU)
+20,E,A,TX,MWS1,Subtotal
+20,E,A,TX,MWVI,Input Tax Round.up
+20,E,A,TX,MWVN,Non-deduct.Input Tax
+20,E,A,TX,MWVS,Input tax
+20,E,A,TX,MWVY,Non-deduct.Input Tax
+20,E,A,TX,MWVZ,Non-deduct.Input Tax
+20,E,A,TX,MWWS,Simplif. Tax Output
+20,E,A,TX,MWZB,Invst.Tax Norw.Basis
+20,E,A,TX,MWZI,Non-ded.InputTax -RU
+20,E,A,TX,MWZS,Simplif. Tax Input
+20,E,A,TX,MWZU,Investment Tax Norw.
+20,E,A,TX,NLAI,Acqu.Tax Outgoing-RU
+20,E,A,TX,NLNA,Non-ded  Acqu. Tax
+20,E,A,TX,NLVI,Acqu.Tax Inc.- Ro.up
+20,E,A,TX,NLXA,Acquisition Tax Cred
+20,E,A,TX,NLXN,Non-ded. Acqu. Tax
+20,E,A,TX,NLXV,Acquisition Tax Deb.
+20,E,A,TX,NZE1,NZ Entertain-GST inv
+20,E,A,TX,NZE2,NZ Entertainment Tax
+20,E,A,TX,PST,A/P PST & QST
+20,E,A,TX,PST1,A/R PST & QST
+20,E,A,TX,PTI1,A/P PST Distributed
+20,E,A,TX,PTI2,A/P PST Separate GL
+20,E,A,TX,PTI3,A/P PST Separate GL
+20,E,A,TX,PTI4,A/P PST Sep. B+GST
+20,E,A,TX,PTU1,A/P Usage
+20,E,A,TX,PTU2,A/P Usage B+GST
+20,E,A,TX,XP1E,A/P Sales Tax 1 Exp.
+20,E,A,TX,XP1I,A/P Sales Tax 1 Inv.
+20,E,A,TX,XP1U,A/P Sales Tax 1 Use
+20,E,A,TX,XP1X,A/P Sales Tax 1 Ext.
+20,E,A,TX,XP2E,A/P Sales Tax 2 Exp.
+20,E,A,TX,XP2I,A/P Sales Tax 2 Inv.
+20,E,A,TX,XP2U,A/P Sales Tax 2 Use
+20,E,A,TX,XP2X,A/P Sales Tax 2 Ext.
+20,E,A,TX,XP3E,A/P Sales Tax 3 Exp.
+20,E,A,TX,XP3I,A/P Sales Tax 3 Inv.
+20,E,A,TX,XP3U,A/P Sales Tax 3 Use
+20,E,A,TX,XP3X,A/P Sales Tax 3 Ext.
+20,E,A,TX,XP4E,A/P Sales Tax 4 Exp.
+20,E,A,TX,XP4I,A/P Sales Tax 4 Inv.
+20,E,A,TX,XP4U,A/P Sales Tax 4 Use
+20,E,A,TX,XP4X,A/P Sales Tax 4 Ext.
+20,E,A,TX,XP5E,A/P Sales Tax 5 Exp
+20,E,A,TX,XP5I,A/P Sales Tax 5 Inv.
+20,E,A,TX,XP5U,A/P Sales Tax 5 Use
+20,E,A,TX,XP6E,A/P Sales Tax 6 Exp
+20,E,A,TX,XP6I,A/P Sales Tax 6 Inv.
+20,E,A,TX,XP6U,A/P Sales Tax 6 Use
+20,E,A,TX,XR1,A/R Sales Tax 1
+20,E,A,TX,XR2,A/R Sales Tax 2
+20,E,A,TX,XR3,A/R Sales Tax 3
+20,E,A,TX,XR4,A/R Sales Tax 4
+20,E,A,TX,XR5,A/R Sales Tax 5
+20,E,A,TX,XR6,A/R Sales Tax 6
+20,E,A,TX,XWVS,Input Tax
+20,E,A,TX,YMIP,IN: BED inventory %
+20,E,A,TX,YMOP,IN: BED setoff %
+20,E,A,TX,YMX1,IN: A/P BED setoff
+20,E,A,TX,YMX2,IN: A/P BED inventor
+20,E,A,TX,ZJP6,A/P VAT RM Non-Dedu
+20,E,A,W,WWEP,Purchase Price
+20,E,A,W,WWRZ,Scheduled Surcharge
+20,E,A,W,WWV1,Sales Price 1
+20,E,A,W,WWV2,Sales Price 2
+20,D,B,V3,ZINV,Rechnung
+20,D,B,WB,RTB3,A-Bek. Bestätigung
+20,D,C,V,KOFK,Kontenfindung mit CO
+20,D,I,QC,QCA1,Vorl.-Zuordnung
+20,D,B,DB,KO00,Kontraktbestätigung
+20,D,B,EF,WEZL,WE-Zählliste
+20,D,B,EL,LPE2,LP-Einteilung WE-off
+20,D,B,EL,LPF2,LP-Fortschr.Z WE-off
+20,D,B,EL,LPFZ,LP-Fortschr.Zahlen
+20,D,B,EL,LPMA,LP-Mahnung
+20,D,B,EL,LPMF,LP-Mahnung Fortschr.
+20,D,B,ES,NEU,Leistungserfassung
+20,D,B,K1,MAAK,Mailing-Aktion
+20,D,B,K1,MAK1,Drucken Brief
+20,D,B,K1,MAK2,Drucken Kontakt
+20,D,B,K1,MAK3,Drucken Kontakt/KuSt
+20,D,B,K1,MAKO,Anlegen Kontakte
+20,D,B,MD,MAL1,Direktbesch. Mail 1
+20,D,B,MD,MAL2,Direktbesch. Mail 2
+20,D,B,MD,MAL3,Direktbesch. Mail 3
+20,D,B,MD,MAL4,Direktbesch. Mail 4
+20,D,B,ME,WE03,WE-Schein Vers.3
+20,D,B,P1,MAL2,Direktfert. Mail 2
+20,D,B,P1,MAL3,Direktfert. Mail 3
+20,D,B,P1,MAL4,Direktfert. Mail 4
+20,D,B,V1,KO00,Kontrakt
+20,D,B,V3,AUS1,Muster - EDI
+20,D,B,V3,AUS2,Muster - AusfuhrAnm.
+20,D,B,V3,AUSJ,Muster Japanreport
+20,D,B,V3,LR00,Rechnungsliste
+20,D,B,V5,LL00,Ladeliste
+20,D,B,CV,STAT,Dokumentenstatus
+20,D,B,MD,MAL5,Direktbesch. Mail 5
+20,D,B,MR,INS,Rechnungsplan
+20,D,B,MR,REKL,Reklamation
+20,D,B,RS,ACS6,Kontoauszug Ausgang
+20,D,B,RS,ACSP,Kontoauszugsdruck
+20,D,B,V2,WSOR,Lagerauftrag
+20,D,B,V3,AUS3,Muster - WVB
+20,D,B,V3,RD02,Rechnung VDA
+20,D,B,V3,RD04,Rechnungseingang IV
+20,F,B,V3,ZCRD,TII-Credit Note
+20,F,B,V3,ZEDI,TII-E-Invoice
+20,F,B,V3,ZINV,TII-Invoice
+20,F,P,PO,RMAT,Ref. Mat. Pack. Ins.
+20,D,B,WE,ET02,Regaletikett
+20,D,B,WR,WKAM,"Kopf, LF, m. Log-Dat"
+20,D,B,WR,WKAO,"Kopf, LF, o. Log-Dat"
+20,D,B,WR,WKBM,"Kopf, RA, m. Log-Dat"
+20,D,B,WR,WKBO,"Kopf, RA, o. Log-Dat"
+20,D,B,WR,WKCM,"Kopf, BuLi, mit Log."
+20,D,B,WR,WKCO,"Kopf, BuLi, ohne Log"
+20,D,B,WR,WKDM,"Kopf,ReguLi, mit Log"
+20,D,B,WR,WKDO,"Kopf, ReguLi, o. Log"
+20,D,B,WR,WKEM,"ReLi, LF, m. Log-Dat"
+20,D,B,WR,WKEO,"ReLi, LF, o. Log-Dat"
+20,D,B,WR,WKFM,"ReLi, RA, Li, m. Log"
+20,D,B,WR,WKFN,"ReLi, RA, Kd, m. Log"
+20,D,B,WR,WKFO,"ReLi, RA, Li, o. Log"
+20,D,B,WR,WKFQ,"ReLi, RA, Kd, o. Log"
+20,D,B,WS,WSDD,"Druck Abspr., deb."
+20,D,B,WS,WSDK,Druck Abspr. kred.
+20,D,G,V,B001,Ausschluß
+20,D,H,V,SD01,Kunde/Material
+20,D,H,V,SD02,Kunde/Material/Werk
+20,D,H,V,SD04,Kundenhierarchie
+20,D,H,WM,WM01,Lagernummer
+20,D,H,WM,WM02,Lagernr/Bewegungsart
+20,D,P,PO,STOC,Lager-Packvorschrift
+20,E,P,PO,RMAT,Ref. Mat. Pack. Ins.
+20,S,B,EF,ZFC1,Form OC CHILE Españo
+20,S,B,EF,ZFC2,Form PO CHILE Inglés
+20,S,B,EF,ZFP1,Form OC PERÚ Español
+20,S,B,EF,ZFP2,Form PO PERÚ Inglés
+20,E,B,V3,ZCRD,TII-Credit Note
+20,E,B,V3,ZEDI,TII-E-Invoice
+20,E,B,V3,ZINV,TII-Invoice

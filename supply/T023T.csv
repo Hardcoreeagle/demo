@@ -1,0 +1,716 @@
+MANDT,SPRAS,MATKL,WGBEZ,WGBEZ60
+20,E,111010,LEASE HOLD LAND,
+20,E,111020,BUILDING,
+20,E,111030,PLANT & MACHINERY,
+20,E,111040,ELECTRICAL INSTALLAT,
+20,E,111053,LABORATORY EQUIPMENT,
+20,E,111058,SPARES & CHANGE PART,
+20,E,111059,GENERATOR SET,
+20,E,111060,"CLEAN AIR SYSTEM, RE",
+20,E,111070,EFFLUENT TREATMENT P,
+20,E,111080,R & D EQUIPMENTS,
+20,E,111100,FURNITURE & FIXTURES,
+20,E,111110,OFFICE EQUIPMENTS,
+20,E,111120,COMPUTER HARDWARE,
+20,E,111130,COMPUTER SOFTWARE,
+20,E,111140,VEHICLES,
+20,E,111500,BRANDS/PATENTS & INT,
+20,E,440048,RENT A CAB OPERATOR,INPUT SERVICES
+20,E,440060,MANPOWER RECRUITMENT,INPUT SERVICES
+20,E,440225,BUS AUXILIARY SERVIC,INPUT SERVICES
+20,E,440262,TRNSPT OF GOODS ROAD,INPUT SERVICES
+20,E,440358,SPONSORSHIP SERVICE,INPUT SERVICES
+20,E,440410,WORKS CONTRACT,INPUT SERVICES
+20,E,440480,LEGAL CONSULTANCY SE,INPUT SERVICES
+20,E,441480,OTHER TAXABLE SERVIC,INPUT SERVICES
+20,E,CG-01,ETP,Effluent Treatment Plant
+20,E,CG-02,Machinery,
+20,E,CG-03,Machinery Spares,
+20,E,CG-04,Lab Equipment,
+20,E,CG-05,Office Equipments,
+20,E,CG-06,Furniture,
+20,E,CG-07,Computer Hardware,
+20,E,CG-08,Computer Software,
+20,E,CG-09,Material Handling eq,
+20,E,CG-10,Weighing Equipment,
+20,E,CG-11,Clean Air  Circulati,Clean Air Circulation
+20,E,CG-12,AHU,Air Handling Unit
+20,E,FM-01,Allopathic Pharma.,Allopathic Pharmaceuticals Products [P&P medicaments]
+20,E,FM-02,Herbal Pharma.,Herbal Pharmaceuticals Products
+20,E,FM-03,Ayurvedic Pharmac,Ayurvedic Pharmaceuticals Products
+20,E,FM-04,Food supplement,Food supplement
+20,E,FM-05,Biochemical,Biochemical Product
+20,E,FM-06,BPC (Bulk Chemical),Bilk Pharmaceutical Chemical [BPC] [organic/inorganic]
+20,E,FM-07,Biological Produc,Biological Product [for Biotech]
+20,E,FM-08,Cosmetics,
+20,E,FM-09,others,
+20,E,FM-10,Medical device,
+20,E,FM-11,Rx,Prescription Pharmaceutical  (Rx)
+20,E,FM-12,OTC,OTC Pharmaceutical  (OTC)
+20,E,FM-13,NHP,NHP
+20,E,FM-14,CDS,CDS
+20,E,FM-15,BTC,BTC Pharmaceutical (BTC)
+20,E,LC-01,Chemicals,
+20,E,LC-02,Glasswares,
+20,E,LC-03,Coloumns,
+20,E,LC-04,Reference Standards,
+20,E,LC-05,Lab consumables,
+20,E,MISC-01,Stationary,
+20,E,MISC-02,Electricals,
+20,E,MISC-03,Hardwares,
+20,E,MISC-04,Stereos,
+20,E,MISC-05,Oils & Fuels,
+20,E,MISC-06,Other Misc Items,
+20,E,MISC-07,Civil Construction,Material required for construction work
+20,E,PM-01,Ampoule Glass,
+20,E,PM-02,Bag Poly,
+20,E,PM-03,Bottle Glass,
+20,E,PM-04,Bottle Pet,
+20,E,PM-05,Bottle HDPE/LDPE,
+20,E,PM-06,Box corrugated,
+20,E,PM-07,Box Thermacoal,
+20,E,PM-08,Cache cover,
+20,E,PM-09,Cap PP,
+20,E,PM-10,Cap Screw,
+20,E,PM-11,Carton,
+20,E,PM-12,Carton un printed,
+20,E,PM-13,Container,
+20,E,PM-14,Container Tin,
+20,E,PM-15,Cutter alu,
+20,E,PM-16,Dropper,
+20,E,PM-17,Film BOPP,
+20,E,PM-18,Film Pvc,
+20,E,PM-19,Film Pvc/Pvdc,
+20,E,PM-20,Foil alu plain,
+20,E,PM-21,Foil alu printed,
+20,E,PM-22,Foil Form pack,
+20,E,PM-23,Foil Glassine,
+20,E,PM-24,Gum,
+20,E,PM-25,Jar Pet,
+20,E,PM-26,Jar Tin,
+20,E,PM-27,Label,
+20,E,PM-28,Label Box,
+20,E,PM-29,Label Sticker,
+20,E,PM-30,Leaflet,
+20,E,PM-31,Liner,
+20,E,PM-32,Measuring cup,
+20,E,PM-33,Pouch Alu Laminat,
+20,E,PM-34,Seal Flip Off,
+20,E,PM-35,Seal Plastic,
+20,E,PM-36,Stopper Rubber,
+20,E,PM-37,Tagger,
+20,E,PM-38,Tape BOPP,
+20,E,PM-39,Tray Plastic,
+20,E,PM-40,Tray Rondo,
+20,E,PM-41,Tube Alu,
+20,E,PM-42,Tube Lami,
+20,E,PM-43,Vial Plastic,
+20,E,PM-44,Vial Glass,
+20,E,PM-45,Wrapper,
+20,E,PM-46,Cotton/Rayon Filler,
+20,E,PM-47,Bag Silica,
+20,E,PM-48,Barrel,
+20,E,PM-49,Closures,
+20,E,PM-50,Drum,
+20,E,PM-51,Film PVC/PE/Pvdc,
+20,E,PM-52,Foil Lidding,
+20,E,PM-53,Paper,
+20,E,PM-54,Plugs,
+20,E,PM-55,Plunger,
+20,E,PM-56,Sachets,
+20,E,PM-57,Nasal Pump,
+20,E,PM-58,Bulk,
+20,E,PM-59,Drum,
+20,E,PM-60,Device,
+20,E,PM-61,canister,
+20,E,PM-62,Bottle Glass Amber,
+20,E,PM-63,Oral Drop,
+20,E,PM-72,Aluminium Container,Packing Material Aluminium containers
+20,E,PRM-01,Promotional,Promotional Materials
+20,E,PRM-02,Brand Reminders,Brand Reminders
+20,E,PRM-03,MR Items,Printed/Non printed items for MR
+20,E,PRM-04,Medical camp materia,Medical camp material
+20,E,PRM-05,Chemist/Distributor,Chemist/Distributor Input
+20,E,PRM-06,Field Employee cons,Field Employee consumable
+20,E,PRM-07,Print items,Print items
+20,E,RM-01,Active Pharmaceutica,
+20,E,RM-02,Potency Dep -API,Potency Dependent - API
+20,E,RM-03,Excipients,
+20,E,RM-04,Potency Dep -Excipnt,Potency Dependent - Excipient
+20,E,RM-05,Intermediates,
+20,E,RM-06,Chemical,
+20,E,RM-07,Solvent,
+20,E,RM-08,Bulk-Solvent,
+20,E,RM-09,Gas,
+20,E,RM-10,Starting material,
+20,E,RM-11,Intermediate outsour,
+20,E,RM-12,Catalyst,
+20,E,SER-01,Services,External Services
+20,E,SER-02,AUDIT FEES,External Services
+20,E,SER-03,PROFESSIONAL FEES,External Services
+20,E,SER-04,WAGES,External Services
+20,E,SER-05,CANTEEN EXPENSES,External Services
+20,E,SER-06,STAFF TRAINING EXP.,External Services
+20,E,SER-07,STAFF BUS EXPENSES,External Services
+20,E,SER-08,RECRUITMENT EXP.,External Services
+20,E,SER-09,STAFF WELFARE EXP.-S,External Services
+20,E,SER-10,RENT PAID,External Services
+20,E,SER-11,TRAVEL EXPENSES,External Services
+20,E,SER-12,COURIER EXPENSES,External Services
+20,E,SER-13,TELEPHONE EXPS.,External Services
+20,E,SER-14,SECURITY SERVICE,External Services
+20,E,SER-15,GARDENING EXP-LABOUR,External Services
+20,E,SER-16,EMPLOYEE HEALTH -INS,External Services
+20,E,SER-17,INSURANCE CHARGES,External Services
+20,E,SER-18,MOTOR CAR  EXP.,External Services
+20,E,SER-19,COMPUTER EXPENSES,External Services
+20,E,SER-20,LEGAL EXP- ADVOCATE,External Services
+20,E,SER-21,PATENT REG CHRG-ADV,External Services
+20,E,SER-22,FACTORY BLDG.-ASSETS,External Services
+20,E,SER-23,OTHER ASSESTS,External Services
+20,E,SER-24,REPAIR BLDG(REPAIR),External Services
+20,E,SER-25,REPAIR PL-MACH(REPAI,External Services
+20,E,SER-26,REPAIRS - OTHERS,External Services
+20,E,SER-27,REPAIRS  TO  OTHER,External Services
+20,E,SER-28,C&FA GEN. EXPS,External Services
+20,E,SER-29,ROYALTY / TECHNICAL,External Services
+20,E,SER-30,PRODUCT ADVERTISEMEN,External Services
+20,E,SER-31,DESIGN&ART WORK CHRG,External Services
+20,E,SER-32,BIOEQUIVALENCE STUDY,External Services
+20,E,SER-33,SALES PROMOTION EXPS,External Services
+20,E,SER-34,DOCTORS CONFERENCES,External Services
+20,E,SER-35,CYCLE MEET EXPENSES,External Services
+20,E,SER-36,COMMISSION ON SALES,External Services
+20,E,SER-37,MKTG. MEETING EXPS.,External Services
+20,E,SER-38,CME (CONT MED EDU),External Services
+20,E,SER-39,ANALYSIS CHARGES,External Services
+20,E,SER-40,CLINICAL TRIALS,External Services
+20,E,SER-41,LABORATORY EXPS.,External Services
+20,E,SER-42,CLEARING CHRGS O/W-E,External Services
+20,E,SER-43,FREIGHT INWARD,External Services
+20,E,SER-44,FREIGHT OUTWARD,External Services
+20,E,SER-45,CONVEYANCE EXPENSES,External Services
+20,E,SER-46,Printing &Stationery,External Services
+20,E,SER-47,Batch ptg/Branding,External Services
+20,E,SER-48,Power & Fuel service,External Services
+20,E,SER-49,STAFF BUS EXP-CORP V,External Services
+20,E,SER-50,TRAVEL EXP-CORP VEND,External Services
+20,E,SER-51,TRAVEL EXP-HOTEL,External Services
+20,E,SER-52,SECURITY SERV-CORP V,External Services
+20,E,SER-53,GARDENING EXP-WCT,External Services
+20,E,SER-54,MOTOR CAR  EXP-CORP,External Services
+20,E,SER-55,LEGAL EXPENSES,External Services
+20,E,SER-56,PATENT REG CHARGES,External Services
+20,E,SER-57,REPAIR BLDG (NEW),External Services
+20,E,SER-58,REPAIR BLDG (CORP V),External Services
+20,E,SER-59,REPAIR PL-MACH (NEW),External Services
+20,E,SER-60,REPAIR PL-MACH(CORP),External Services
+20,E,SER-61,REPAIR OTHER(CORP),External Services
+20,E,SER-62,LABORATORY EXPS(CMC),External Services
+20,E,SF-01,Coated -branded tab,
+20,E,SF-02,Coated-unbranded tab,
+20,E,SF-03,Uncoated tablet,
+20,E,SF-04,Syrup,
+20,E,SF-05,Suspension,
+20,E,SF-06,Bulk - caps filling,
+20,E,SF-07,Filled Vials,
+20,E,SF-08,Filled Ampoules,
+20,E,SF-09,Crude Bulk,
+20,E,SF-10,Granules,
+20,E,SF-11,Bulk -tube filling,
+20,E,SF-12,Water for injection,
+20,E,SF-13,Coated Granules,
+20,E,SF-14,Blend for Capsules,
+20,E,SF-15,Blend for Tablets,
+20,E,SF-16,Bulk for Injectible,
+20,E,SF-17,Bulk Media for Syrin,
+20,E,SF-18,Compressed tablets,
+20,E,SF-19,Core Tablets,
+20,E,SF-20,Filled Capsules,
+20,E,SF-21,Filled Syinges,
+20,E,SF-22,Internediates for bu,
+20,E,SF-23,Recoverable,
+20,E,SF-24,Recovered,
+20,E,SF-25,Inhale solution,
+20,E,SF-26,Filled Tablets,
+20,E,SF-27,Blend for Sachet,
+20,E,SF-28,Oral Drop,
+20,E,SF-35,Oral Spray,
+20,E,SPR-01,Loose Spares,Loose Spares
+20,E,SPR-02,Change Parts,
+20,E,WA-01,Scrap,Scrap Material
+20,F,111010,LEASE HOLD LAND,
+20,F,111020,BUILDING,
+20,F,111030,PLANT & MACHINERY,
+20,F,111040,ELECTRICAL INSTALLAT,
+20,F,111053,LABORATORY EQUIPMENT,
+20,F,111058,SPARES & CHANGE PART,
+20,F,111059,GENERATOR SET,
+20,F,111060,"CLEAN AIR SYSTEM, RE",
+20,F,111070,EFFLUENT TREATMENT P,
+20,F,111080,R & D EQUIPMENTS,
+20,F,111100,FURNITURE & FIXTURES,
+20,F,111110,OFFICE EQUIPMENTS,
+20,F,111120,COMPUTER HARDWARE,
+20,F,111130,COMPUTER SOFTWARE,
+20,F,111140,VEHICLES,
+20,F,111500,BRANDS/PATENTS & INT,
+20,F,440048,RENT A CAB OPERATOR,INPUT SERVICES
+20,F,440060,MANPOWER RECRUITMENT,INPUT SERVICES
+20,F,440225,BUS AUXILIARY SERVIC,INPUT SERVICES
+20,F,440262,TRNSPT OF GOODS ROAD,INPUT SERVICES
+20,F,440358,SPONSORSHIP SERVICE,INPUT SERVICES
+20,F,440410,WORKS CONTRACT,INPUT SERVICES
+20,F,440480,LEGAL CONSULTANCY SE,INPUT SERVICES
+20,F,441480,OTHER TAXABLE SERVIC,INPUT SERVICES
+20,F,CG-01,ETP,Effluent Treatment Plant
+20,F,CG-02,Machinery,
+20,F,CG-03,Machinery Spares,
+20,F,CG-04,Lab Equipment,
+20,F,CG-05,Office Equipments,
+20,F,CG-06,Furniture,
+20,F,CG-07,Computer Hardware,
+20,F,CG-08,Computer Software,
+20,F,CG-09,Material Handling eq,
+20,F,CG-10,Weighing Equipment,
+20,F,CG-11,Clean Air  Circulati,Clean Air Circulation
+20,F,CG-12,AHU,Air Handling Unit
+20,F,FM-01,Allopathic Pharma.,Allopathic Pharmaceuticals Products [P&P medicaments]
+20,F,FM-02,Herbal Pharma.,Herbal Pharmaceuticals Products
+20,F,FM-03,Ayurvedic Pharmac,Ayurvedic Pharmaceuticals Products
+20,F,FM-04,Food supplement,Food supplement
+20,F,FM-05,Biochemical,Biochemical Product
+20,F,FM-06,BPC (Bulk Chemical),Bilk Pharmaceutical Chemical [BPC] [organic/inorganic]
+20,F,FM-07,Biological Produc,Biological Product [for Biotech]
+20,F,FM-08,Cosmetics,
+20,F,FM-09,others,
+20,F,FM-10,Medical device,
+20,F,FM-11,Rx,Prescription Pharmaceutical  (Rx)
+20,F,FM-12,OTC,OTC Pharmaceutical  (OTC)
+20,F,FM-13,NHP,NHP
+20,F,FM-14,CDS,CDS
+20,F,FM-15,CDS,CDS
+20,F,LC-01,Chemicals,
+20,F,LC-02,Glasswares,
+20,F,LC-03,Coloumns,
+20,F,LC-04,Reference Standards,
+20,F,LC-05,Lab consumables,
+20,F,MISC-01,Stationary,
+20,F,MISC-02,Electricals,
+20,F,MISC-03,Hardwares,
+20,F,MISC-04,Stereos,
+20,F,MISC-05,Oils & Fuels,
+20,F,MISC-06,Other Misc Items,
+20,F,MISC-07,Civil Construction,Material required for construction work
+20,F,PM-01,Ampoule Glass,
+20,F,PM-02,Bag Poly,
+20,F,PM-03,Bottle Glass,
+20,F,PM-04,Bottle Pet,
+20,F,PM-05,Bottle HDPE/LDPE,
+20,F,PM-06,Box corrugated,
+20,F,PM-07,Box Thermacoal,
+20,F,PM-08,Cache cover,
+20,F,PM-09,Cap PP,
+20,F,PM-10,Cap Screw,
+20,F,PM-11,Carton,
+20,F,PM-12,Carton un printed,
+20,F,PM-13,Container,
+20,F,PM-14,Container Tin,
+20,F,PM-15,Cutter alu,
+20,F,PM-16,Dropper,
+20,F,PM-17,Film BOPP,
+20,F,PM-18,Film Pvc,
+20,F,PM-19,Film Pvc/Pvdc,
+20,F,PM-20,Foil alu plain,
+20,F,PM-21,Foil alu printed,
+20,F,PM-22,Foil Form pack,
+20,F,PM-23,Foil Glassine,
+20,F,PM-24,Gum,
+20,F,PM-25,Jar Pet,
+20,F,PM-26,Jar Tin,
+20,F,PM-27,Label,
+20,F,PM-28,Label Box,
+20,F,PM-29,Label Sticker,
+20,F,PM-30,Leaflet,
+20,F,PM-31,Liner,
+20,F,PM-32,Measuring cup,
+20,F,PM-33,Pouch Alu Laminat,
+20,F,PM-34,Seal Flip Off,
+20,F,PM-35,Seal Plastic,
+20,F,PM-36,Stopper Rubber,
+20,F,PM-37,Tagger,
+20,F,PM-38,Tape BOPP,
+20,F,PM-39,Tray Plastic,
+20,F,PM-40,Tray Rondo,
+20,F,PM-41,Tube Alu,
+20,F,PM-42,Tube Lami,
+20,F,PM-43,Vial Plastic,
+20,F,PM-44,Vial Glass,
+20,F,PM-45,Wrapper,
+20,F,PM-46,Cotton/Rayon Filler,
+20,F,PM-47,Bag Silica,
+20,F,PM-48,Barrel,
+20,F,PM-49,Closures,
+20,F,PM-50,Drum,
+20,F,PM-51,Film PVC/PE/Pvdc,
+20,F,PM-52,Foil Lidding,
+20,F,PM-53,Paper,
+20,F,PM-54,Plugs,
+20,F,PM-55,Plunger,
+20,F,PM-56,Sachets,
+20,F,PM-57,Nasal Pump,
+20,F,PM-58,Bulk,
+20,F,PM-59,Drum,
+20,F,PM-60,Device,
+20,F,PM-61,canister,
+20,F,PM-62,Bottle Glass Amber,
+20,F,PM-63,Oral Drop,
+20,F,PM-72,PM Fibre Drums,Packing Material Fibre Drums
+20,F,PRM-01,Promotional,Promotional Materials
+20,F,PRM-02,Brand Reminders,Brand Reminders
+20,F,PRM-03,MR Items,Printed/Non printed items for MR
+20,F,PRM-04,Medical camp materia,Medical camp material
+20,F,PRM-05,Chemist/Distributor,Chemist/Distributor Input
+20,F,PRM-06,Field Employee cons,Field Employee consumable
+20,F,PRM-07,Print items,Print items
+20,F,RM-01,Active Pharmaceutica,
+20,F,RM-02,Potency Dep -API,Potency Dependent - API
+20,F,RM-03,Excipients,
+20,F,RM-04,Potency Dep -Excipnt,Potency Dependent - Excipient
+20,F,RM-05,Intermediates,
+20,F,RM-06,Chemical,
+20,F,RM-07,Solvent,
+20,F,RM-08,Bulk-Solvent,
+20,F,RM-09,Gas,
+20,F,RM-10,Starting material,
+20,F,RM-11,Intermediate outsour,
+20,F,RM-12,Catalyst,
+20,F,SER-01,Services,External Services
+20,F,SER-02,AUDIT FEES,External Services
+20,F,SER-03,PROFESSIONAL FEES,External Services
+20,F,SER-04,WAGES,External Services
+20,F,SER-05,CANTEEN EXPENSES,External Services
+20,F,SER-06,STAFF TRAINING EXP.,External Services
+20,F,SER-07,STAFF BUS EXPENSES,External Services
+20,F,SER-08,RECRUITMENT EXP.,External Services
+20,F,SER-09,STAFF WELFARE EXP.-S,External Services
+20,F,SER-10,RENT PAID,External Services
+20,F,SER-11,TRAVEL EXPENSES,External Services
+20,F,SER-12,COURIER EXPENSES,External Services
+20,F,SER-13,TELEPHONE EXPS.,External Services
+20,F,SER-14,SECURITY SERVICE,External Services
+20,F,SER-15,GARDENING EXP-LABOUR,External Services
+20,F,SER-16,EMPLOYEE HEALTH -INS,External Services
+20,F,SER-17,INSURANCE CHARGES,External Services
+20,F,SER-18,MOTOR CAR  EXP.,External Services
+20,F,SER-19,COMPUTER EXPENSES,External Services
+20,F,SER-20,LEGAL EXP- ADVOCATE,External Services
+20,F,SER-21,PATENT REG CHRG-ADV,External Services
+20,F,SER-22,FACTORY BLDG.-ASSETS,External Services
+20,F,SER-23,OTHER ASSESTS,External Services
+20,F,SER-24,REPAIR BLDG(REPAIR),External Services
+20,F,SER-25,REPAIR PL-MACH(REPAI,External Services
+20,F,SER-26,REPAIRS - OTHERS,External Services
+20,F,SER-27,REPAIRS  TO  OTHER,External Services
+20,F,SER-28,C&FA GEN. EXPS,External Services
+20,F,SER-29,ROYALTY / TECHNICAL,External Services
+20,F,SER-30,PRODUCT ADVERTISEMEN,External Services
+20,F,SER-31,DESIGN&ART WORK CHRG,External Services
+20,F,SER-32,BIOEQUIVALENCE STUDY,External Services
+20,F,SER-33,SALES PROMOTION EXPS,External Services
+20,F,SER-34,DOCTORS CONFERENCES,External Services
+20,F,SER-35,CYCLE MEET EXPENSES,External Services
+20,F,SER-36,COMMISSION ON SALES,External Services
+20,F,SER-37,MKTG. MEETING EXPS.,External Services
+20,F,SER-38,CME (CONT MED EDU),External Services
+20,F,SER-39,ANALYSIS CHARGES,External Services
+20,F,SER-40,CLINICAL TRIALS,External Services
+20,F,SER-41,LABORATORY EXPS.,External Services
+20,F,SER-42,CLEARING CHRGS O/W-E,External Services
+20,F,SER-43,FREIGHT INWARD,External Services
+20,F,SER-44,FREIGHT OUTWARD,External Services
+20,F,SER-45,CONVEYANCE EXPENSES,External Services
+20,F,SER-46,Printing &Stationery,External Services
+20,F,SER-47,Batch ptg/Branding,External Services
+20,F,SER-48,Power & Fuel service,External Services
+20,F,SER-49,STAFF BUS EXP-CORP V,External Services
+20,F,SER-50,TRAVEL EXP-CORP VEND,External Services
+20,F,SER-51,TRAVEL EXP-HOTEL,External Services
+20,F,SER-52,SECURITY SERV-CORP V,External Services
+20,F,SER-53,GARDENING EXP-WCT,External Services
+20,F,SER-54,MOTOR CAR  EXP-CORP,External Services
+20,F,SER-55,LEGAL EXPENSES,External Services
+20,F,SER-56,PATENT REG CHARGES,External Services
+20,F,SER-57,REPAIR BLDG (NEW),External Services
+20,F,SER-58,REPAIR BLDG (CORP V),External Services
+20,F,SER-59,REPAIR PL-MACH (NEW),External Services
+20,F,SER-60,REPAIR PL-MACH(CORP),External Services
+20,F,SER-61,REPAIR OTHER(CORP),External Services
+20,F,SER-62,LABORATORY EXPS(CMC),External Services
+20,F,SF-01,Coated -branded tab,
+20,F,SF-02,Coated-unbranded tab,
+20,F,SF-03,Uncoated tablet,
+20,F,SF-04,Syrup,
+20,F,SF-05,Suspension,
+20,F,SF-06,Bulk - caps filling,
+20,F,SF-07,Filled Vials,
+20,F,SF-08,Filled Ampoules,
+20,F,SF-09,Crude Bulk,
+20,F,SF-10,Granules,
+20,F,SF-11,Bulk -tube filling,
+20,F,SF-12,Water for injection,
+20,F,SF-13,Coated Granules,
+20,F,SF-14,Blend for Capsules,
+20,F,SF-15,Blend for Tablets,
+20,F,SF-16,Bulk for Injectible,
+20,F,SF-17,Bulk Media for Syrin,
+20,F,SF-18,Compressed tablets,
+20,F,SF-19,Core Tablets,
+20,F,SF-20,Filled Capsules,
+20,F,SF-21,Filled Syinges,
+20,F,SF-22,Internediates for bu,
+20,F,SF-23,Recoverable,
+20,F,SF-24,Recovered,
+20,F,SF-25,Inhale solution,
+20,F,SF-26,Filled Tablets,
+20,F,SF-27,Blend for Sachet,
+20,F,SF-28,Oral Drop,
+20,F,SF-35,Crude Bulk,
+20,F,SPR-01,Loose Spares,Loose Spares
+20,F,SPR-02,Change Parts,
+20,F,WA-01,Scrap,Scrap Material
+20,I,111010,AFFITTO TENERE TERRE,
+20,I,111020,EDIFICIO,
+20,I,111030,IMPIANTI & MACCHINAR,
+20,I,111040,IMPIANTI ELETTRICI,
+20,I,111053,ATTREZZATURA DI LABO,
+20,I,111058,RICAMBI & CAMBIO PAR,
+20,I,111059,GRUPPO ELETTROGENO,
+20,I,111060,"SISTEMA ARIA PULITA,",
+20,I,111070,TRATTAMENTO DEGLI EF,
+20,I,111080,ATTREZZATURE R & S,
+20,I,111100,MOBILI & INFISSI,
+20,I,111110,ATTREZZATURE PER UFF,
+20,I,111120,COMPUTER HARDWARE,
+20,I,111130,COMPUTER SOFTWARE,
+20,I,111140,VEICOLI,
+20,I,111500,MARCHI/BREVETTI & IN,
+20,I,440048,NOLEGGIA UN OPERATOR,SERVIZI DI INPUT
+20,I,440060,RECLUTAMENTO MANODOP,SERVIZI DI INPUT
+20,I,440225,SERVIZIO AUSILIARIO,SERVIZI DI INPUT
+20,I,440262,TRNSPT DI STRADA MER,SERVIZI DI INPUT
+20,I,440358,SERVIZIO DI SPONSORI,SERVIZI DI INPUT
+20,I,440410,APPALTO LAVORI,SERVIZI DI INPUT
+20,I,440480,CONSULENZA LEGALE SE,SERVIZI DI INPUT
+20,I,441480,ALTRI SERVIZI IMPONI,SERVIZI DI INPUT
+20,I,CG-01,ETP,Impianto di trattamento degli effluenti
+20,I,CG-02,Macchinario,
+20,I,CG-03,Ricambi Macchinari,
+20,I,CG-04,Attrezzature di labo,
+20,I,CG-05,Attrezzature per uff,
+20,I,CG-06,Mobilio,
+20,I,CG-07,Computer Hardware,
+20,I,CG-08,Computer Software,
+20,I,CG-09,Material Handling eq,
+20,I,CG-10,Strumenti di pesatur,
+20,I,CG-11,Aria Pulita Circulat,Circolazione dell'aria pulita
+20,I,CG-12,AHU,Unità di trattamento aria
+20,I,FM-01,Allopatico Pharma.,Prodotti farmaceutici allopatici [farmaci P & P]
+20,I,FM-02,Erboristeria Farmace,Prodotti farmaceutici a base di erbe
+20,I,FM-03,Farmaceutica Ayurved,Prodotti farmaceutici ayurvedici
+20,I,FM-04,Integratore alimenta,Integratore alimentare
+20,I,FM-05,Biochimico,Prodotto Biochimico
+20,I,FM-06,BPC (Bulk Chemical),Bilk Pharmaceutical Chemical [BPC] [organico/inorganico]
+20,I,FM-07,Prodotto Biologico,Prodotto biologico [per Biotech]
+20,I,FM-08,Cosmesi,
+20,I,FM-09,Altri,
+20,I,FM-10,Dispositivo medico,
+20,I,FM-11,Rx,Prescrizione Farmaceutica (Rx)
+20,I,FM-12,OTC,OTC Farmaceutico (OTC)
+20,I,FM-13,NHP,NHP
+20,I,FM-14,NHP,NHP
+20,I,FM-15,NHP,NHP
+20,I,LC-01,Prodotti chimici,
+20,I,LC-02,Vetreria,
+20,I,LC-03,Coloumns,
+20,I,LC-04,Norme di riferimento,
+20,I,LC-05,Materiali di consumo,
+20,I,MISC-01,Stazionario,
+20,I,MISC-02,Impianti elettrici,
+20,I,MISC-03,Hardware,
+20,I,MISC-04,Stereo,
+20,I,MISC-05,Oli & Combustibili,
+20,I,MISC-06,Altri elementi vari,
+20,I,MISC-07,Edilizia Civile,Materiale necessario per i lavori di costruzione
+20,I,PM-01,Fiala di vetro,
+20,I,PM-02,Borsa Poly,
+20,I,PM-03,Bicchiere per bottig,
+20,I,PM-04,Bottiglia Pet,
+20,I,PM-05,Flacone HDPE/LDPE,
+20,I,PM-06,Scatola ondulata,
+20,I,PM-07,Scatola Thermacoal,
+20,I,PM-08,Coperchio cache,
+20,I,PM-09,Cappuccio PP,
+20,I,PM-10,Vite del tappo,
+20,I,PM-11,Cartone,
+20,I,PM-12,Cartone non stampato,
+20,I,PM-13,Contenitore,
+20,I,PM-14,Notizie sui containe,
+20,I,PM-15,Cutter alu,
+20,I,PM-16,Cadere,
+20,I,PM-17,Film BOPP,
+20,I,PM-18,Film Pvc,
+20,I,PM-19,Film Pvc/Pvdc,
+20,I,PM-20,Lamina alu plain,
+20,I,PM-21,Lamina stampata in a,
+20,I,PM-22,Pacchetto Foil Form,
+20,I,PM-23,Lamina Glassine,
+20,I,PM-24,Gengiva,
+20,I,PM-25,Vaso Pet,
+20,I,PM-26,Barattolo Di lattina,
+20,I,PM-27,Etichetta,
+20,I,PM-28,Scatola etichette,
+20,I,PM-29,Adesivo etichetta,
+20,I,PM-30,Dépliant,
+20,I,PM-31,Transatlantico,
+20,I,PM-32,Misurino,
+20,I,PM-33,Sacchetto Alu Lamina,
+20,I,PM-34,Sigillo Flip Off,
+20,I,PM-35,Sigillare in plastic,
+20,I,PM-36,Gomma tappo,
+20,I,PM-37,Tagger,
+20,I,PM-38,Nastro BOPP,
+20,I,PM-39,Vassoio in plastica,
+20,I,PM-40,Vassoio Rondò,
+20,I,PM-41,Tubo Alu,
+20,I,PM-42,Tubo Lami,
+20,I,PM-43,Fiala di plastica,
+20,I,PM-44,Fiala di vetro,
+20,I,PM-45,Involucro,
+20,I,PM-46,Filler cotone/rayon,
+20,I,PM-47,Borsa Silice,
+20,I,PM-48,Barile,
+20,I,PM-49,Chiusure,
+20,I,PM-50,Tamburo,
+20,I,PM-51,Film PVC/PE/Pvdc,
+20,I,PM-52,Coperchio in lamina,
+20,I,PM-53,Carta,
+20,I,PM-54,Spine,
+20,I,PM-55,Stantuffo,
+20,I,PM-56,Borse,
+20,I,PM-57,Pompa nasale,
+20,I,PM-58,Massa,
+20,I,PM-59,Tamburo,
+20,I,PM-60,Dispositivo,
+20,I,PM-61,barattolo,
+20,I,PM-62,Bicchiere per bottig,
+20,I,PM-63,Bicchiere per bottig,
+20,I,PRM-01,Promozionale,Materiale promozionale
+20,I,PRM-02,Articoli da regalo,Articoli da regalo
+20,I,PRM-03,Articoli MR,Articoli stampati/non stampati per MR
+20,I,PRM-04,Articoli MR,Materiale per conferenze
+20,I,PRM-05,Ingresso servizio 3,Ingresso servizio 3
+20,I,PRM-06,Ingresso servizio 3,Ingresso servizio 3
+20,I,PRM-07,Ingresso servizio 3,Ingresso servizio 3
+20,I,RM-01,Pharmaceutica attiva,
+20,I,RM-02,Potenza Dep -API,Potenza dipendente - API
+20,I,RM-03,Eccipienti,
+20,I,RM-04,Potenza Dep -Excipnt,Potenza dipendente - Eccipiente
+20,I,RM-05,Intermedi,
+20,I,SER-01,Servizi,Servizi esterni
+20,I,SER-02,COMMISSIONI DI REVIS,Servizi esterni
+20,I,SER-03,ONORARI PROFESSIONAL,Servizi esterni
+20,I,SER-04,SALARIO,Servizi esterni
+20,I,SER-05,SPESE MENSA,Servizi esterni
+20,I,SER-06,FORMAZIONE DEL PERSO,Servizi esterni
+20,I,SER-07,SPESE PER L'AUTOBUS,Servizi esterni
+20,I,SER-08,RECLUTAMENTO EXP.,Servizi esterni
+20,I,SER-09,PERSONALE BENESSERE,Servizi esterni
+20,I,SER-10,AFFITTO PAGATO,Servizi esterni
+20,I,SER-11,SPESE DI VIAGGIO,Servizi esterni
+20,I,SER-12,SPESE DI CORRIERE,Servizi esterni
+20,I,SER-13,SPESE TELEFONICHE,Servizi esterni
+20,I,SER-14,SERVIZIO DI SICUREZZ,Servizi esterni
+20,I,SER-15,GIARDINAGGIO EXP-LAB,Servizi esterni
+20,I,SER-16,SALUTE DEI DIPENDENT,Servizi esterni
+20,I,SER-17,SPESE ASSICURATIVE,Servizi esterni
+20,I,SER-18,AUTO EXP.,Servizi esterni
+20,I,SER-19,SPESE INFORMATICHE,Servizi esterni
+20,I,SER-20,AVVOCATO EXP- AVVOCA,Servizi esterni
+20,I,SER-21,BREVETTO REG CHRG-AD,Servizi esterni
+20,I,SER-22,FABBRICA BLDG.-ASSET,Servizi esterni
+20,I,SER-23,ALTRI ASSESTS,Servizi esterni
+20,I,SER-24,RIPARAZIONE BLDG (RI,Servizi esterni
+20,I,SER-25,RIPARAZIONE PL-MACH(,Servizi esterni
+20,I,SER-26,RIPARAZIONI - ALTRI,Servizi esterni
+20,I,SER-27,RIPARAZIONI AD ALTRI,Servizi esterni
+20,I,SER-28,C&FA GEN. EXPS,Servizi esterni
+20,I,SER-29,ROYALTY / TECNICO,Servizi esterni
+20,I,SER-30,PUBBLICITÀ PRODOTTI,Servizi esterni
+20,I,SER-31,DESIGN&ART OPERA CHR,Servizi esterni
+20,I,SER-32,STUDIO DI BIOEQUIVAL,Servizi esterni
+20,I,SER-33,PROMOZIONE DELLE VEN,Servizi esterni
+20,I,SER-34,CONFERENZE DEI MEDIC,Servizi esterni
+20,I,SER-35,CICLO SODDISFARE LE,Servizi esterni
+20,I,SER-36,COMMISSIONE SULLE VE,Servizi esterni
+20,I,SER-37,MKTG. INCONTRO EXPS.,Servizi esterni
+20,I,SER-38,CME (CONT MED EDU),Servizi esterni
+20,I,SER-39,ONERI DI ANALISI,Servizi esterni
+20,I,SER-40,CLINICI,Servizi esterni
+20,I,SER-41,LABORATORIO EXPS.,Servizi esterni
+20,I,SER-42,CLEARING CHRGS O/W-E,Servizi esterni
+20,I,SER-43,TRASPORTO VERSO L'IN,Servizi esterni
+20,I,SER-44,TRASPORTO MERCI IN U,Servizi esterni
+20,I,SER-45,SPESE DI TRASPORTO,Servizi esterni
+20,I,SER-46,Stampa & Cancelleria,Servizi esterni
+20,I,SER-47,Batch ptg/Branding,Servizi esterni
+20,I,SER-48,Servizio Power & Fue,Servizi esterni
+20,I,SER-49,AUTOBUS DEL PERSONAL,Servizi esterni
+20,I,SER-50,VIAGGI EXP-CORP VEND,Servizi esterni
+20,I,SER-51,VIAGGIO EXP-HOTEL,Servizi esterni
+20,I,SER-52,SICUREZZA SERV-CORP,Servizi esterni
+20,I,SER-53,GIARDINAGGIO EXP-WCT,Servizi esterni
+20,I,SER-54,AUTO EXP-CORP,Servizi esterni
+20,I,SER-55,SPESE LEGALI,Servizi esterni
+20,I,SER-56,TASSE DI REGISTRAZIO,Servizi esterni
+20,I,SER-57,RIPARAZIONE BLDG (NU,Servizi esterni
+20,I,SER-58,RIPARAZIONE BLDG (CO,Servizi esterni
+20,I,SER-59,RIPARAZ.PL-MACH(NUOV,Servizi esterni
+20,I,SER-60,RIPARAZ.PL-MACH(CORP,Servizi esterni
+20,I,SER-61,RIPARAZIONE ALTRO (C,Servizi esterni
+20,I,SER-62,LABORATORIO EXPS (CM,Servizi esterni
+20,I,SF-01,Scheda rivestita con,
+20,I,SF-02,Scheda rivestita sen,
+20,I,SF-03,Compressa non rivest,
+20,I,SF-04,Sciroppo,
+20,I,SF-05,Sospensione,
+20,I,SF-06,Bulk - riempimento t,
+20,I,SF-07,Fiale riempite,
+20,I,SF-08,Fiale riempite,
+20,I,SF-09,Bulk grezzo,
+20,I,SF-10,Granuli,
+20,I,SF-11,Riempimento di tubi,
+20,I,SF-12,Acqua per preparazio,
+20,I,SF-13,Granuli rivestiti,
+20,I,SF-14,Miscela per capsule,
+20,I,SF-15,Miscela per compress,
+20,I,SF-16,Bulk per iniettabile,
+20,I,SF-17,Supporti di massa pe,
+20,I,SF-18,Compresse compresse,
+20,I,SF-19,Tablet Core,
+20,I,SF-20,Capsule riempite,
+20,I,SF-21,Syinges ripieni,
+20,I,SF-22,Internediati per bu,
+20,I,SF-23,Recuperabile,
+20,I,SF-24,Recuperato,
+20,I,SF-25,Inalare la soluzione,
+20,I,SF-26,Compresse riempite,
+20,I,SF-27,Miscela per compress,
+20,I,SF-28,Miscela per compress,
+20,I,SF-35,Bulk grezzo,
+20,I,SPR-01,Ricambi sfusi,Ricambi sfusi
+20,I,SPR-02,Cambia parti,
+20,I,WA-01,Ferraglia,Materiale di scarto
+20,덆,FM-15,CDS,CDS
+20,덆,PM-72,PM Fibre Drums,Packing Material Fibre Drums
+20,덆,SF-35,Crude Bulk,
