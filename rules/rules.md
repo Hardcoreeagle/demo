@@ -6,13 +6,15 @@ Context to the project :
             1.Canonical model data :
                 deals with sap tables and field and generate geneology of batch specific . we will be tracing the finished batched , mean while it will also generate genelogy of batches used in the production(process order) , it will be consisting of following parts 
                     business Objects : 
-                        these are the object in the business which business look with precausion like materia , process order , sales order like this these are directly maped from sap tables and fields .business object are defied already globally but content of it will be batch specific example i have material now this material also present in geneology of finished batched , semifinished batches , raw material but the content of it will be batch specific .
+                        these are the object in the business which business look with precausion like materia , process order , sales order like this these are directly maped from sap tables and fields .business object are defied already globally but content of it will be batch specific example i have material now this material also present in geneology of finished batched , semifinished batches , raw material but the content of it will be batch specific . refer: rules\Business_object_schema.md
 
                     relationship resolver :
                         these resolves the relationship of the business object with each other these are also maped with from sap tables and fields i'll provide you the logic for relationship resolver . 
+                        refer: rules\relationship-resolver-updated-v2.md
 
                     Business Event resolution :
                         these are the things which tell about the objects like what happed with business objects to go for next business object i'll also provide logic for it .
+                        refer: rules\SAP_Event_Detection_Catalog_Updated_v2.md
 
                 out put: fished batch full geneology using business objects ,relationship resolver , event resolver , here also generate the geneology of batches used like seminfinish , raw material using business objec ,relationship resolver , event resolver also we need the events audit trail for finish batches .
 
