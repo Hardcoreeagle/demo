@@ -1,0 +1,427 @@
+[
+  {
+    "from": "Planning Requirement",
+    "to": "Planned Order",
+    "relationship": "PLANS_FOR",
+    "join_fields": [
+      "material_id",
+      "plant_id"
+    ]
+  },
+  {
+    "from": "Planned Order",
+    "to": "Purchase Requisition",
+    "relationship": "CREATES_PROCUREMENT_REQUIREMENT",
+    "join_fields": [
+      "material_id",
+      "plant_id"
+    ]
+  },
+  {
+    "from": "Purchase Requisition",
+    "to": "Purchase Order",
+    "relationship": "CONVERTED_TO",
+    "join_fields": [
+      "material_id",
+      "plant_id"
+    ]
+  },
+  {
+    "from": "Purchase Order",
+    "to": "Material Movement",
+    "relationship": "RECEIVED_BY",
+    "join_fields": [
+      "purchase_order_id",
+      "reference_document_id"
+    ]
+  },
+  {
+    "from": "Material Movement",
+    "to": "Input Batch",
+    "relationship": "CREATES_OR_RECEIVES",
+    "join_fields": [
+      "material_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Input Batch",
+    "to": "Inventory / Stock",
+    "relationship": "STORED_IN",
+    "join_fields": [
+      "material_id",
+      "plant_id",
+      "storage_location"
+    ]
+  },
+  {
+    "from": "Reservation",
+    "to": "Process Order",
+    "relationship": "RESERVED_FOR",
+    "join_fields": [
+      "process_order_id"
+    ]
+  },
+  {
+    "from": "Process Order",
+    "to": "BOM",
+    "relationship": "USES",
+    "join_fields": [
+      "material_id",
+      "plant_id"
+    ]
+  },
+  {
+    "from": "Process Order",
+    "to": "Recipe",
+    "relationship": "USES",
+    "join_fields": [
+      "material_id",
+      "plant_id"
+    ]
+  },
+  {
+    "from": "Process Order",
+    "to": "Production Version",
+    "relationship": "USES",
+    "join_fields": [
+      "production_version_id"
+    ]
+  },
+  {
+    "from": "Batch Determination",
+    "to": "Material Consumption",
+    "relationship": "DETERMINES_BATCH_FOR_CONSUMPTION",
+    "join_fields": [
+      "batch_id",
+      "process_order_id"
+    ]
+  },
+  {
+    "from": "Material Consumption",
+    "to": "Process Order",
+    "relationship": "CONSUMED_IN",
+    "join_fields": [
+      "process_order_id"
+    ]
+  },
+  {
+    "from": "Material Consumption",
+    "to": "Input Batch",
+    "relationship": "CONSUMES",
+    "join_fields": [
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Process Order",
+    "to": "Production Confirmation",
+    "relationship": "CONFIRMED_BY",
+    "join_fields": [
+      "process_order_id"
+    ]
+  },
+  {
+    "from": "Process Order",
+    "to": "Yield",
+    "relationship": "PRODUCES_YIELD",
+    "join_fields": [
+      "process_order_id"
+    ]
+  },
+  {
+    "from": "Input Batch",
+    "to": "Batch Transformation",
+    "relationship": "INPUT_BATCH",
+    "join_fields": [
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Batch Transformation",
+    "to": "Batch",
+    "relationship": "PRODUCES",
+    "join_fields": [
+      "output_batch_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Raw Material Batch",
+    "to": "Batch Transformation (Semi-Finished)",
+    "relationship": "TRANSFORMS_TO_SEMIFINISHED",
+    "join_fields": [
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Batch Transformation (Semi-Finished)",
+    "to": "Semi-Finished Batch",
+    "relationship": "PRODUCES_SEMIFINISHED_BATCH",
+    "join_fields": [
+      "output_batch_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Semi-Finished Batch",
+    "to": "Batch Transformation (Finished)",
+    "relationship": "TRANSFORMS_TO_FINISHED_PRODUCT",
+    "join_fields": [
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Batch",
+    "to": "Quality Inspection Lot",
+    "relationship": "INSPECTED_BY",
+    "join_fields": [
+      "batch_id",
+      "material_id",
+      "plant_id"
+    ]
+  },
+  {
+    "from": "Quality Inspection Lot",
+    "to": "Sampling",
+    "relationship": "SAMPLED_BY",
+    "join_fields": [
+      "inspection_lot_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Sampling",
+    "to": "Inspection Result",
+    "relationship": "PRODUCES_RESULT",
+    "join_fields": [
+      "sample_id",
+      "inspection_lot_id"
+    ]
+  },
+  {
+    "from": "Inspection Result",
+    "to": "Usage Decision",
+    "relationship": "SUPPORTS",
+    "join_fields": [
+      "inspection_lot_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Batch",
+    "to": "Sales Batch Allocation",
+    "relationship": "ALLOCATED_TO",
+    "join_fields": [
+      "batch_id",
+      "material_id"
+    ]
+  },
+  {
+    "from": "Sales Batch Allocation",
+    "to": "Delivery Item",
+    "relationship": "ALLOCATED_FOR",
+    "join_fields": [
+      "delivery_id",
+      "delivery_item_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Delivery Item",
+    "to": "Outbound Delivery",
+    "relationship": "PART_OF",
+    "join_fields": [
+      "delivery_id"
+    ]
+  },
+  {
+    "from": "Delivery Item",
+    "to": "Material Movement",
+    "relationship": "GOODS_ISSUE",
+    "join_fields": [
+      "batch_id",
+      "material_id"
+    ]
+  },
+  {
+    "from": "Outbound Delivery",
+    "to": "Billing Document",
+    "relationship": "BILLED_BY",
+    "join_fields": [
+      "delivery_id"
+    ]
+  },
+  {
+    "from": "Billing Document",
+    "to": "Customer or CFA",
+    "relationship": "BILLED_TO",
+    "join_fields": [
+      "coustomer_id"
+    ]
+  },
+  {
+    "from": "Customer or CFA",
+    "to": "Sales Return",
+    "relationship": "RETURNS",
+    "join_fields": [
+      "customer_id"
+    ]
+  },
+  {
+    "from": "Sales Return",
+    "to": "Batch",
+    "relationship": "RETURNS_BATCH",
+    "join_fields": [
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Raw Material Supplier",
+    "to": "Raw Material Purchase Order",
+    "relationship": "PURCHASED_FROM",
+    "join_fields": [
+      "vendor_id"
+    ]
+  },
+  {
+    "from": "Raw Material Purchase Order",
+    "to": "Raw Material Goods Receipt (101)",
+    "relationship": "RECEIVED_INTO_STOCK",
+    "join_fields": [
+      "purchase_order_id",
+      "material_document_id"
+    ]
+  },
+  {
+    "from": "Raw Material Goods Receipt (101)",
+    "to": "Raw Material Batch",
+    "relationship": "RECEIVES_BATCH",
+    "join_fields": [
+      "batch_id",
+      "material_id"
+    ]
+  },
+  {
+    "from": "Raw Material Batch",
+    "to": "Raw Material Quality Inspection",
+    "relationship": "INSPECTED_BY",
+    "join_fields": [
+      "batch_id",
+      "inspection_lot_id"
+    ]
+  },
+  {
+    "from": "Raw Material Batch",
+    "to": "Raw Material Stock (RMS)",
+    "relationship": "STORED_IN",
+    "join_fields": [
+      "material_id",
+      "plant_id",
+      "storage_location"
+    ]
+  },
+  {
+    "from": "Raw Material Stock (RMS)",
+    "to": "Raw Material Reservation",
+    "relationship": "RESERVED_FROM_STOCK",
+    "join_fields": [
+      "reservation_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Raw Material Reservation",
+    "to": "Raw Material Consumption (261)",
+    "relationship": "CONSUMED_VIA_RESERVATION",
+    "join_fields": [
+      "reservation_id",
+      "reservation_item_id",
+      "material_document_id"
+    ]
+  },
+  {
+    "from": "Raw Material Consumption (261)",
+    "to": "Process Order",
+    "relationship": "CONSUMED_IN_FINISHED_PROCESS_ORDER",
+    "join_fields": [
+      "process_order_id",
+      "batch_id",
+      "material_id"
+    ]
+  },
+  {
+    "from": "Coating Supplier",
+    "to": "Coating Purchase Order",
+    "relationship": "PURCHASED_FROM",
+    "join_fields": [
+      "vendor_id"
+    ]
+  },
+  {
+    "from": "Coating Purchase Order",
+    "to": "Coating Goods Receipt (101)",
+    "relationship": "RECEIVED_INTO_STOCK",
+    "join_fields": [
+      "purchase_order_id",
+      "material_document_id"
+    ]
+  },
+  {
+    "from": "Coating Goods Receipt (101)",
+    "to": "Coating Raw Material Batch",
+    "relationship": "RECEIVES_BATCH",
+    "join_fields": [
+      "batch_id",
+      "material_id"
+    ]
+  },
+  {
+    "from": "Coating Raw Material Batch",
+    "to": "Coating Quality Inspection",
+    "relationship": "INSPECTED_BY",
+    "join_fields": [
+      "batch_id",
+      "inspection_lot_id"
+    ]
+  },
+  {
+    "from": "Coating Raw Material Batch",
+    "to": "Coating Stock (RMS)",
+    "relationship": "STORED_IN",
+    "join_fields": [
+      "material_id",
+      "plant_id",
+      "storage_location"
+    ]
+  },
+  {
+    "from": "Coating Stock (RMS)",
+    "to": "Coating Reservation",
+    "relationship": "RESERVED_FROM_STOCK",
+    "join_fields": [
+      "reservation_id",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "Coating Reservation",
+    "to": "Coating Consumption (261)",
+    "relationship": "CONSUMED_VIA_RESERVATION",
+    "join_fields": [
+      "reservation_id",
+      "reservation_item_id",
+      "material_document_id"
+    ]
+  },
+  {
+    "from": "Coating Consumption (261)",
+    "to": "Process Order",
+    "relationship": "CO_CONSUMED_IN_FINISHED_PROCESS_ORDER",
+    "join_fields": [
+      "process_order_id",
+      "batch_id",
+      "material_id"
+    ]
+  }
+]

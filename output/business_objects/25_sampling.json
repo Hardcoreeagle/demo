@@ -1,0 +1,152 @@
+[
+  {
+    "sample_id": "SMP-040000234391-000001",
+    "inspection_lot_id": "040000234391",
+    "material_id": "000000000110002173",
+    "batch_id": "16A12002",
+    "sample_quantity": 0.5,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000234901-000001",
+    "inspection_lot_id": "040000234901",
+    "material_id": "000000000110002174",
+    "batch_id": "16A11004",
+    "sample_quantity": 0.25,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000234920-000001",
+    "inspection_lot_id": "040000234920",
+    "material_id": "000000000110002175",
+    "batch_id": "LAA11002",
+    "sample_quantity": 1,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000234933-000001",
+    "inspection_lot_id": "040000234933",
+    "material_id": "000000000110002563",
+    "batch_id": "LAA11006",
+    "sample_quantity": 0.5,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000236303-000001",
+    "inspection_lot_id": "040000236303",
+    "material_id": "000000000110002564",
+    "batch_id": "16A12004",
+    "sample_quantity": 0.75,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000236304-000001",
+    "inspection_lot_id": "040000236304",
+    "material_id": "000000000110003010",
+    "batch_id": "16A11005",
+    "sample_quantity": 0.25,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000236308-000001",
+    "inspection_lot_id": "040000236308",
+    "material_id": "000000000110010894",
+    "batch_id": "PF05043",
+    "sample_quantity": 0.5,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000236871-000001",
+    "inspection_lot_id": "040000236871",
+    "material_id": "000000000110010896",
+    "batch_id": "PF05048",
+    "sample_quantity": 0.3,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000237436-000001",
+    "inspection_lot_id": "040000237436",
+    "material_id": "000000000110010901",
+    "batch_id": "TE07096",
+    "sample_quantity": 0.5,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-040000237794-000001",
+    "inspection_lot_id": "040000237794",
+    "material_id": "000000000110010902",
+    "batch_id": "TE07143",
+    "sample_quantity": 0.25,
+    "sample_uom": "KG",
+    "sample_date": "2011-05-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-GEN-PF05043-01",
+    "inspection_lot_id": "080000004001",
+    "material_id": "000000000210250095",
+    "batch_id": "PF05043-CORE",
+    "sample_quantity": 0.5,
+    "sample_uom": "KG",
+    "sample_date": "2010-02-02",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-GEN-PF05043-02",
+    "inspection_lot_id": "080000004002",
+    "material_id": "000000000210250096",
+    "batch_id": "PF05043",
+    "sample_quantity": 1.034,
+    "sample_uom": "KG",
+    "sample_date": "2010-02-03",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-GEN-PF05048-01",
+    "inspection_lot_id": "080000004003",
+    "material_id": "000000000210250095",
+    "batch_id": "PF05048-CORE",
+    "sample_quantity": 0.5,
+    "sample_uom": "KG",
+    "sample_date": "2010-02-05",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-GEN-PF05048-02",
+    "inspection_lot_id": "080000004004",
+    "material_id": "000000000210250096",
+    "batch_id": "PF05048",
+    "sample_quantity": 1.029,
+    "sample_uom": "KG",
+    "sample_date": "2010-02-06",
+    "status": "Sample Drawn \u0026 Confirmed"
+  },
+  {
+    "sample_id": "SMP-GEN-RM05043-01",
+    "inspection_lot_id": "040000234391",
+    "material_id": "000000000110000711",
+    "batch_id": "RM-MET-05043",
+    "sample_quantity": 0.25,
+    "sample_uom": "KG",
+    "sample_date": "2010-01-20",
+    "status": "Sample Drawn \u0026 Confirmed"
+  }
+]

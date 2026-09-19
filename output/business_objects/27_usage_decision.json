@@ -1,0 +1,112 @@
+[
+  {
+    "usage_decision_id": "UD-080000930583",
+    "inspection_lot_id": "080000930583",
+    "material_id": "000000000110002173",
+    "batch_id": "16A12002",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000930609",
+    "inspection_lot_id": "080000930609",
+    "material_id": "000000000110002174",
+    "batch_id": "16A11004",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000933612",
+    "inspection_lot_id": "080000933612",
+    "material_id": "000000000110002175",
+    "batch_id": "LAA11002",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000936233",
+    "inspection_lot_id": "080000936233",
+    "material_id": "000000000110002563",
+    "batch_id": "LAA11002",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000936942",
+    "inspection_lot_id": "080000936942",
+    "material_id": "000000000110002564",
+    "batch_id": "16A12004",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000936948",
+    "inspection_lot_id": "080000936948",
+    "material_id": "000000000110003010",
+    "batch_id": "LAA11006",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000939333",
+    "inspection_lot_id": "080000939333",
+    "material_id": "000000000110010894",
+    "batch_id": "16A11004",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000939334",
+    "inspection_lot_id": "080000939334",
+    "material_id": "000000000110010896",
+    "batch_id": "16A11005",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000939335",
+    "inspection_lot_id": "080000939335",
+    "material_id": "000000000110010901",
+    "batch_id": "16A11005",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000939826",
+    "inspection_lot_id": "080000939826",
+    "material_id": "000000000110010902",
+    "batch_id": "16A11004",
+    "plant_id": "EP07",
+    "decision_code": "A5",
+    "decision_status": "A",
+    "decision_date": "2016-07-14"
+  },
+  {
+    "usage_decision_id": "UD-080000004001",
+    "inspection_lot_id": "080000004001",
+    "material_id": "000000000210250095",
+    "batch_id": "PF05043-CORE",
+    "plant_id": "EP04",
+    "decision_code": "A",
+    "decision_status": "A",
+    "decision_date": "2010-02-02"
+  }
+]

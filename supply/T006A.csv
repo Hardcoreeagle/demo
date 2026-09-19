@@ -1,0 +1,11 @@
+﻿MANDT,SPRAS,MSEHI,MSEH3,MSEH6,MSEHT,MSEHL
+"000","D","%","%","%","%","Prozent"
+"000","D","%O","%O","%O","%0","Promille"
+"000","D","1","ONE","one","Eins","Eins"
+"000","D","10","T","d","Tage","Tage"
+"000","D","22S","22S","mm2/s","mm2/s","Quadratmillimeter/Sekunde"
+"000","D","2M","CMS","cm/s","cm/s","Zentimeter/Sekunde"
+"000","D","2X","000","m/min","m/min","Meter/Minute"
+"000","D","4G","µL","µl","µl","Mikroliter"
+"000","D","4O","µF","µF","µF","Mikrofarad"
+"000","D","4T","PF","pF","pF","Pikofarad"

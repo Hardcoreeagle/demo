@@ -1,0 +1,340 @@
+[
+  {
+    "relationship_id": 8,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Reservation",
+    "source_key": "2000029081|0002",
+    "target_entity": "Material Consumption",
+    "target_key": "4900000004",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "batch_id": "RM-MET-05043",
+      "consumed_qty": "0.77"
+    }
+  },
+  {
+    "relationship_id": 24,
+    "group_name": "4. Material Movements \u0026 Inventory Postings",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-05043",
+    "target_entity": "Batch Stock",
+    "target_key": "(zero-stock)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700103552",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700103557",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700124597",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700124729",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700128898",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700128918",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700128971",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700129162",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700129212",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 31,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "source_key": "4700147466",
+    "target_entity": "PO Item",
+    "target_key": "00010",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "matnr": "000000000110000711",
+      "qty": "500.00"
+    }
+  },
+  {
+    "relationship_id": 38,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Reservation",
+    "source_key": "2000029081",
+    "target_entity": "Purchase Requisition",
+    "target_key": "(no-pr)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 39,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Reservation",
+    "source_key": "2000029081",
+    "target_entity": "Purchase Order",
+    "target_key": "(no-po)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 44,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "BOM Component",
+    "source_key": "0010",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "uom": "KG"
+    }
+  },
+  {
+    "relationship_id": 72,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material",
+    "source_key": "000000000110000711",
+    "target_entity": "Inventory",
+    "target_key": "EP04|RMS",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "stock_qty": "110.00"
+    }
+  },
+  {
+    "relationship_id": 74,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Inventory",
+    "source_key": "000000000110000711|EP04|RMS",
+    "target_entity": "Batch Stock",
+    "target_key": "RM-MET-05043",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "unrestricted": "110.00"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-05043",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-05048",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-06035",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-06036",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-TEL-07096",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-TEL-07097",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 80,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-TEL-07143",
+    "target_entity": "Material",
+    "target_key": "000000000110000711",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_type": "RAW_MATERIAL"
+    }
+  },
+  {
+    "relationship_id": 81,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-05043",
+    "target_entity": "Plant Material",
+    "target_key": "000000000110000711|EP04",
+    "join_type": "INNER JOIN",
+    "matched": true
+  },
+  {
+    "relationship_id": 82,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "source_key": "RM-MET-05043",
+    "target_entity": "Batch Master",
+    "target_key": "MCH1-000000000110000711-RM-MET-05043",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "exp_date": "2014-01-14",
+      "mfg_date": "2010-01-15"
+    }
+  }
+]

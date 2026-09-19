@@ -1,0 +1,102 @@
+[
+  {
+    "delivery_id": "ACUNEE0385",
+    "sales_order_id": "3330302198",
+    "customer_id": "0000401178",
+    "delivery_type": "YF",
+    "delivery_date": "2007-02-08",
+    "planned_goods_issue_date": "2007-02-08",
+    "actual_goods_issue_date": "2007-02-08",
+    "status": "C"
+  },
+  {
+    "delivery_id": "ACUNEE0414",
+    "sales_order_id": "3330302202",
+    "customer_id": "0000400103",
+    "delivery_type": "YF",
+    "delivery_date": "2007-02-28",
+    "planned_goods_issue_date": "2007-02-28",
+    "actual_goods_issue_date": "2007-02-28",
+    "status": "C"
+  },
+  {
+    "delivery_id": "ACUNFE0140",
+    "sales_order_id": "3330302219",
+    "customer_id": "0000400163",
+    "delivery_type": "YF",
+    "delivery_date": "2007-07-28",
+    "planned_goods_issue_date": "2007-07-28",
+    "actual_goods_issue_date": "2007-07-28",
+    "status": "C"
+  },
+  {
+    "delivery_id": "ACUNFE0187",
+    "sales_order_id": "3330302241",
+    "customer_id": "0000400208",
+    "delivery_type": "YF",
+    "delivery_date": "2007-08-17",
+    "planned_goods_issue_date": "2007-08-17",
+    "actual_goods_issue_date": "2007-08-17",
+    "status": "C"
+  },
+  {
+    "delivery_id": "ACUNFE0332",
+    "sales_order_id": "3330302242",
+    "customer_id": "0000400163",
+    "delivery_type": "YF",
+    "delivery_date": "2007-11-29",
+    "planned_goods_issue_date": "2007-11-29",
+    "actual_goods_issue_date": "2007-11-29",
+    "status": "C"
+  },
+  {
+    "delivery_id": "AKLSEG2066",
+    "sales_order_id": "3330302247",
+    "customer_id": "0000400344",
+    "delivery_type": "YF",
+    "delivery_date": "2007-01-31",
+    "planned_goods_issue_date": "2007-01-31",
+    "actual_goods_issue_date": "2007-01-31",
+    "status": "C"
+  },
+  {
+    "delivery_id": "AKLSEG2085",
+    "sales_order_id": "3330302252",
+    "customer_id": "0000402569",
+    "delivery_type": "YF",
+    "delivery_date": "2007-01-31",
+    "planned_goods_issue_date": "2007-01-31",
+    "actual_goods_issue_date": "2007-01-31",
+    "status": "C"
+  },
+  {
+    "delivery_id": "AKLSEG2255",
+    "sales_order_id": "3330302257",
+    "customer_id": "0000400341",
+    "delivery_type": "YF",
+    "delivery_date": "2007-02-21",
+    "planned_goods_issue_date": "2007-02-21",
+    "actual_goods_issue_date": "2007-02-21",
+    "status": "C"
+  },
+  {
+    "delivery_id": "AKLSEG2257",
+    "sales_order_id": "3330302269",
+    "customer_id": "0000400348",
+    "delivery_type": "YF",
+    "delivery_date": "2007-02-21",
+    "planned_goods_issue_date": "2007-02-21",
+    "actual_goods_issue_date": "2007-02-21",
+    "status": "C"
+  },
+  {
+    "delivery_id": "AKLSEG2281",
+    "sales_order_id": "3330302270",
+    "customer_id": "0000402827",
+    "delivery_type": "YF",
+    "delivery_date": "2007-02-28",
+    "planned_goods_issue_date": "2007-02-28",
+    "actual_goods_issue_date": "2007-02-28",
+    "status": "C"
+  }
+]

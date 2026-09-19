@@ -1,0 +1,102 @@
+[
+  {
+    "sales_order_id": "3330302198",
+    "order_type": "ZOSI",
+    "customer_id": "0000500906",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302202",
+    "order_type": "ZOSI",
+    "customer_id": "0000502297",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302219",
+    "order_type": "ZOSI",
+    "customer_id": "0000500839",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302241",
+    "order_type": "ZOSI",
+    "customer_id": "0000500899",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302242",
+    "order_type": "ZOSI",
+    "customer_id": "0000502110",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302247",
+    "order_type": "ZOSI",
+    "customer_id": "0000500839",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302252",
+    "order_type": "ZOSI",
+    "customer_id": "0000500882",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302257",
+    "order_type": "ZOSI",
+    "customer_id": "0000502297",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302269",
+    "order_type": "ZOSI",
+    "customer_id": "0000503187",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  },
+  {
+    "sales_order_id": "3330302270",
+    "order_type": "ZOSI",
+    "customer_id": "0000500878",
+    "company_code": "ZHL",
+    "order_date": "2012-11-30",
+    "request_delivery_date": "2012-11-30",
+    "currency": "INR",
+    "status": "C"
+  }
+]

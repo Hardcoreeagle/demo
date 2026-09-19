@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAP S/4HANA & ECC Supply Chain Traceability 360° (Business Objects Architecture)</title>
+  <meta name="description" content="Enterprise Supply Chain Traceability by Business Objects - End-to-end batch genealogy across 37 SAP Business Objects from planning to sales and returns.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/graph.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Command Bar
+       ========================================================================= -->
+  <header class="header">
+    <div class="brand-section" onclick="window.app.switchView('viewHome', '/home')" style="cursor: pointer;" title="Return to Home Overview">
+      <div class="brand-logo">BO</div>
+      <div class="brand-title-group">
+        <h1>SAP Traceability 360°</h1>
+        <div class="brand-subtitle">Business Objects Architecture (BO #01 to BO #37)</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="globalSearchInput" class="search-input" placeholder="Search BO, Batch, Material, Order...">
+      </div>
+
+      <!-- User Auth / Session Button -->
+      <div id="userProfileArea" style="display: flex; align-items: center; gap: 8px;">
+        <button id="authBtn" class="home-btn-secondary" style="font-size: 0.8rem; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 6px;">
+          <span id="authIcon">👤</span>
+          <span id="authLabel">Admin Login</span>
+        </button>
+      </div>
+
+      <button id="themeToggleBtn" class="btn-icon" title="Toggle Dark/Light Mode">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Navigation Tabs
+       ========================================================================= -->
+  <nav class="tabs-nav" id="tabsNav" style="align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <button class="home-btn-secondary" onclick="window.app.switchView('viewHome', '/home')" style="font-size: 0.85rem; padding: 6px 14px; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+        <span>⬅️</span>
+        <span>Back to Home</span>
+      </button>
+      <div style="font-size: 1.1rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; margin-left: 8px;">
+        <span style="color: var(--cyan-400);">🔍</span>
+        <span>Traceability 360° Workspace</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       Main View Panels
+       ========================================================================= -->
+  <main class="main-content">
+
+    <!-- VIEW -1: LOGIN VIEW / MODAL -->
+    <section id="viewLogin" class="view-panel active">
+      <div id="loginContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- VIEW 0: HOME OVERVIEW (Batch Independent, Pure Intro + Side Options) -->
+    <section id="viewHome" class="view-panel">
+      <div id="homeContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 1: TRACEABILITY 360° (Dedicated Batch Workspace with Search, Recent Batches, Graphs & Event Audit) -->
+    <section id="viewPipeline" class="view-panel">
+      <div class="trace-control-panel">
+        <div class="trace-search-row">
+          <div class="trace-batch-input-group">
+            <span style="color: var(--cyan-400); font-size: 1.1rem;">🔍</span>
+            <input type="text" id="traceBatchSearchInput" class="trace-batch-input" placeholder="Enter Batch No (e.g. PF05043, RM-MET-05043, RM-COAT-05043)...">
+            <button id="traceBatchSearchBtn" class="home-btn-primary" style="padding: 6px 14px; font-size: 0.8rem;">Load Batch</button>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <div class="batch-category-tabs" id="batchCategoryTabs" style="display: flex; gap: 6px;">
+              <button class="cat-btn active" id="btnCatFinished" data-cat="finished">Finished Batches (FG)</button>
+              <button class="cat-btn" id="btnCatRaw" data-cat="raw">Raw Material Batches (RM)</button>
+            </div>
+            <div class="batch-pills-list" id="batchPillsList">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Traceability Sub Navigation (Lifecycle BOs, Graph Visualizer, Audit Events, Transformation) -->
+        <div class="trace-subnav-bar">
+          <button class="trace-subnav-btn active" data-subview="subStages">
+            <span>📋</span> Lifecycle BO Trace
+          </button>
+          <button class="trace-subnav-btn" data-subview="subGraph">
+            <span>🕸️</span> Business Object DAG Graph
+          </button>
+          <button class="trace-subnav-btn" data-subview="subEvents">
+            <span>⚡</span> Audit Trail Events
+          </button>
+          <button class="trace-subnav-btn" data-subview="subTransform">
+            <span>⚖️</span> Multi-Tier Mass Balance
+          </button>
+        </div>
+      </div>
+
+      <!-- Traceability Subview 1: Lifecycle Stages Grid -->
+      <div id="traceSubStages" class="trace-subview-panel active">
+        <!-- Flow Switcher for Finished Batches: Lifecycle vs Direct Raw Material Flow -->
+        <div id="flowSwitcherContainer" style="display: flex; gap: 0.5rem; align-items: center; background: rgba(0,0,0,0.25); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.5rem 0.85rem; margin-bottom: 1rem; flex-wrap: wrap;">
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Genealogy Stream:</span>
+          <button class="flow-pill-btn active" id="btnFlowFinished" data-flow="finished">Finished Goods Full Lifecycle (BO #01 - #35)</button>
+          <button class="flow-pill-btn" id="btnFlowDirectRM" data-flow="direct_rm">Raw Material 1: RM-MET-05043 (API Flow)</button>
+          <button class="flow-pill-btn" id="btnFlowCoatRM" data-flow="coat_rm">Raw Material 2: RM-COAT-05043 (Coating Flow)</button>
+        </div>
+
+        <!-- BO Domain Filtering Pills -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+          <button class="filter-btn bo-filter-btn active" data-bofilter="all">All Linked Business Objects</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="planning">Planning (BO #01, #02)</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="procurement">Procurement (BO #05, #06, #07, #37, #08, #09)</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="manufacturing">Manufacturing (BO #10, #12, #13, #14, #15, #11, #16, #36, #17, #18, #19, #04, #03)</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="quality">Quality (BO #22, #21, #23, #24, #25, #26, #27)</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="commercial">Commercial (BO #28, #29, #30, #31, #32, #33, #34, #35)</button>
+        </div>
+
+        <div class="stages-grid" id="stagesGrid">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- Traceability Subview 2: Embedded Genealogy DAG Network Graph -->
+      <div id="traceSubGraph" class="trace-subview-panel" style="display: none;">
+        <div class="view-header" style="margin-bottom: 1rem;">
+          <div class="view-title-group">
+            <h3>Business Objects Genealogy DAG for Selected Batch</h3>
+            <p class="view-description">Interactive node-link graph of parent-child intermediate and finished objects.</p>
+          </div>
+        </div>
+        <div class="graph-viewport-wrapper" id="graphContainer">
+          <!-- SVG rendered dynamically by graph.js -->
+        </div>
+      </div>
+
+      <!-- Traceability Subview 3: Embedded Business Events Audit Trail -->
+      <div id="traceSubEvents" class="trace-subview-panel" style="display: none;">
+        <div class="view-header" style="margin-bottom: 1rem;">
+          <div class="view-title-group">
+            <h3>Batch Business Events Audit Trail</h3>
+            <p class="view-description">Chronological event-driven audit log for the current active finished batch.</p>
+          </div>
+        </div>
+        <div class="events-toolbar">
+          <div class="event-filter-btns">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="batch">Batch Events</button>
+            <button class="filter-btn" data-filter="order">Order Events</button>
+            <button class="filter-btn" data-filter="quality">Quality Events</button>
+            <button class="filter-btn" data-filter="movement">Goods Movements</button>
+          </div>
+        </div>
+        <div class="timeline-list" id="timelineList">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Traceability Subview 4: Multi-Tier Transformation -->
+      <div id="traceSubTransform" class="trace-subview-panel" style="display: none;">
+        <div id="transformationContainer">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: BLOCKCHAIN IMMUTABILITY & MERKLE HASHES -->
+    <section id="viewBlockchain" class="view-panel">
+      <div id="blockchainContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: ANTI-COUNTERFEIT SHIELD & AUTHENTICITY GUARD -->
+    <section id="viewCounterfeit" class="view-panel">
+      <div id="counterfeitContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 4: INTERACTIVE BUSINESS OBJECTS DAG NETWORK -->
+    <section id="viewGraph" class="view-panel">
+      <div class="view-header">
+        <div class="view-title-group">
+          <h2>Business Objects Genealogy DAG</h2>
+          <p class="view-description">Interactive node-link graph where each node represents an SAP Business Object and edges represent resolved relationships.</p>
+        </div>
+      </div>
+
+      <div class="graph-viewport-wrapper" id="graphContainer">
+        <!-- SVG rendered dynamically by graph.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: MULTI-TIER TRANSFORMATION & MASS BALANCE -->
+    <section id="viewTransform" class="view-panel">
+      <div class="view-header">
+        <div class="view-title-group">
+          <h2>Multi-Tier Transformation Accounting (BO #18 & BO #19)</h2>
+          <p class="view-description">Stage 1 (Granulation & Core Compression) and Stage 2 (Film Coating & Final Packing) operational accounting.</p>
+        </div>
+      </div>
+
+      <div id="transformationContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- VIEW 5: BUSINESS EVENTS AUDIT TRAIL -->
+    <section id="viewEvents" class="view-panel">
+      <div class="view-header">
+        <div class="view-title-group">
+          <h2>SAP Business Events Audit Trail (580 Events)</h2>
+          <p class="view-description">Event-driven stream according to SAP Business Events specification for complete lifecycle verification.</p>
+        </div>
+      </div>
+
+      <div class="events-toolbar">
+        <div class="event-filter-btns">
+          <button class="filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn" data-filter="batch">Batch Events</button>
+          <button class="filter-btn" data-filter="order">Order Events</button>
+          <button class="filter-btn" data-filter="quality">Quality Events</button>
+          <button class="filter-btn" data-filter="movement">Goods Movements</button>
+        </div>
+      </div>
+
+      <div class="timeline-list" id="timelineList">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       Slide-over Entity Inspector Drawer
+       ========================================================================= -->
+  <div class="drawer-backdrop" id="drawerBackdrop">
+    <div class="drawer-panel" id="drawerPanel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <h3 id="drawerTitle">Entity Details</h3>
+          <div class="drawer-subtitle" id="drawerSubtitle">SAP S/4HANA Entity Inspector</div>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" title="Close">✕</button>
+      </div>
+      <div class="drawer-content" id="drawerContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div>SAP S/4HANA & ECC Supply Chain Traceability 360° Portal</div>
+    <div>Architecture: 37 Business Objects | Multi-Tier Batch Genealogy | 580 Business Events | MATDOC Unified</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data-bundle.js"></script>
+  <script src="js/data-service.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

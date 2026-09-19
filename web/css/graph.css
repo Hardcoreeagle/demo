@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Genealogy Network Graph Styles (SVG / Interactive Canvas DAG)
+   ========================================================================== */
+
+.graph-viewport-wrapper {
+  position: relative;
+  width: 100%;
+  height: 780px;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.95) 0%, rgba(8, 13, 26, 0.98) 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.graph-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+  background: var(--bg-surface-elevated);
+  backdrop-filter: var(--glass-blur);
+  padding: 0.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.graph-ctrl-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.graph-ctrl-btn:hover {
+  background: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.graph-legend {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: var(--bg-surface-elevated);
+  backdrop-filter: var(--glass-blur);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  gap: 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  z-index: 10;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-raw { background: #f59e0b; box-shadow: 0 0 6px #f59e0b; }
+.legend-semi { background: #8b5cf6; box-shadow: 0 0 6px #8b5cf6; }
+.legend-finish { background: #06b6d4; box-shadow: 0 0 6px #06b6d4; }
+.legend-process { background: #3b82f6; box-shadow: 0 0 6px #3b82f6; }
+.legend-quality { background: #10b981; box-shadow: 0 0 6px #10b981; }
+.legend-sales { background: #f43f5e; box-shadow: 0 0 6px #f43f5e; }
+
+/* SVG Graph Nodes & Edges */
+.graph-svg {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.graph-svg:active {
+  cursor: grabbing;
+}
+
+.graph-edge {
+  stroke: rgba(148, 163, 184, 0.25);
+  stroke-width: 2;
+  fill: none;
+  transition: stroke var(--transition-fast), stroke-width var(--transition-fast);
+}
+
+.graph-edge.active {
+  stroke: var(--cyan-400);
+  stroke-width: 3;
+}
+
+.graph-edge-arrow {
+  fill: rgba(148, 163, 184, 0.4);
+}
+
+.graph-node {
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.graph-node:hover {
+  filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
+}
+
+.node-rect {
+  rx: 8px;
+  ry: 8px;
+  stroke-width: 1.5;
+  transition: stroke var(--transition-fast), fill var(--transition-fast);
+}
+
+.node-type-label {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  fill: #94a3b8;
+}
+
+.node-main-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #f8fafc;
+}
+
+.node-sub-label {
+  font-size: 9px;
+  fill: #64748b;
+}

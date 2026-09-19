@@ -1,0 +1,122 @@
+[
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002103",
+    "production_version_status": "FELODIPINE ER TABLETS USP 5 MG 100T",
+    "bom_id": "00007153",
+    "recipe_id": "50009047",
+    "valid_from": "2010-09-04",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002104",
+    "production_version_status": "FELODIPINE ER TABLETS USP 5 MG 500T",
+    "bom_id": "00007154",
+    "recipe_id": "50009048",
+    "valid_from": "2010-09-04",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002105",
+    "production_version_status": "FELODIPINE ER TABLETS USP10 MG 100T",
+    "bom_id": "00007155",
+    "recipe_id": "50009044",
+    "valid_from": "2010-09-04",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002106",
+    "production_version_status": "FELODIPINE ER TABLETS USP 10 MG 500T",
+    "bom_id": "00007156",
+    "recipe_id": "50009045",
+    "valid_from": "2010-09-04",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002107",
+    "production_version_status": "MONTELUKAST SODIUM CHEW TAB 4MG 30T",
+    "bom_id": "00007157",
+    "recipe_id": "50008883",
+    "valid_from": "2010-07-21",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002108",
+    "production_version_status": "MONTELUKAST SODIUM CHEW TAB 4MG 90T",
+    "bom_id": "00007452",
+    "recipe_id": "50008884",
+    "valid_from": "2010-07-21",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002109",
+    "production_version_status": "MONTELUKAST SODIUM CHEW TAB 4MG 1000T",
+    "bom_id": "00007453",
+    "recipe_id": "50008885",
+    "valid_from": "2010-07-21",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002110",
+    "production_version_status": "MONTELUKAST SODIUM CHEW TAB 5MG 30T",
+    "bom_id": "00007456",
+    "recipe_id": "50008887",
+    "valid_from": "2010-07-21",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002111",
+    "production_version_status": "MONTELUKAST SODIUM CHEW TAB 5MG 90T",
+    "bom_id": "00007502",
+    "recipe_id": "50008888",
+    "valid_from": "2010-07-21",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  },
+  {
+    "production_version_id": "00",
+    "material_id": "000000000420002112",
+    "production_version_status": "MONTELUKAST SODIUM CHEW TAB 5MG 1000T",
+    "bom_id": "00007503",
+    "recipe_id": "50008889",
+    "valid_from": "2010-07-21",
+    "valid_to": "9999-12-31",
+    "plant_id": "EP04",
+    "bom_alternative_id": "01",
+    "recipe_id_type": "2"
+  }
+]

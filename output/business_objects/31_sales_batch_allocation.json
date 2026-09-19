@@ -1,0 +1,92 @@
+[
+  {
+    "sales_order_id": "1100809985",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100084439",
+    "delivery_item_id": "900055",
+    "material_id": "000000000423330191",
+    "batch_id": "ZZA07002",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100811172",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100085668",
+    "delivery_item_id": "900019",
+    "material_id": "000000000423330191",
+    "batch_id": "ZZA07002",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100813271",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100087859",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330170",
+    "batch_id": "AZA08026",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100813545",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100088148",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330066",
+    "batch_id": "ZVB08011",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100813949",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100088577",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330170",
+    "batch_id": "AZA08021",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100815831",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100090577",
+    "delivery_item_id": "900005",
+    "material_id": "000000000423330191",
+    "batch_id": "ZZA07002",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100815902",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100090649",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330170",
+    "batch_id": "AZA08030",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100815997",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100090746",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330170",
+    "batch_id": "AZA08030",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100816096",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100090842",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330066",
+    "batch_id": "ZVB08010",
+    "allocated_status": "Allocated"
+  },
+  {
+    "sales_order_id": "1100816208",
+    "sales_order_item_id": "000001",
+    "delivery_id": "2100090956",
+    "delivery_item_id": "900001",
+    "material_id": "000000000423330170",
+    "batch_id": "AZA08027",
+    "allocated_status": "Allocated"
+  }
+]

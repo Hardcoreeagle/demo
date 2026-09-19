@@ -1,0 +1,421 @@
+{
+  "batch_genealogy": {
+    "root_batch_id": "PF05043-CORE",
+    "parent_finished_batch_id": "PF05043",
+    "material_id": "000000000210250095",
+    "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+    "plant_id": "EP04",
+    "batch_type": "SEMI_FINISHED_BATCH",
+    "business_objects": {
+      "material": {
+        "material_id": "000000000210250095",
+        "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+        "material_type": "HALB",
+        "plant_id": "EP04",
+        "UOM": "KG",
+        "status": "Active",
+        "events": [
+          {
+            "event_type": "MaterialCreated"
+          }
+        ]
+      },
+      "batch": {
+        "batch_id": "PF05043-CORE",
+        "material_id": "000000000210250095",
+        "batch_type": "SEMI_FINISHED",
+        "Plant_id": "EP04",
+        "Manufacturing_date": "2010-02-02",
+        "expiery_date": "",
+        "status": "Released",
+        "events": [
+          {
+            "event_type": "BatchCreated"
+          },
+          {
+            "event_type": "BatchReleased"
+          }
+        ]
+      },
+      "planned_order": {
+        "plan_order_id": "2000000004001",
+        "material_id": "000000000210250095",
+        "plant_id": "EP04",
+        "order_quantity": 105.07434,
+        "start_date": "2010-02-02",
+        "finish_date": "2010-02-02",
+        "order_type": "EOBK",
+        "events": [
+          {
+            "event_type": "PlannedOrderCreated"
+          },
+          {
+            "event_type": "PlannedOrderConverted"
+          }
+        ]
+      },
+      "process_order": {
+        "process_order_id": "4000000004001",
+        "order_type": "EOBK",
+        "Material_id": "000000000210250095",
+        "Plant_id": "EP04",
+        "planned_id": "",
+        "planned_quantity": 105.07434,
+        "UOM": "KG",
+        "basic_start_date": "2010-02-02",
+        "basic_finish_date": "2010-02-02",
+        "actual_start_date": "2010-02-02",
+        "actual_finish_date": "2010-02-02",
+        "status": "CLOSED",
+        "production_version_id": "",
+        "input_batches": [
+          "RM-MET-05043"
+        ],
+        "output_batches": null,
+        "produced_product": {
+          "batch_id": "PF05043-CORE",
+          "material_id": "000000000210250095",
+          "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+          "stage": "SEMI_FINISHED_CORE",
+          "produced_quantity": 104.5,
+          "uom": "KG"
+        },
+        "events": [
+          {
+            "event_type": "ProcessOrderCreated"
+          },
+          {
+            "event_type": "ProcessOrderReleased"
+          },
+          {
+            "event_type": "ProcessOrderClosed"
+          }
+        ]
+      },
+      "bom": {
+        "bom_id": "BOM-210250095-01",
+        "Material_id": "000000000210250095",
+        "Plant_id": "EP04",
+        "bom_usage": "PRODUCTION",
+        "bom_status": "ACTIVE",
+        "alternative_bom": "",
+        "base_quantity": 105.07434,
+        "base_UOM": "KG",
+        "Components": null,
+        "events": [
+          {
+            "event_type": "BOMAssigned"
+          }
+        ]
+      },
+      "recipe": {
+        "Recipe_id": "REC-210250095-01",
+        "Material_id": "000000000210250095",
+        "Plant_id": "EP04",
+        "recipe_type": "PRODUCTION_RECIPE",
+        "recipe_group": "",
+        "recipe_status": "ACTIVE",
+        "operations": null,
+        "events": [
+          {
+            "event_type": "RecipeAssigned"
+          }
+        ]
+      },
+      "production_confirmation": {
+        "confermation_id": "CONF-400000000846-01",
+        "process_order_id": "4000000004001",
+        "operation_id": "OP-0010",
+        "work_center_id": "WC-GRAN-01",
+        "confirmed_quantity": 105.07434,
+        "UOM": "KG",
+        "Confirmation_date": "2010-02-01",
+        "confirmation_time": "16:00:00",
+        "status": "CONFIRMED",
+        "events": [
+          {
+            "event_type": "ProductionConfirmationRecorded"
+          }
+        ]
+      },
+      "yield": {
+        "Process_order_id": "4000000004001",
+        "master_id": "000000000210250095",
+        "Batch_id": "PF05043-CORE",
+        "material_document_id": "",
+        "yield_quantity": 104.5,
+        "scrap_quantity": 0,
+        "UOM": "KG",
+        "posting_date": "",
+        "status": "CONFIRMED",
+        "events": [
+          {
+            "event_type": "YieldRecorded"
+          }
+        ]
+      },
+      "material_consumption": {
+        "Material_document_id": "MATDOC-261-001",
+        "material_document_year": "2010",
+        "process_order_id": "4000000004001",
+        "Batch_id": "RM-MET-05043",
+        "Plant_id": "EP04",
+        "storage_location_id": "",
+        "consumed_quantity": 105.07434,
+        "UOM": "KG",
+        "posting_date": "",
+        "movement_type": "261",
+        "status": "POSTED",
+        "events": [
+          {
+            "event_type": "MaterialConsumptionPosted"
+          }
+        ]
+      },
+      "batch_transformation": {
+        "transformation_id": "TRANS-SFG-001",
+        "process_order_id": "4000000004001",
+        "input_batch_id": "RM-MET-05043",
+        "output_batch_id": "PF05043-CORE",
+        "Material_id": "000000000210250095",
+        "transformation_type": "GRANULATION_AND_COMPRESSION",
+        "quantity": 105.07434,
+        "UOM": "KG",
+        "status": "COMPLETED",
+        "input_batches": null,
+        "output_batches": null,
+        "events": [
+          {
+            "event_type": "BatchTransformationCreated"
+          }
+        ]
+      },
+      "quality_inspection_lot": {
+        "inspection_lot_id": "0800000004001",
+        "Material_id": "000000000210250095",
+        "Batch_id": "PF05043-CORE",
+        "Plant_id": "EP04",
+        "inspection_origin": "04_IN_PROCESS_INSPECTION",
+        "quantity": 105.07434,
+        "Creation_date": "",
+        "inspection_start_date": "",
+        "inspection_completion_date": "",
+        "status": "COMPLETED",
+        "events": [
+          {
+            "event_type": "QualityInspectionLotCreated"
+          }
+        ]
+      },
+      "usage_decision": {
+        "usage_decision_id": "UD-0800000004001",
+        "inspection_lot_id": "0800000004001",
+        "Material_id": "000000000210250095",
+        "Batch_id": "PF05043-CORE",
+        "Plant_id": "EP04",
+        "decision_code": "A",
+        "desion_status": "APPROVED",
+        "decison_date": "2010-02-02",
+        "events": [
+          {
+            "event_type": "UsageDecisionRecorded"
+          }
+        ]
+      },
+      "inspection_result": {
+        "inspection_result_id": "RES-0800000004001",
+        "inspection_lot_id": "0800000004001",
+        "sample_id": "",
+        "Material_id": "000000000210250095",
+        "batch_id": "PF05043-CORE",
+        "inspection_characteristic_id": "CHAR-HARDNESS-01",
+        "result_value": 8.5,
+        "UOM": "kP",
+        "result_status": "PASSED",
+        "record_date": "2010-02-02",
+        "events": [
+          {
+            "event_type": "InspectionResultRecorded"
+          }
+        ]
+      },
+      "inventory_stock": {
+        "Material_id": "000000000210250095",
+        "Plant_id": "EP04",
+        "stroage_location": "WIP",
+        "UOM": "KG",
+        "stock_status": "Unrestricted",
+        "batch_id": "PF05043-CORE",
+        "stock_quantity": 104.5,
+        "in_transfer": 104.5,
+        "events": [
+          {
+            "event_type": "StockUpdated"
+          },
+          {
+            "event_type": "StockIncreased"
+          }
+        ]
+      },
+      "reservation": {
+        "reservation_id": "RES-00004001",
+        "item_id": "",
+        "Material_id": "000000000110000711",
+        "Plant_id": "EP04",
+        "storage_location": "0001",
+        "reservation_quantity": 105.07434,
+        "UOM": "KG",
+        "requirement_date": "2010-02-02",
+        "movement_type": "",
+        "process_order_id": "4000000004001",
+        "events": [
+          {
+            "event_type": "ReservationCreated"
+          }
+        ]
+      },
+      "storage_location": {
+        "storage_location_id": "0002",
+        "description": "WIP / Intermediate Core Tablet Quarantine \u0026 Holding"
+      },
+      "plant": {
+        "plant_id": "EP04",
+        "plant_name": "Pharmaceutical Manufacturing Plant EP04"
+      }
+    },
+    "relationships": [
+      {
+        "from": "planned_order",
+        "to": "process_order",
+        "relationship": "Planned Order converted to In-House Core Compression Process Order",
+        "join_fields": [
+          "plan_order_id",
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "material",
+        "relationship": "Process Order produces Uncoated Core Tablet Material (HALB)",
+        "join_fields": [
+          "material_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "batch",
+        "relationship": "Process Order produces Semi-Finished Core Tablet Batch",
+        "join_fields": [
+          "batch_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "bom",
+        "relationship": "Process Order uses Core Formulation BOM",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "recipe",
+        "relationship": "Process Order executes Granulation \u0026 Compression Master Recipe",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "reservation",
+        "relationship": "Process Order reserves Raw Material API",
+        "join_fields": [
+          "reservation_id",
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "material_consumption",
+        "to": "process_order",
+        "relationship": "Raw Material API consumed into Core Process Order (Movement 261)",
+        "join_fields": [
+          "material_document_id",
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "batch_transformation",
+        "to": "batch",
+        "relationship": "Batch Transformation transforms API raw batch to Semi-Finished Core batch",
+        "join_fields": [
+          "input_batch_id",
+          "output_batch_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "production_confirmation",
+        "relationship": "Granulation \u0026 Tablet Compression Operations confirmed at Work Center",
+        "join_fields": [
+          "process_order_id",
+          "confirmation_id"
+        ]
+      },
+      {
+        "from": "process_order",
+        "to": "yield",
+        "relationship": "Yield of un-coated core tablets recorded from Process Order",
+        "join_fields": [
+          "process_order_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "batch",
+        "to": "quality_inspection_lot",
+        "relationship": "Semi-finished core batch assigned In-Process Quality Inspection Lot",
+        "join_fields": [
+          "batch_id",
+          "material_id"
+        ]
+      },
+      {
+        "from": "quality_inspection_lot",
+        "to": "usage_decision",
+        "relationship": "In-Process Usage Decision approved to release core tablets for coating",
+        "join_fields": [
+          "inspection_lot_id"
+        ]
+      },
+      {
+        "from": "quality_inspection_lot",
+        "to": "inspection_result",
+        "relationship": "Inspection parameters recorded (Hardness, Friability, Weight)",
+        "join_fields": [
+          "inspection_lot_id"
+        ]
+      },
+      {
+        "from": "batch",
+        "to": "inventory_stock",
+        "relationship": "Semi-finished batch stored in WIP intermediate storage location",
+        "join_fields": [
+          "batch_id",
+          "plant_id",
+          "storage_location_id"
+        ]
+      },
+      {
+        "from": "batch",
+        "to": "batch_transformation",
+        "relationship": "Semi-finished core batch consumed as input to Finished Good coating",
+        "join_fields": [
+          "input_batch_id",
+          "output_batch_id"
+        ]
+      }
+    ]
+  }
+}

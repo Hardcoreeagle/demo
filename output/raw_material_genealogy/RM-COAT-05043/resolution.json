@@ -1,0 +1,224 @@
+[
+  {
+    "relationship_id": 2,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "source_key": "5003488165",
+    "target_entity": "Process Order",
+    "target_key": "400000014001",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "material_id": "000000000210011922",
+      "plant_id": "ELP3"
+    }
+  },
+  {
+    "relationship_id": 2,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "source_key": "2000307022",
+    "target_entity": "Process Order",
+    "target_key": "400000014001",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "material_id": "000000000210250096",
+      "plant_id": "EP04"
+    }
+  },
+  {
+    "relationship_id": 4,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "source_key": "5003488165",
+    "target_entity": "Process Order",
+    "target_key": "400000014001",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "order_type": "EOBK",
+      "plant_id": "EP04"
+    }
+  },
+  {
+    "relationship_id": 4,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "source_key": "2000307022",
+    "target_entity": "Process Order",
+    "target_key": "400000014001",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "order_type": "EOBK",
+      "plant_id": "EP04"
+    }
+  },
+  {
+    "relationship_id": 5,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Process Order Header",
+    "target_key": "400000014001-HDR",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "material_id": "000000000210250096",
+      "plant_id": "EP04",
+      "status": "Created/Released"
+    }
+  },
+  {
+    "relationship_id": 6,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Process Order Item",
+    "target_key": "400000014001-0001",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "batch_id": "PF05043",
+      "planned_q": "104.03"
+    }
+  },
+  {
+    "relationship_id": 7,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Reservation",
+    "target_key": "(none)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 8,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Reservation",
+    "source_key": "2000029948|0002",
+    "target_entity": "Material Consumption",
+    "target_key": "4900000007",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "batch_id": "RM-MET-05046",
+      "consumed_qty": "0.58"
+    }
+  },
+  {
+    "relationship_id": 9,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Material Consumption",
+    "target_key": "(none)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 10,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Production Confirmation",
+    "target_key": "(unconfirmed)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 12,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Process Operation",
+    "target_key": "400000014001-OP01",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "note": "Standard Process Operation"
+    }
+  },
+  {
+    "relationship_id": 14,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Work Center",
+    "target_key": "10000003",
+    "join_type": "INNER JOIN",
+    "matched": true,
+    "details": {
+      "material_id": "000000000210250096"
+    }
+  },
+  {
+    "relationship_id": 15,
+    "group_name": "3. Quality Management",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Quality Inspection Lot",
+    "target_key": "(no-lot)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 53,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Production Version",
+    "target_key": "00",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "bom": "00007503"
+    }
+  },
+  {
+    "relationship_id": 54,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Routing",
+    "target_key": "(no-routing)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  },
+  {
+    "relationship_id": 78,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material Movement",
+    "source_key": "4901710567",
+    "target_entity": "Process Order",
+    "target_key": "400000014001",
+    "join_type": "LEFT JOIN",
+    "matched": true
+  },
+  {
+    "relationship_id": 89,
+    "group_name": "11. Production Yield, Scrap \u0026 Confirmation",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Production Yield",
+    "target_key": "YLD-400000014001",
+    "join_type": "LEFT JOIN",
+    "matched": true,
+    "details": {
+      "status": "Completed",
+      "yield_qty": "104.03"
+    }
+  },
+  {
+    "relationship_id": 90,
+    "group_name": "11. Production Yield, Scrap \u0026 Confirmation",
+    "source_entity": "Process Order",
+    "source_key": "400000014001",
+    "target_entity": "Production Scrap",
+    "target_key": "(zero-scrap)",
+    "join_type": "LEFT JOIN",
+    "matched": false
+  }
+]

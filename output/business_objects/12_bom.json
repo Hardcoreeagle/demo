@@ -1,0 +1,222 @@
+[
+  {
+    "bom_id": "00007153",
+    "material_id": "000000000210270422",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 4.9,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007154",
+    "material_id": "000000000210270423",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 6,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007155",
+    "material_id": "000000000210270429",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 240,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007156",
+    "material_id": "000000000210270430",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 240,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007157",
+    "material_id": "000000000210270431",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 240,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007452",
+    "material_id": "000000000210270432",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 47.5,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007453",
+    "material_id": "000000000210270433",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 23.75,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007456",
+    "material_id": "000000000210270434",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 23.75,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007502",
+    "material_id": "000000000210270435",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 600,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "00007503",
+    "material_id": "000000000210270436",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 609,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 100,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  },
+  {
+    "bom_id": "BOM-210250095-01",
+    "material_id": "000000000210250095",
+    "plant_id": "EP04",
+    "bom_usage": "1",
+    "bom_status": "01",
+    "alternative_bom": "01",
+    "base_quantity": 105.07434,
+    "base_uom": "KG",
+    "components": [
+      {
+        "component_material_id": "000000000110000711",
+        "component_quantity": 105.07434,
+        "component_uom": "KG",
+        "component_item_number": "0010",
+        "bom_category": "L",
+        "component_scrap_quantity": 0
+      }
+    ]
+  }
+]

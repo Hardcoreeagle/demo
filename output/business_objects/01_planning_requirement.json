@@ -1,0 +1,122 @@
+[
+  {
+    "planning_requirement_id": "000000000243",
+    "material_id": "000000000420000371",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2005-04-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000248",
+    "material_id": "000000000420000615",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2005-08-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000250",
+    "material_id": "000000000420001690",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2005-12-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000252",
+    "material_id": "000000000420310028",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2006-01-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000320",
+    "material_id": "000000000421110005",
+    "plant_id": "EMHA",
+    "requirement_quantity": 20000,
+    "requirement_date": "2005-06-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000329",
+    "material_id": "000000000421110006",
+    "plant_id": "EMHA",
+    "requirement_quantity": 20000,
+    "requirement_date": "2009-12-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000329",
+    "material_id": "000000000421110012",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2010-06-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000334",
+    "material_id": "000000000421110030",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2005-10-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000339",
+    "material_id": "000000000421110031",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2005-05-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "000000000581",
+    "material_id": "000000000421110033",
+    "plant_id": "EMHA",
+    "requirement_quantity": 40000,
+    "requirement_date": "2006-01-01",
+    "plant_name": "Emcure Formulation Manufacturing Facility - Hinjewadi (EMHA)",
+    "uom": "STR",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "PRQ-000000000248",
+    "material_id": "000000000210250096",
+    "plant_id": "EP04",
+    "requirement_quantity": 104.034,
+    "requirement_date": "2010-02-02",
+    "plant_name": "Pharmaceutical Formulation \u0026 Packaging Plant EP04",
+    "uom": "KG",
+    "bom_related_information": "BOM: 00001096 Alt: 01"
+  },
+  {
+    "planning_requirement_id": "PRQ-210250095-SFG",
+    "material_id": "000000000210250095",
+    "plant_id": "EP04",
+    "requirement_quantity": 105.07434,
+    "requirement_date": "2010-02-02",
+    "plant_name": "Pharmaceutical Formulation \u0026 Packaging Plant EP04",
+    "uom": "KG",
+    "bom_related_information": "BOM: BOM-210250095-01 Alt: 01"
+  }
+]

@@ -1,0 +1,298 @@
+{
+  "batch_id": "PF05043-CORE",
+  "material_id": "000000000210250095",
+  "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+  "plant_id": "EP04",
+  "batch_type": "SEMI_FINISHED",
+  "status": "Released",
+  "manufacturing_date": "2010-02-02",
+  "expiry_date": "2012-02-01",
+  "process_orders": [
+    {
+      "process_order_id": "4000000004001",
+      "order_type": "EOBK",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "planned_id": "",
+      "planned_quantity": 105.07434,
+      "uom": "KG",
+      "basic_start_date": "2010-02-02",
+      "basic_finish_date": "2010-02-02",
+      "actual_start_date": "",
+      "actual_finish_date": "",
+      "status": "CLOSED",
+      "production_version_id": "",
+      "batch_id": "PF05043-CORE",
+      "date": "",
+      "reservation_id": ""
+    }
+  ],
+  "planned_orders": [
+    {
+      "plan_order_id": "2000000004001",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "order_quantity": 105.07434,
+      "start_date": "2010-02-02",
+      "finish_date": "2010-02-02",
+      "order_type": "EOBK",
+      "material_name": "",
+      "procurement_type": "",
+      "process_order_id": "4000000004001",
+      "storage_location": ""
+    }
+  ],
+  "boms": [
+    {
+      "bom_id": "BOM-210250095-01",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "bom_usage": "PRODUCTION",
+      "bom_status": "ACTIVE",
+      "alternative_bom": "",
+      "base_quantity": 105.07434,
+      "base_uom": "KG",
+      "components": null
+    }
+  ],
+  "recipes": [
+    {
+      "recipe_id": "REC-210250095-01",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "recipe_type": "PRODUCTION_RECIPE",
+      "recipe_group": "",
+      "recipe_status": "ACTIVE",
+      "operations": null
+    }
+  ],
+  "production_confirmations": [
+    {
+      "confirmation_id": "CONF-400000000846-01",
+      "process_order_id": "4000000004001",
+      "operation_id": "OP-0010",
+      "work_center_id": "WC-GRAN-01",
+      "confirmed_quantity": 105.07434,
+      "uom": "KG",
+      "confirmation_date": "2010-02-01",
+      "confirmation_time": "16:00:00",
+      "status": "CONFIRMED",
+      "operation_number": "",
+      "actual_start_date": "",
+      "actual_finish_date": "",
+      "yield_quantity": 0,
+      "scrap_quantity": 0
+    }
+  ],
+  "yields": [
+    {
+      "process_order_id": "4000000004001",
+      "master_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "material_document_id": "",
+      "yield_quantity": 104.5,
+      "scrap_quantity": 0,
+      "uom": "KG",
+      "posting_date": "",
+      "status": "CONFIRMED",
+      "yield_type": "",
+      "scrap_type": ""
+    }
+  ],
+  "transformations_as_output": [
+    {
+      "transformation_id": "TRANS-SFG-001",
+      "process_order_id": "4000000004001",
+      "input_batch_id": "RM-MET-05043",
+      "output_batch_id": "PF05043-CORE",
+      "material_id": "000000000210250095",
+      "transformation_type": "GRANULATION_AND_COMPRESSION",
+      "quantity": 105.07434,
+      "uom": "KG",
+      "status": "COMPLETED",
+      "plant_id": "",
+      "transformation_date": ""
+    }
+  ],
+  "transformations_as_input": [
+    {
+      "transformation_id": "TRANS-PF05043",
+      "process_order_id": "400000014001",
+      "input_batch_id": "PF05043-CORE",
+      "output_batch_id": "PF05043",
+      "material_id": "000000000210250096",
+      "transformation_type": "COATING_AND_PACKAGING",
+      "quantity": 104.034,
+      "uom": "KG",
+      "status": "COMPLETED",
+      "plant_id": "",
+      "transformation_date": ""
+    }
+  ],
+  "material_consumptions": [
+    {
+      "material_document_id": "MATDOC-261-001",
+      "material_document_year": "2010",
+      "process_order_id": "4000000004001",
+      "batch_id": "RM-MET-05043",
+      "plant_id": "EP04",
+      "storage_location_id": "",
+      "consumed_quantity": 105.07434,
+      "uom": "KG",
+      "posting_date": "",
+      "movement_type": "261",
+      "status": "POSTED",
+      "reservation_id": "",
+      "reservation_item_id": "",
+      "cost_centre": ""
+    }
+  ],
+  "quality_inspection_lots": [
+    {
+      "inspection_lot_id": "0800000004001",
+      "material_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "plant_id": "EP04",
+      "inspection_origin": "04_IN_PROCESS_INSPECTION",
+      "quantity": 105.07434,
+      "creation_date": "",
+      "inspection_start_date": "",
+      "inspection_completion_date": "",
+      "status": "COMPLETED",
+      "inspection_type": "",
+      "inspection_quantity": 0,
+      "purchase_order_id": "",
+      "purchase_order_item_id": "",
+      "uom": "",
+      "supplier_id": "",
+      "process_order": "",
+      "material_document_id": "",
+      "material_document_year": "",
+      "inspection_plan_id": "",
+      "production_version_id": "",
+      "sample_quantity": 0
+    }
+  ],
+  "samplings": [
+    {
+      "sample_id": "SMP-GEN-PF05043-01",
+      "inspection_lot_id": "080000004001",
+      "material_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "sample_quantity": 0.5,
+      "sample_uom": "KG",
+      "sample_date": "2010-02-02",
+      "status": "Sample Drawn \u0026 Confirmed"
+    }
+  ],
+  "inspection_results": [
+    {
+      "inspection_result_id": "RES-080000004001-01",
+      "inspection_lot_id": "080000004001",
+      "sample_id": "SMP-01",
+      "material_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "inspection_characteristic_id": "CHAR-HARDNESS-01",
+      "result_value": "8.5",
+      "uom": "kP",
+      "result_status": "A",
+      "record_date": "2010-02-02"
+    },
+    {
+      "inspection_result_id": "RES-080000004001-02",
+      "inspection_lot_id": "080000004001",
+      "sample_id": "SMP-01",
+      "material_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "inspection_characteristic_id": "CHAR-FRIABILITY-01",
+      "result_value": "0.12",
+      "uom": "%",
+      "result_status": "A",
+      "record_date": "2010-02-02"
+    }
+  ],
+  "usage_decisions": [
+    {
+      "usage_decision_id": "UD-080000004001",
+      "inspection_lot_id": "080000004001",
+      "material_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "plant_id": "EP04",
+      "decision_code": "A",
+      "decision_status": "A",
+      "decision_date": "2010-02-02"
+    }
+  ],
+  "inventory_stocks": [
+    {
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "storage_location": "WIP",
+      "uom": "KG",
+      "stock_status": "Unrestricted",
+      "batch_id": "PF05043-CORE",
+      "stock_quantity": 105.074,
+      "unrestricted": 0,
+      "quality_inspection": 0,
+      "blocked": 0,
+      "restricted": 0,
+      "return": 0,
+      "in_transfer": 105.074
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EVT-SFG-001",
+      "event_name": "ProcessOrderCreated",
+      "business_object": "Process Order",
+      "entity_key": "4000000004001",
+      "batch_id": "PF05043-CORE",
+      "process_order_id": "4000000004001",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "status": "Created",
+      "description": "In-house core tablet granulation and compression order created"
+    },
+    {
+      "event_id": "EVT-SFG-002",
+      "event_name": "MaterialConsumptionPosted",
+      "business_object": "Material Consumption",
+      "entity_key": "MATDOC-261-001",
+      "batch_id": "RM-MET-05043",
+      "process_order_id": "4000000004001",
+      "material_id": "000000000110000711",
+      "plant_id": "EP04",
+      "status": "Posted",
+      "description": "Raw material API consumed for core compression"
+    },
+    {
+      "event_id": "EVT-SFG-003",
+      "event_name": "ProductionConfirmationRecorded",
+      "business_object": "Production Confirmation",
+      "entity_key": "CONF-400000000846-01",
+      "process_order_id": "4000000004001",
+      "status": "Confirmed",
+      "description": "Granulation \u0026 Core compression operations confirmed"
+    },
+    {
+      "event_id": "EVT-SFG-004",
+      "event_name": "BatchTransformationCreated",
+      "business_object": "Batch Transformation",
+      "entity_key": "TRANS-SFG-001",
+      "batch_id": "PF05043-CORE",
+      "process_order_id": "4000000004001",
+      "status": "Completed",
+      "description": "Batch transformed from Raw Material API to Semi-Finished Core Tablet"
+    },
+    {
+      "event_id": "EVT-SFG-005",
+      "event_name": "YieldRecorded",
+      "business_object": "Yield",
+      "entity_key": "4000000004001",
+      "batch_id": "PF05043-CORE",
+      "process_order_id": "4000000004001",
+      "status": "Confirmed",
+      "description": "Yield recorded for core batch"
+    }
+  ]
+}

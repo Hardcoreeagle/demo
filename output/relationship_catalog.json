@@ -1,0 +1,956 @@
+[
+  {
+    "id": 1,
+    "group_number": 1,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planning Requirement",
+    "target_entity": "Planning Requirement data",
+    "join_type": "INNER JOIN",
+    "logic_description": "PBIM.BDZEI = PBED.BDZEI"
+  },
+  {
+    "id": 2,
+    "group_number": 1,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "target_entity": "Process Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "PLAF.PLNUM = AFPO.PLNUM -\u003e AFPO.AUFNR"
+  },
+  {
+    "id": 3,
+    "group_number": 1,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "target_entity": "Reservation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "PLAF.RSNUM = RESB.RSNUM"
+  },
+  {
+    "id": 4,
+    "group_number": 1,
+    "group_name": "1. Planning \u0026 MRP",
+    "source_entity": "Planned Order",
+    "target_entity": "Process Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "PLAF.AUFNR = AFPO.AUFNR when PLAF.AUFNR is populated"
+  },
+  {
+    "id": 5,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Process Order Header",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFKO.AUFNR = ProcessOrder.AUFNR"
+  },
+  {
+    "id": 6,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Process Order Item",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFPO.AUFNR = ProcessOrder.AUFNR"
+  },
+  {
+    "id": 7,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Reservation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "AFKO.RSNUM = RESB.RSNUM AND RESB.AUFNR = AFKO.AUFNR when populated"
+  },
+  {
+    "id": 8,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Reservation",
+    "target_entity": "Material Consumption",
+    "join_type": "LEFT JOIN",
+    "logic_description": "RESB.RSNUM = MATDOC.RSNUM AND RESB.RSPOS = MATDOC.RSPOS AND MATDOC.BWART = 261"
+  },
+  {
+    "id": 9,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Material Consumption",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.AUFNR = AFKO.AUFNR AND MATDOC.BWART = 261"
+  },
+  {
+    "id": 10,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Production Confirmation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "AFRU.AUFNR = AFKO.AUFNR"
+  },
+  {
+    "id": 11,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Production Confirmation",
+    "target_entity": "Process Operation",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFRU.AUFPL = AFVC.AUFPL AND AFRU.APLZL = AFVC.APLZL"
+  },
+  {
+    "id": 12,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Process Operation",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFKO.AUFPL = AFVC.AUFPL"
+  },
+  {
+    "id": 13,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Operation",
+    "target_entity": "Work Center",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFVC.ARBID = CRHD.OBJID"
+  },
+  {
+    "id": 14,
+    "group_number": 2,
+    "group_name": "2. Process Order Structure",
+    "source_entity": "Process Order",
+    "target_entity": "Work Center",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFKO.AUFPL = AFVC.AUFPL -\u003e AFVC.ARBID = CRHD.OBJID"
+  },
+  {
+    "id": 15,
+    "group_number": 3,
+    "group_name": "3. Quality Management",
+    "source_entity": "Process Order",
+    "target_entity": "Quality Inspection Lot",
+    "join_type": "LEFT JOIN",
+    "logic_description": "Prefer AFKO.PRUEFLOS = QALS.PRUEFLOS; otherwise AFKO.AUFNR = QALS.AUFNR when populated"
+  },
+  {
+    "id": 16,
+    "group_number": 3,
+    "group_name": "3. Quality Management",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Material Movement",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.MBLNR = MATDOC.MBLNR AND QALS.MJAHR = MATDOC.MJAHR AND QALS.ZEILE = MATDOC.ZEILE"
+  },
+  {
+    "id": 17,
+    "group_number": 3,
+    "group_name": "3. Quality Management",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.MATNR = Batch.MATNR AND QALS.WERK = Batch.WERKS AND QALS.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 18,
+    "group_number": 3,
+    "group_name": "3. Quality Management",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Sampling",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.PRUEFLOS = QAMR.PRUEFLOS / QASR.PRUEFLOS"
+  },
+  {
+    "id": 19,
+    "group_number": 3,
+    "group_name": "3. Quality Management",
+    "source_entity": "Sampling",
+    "target_entity": "Inspection Result",
+    "join_type": "LEFT JOIN",
+    "logic_description": "Match PRUEFLOS plus the relevant operation/characteristic keys"
+  },
+  {
+    "id": 20,
+    "group_number": 3,
+    "group_name": "3. Quality Management",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Usage Decision",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.PRUEFLOS = QAVE.PRUEFLOS"
+  },
+  {
+    "id": 21,
+    "group_number": 4,
+    "group_name": "4. Material Movements \u0026 Inventory Postings",
+    "source_entity": "Material Movement",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MATDOC.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 22,
+    "group_number": 4,
+    "group_name": "4. Material Movements \u0026 Inventory Postings",
+    "source_entity": "Material Movement",
+    "target_entity": "Plant Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MATDOC.MATNR = MARC.MATNR AND MATDOC.WERKS = MARC.WERKS"
+  },
+  {
+    "id": 23,
+    "group_number": 4,
+    "group_name": "4. Material Movements \u0026 Inventory Postings",
+    "source_entity": "Material Movement",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.MATNR = Batch.MATNR AND MATDOC.WERKS = Batch.WERKS AND MATDOC.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 24,
+    "group_number": 4,
+    "group_name": "4. Material Movements \u0026 Inventory Postings",
+    "source_entity": "Batch",
+    "target_entity": "Batch Stock",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MCHB.MATNR = Batch.MATNR AND MCHB.WERKS = Batch.WERKS AND MCHB.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 25,
+    "group_number": 4,
+    "group_name": "4. Material Movements \u0026 Inventory Postings",
+    "source_entity": "Material Movement",
+    "target_entity": "Material Document",
+    "join_type": "INNER JOIN",
+    "logic_description": "MATDOC.MBLNR = MKPF.MBLNR AND MATDOC.MJAHR = MKPF.MJAHR"
+  },
+  {
+    "id": 26,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Requisition",
+    "target_entity": "PO Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "EBAN.BANFN = EKPO.BANFN AND EBAN.BNFPO = EKPO.BNFPO"
+  },
+  {
+    "id": 27,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Requisition",
+    "target_entity": "PR Account Assignment",
+    "join_type": "LEFT JOIN",
+    "logic_description": "EBAN.BANFN = EBKN.BANFN AND EBAN.BNFPO = EBKN.BNFPO"
+  },
+  {
+    "id": 28,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Supplier",
+    "target_entity": "Purchase Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LFA1.LIFNR = EKKO.LIFNR"
+  },
+  {
+    "id": 29,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Supplier",
+    "target_entity": "Supplier Purchasing Data",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LFA1.LIFNR = LFM1.LIFNR"
+  },
+  {
+    "id": 30,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Supplier",
+    "target_entity": "Supplier Company Data",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LFA1.LIFNR = LFB1.LIFNR"
+  },
+  {
+    "id": 31,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Purchase Order",
+    "target_entity": "PO Item",
+    "join_type": "INNER JOIN",
+    "logic_description": "EKKO.EBELN = EKPO.EBELN"
+  },
+  {
+    "id": 32,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "PO Item",
+    "target_entity": "Schedule Line",
+    "join_type": "LEFT JOIN",
+    "logic_description": "EKPO.EBELN = EKET.EBELN AND EKPO.EBELP = EKET.EBELP"
+  },
+  {
+    "id": 33,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "PO Item",
+    "target_entity": "PO History",
+    "join_type": "LEFT JOIN",
+    "logic_description": "EKPO.EBELN = EKBE.EBELN AND EKPO.EBELP = EKBE.EBELP"
+  },
+  {
+    "id": 34,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "PO Item",
+    "target_entity": "PO Confirmation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "EKPO.EBELN = EKES.EBELN AND EKPO.EBELP = EKES.EBELP"
+  },
+  {
+    "id": 35,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "PO Item",
+    "target_entity": "GRN",
+    "join_type": "LEFT JOIN",
+    "logic_description": "EKPO.EBELN = MATDOC.EBELN AND EKPO.EBELP = MATDOC.EBELP AND MATDOC.BWART is a goods-receipt movement"
+  },
+  {
+    "id": 36,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "GRN",
+    "target_entity": "Material Movement",
+    "join_type": "INNER JOIN",
+    "logic_description": "GRN references MATDOC.MBLNR + MATDOC.MJAHR + MATDOC.ZEILE"
+  },
+  {
+    "id": 37,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "GRN",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.MATNR = Batch.MATNR AND MATDOC.WERKS = Batch.WERKS AND MATDOC.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 38,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Reservation",
+    "target_entity": "Purchase Requisition",
+    "join_type": "LEFT JOIN",
+    "logic_description": "RESB.BANFN = EBAN.BANFN AND RESB.BNFPO = EBAN.BNFPO"
+  },
+  {
+    "id": 39,
+    "group_number": 5,
+    "group_name": "5. Procurement: Requisition to Purchase Order",
+    "source_entity": "Reservation",
+    "target_entity": "Purchase Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "RESB.EBELN = EKPO.EBELN AND RESB.EBELP = EKPO.EBELP"
+  },
+  {
+    "id": 40,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "BOM Assignment",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MAST.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 41,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "BOM Assignment",
+    "target_entity": "Plant Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MAST.MATNR = MARC.MATNR AND MAST.WERKS = MARC.WERKS"
+  },
+  {
+    "id": 42,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "BOM Assignment",
+    "target_entity": "BOM Header",
+    "join_type": "INNER JOIN",
+    "logic_description": "MAST.STLNR = STKO.STLNR AND MAST.STLAL = STKO.STLAL"
+  },
+  {
+    "id": 43,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "BOM Header",
+    "target_entity": "BOM Component",
+    "join_type": "LEFT JOIN",
+    "logic_description": "STKO.STLNR = STPO.STLNR"
+  },
+  {
+    "id": 44,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "BOM Component",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "STPO.IDNRK = MARA.MATNR"
+  },
+  {
+    "id": 45,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Material",
+    "target_entity": "Routing Assignment",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MAPL.MATNR = MARA.MATNR AND MAPL.WERKS = MARC.WERKS"
+  },
+  {
+    "id": 46,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Routing Assignment",
+    "target_entity": "Routing Header",
+    "join_type": "INNER JOIN",
+    "logic_description": "MAPL.PLNNR = PLKO.PLNNR AND MAPL.PLNAL = PLKO.PLNAL"
+  },
+  {
+    "id": 47,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Routing Header",
+    "target_entity": "Routing Operation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "PLKO.PLNNR = PLPO.PLNNR"
+  },
+  {
+    "id": 48,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Routing Operation",
+    "target_entity": "Work Center",
+    "join_type": "INNER JOIN",
+    "logic_description": "PLPO.ARBID = CRHD.OBJID"
+  },
+  {
+    "id": 49,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Production Version",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MKAL.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 50,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Production Version",
+    "target_entity": "Plant Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MKAL.MATNR = MARC.MATNR AND MKAL.WERKS = MARC.WERKS"
+  },
+  {
+    "id": 51,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Production Version",
+    "target_entity": "BOM",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MKAL.MATNR = MAST.MATNR AND MKAL.WERKS = MAST.WERKS AND MKAL.STLAL = MAST.STLAL"
+  },
+  {
+    "id": 52,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Production Version",
+    "target_entity": "Routing",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MKAL.MATNR = MAPL.MATNR AND MKAL.WERKS = MAPL.WERKS AND MKAL.PLNNR = MAPL.PLNNR AND MKAL.PLNAL = MAPL.PLNAL"
+  },
+  {
+    "id": 53,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Process Order",
+    "target_entity": "Production Version",
+    "join_type": "LEFT JOIN",
+    "logic_description": "AFKO.PLNNR = MKAL.PLNNR AND AFKO.PLNAL = MKAL.PLNAL where applicable"
+  },
+  {
+    "id": 54,
+    "group_number": 6,
+    "group_name": "6. Bill of Materials \u0026 Routing",
+    "source_entity": "Process Order",
+    "target_entity": "Routing",
+    "join_type": "LEFT JOIN",
+    "logic_description": "AFKO.PLNNR = PLKO.PLNNR AND AFKO.PLNAL = PLKO.PLNAL"
+  },
+  {
+    "id": 55,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Order",
+    "target_entity": "Sales Order Item",
+    "join_type": "INNER JOIN",
+    "logic_description": "VBAK.VBELN = VBAP.VBELN"
+  },
+  {
+    "id": 56,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Order Item",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "VBAP.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 57,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Order Item",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBAP.MATNR = Batch.MATNR AND VBAP.CHARG = Batch.CHARG when populated"
+  },
+  {
+    "id": 58,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Order",
+    "target_entity": "Customer",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBAK.VBELN = VBPA.VBELN AND relevant customer partner function"
+  },
+  {
+    "id": 59,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Order",
+    "target_entity": "Delivery",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = VBAK.VBELN AND VBFA.VBELN = LIKP.VBELN"
+  },
+  {
+    "id": 60,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Order Item",
+    "target_entity": "Delivery Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = VBAP.VBELN AND VBFA.POSNV = VBAP.POSNR AND VBFA.VBELN = LIPS.VBELN AND VBFA.POSNN = LIPS.POSNR"
+  },
+  {
+    "id": 61,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Delivery",
+    "target_entity": "Delivery Item",
+    "join_type": "INNER JOIN",
+    "logic_description": "LIKP.VBELN = LIPS.VBELN"
+  },
+  {
+    "id": 62,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Delivery Item",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "LIPS.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 63,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Delivery Item",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LIPS.MATNR = Batch.MATNR AND LIPS.WERKS = Batch.WERKS AND LIPS.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 64,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Delivery Item",
+    "target_entity": "Process Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LIPS.AUFNR = AFKO.AUFNR when populated"
+  },
+  {
+    "id": 65,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Delivery Item",
+    "target_entity": "Goods Issue",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LIPS.LFBNR = MATDOC.MBLNR AND LIPS.LFPOS = MATDOC.ZEILE AND LIPS.LFGJA = MATDOC.MJAHR"
+  },
+  {
+    "id": 66,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Delivery Item",
+    "target_entity": "Material Movement",
+    "join_type": "LEFT JOIN",
+    "logic_description": "Validate LIPS.MATNR = MATDOC.MATNR AND LIPS.WERKS = MATDOC.WERKS"
+  },
+  {
+    "id": 67,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Billing",
+    "target_entity": "Billing Item",
+    "join_type": "INNER JOIN",
+    "logic_description": "VBRK.VBELN = VBRP.VBELN"
+  },
+  {
+    "id": 68,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Billing Item",
+    "target_entity": "Delivery Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBRP.VGBEL = LIPS.VBELN AND VBRP.VGPOS = LIPS.POSNR"
+  },
+  {
+    "id": 69,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Billing Item",
+    "target_entity": "Sales Order Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBRP.AUBEL = VBAP.VBELN AND VBRP.AUPOS = VBAP.POSNR"
+  },
+  {
+    "id": 70,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Billing",
+    "target_entity": "Delivery",
+    "join_type": "LEFT JOIN",
+    "logic_description": "Use VBFA: billing document VBELN \u003c-\u003e preceding delivery VBELV"
+  },
+  {
+    "id": 71,
+    "group_number": 7,
+    "group_name": "7. Sales \u0026 Distribution",
+    "source_entity": "Sales Document Flow",
+    "target_entity": "Sales Documents",
+    "join_type": "INNER JOIN",
+    "logic_description": "VBFA.VBELV + VBFA.POSNV = preceding document/item; VBFA.VBELN + VBFA.POSNN = subsequent document/item"
+  },
+  {
+    "id": 72,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material",
+    "target_entity": "Inventory",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MARA.MATNR = MARD.MATNR"
+  },
+  {
+    "id": 73,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Plant Material",
+    "target_entity": "Inventory",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MARC.MATNR = MARD.MATNR AND MARC.WERKS = MARD.WERKS"
+  },
+  {
+    "id": 74,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Inventory",
+    "target_entity": "Batch Stock",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MARD.MATNR = MCHB.MATNR AND MARD.WERKS = MCHB.WERKS AND MARD.LGORT = MCHB.LGORT"
+  },
+  {
+    "id": 75,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material Movement",
+    "target_entity": "Inventory",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.MATNR = MARD.MATNR AND MATDOC.WERKS = MARD.WERKS AND MATDOC.LGORT = MARD.LGORT"
+  },
+  {
+    "id": 76,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material Movement",
+    "target_entity": "Reservation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.RSNUM = RESB.RSNUM AND MATDOC.RSPOS = RESB.RSPOS"
+  },
+  {
+    "id": 77,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material Movement",
+    "target_entity": "Purchase Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.EBELN = EKPO.EBELN AND MATDOC.EBELP = EKPO.EBELP"
+  },
+  {
+    "id": 78,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material Movement",
+    "target_entity": "Process Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.AUFNR = AFKO.AUFNR"
+  },
+  {
+    "id": 79,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Material Movement",
+    "target_entity": "Sales Order Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.KDAUF = VBAP.VBELN AND MATDOC.KDPOS = VBAP.POSNR"
+  },
+  {
+    "id": 80,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MCHA.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 81,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "target_entity": "Plant Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MCHA.MATNR = MARC.MATNR AND MCHA.WERKS = MARC.WERKS"
+  },
+  {
+    "id": 82,
+    "group_number": 8,
+    "group_name": "8. Inventory, Batch \u0026 Material Master",
+    "source_entity": "Batch",
+    "target_entity": "Batch Master",
+    "join_type": "INNER JOIN",
+    "logic_description": "MCHA.MATNR = MCH1.MATNR AND MCHA.CHARG = MCH1.CHARG"
+  },
+  {
+    "id": 83,
+    "group_number": 9,
+    "group_name": "9. Quality Management (Extended Linkages)",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Material Document",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.MBLNR = MATDOC.MBLNR AND QALS.MJAHR = MATDOC.MJAHR AND QALS.ZEILE = MATDOC.ZEILE"
+  },
+  {
+    "id": 84,
+    "group_number": 9,
+    "group_name": "9. Quality Management (Extended Linkages)",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Process Operation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.AUFPL = AFVC.AUFPL when populated"
+  },
+  {
+    "id": 85,
+    "group_number": 9,
+    "group_name": "9. Quality Management (Extended Linkages)",
+    "source_entity": "Quality Inspection Lot",
+    "target_entity": "Process Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "QALS.AUFNR = AFKO.AUFNR when populated"
+  },
+  {
+    "id": 86,
+    "group_number": 10,
+    "group_name": "10. Sales \u0026 Delivery Cross-References",
+    "source_entity": "Delivery Item",
+    "target_entity": "Sales Order Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LIPS.VGBEL = VBAP.VBELN AND LIPS.VGPOS = VBAP.POSNR"
+  },
+  {
+    "id": 87,
+    "group_number": 10,
+    "group_name": "10. Sales \u0026 Delivery Cross-References",
+    "source_entity": "Billing Item",
+    "target_entity": "Sales Order Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBRP.AUBEL = VBAP.VBELN AND VBRP.AUPOS = VBAP.POSNR"
+  },
+  {
+    "id": 88,
+    "group_number": 10,
+    "group_name": "10. Sales \u0026 Delivery Cross-References",
+    "source_entity": "Delivery Item",
+    "target_entity": "Reservation",
+    "join_type": "LEFT JOIN",
+    "logic_description": "LIPS.RSNUM = RESB.RSNUM AND LIPS.RSPOS = RESB.RSPOS when populated"
+  },
+  {
+    "id": 89,
+    "group_number": 11,
+    "group_name": "11. Production Yield, Scrap \u0026 Confirmation",
+    "source_entity": "Process Order",
+    "target_entity": "Production Yield",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.AUFNR = AFKO.AUFNR AND MATDOC.BWART = 101"
+  },
+  {
+    "id": 90,
+    "group_number": 11,
+    "group_name": "11. Production Yield, Scrap \u0026 Confirmation",
+    "source_entity": "Process Order",
+    "target_entity": "Production Scrap",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.AUFNR = AFKO.AUFNR AND MATDOC.BWART corresponds to the configured scrap movement"
+  },
+  {
+    "id": 91,
+    "group_number": 11,
+    "group_name": "11. Production Yield, Scrap \u0026 Confirmation",
+    "source_entity": "Production Confirmation",
+    "target_entity": "Process Operation",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFRU.AUFPL = AFVC.AUFPL AND AFRU.APLZL = AFVC.APLZL"
+  },
+  {
+    "id": 92,
+    "group_number": 11,
+    "group_name": "11. Production Yield, Scrap \u0026 Confirmation",
+    "source_entity": "Production Confirmation",
+    "target_entity": "Process Order",
+    "join_type": "INNER JOIN",
+    "logic_description": "AFRU.AUFNR = AFKO.AUFNR"
+  },
+  {
+    "id": 93,
+    "group_number": 12,
+    "group_name": "12. Goods Receipt (GRN) Linkages",
+    "source_entity": "GRN",
+    "target_entity": "Purchase Order Item",
+    "join_type": "INNER JOIN",
+    "logic_description": "MATDOC.MBLNR + MJAHR + ZEILE identifies GRN movement AND MATDOC.EBELN = EKPO.EBELN AND MATDOC.EBELP = EKPO.EBELP"
+  },
+  {
+    "id": 94,
+    "group_number": 12,
+    "group_name": "12. Goods Receipt (GRN) Linkages",
+    "source_entity": "GRN",
+    "target_entity": "Material",
+    "join_type": "INNER JOIN",
+    "logic_description": "MATDOC.MATNR = MARA.MATNR"
+  },
+  {
+    "id": 95,
+    "group_number": 12,
+    "group_name": "12. Goods Receipt (GRN) Linkages",
+    "source_entity": "GRN",
+    "target_entity": "Inventory",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.MATNR = MARD.MATNR AND MATDOC.WERKS = MARD.WERKS AND MATDOC.LGORT = MARD.LGORT"
+  },
+  {
+    "id": 96,
+    "group_number": 12,
+    "group_name": "12. Goods Receipt (GRN) Linkages",
+    "source_entity": "GRN",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "MATDOC.MATNR = Batch.MATNR AND MATDOC.WERKS = Batch.WERKS AND MATDOC.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 97,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Sales Document Flow",
+    "join_type": "INNER JOIN",
+    "logic_description": "VBFA.VBELV + VBFA.POSNV = preceding sales/delivery/billing document/item AND VBFA.VBELN + VBFA.POSNN = return document/item"
+  },
+  {
+    "id": 98,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Sales Order",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = VBAK.VBELN / relevant return-document flow relationship"
+  },
+  {
+    "id": 99,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Sales Order Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = VBAP.VBELN AND VBFA.POSNV = VBAP.POSNR / relevant return-document flow relationship"
+  },
+  {
+    "id": 100,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Delivery",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = LIKP.VBELN / relevant return-delivery document flow relationship"
+  },
+  {
+    "id": 101,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Delivery Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = LIPS.VBELN AND VBFA.POSNV = LIPS.POSNR / relevant return-delivery flow relationship"
+  },
+  {
+    "id": 102,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Billing Document",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = VBRK.VBELN / relevant return-billing document flow relationship"
+  },
+  {
+    "id": 103,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Billing Item",
+    "join_type": "LEFT JOIN",
+    "logic_description": "VBFA.VBELV = VBRP.VBELN AND VBFA.POSNV = VBRP.POSNR / relevant return-billing flow relationship"
+  },
+  {
+    "id": 104,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Material Movement",
+    "join_type": "LEFT JOIN",
+    "logic_description": "Where return is posted through inventory: identify return material document in MATDOC; validate MATDOC.MATNR = LIPS.MATNR and MATDOC.WERKS = LIPS.WERKS"
+  },
+  {
+    "id": 105,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Batch",
+    "join_type": "LEFT JOIN",
+    "logic_description": "For batch-specific return, LIPS.MATNR = Batch.MATNR AND LIPS.WERKS = Batch.WERKS AND LIPS.CHARG = Batch.CHARG"
+  },
+  {
+    "id": 106,
+    "group_number": 13,
+    "group_name": "13. Sales Returns",
+    "source_entity": "Sales Return",
+    "target_entity": "Customer",
+    "join_type": "LEFT JOIN",
+    "logic_description": "Resolve customer through related sales document: VBPA.VBELN = related sales document VBELN AND relevant customer partner function"
+  }
+]

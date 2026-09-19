@@ -1,0 +1,2289 @@
+{
+  "batch_genealogy": {
+    "root_batch_id": "PF05043",
+    "business_objects": {
+      "planning_requirement": {
+        "planning_requirement_id": "PRQ-210250096-01",
+        "material_id": "000000000210250096",
+        "plant_id": "EP04",
+        "requirement_quantity": 105.07434,
+        "requirement_date": "2010-02-02",
+        "events": [
+          {
+            "event_type": "PlanningRequirementCreated"
+          },
+          {
+            "event_type": "PlanningRequirementUpdated"
+          }
+        ]
+      },
+      "planned_order": {
+        "plan_order_id": "2000307022",
+        "material_id": "000000000210250096",
+        "plant_id": "EP04",
+        "order_quantity": 104.034,
+        "start_date": "2010-02-02",
+        "finish_date": "2010-02-02",
+        "order_type": "EOBK",
+        "events": [
+          {
+            "event_type": "PlannedOrderCreated"
+          },
+          {
+            "event_type": "PlannedOrderReleased"
+          },
+          {
+            "event_type": "PlannedOrderConverted"
+          }
+        ]
+      },
+      "material": {
+        "material_id": "000000000210250096",
+        "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+        "material_type": "FINISHED_PRODUCT",
+        "plant_id": "EP04",
+        "UOM": "KG",
+        "status": "ACTIVE",
+        "events": [
+          {
+            "event_type": "MaterialCreated"
+          },
+          {
+            "event_type": "MaterialUpdated"
+          },
+          {
+            "event_type": "MaterialUnblocked"
+          }
+        ]
+      },
+      "batch": {
+        "batch_id": "PF05043",
+        "material_id": "000000000210250096",
+        "batch_type": "FINISHED_PRODUCT",
+        "Plant_id": "EP04",
+        "Manufacturing_date": "2010-02-02",
+        "expiery_date": "2010-05-14",
+        "status": "Released",
+        "events": [
+          {
+            "event_type": "ProductionBatchCreated"
+          },
+          {
+            "event_type": "ProductionBatchUpdated"
+          },
+          {
+            "event_type": "ProductionBatchCompleted"
+          }
+        ]
+      },
+      "supplier_or_source": {
+        "Supplier_or_Source_id": "0000400860",
+        "Source_Name": "Aarti Drugs Limited - Active Pharma Ingredients",
+        "Source_type": "APPROVED_VENDOR",
+        "Country": "India",
+        "region": "Maharashtra",
+        "postal_code": "400001",
+        "address_id": "ADDR-1004",
+        "email": "orders@aartidrugs.com",
+        "status": "ACTIVE",
+        "Company_code": "1000",
+        "valid": true,
+        "events": [
+          {
+            "event_type": "SupplierSourceCreated"
+          },
+          {
+            "event_type": "SupplierSourceUpdated"
+          }
+        ]
+      },
+      "purchase_requisition": {
+        "purchase_requisition_id": "1000037529",
+        "item_id": "0010",
+        "Material_id": "000000000110000711",
+        "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+        "Plant_id": "EP04",
+        "requested_quantity": 110,
+        "UOM": "KG",
+        "requested_delivery_date": "2010-01-12",
+        "events": [
+          {
+            "event_type": "PurchaseRequisitionCreated"
+          },
+          {
+            "event_type": "PurchaseRequisitionUpdated"
+          },
+          {
+            "event_type": "PurchaseRequisitionReleased"
+          }
+        ]
+      },
+      "purchase_order": {
+        "purchase_order_id": "4500012345",
+        "Supplier_or_Source_id": "0000400860",
+        "Company_code": "1000",
+        "order_date": "2010-01-05",
+        "document_type": "STANDARD_PO",
+        "item": {
+          "item_id": "0010",
+          "material_id": "000000000110000711",
+          "description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+          "order_quantity": 110,
+          "plant_id": "EP04",
+          "storage_location_id": "RMS",
+          "delevery_date": "2010-01-15",
+          "UOM": "KG"
+        },
+        "events": [
+          {
+            "event_type": "PurchaseOrderCreated"
+          },
+          {
+            "event_type": "PurchaseOrderUpdated"
+          },
+          {
+            "event_type": "PurchaseOrderReleased"
+          }
+        ]
+      },
+      "material_movement": {
+        "material_document_id": "5000012345",
+        "material_document_year": "2010",
+        "movement_type": "101",
+        "Material_id": "000000000110000711",
+        "Batch_id": "RM-MET-05043",
+        "stroage_location": "RMS",
+        "quantity": 110,
+        "UOM": "KG",
+        "posting_date": "2010-01-16",
+        "document_date": "2010-01-16",
+        "reference_document_id": "4500012345",
+        "purchase_order_id": "4500012345",
+        "process_order_id": null,
+        "events": [
+          {
+            "event_type": "GoodsReceiptPosted"
+          },
+          {
+            "event_type": "BatchReceived"
+          }
+        ]
+      },
+      "inventory_stock": {
+        "Material_id": "000000000210250096",
+        "Plant_id": "EP04",
+        "stroage_location": "FGS",
+        "UOM": "KG",
+        "stock_status": "Unrestricted",
+        "batch_id": "PF05043",
+        "stock_quantity": 104.034,
+        "unrestricted": 104.034,
+        "events": [
+          {
+            "event_type": "StockIncreased"
+          },
+          {
+            "event_type": "StockDecreased"
+          },
+          {
+            "event_type": "StockTransferred"
+          },
+          {
+            "event_type": "StockStatusChanged"
+          }
+        ]
+      },
+      "reservation": {
+        "reservation_id": "2000029081",
+        "item_id": "0002",
+        "Material_id": "000000000110000711",
+        "Plant_id": "EP04",
+        "storage_location": "RMS",
+        "reservation_quantity": 0.768,
+        "UOM": "KG",
+        "requirement_date": "2010-02-02",
+        "movement_type": "261",
+        "process_order_id": "400000014001",
+        "events": [
+          {
+            "event_type": "ReservationCreated"
+          },
+          {
+            "event_type": "ReservationReleased"
+          }
+        ]
+      },
+      "process_order": {
+        "process_order_id": "400000014001",
+        "order_type": "EOBK",
+        "Material_id": "000000000210250096",
+        "Plant_id": "EP04",
+        "planned_id": "2000307022",
+        "planned_quantity": 104.034,
+        "UOM": "KG",
+        "basic_start_date": "2010-02-02",
+        "basic_finish_date": "2010-02-02",
+        "actual_start_date": "2010-02-02",
+        "actual_finish_date": "2010-02-02",
+        "status": "Created/Released",
+        "production_version_id": "00",
+        "input_batches": [
+          "PF05043-CORE",
+          "RM-MET-05043",
+          "RM-COAT-05043"
+        ],
+        "output_batches": [
+          "PF05043"
+        ],
+        "consumed_batches": [
+          {
+            "batch_id": "PF05043-CORE",
+            "material_id": "000000000210250095",
+            "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+            "stage": "SEMI_FINISHED_CORE",
+            "consumed_quantity": 105.07434,
+            "uom": "KG"
+          },
+          {
+            "batch_id": "RM-MET-05043",
+            "material_id": "000000000110000711",
+            "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+            "stage": "ACTIVE_RAW_MATERIAL_API_RMS",
+            "consumed_quantity": 0.768,
+            "uom": "KG"
+          },
+          {
+            "batch_id": "RM-COAT-05043",
+            "material_id": "000000000110000714",
+            "material_description": "OPADRY FILM COATING SUSPENSION IP/USP (COATING RAW MATERIAL)",
+            "stage": "COATING_EXCIPIENT_RAW_MATERIAL_RMS",
+            "consumed_quantity": 0.534,
+            "uom": "KG"
+          }
+        ],
+        "produced_product": {
+          "batch_id": "PF05043",
+          "material_id": "000000000210250096",
+          "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+          "stage": "FINISHED_PRODUCT",
+          "produced_quantity": 104.034,
+          "uom": "KG"
+        },
+        "events": [
+          {
+            "event_type": "ProcessOrderCreated"
+          },
+          {
+            "event_type": "ProcessOrderReleased"
+          },
+          {
+            "event_type": "ProcessOrderUpdated"
+          },
+          {
+            "event_type": "ProcessOrderClosed"
+          }
+        ]
+      },
+      "bom": {
+        "bom_id": "BOM-210250096-01",
+        "Material_id": "000000000210250096",
+        "Plant_id": "EP04",
+        "bom_usage": "PRODUCTION",
+        "bom_status": "ACTIVE",
+        "alternative_bom": "01",
+        "base_quantity": 104.034,
+        "base_UOM": "KG",
+        "Components": [
+          {
+            "Component_material_id": "000000000210250095",
+            "Component_quantity": 105.07434,
+            "Component_UOM": "KG",
+            "Component_item_number": "0010"
+          },
+          {
+            "Component_material_id": "000000000110000711",
+            "Component_quantity": 0.768,
+            "Component_UOM": "KG",
+            "Component_item_number": "0020"
+          },
+          {
+            "Component_material_id": "000000000110000714",
+            "Component_quantity": 0.534,
+            "Component_UOM": "KG",
+            "Component_item_number": "0030"
+          }
+        ],
+        "events": [
+          {
+            "event_type": "BOMCreated"
+          },
+          {
+            "event_type": "BOMUpdated"
+          },
+          {
+            "event_type": "BOMReleased"
+          }
+        ]
+      },
+      "recipe": {
+        "Recipe_id": "REC-210250096-01",
+        "Material_id": "000000000210250096",
+        "Plant_id": "EP04",
+        "recipe_type": "PRODUCTION_RECIPE",
+        "recipe_group": "RG-MET-01",
+        "recipe_status": "ACTIVE",
+        "operations": [
+          {
+            "Opreration_id": "OP-0010",
+            "Operation_number": "0010",
+            "Operation_description": "Film Coating of Metformin Core Tablets",
+            "work_center_id": "WC-COAT-01",
+            "Control_key": "PP01"
+          },
+          {
+            "Opreration_id": "OP-0020",
+            "Operation_number": "0020",
+            "Operation_description": "Primary Blister Packaging 10x10",
+            "work_center_id": "WC-PACK-01",
+            "Control_key": "PP01"
+          }
+        ],
+        "events": [
+          {
+            "event_type": "RecipeCreated"
+          },
+          {
+            "event_type": "RecipeUpdated"
+          },
+          {
+            "event_type": "RecipeReleased"
+          }
+        ]
+      },
+      "production_version": {
+        "production_version_id": "PV-210250096-01",
+        "Material_id": "000000000210250096",
+        "production_version_status": "ACTIVE",
+        "bom_id": "BOM-210250096-01",
+        "Recipe_id": "REC-210250096-01",
+        "valid_from": "2010-01-01",
+        "valid_to": "2025-12-31",
+        "events": [
+          {
+            "event_type": "ProductionVersionCreated"
+          },
+          {
+            "event_type": "ProductionVersionUpdated"
+          },
+          {
+            "event_type": "ProductionVersionReleased"
+          }
+        ]
+      },
+      "batch_determination": {
+        "determination_id": "BD-400000014001-01",
+        "Material_id": "000000000210250095",
+        "Batch_id": "PF05043-CORE",
+        "process_order_id": "400000014001",
+        "quantity": 105.07434,
+        "UOM": "KG",
+        "status": "ALLOCATED",
+        "events": [
+          {
+            "event_type": "BatchDetermined"
+          },
+          {
+            "event_type": "BatchAssigned"
+          }
+        ]
+      },
+      "material_consumption": {
+        "Material_document_id": "4900000004",
+        "material_document_year": "2025",
+        "process_order_id": "400000014001",
+        "Batch_id": "RM-MET-05043",
+        "Plant_id": "EP04",
+        "storage_location_id": "RMS",
+        "consumed_quantity": 0.768,
+        "UOM": "KG",
+        "posting_date": "2010-02-02",
+        "movement_type": "261",
+        "status": "Issued",
+        "events": [
+          {
+            "event_type": "MaterialConsumptionPosted"
+          },
+          {
+            "event_type": "MaterialConsumptionAdjusted"
+          },
+          {
+            "event_type": "MaterialConsumptionReversed"
+          }
+        ]
+      },
+      "production_confirmation": {
+        "confermation_id": "CONF-400000014001-01",
+        "process_order_id": "400000014001",
+        "operation_id": "OP-0010",
+        "work_center_id": "WC-COAT-01",
+        "confirmed_quantity": 104.034,
+        "UOM": "KG",
+        "Confirmation_date": "2010-02-02",
+        "confirmation_time": "14:30:00",
+        "status": "CONFIRMED",
+        "events": [
+          {
+            "event_type": "ProductionConfirmationRecorded"
+          },
+          {
+            "event_type": "ProductionConfirmationUpdated"
+          },
+          {
+            "event_type": "OperationCompleted"
+          }
+        ]
+      },
+      "batch_transformation": {
+        "transformation_id": "TRANS-PF05043",
+        "process_order_id": "400000014001",
+        "input_batch_id": "PF05043-CORE",
+        "output_batch_id": "PF05043",
+        "Material_id": "000000000210250096",
+        "transformation_type": "COATING_AND_PACKAGING",
+        "quantity": 104.034,
+        "UOM": "KG",
+        "status": "COMPLETED",
+        "input_batches": [
+          "PF05043-CORE",
+          "RM-MET-05043",
+          "RM-COAT-05043"
+        ],
+        "output_batches": [
+          "PF05043"
+        ],
+        "consumed_batches": [
+          {
+            "batch_id": "PF05043-CORE",
+            "material_id": "000000000210250095",
+            "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+            "stage": "SEMI_FINISHED_CORE",
+            "consumed_quantity": 105.07434,
+            "uom": "KG"
+          },
+          {
+            "batch_id": "RM-MET-05043",
+            "material_id": "000000000110000711",
+            "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+            "stage": "ACTIVE_RAW_MATERIAL_API_RMS",
+            "consumed_quantity": 0.768,
+            "uom": "KG"
+          },
+          {
+            "batch_id": "RM-COAT-05043",
+            "material_id": "000000000110000714",
+            "material_description": "OPADRY FILM COATING SUSPENSION IP/USP (COATING RAW MATERIAL)",
+            "stage": "COATING_EXCIPIENT_RAW_MATERIAL_RMS",
+            "consumed_quantity": 0.534,
+            "uom": "KG"
+          }
+        ],
+        "produced_product": {
+          "batch_id": "PF05043",
+          "material_id": "000000000210250096",
+          "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+          "stage": "FINISHED_PRODUCT",
+          "produced_quantity": 104.034,
+          "uom": "KG"
+        },
+        "transformation_stages": [
+          {
+            "stage_number": 1,
+            "stage_name": "Raw Material to Semi-Finished (Granulation \u0026 Core Compression)",
+            "process_order_id": "4000000004001",
+            "input_batches": [
+              "RM-MET-05043"
+            ],
+            "output_batch": "PF05043-CORE",
+            "material_id": "000000000210250095",
+            "material_type": "SEMI_FINISHED",
+            "quantity_produced": 105.07434,
+            "uom": "KG",
+            "status": "COMPLETED"
+          },
+          {
+            "stage_number": 2,
+            "stage_name": "Semi-Finished \u0026 Raw Materials to Finished Product (Film Coating \u0026 Packing)",
+            "process_order_id": "400000014001",
+            "input_batches": [
+              "PF05043-CORE",
+              "RM-MET-05043",
+              "RM-COAT-05043"
+            ],
+            "output_batch": "PF05043",
+            "material_id": "000000000210250096",
+            "material_type": "FINISHED_PRODUCT",
+            "quantity_produced": 104.034,
+            "uom": "KG",
+            "status": "COMPLETED"
+          }
+        ],
+        "events": [
+          {
+            "event_type": "BatchTransformationCreated"
+          },
+          {
+            "event_type": "BatchTransformationCompleted"
+          }
+        ]
+      },
+      "yield": {
+        "Process_order_id": "400000014001",
+        "master_id": "000000000210250096",
+        "Batch_id": "PF05043",
+        "material_document_id": "YLD-400000014001",
+        "yield_quantity": 104.034,
+        "scrap_quantity": 0,
+        "UOM": "KG",
+        "posting_date": "2010-02-02",
+        "status": "POSTED",
+        "events": [
+          {
+            "event_type": "YieldRecorded"
+          },
+          {
+            "event_type": "YieldAdjusted"
+          }
+        ]
+      },
+      "master_inspection_characteristic": {
+        "inspection_characteristic_id": "MIC-ASSAY-01",
+        "description": "Assay of Metformin Hydrochloride",
+        "Plant_id": "EP04",
+        "UOM": "%",
+        "Lower_specification_limit": 95,
+        "upper_specification_limit": 105,
+        "target_value": 100,
+        "status": "ACTIVE",
+        "events": [
+          {
+            "event_type": "InspectionCharacteristicCreated"
+          },
+          {
+            "event_type": "InspectionCharacteristicChanged"
+          }
+        ]
+      },
+      "inspection_plan": {
+        "inspection_plan_id": "IP-210250096-01",
+        "Material_id": "000000000210250096",
+        "Plant_id": "EP04",
+        "plan_group": "IPG-QC-01",
+        "plan_usage": "FINAL_RELEASE",
+        "status": "ACTIVE",
+        "operations": [
+          {
+            "operation_id": "QOP-0010",
+            "operation_number": "0010",
+            "description": "Finished Product Chemical \u0026 Physical Release Analysis"
+          }
+        ],
+        "events": [
+          {
+            "event_type": "InspectionPlanCreated"
+          },
+          {
+            "event_type": "InspectionPlanChanged"
+          }
+        ]
+      },
+      "inspection_parameter": {
+        "parameter_id": "PARAM-ASSAY-01",
+        "Material_id": "000000000210250096",
+        "Plant_id": "EP04",
+        "inspection_type": "FINAL_RELEASE",
+        "inspection_parameter": "Metformin HCl Content by HPLC",
+        "parameter_value": "99.8",
+        "UOM": "%",
+        "status": "ACTIVE",
+        "events": [
+          {
+            "event_type": "InspectionParameterAssigned"
+          },
+          {
+            "event_type": "InspectionParameterChanged"
+          }
+        ]
+      },
+      "quality_inspection_lot": {
+        "inspection_lot_id": "08000014001",
+        "Material_id": "000000000210250096",
+        "Batch_id": "PF05043",
+        "Plant_id": "EP04",
+        "inspection_origin": "08_PRODUCTION_RELEASE",
+        "quantity": 104.034,
+        "Creation_date": "2010-02-02",
+        "inspection_start_date": "2010-02-02",
+        "inspection_completion_date": "2010-02-02",
+        "status": "COMPLETED",
+        "events": [
+          {
+            "event_type": "InspectionLotCreated"
+          },
+          {
+            "event_type": "InspectionStarted"
+          },
+          {
+            "event_type": "InspectionCompleted"
+          },
+          {
+            "event_type": "InspectionLotStatusChanged"
+          }
+        ]
+      },
+      "sampling": {
+        "Sample_id": "SMP-08000014001-01",
+        "inspection_lot_id": "08000014001",
+        "Material_id": "000000000210250096",
+        "Batch_id": "PF05043",
+        "sample_quantity": 0.5,
+        "sample_UOM": "KG",
+        "sample_date": "2010-02-02",
+        "status": "COMPLETED",
+        "events": [
+          {
+            "event_type": "SampleCreated"
+          },
+          {
+            "event_type": "SampleCollected"
+          },
+          {
+            "event_type": "SampleUpdated"
+          },
+          {
+            "event_type": "SampleCompleted"
+          }
+        ]
+      },
+      "inspection_result": {
+        "inspection_result_id": "RES-08000014001-01",
+        "inspection_lot_id": "08000014001",
+        "sample_id": "SMP-08000014001-01",
+        "Material_id": "000000000210250096",
+        "batch_id": "PF05043",
+        "inspection_characteristic_id": "MIC-ASSAY-01",
+        "result_value": 99.8,
+        "UOM": "%",
+        "result_status": "PASSED",
+        "record_date": "2010-02-02",
+        "events": [
+          {
+            "event_type": "InspectionResultRecorded"
+          },
+          {
+            "event_type": "InspectionResultChanged"
+          }
+        ]
+      },
+      "usage_decision": {
+        "usage_decision_id": "UD-08000014001",
+        "inspection_lot_id": "08000014001",
+        "Material_id": "000000000210250096",
+        "Batch_id": "PF05043",
+        "Plant_id": "EP04",
+        "decision_code": "ACCEPT",
+        "desion_status": "APPROVED",
+        "decison_date": "2010-02-02",
+        "events": [
+          {
+            "event_type": "QualityDecisionRecorded"
+          },
+          {
+            "event_type": "QualityDecisionChanged"
+          }
+        ]
+      },
+      "customer_or_cfa": {
+        "Customer_id": "0000400860",
+        "customer_name": "Central Healthcare Distribution Services",
+        "customer_type": "INSTITUTIONAL_CUSTOMER",
+        "customer_group": "DISTRIBUTOR",
+        "country": "India",
+        "region": "Maharashtra",
+        "postal_code": "400012",
+        "address_id": "ADDR-CUST-01",
+        "email": "procurement@centralhealth.org",
+        "status": "ACTIVE",
+        "company_code": "1000",
+        "events": [
+          {
+            "event_type": "CustomerCreated"
+          },
+          {
+            "event_type": "CustomerUpdated"
+          }
+        ]
+      },
+      "sales_order": {
+        "sales_order_id": "1100809985",
+        "order_type": "STANDARD_SALES_ORDER",
+        "Customer_id": "0000400860",
+        "company_code": "1000",
+        "order_date": "2010-05-17",
+        "request_delivery_date": "2010-05-19",
+        "currency": "INR",
+        "status": "COMPLETED",
+        "events": [
+          {
+            "event_type": "SalesOrderCreated"
+          },
+          {
+            "event_type": "SalesOrderChanged"
+          },
+          {
+            "event_type": "SalesOrderConfirmed"
+          },
+          {
+            "event_type": "SalesOrderCompleted"
+          }
+        ]
+      },
+      "sales_order_item": {
+        "sales_order_id": "1100809985",
+        "item_id": "000010",
+        "Material_id": "000000000210250096",
+        "ordered_quantity": 100,
+        "UOM": "KG",
+        "requested_delevery_date": "2010-05-19",
+        "confirmed_quantity": 100,
+        "confirmed_delevery_date": "2010-05-19",
+        "status": "CONFIRMED",
+        "events": [
+          {
+            "event_type": "SalesOrderItemAdded"
+          },
+          {
+            "event_type": "QuantityChanged"
+          },
+          {
+            "event_type": "ItemConfirmed"
+          }
+        ]
+      },
+      "sales_batch_allocation": {
+        "sales_order_id": "1100809985",
+        "sales_order_item_id": "000010",
+        "delivery_id": "2100084439",
+        "delivery_item_id": "900055",
+        "Material_id": "000000000210250096",
+        "Batch_id": "PF05043",
+        "allocated_status": "CONFIRMED",
+        "events": [
+          {
+            "event_type": "BatchAllocated"
+          },
+          {
+            "event_type": "BatchAllocationChanged"
+          },
+          {
+            "event_type": "BatchAllocationConfirmed"
+          }
+        ]
+      },
+      "outbound_delivery": {
+        "delivery_id": "2100084439",
+        "sales_order_id": "1100809985",
+        "customer_id": "0000400860",
+        "delivery_type": "STANDARD_OUTBOUND",
+        "delivery_date": "2010-05-19",
+        "planned_goods_issue_date": "2010-05-19",
+        "actual_goods_issue_date": "2010-05-19",
+        "status": "COMPLETED",
+        "events": [
+          {
+            "event_type": "DeliveryCreated"
+          },
+          {
+            "event_type": "DeliveryReleased"
+          },
+          {
+            "event_type": "DeliveryPicked"
+          },
+          {
+            "event_type": "DeliveryShipped"
+          },
+          {
+            "event_type": "DeliveryCompleted"
+          }
+        ]
+      },
+      "delivery_item": {
+        "delivery_id": "2100084439",
+        "item_id": "900055",
+        "sales_order_id": "1100809985",
+        "sales_order_item_id": "000010",
+        "Material_id": "000000000210250096",
+        "Batch_id": "PF05043",
+        "delivery_quantity": 104.034,
+        "UOM": "KG",
+        "plant_id": "EP04",
+        "storage_location_id": "SFS",
+        "status": "DELIVERED",
+        "events": [
+          {
+            "event_type": "DeliveryItemCreated"
+          },
+          {
+            "event_type": "BatchAssigned"
+          },
+          {
+            "event_type": "ItemPicked"
+          },
+          {
+            "event_type": "ItemShipped"
+          },
+          {
+            "event_type": "ItemDelivered"
+          }
+        ]
+      },
+      "billing_document": {
+        "billing_document_id": "5402100863",
+        "billing_type": "INVOICE",
+        "coustomer_id": "0000400860",
+        "sales_order_id": "1100809985",
+        "delivery_id": "2100084439",
+        "billing_date": "2010-05-19",
+        "currency": "INR",
+        "net_value": 100000,
+        "tax_value": 18000,
+        "gross_value": 118000,
+        "status": "POSTED",
+        "events": [
+          {
+            "event_type": "InvoiceCreated"
+          },
+          {
+            "event_type": "InvoicePosted"
+          }
+        ]
+      },
+      "sales_return": {
+        "return_id": null,
+        "sales_order_id": "1100809985",
+        "sales_order_item_id": "000010",
+        "delivery_id": "2100084439",
+        "delivery_item_id": "900055",
+        "billing_document_id": "5402100863",
+        "customer_id": "0000400860",
+        "Material_id": "000000000210250096",
+        "batch_id": "PF05043",
+        "return_quantity": null,
+        "UOM": "KG",
+        "return_date": null,
+        "status": "NO_RETURN",
+        "events": []
+      },
+      "semifinished_stage": {
+        "process_order_id": "4000000004001",
+        "order_type": "EOBK",
+        "material_id": "000000000210250095",
+        "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+        "batch_id": "PF05043-CORE",
+        "batch_type": "SEMI_FINISHED_BATCH",
+        "plant_id": "EP04",
+        "status": "CLOSED",
+        "planned_quantity": 105.07434,
+        "uom": "KG",
+        "input_batches": [
+          "RM-MET-05043"
+        ],
+        "output_batches": [
+          "PF05043-CORE"
+        ],
+        "batch_transformation": {
+          "transformation_id": "TRANS-SFG-001",
+          "process_order_id": "4000000004001",
+          "input_batch_id": "RM-MET-05043",
+          "output_batch_id": "PF05043-CORE",
+          "Material_id": "000000000210250095",
+          "transformation_type": "GRANULATION_AND_COMPRESSION",
+          "quantity": 105.07434,
+          "UOM": "KG",
+          "status": "COMPLETED",
+          "input_batches": [
+            "RM-MET-05043"
+          ],
+          "output_batches": [
+            "PF05043-CORE"
+          ],
+          "consumed_batches": [
+            {
+              "batch_id": "RM-MET-05043",
+              "material_id": "000000000110000711",
+              "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+              "stage": "RAW_MATERIAL_API",
+              "consumed_quantity": 105.07434,
+              "uom": "KG"
+            }
+          ],
+          "produced_product": {
+            "batch_id": "PF05043-CORE",
+            "material_id": "000000000210250095",
+            "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+            "stage": "SEMI_FINISHED_CORE",
+            "produced_quantity": 105.07434,
+            "uom": "KG"
+          },
+          "events": [
+            {
+              "event_type": "BatchTransformationCreated"
+            },
+            {
+              "event_type": "BatchTransformationCompleted"
+            }
+          ]
+        },
+        "material_consumption": {
+          "Material_document_id": "MATDOC-261-001",
+          "material_document_year": "2010",
+          "process_order_id": "4000000004001",
+          "Batch_id": "RM-MET-05043",
+          "Plant_id": "EP04",
+          "storage_location_id": "RMS",
+          "consumed_quantity": 105.07434,
+          "UOM": "KG",
+          "posting_date": "2010-01-22",
+          "movement_type": "261",
+          "status": "POSTED",
+          "events": [
+            {
+              "event_type": "MaterialConsumptionPosted"
+            }
+          ]
+        },
+        "production_confirmation": {
+          "confermation_id": "CONF-400000000846-01",
+          "process_order_id": "4000000004001",
+          "operation_id": "OP-0010",
+          "work_center_id": "WC-GRAN-01",
+          "confirmed_quantity": 105.07434,
+          "UOM": "KG",
+          "Confirmation_date": "2010-02-01",
+          "confirmation_time": "16:00:00",
+          "status": "CONFIRMED",
+          "events": [
+            {
+              "event_type": "ProductionConfirmationRecorded"
+            },
+            {
+              "event_type": "OperationCompleted"
+            }
+          ]
+        },
+        "yield": {
+          "Process_order_id": "4000000004001",
+          "master_id": "000000000210250095",
+          "Batch_id": "PF05043-CORE",
+          "material_document_id": "YLD-400000000846",
+          "yield_quantity": 104.5,
+          "scrap_quantity": 0.5,
+          "UOM": "KG",
+          "posting_date": "2010-02-01",
+          "status": "POSTED",
+          "events": [
+            {
+              "event_type": "YieldRecorded"
+            }
+          ]
+        }
+      },
+      "direct_raw_material_flow": {
+        "material": {
+          "material_id": "000000000110000711",
+          "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+          "material_type": "RAW_MATERIAL",
+          "plant_id": "EP04",
+          "UOM": "KG",
+          "status": "ACTIVE",
+          "events": [
+            {
+              "event_type": "MaterialCreated"
+            },
+            {
+              "event_type": "MaterialUpdated"
+            },
+            {
+              "event_type": "MaterialUnblocked"
+            }
+          ]
+        },
+        "batch": {
+          "batch_id": "RM-MET-05043",
+          "material_id": "000000000110000711",
+          "batch_type": "RAW_MATERIAL",
+          "Plant_id": "EP04",
+          "Manufacturing_date": "2010-01-16",
+          "expiery_date": "2014-01-15",
+          "status": "Received",
+          "events": [
+            {
+              "event_type": "ProductionBatchCreated"
+            },
+            {
+              "event_type": "ProductionBatchUpdated"
+            },
+            {
+              "event_type": "BatchReceived"
+            }
+          ]
+        },
+        "supplier_or_source": {
+          "Supplier_or_Source_id": "0000400860",
+          "Source_Name": "Aarti Drugs Limited - Active Pharma Ingredients",
+          "Source_type": "APPROVED_VENDOR",
+          "Country": "India",
+          "region": "Maharashtra",
+          "postal_code": "400001",
+          "address_id": "ADDR-0000400860",
+          "email": "supply@pharma-vendor.com",
+          "status": "ACTIVE",
+          "Company_code": "1000",
+          "valid": true,
+          "events": [
+            {
+              "event_type": "SupplierSourceCreated"
+            },
+            {
+              "event_type": "SupplierSourceUpdated"
+            }
+          ]
+        },
+        "purchase_requisition": {
+          "purchase_requisition_id": "1000037529",
+          "item_id": "0010",
+          "Material_id": "000000000110000711",
+          "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+          "Plant_id": "EP04",
+          "requested_quantity": 110,
+          "UOM": "KG",
+          "requested_delivery_date": "2010-01-12",
+          "events": [
+            {
+              "event_type": "PurchaseRequisitionCreated"
+            },
+            {
+              "event_type": "PurchaseRequisitionUpdated"
+            },
+            {
+              "event_type": "PurchaseRequisitionReleased"
+            }
+          ]
+        },
+        "purchase_order": {
+          "purchase_order_id": "4500012345",
+          "Supplier_or_Source_id": "0000400860",
+          "Company_code": "1000",
+          "order_date": "2010-01-05",
+          "document_type": "STANDARD_PO",
+          "item": {
+            "item_id": "0010",
+            "material_id": "000000000110000711",
+            "description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+            "order_quantity": 110,
+            "plant_id": "EP04",
+            "storage_location_id": "RMS",
+            "delevery_date": "2010-01-15",
+            "UOM": "KG"
+          },
+          "events": [
+            {
+              "event_type": "PurchaseOrderCreated"
+            },
+            {
+              "event_type": "PurchaseOrderUpdated"
+            },
+            {
+              "event_type": "PurchaseOrderReleased"
+            }
+          ]
+        },
+        "material_movement": {
+          "material_document_id": "5000012345",
+          "material_document_year": "2010",
+          "movement_type": "101",
+          "Material_id": "000000000110000711",
+          "Batch_id": "RM-MET-05043",
+          "stroage_location": "RMS",
+          "quantity": 110,
+          "UOM": "KG",
+          "posting_date": "2010-01-16",
+          "document_date": "2010-01-16",
+          "reference_document_id": "",
+          "purchase_order_id": "4500012345",
+          "process_order_id": null,
+          "events": [
+            {
+              "event_type": "GoodsReceiptPosted"
+            },
+            {
+              "event_type": "BatchReceived"
+            }
+          ]
+        },
+        "inventory_stock": {
+          "Material_id": "000000000110000711",
+          "Plant_id": "EP04",
+          "stroage_location": "RMS",
+          "UOM": "KG",
+          "stock_status": "Unrestricted",
+          "batch_id": "RM-MET-05043",
+          "stock_quantity": 109.232,
+          "unrestricted": 109.232,
+          "events": [
+            {
+              "event_type": "StockIncreased"
+            },
+            {
+              "event_type": "StockDecreased"
+            },
+            {
+              "event_type": "StockStatusChanged"
+            }
+          ]
+        },
+        "quality_inspection_lot": {
+          "inspection_lot_id": "0100004500012345",
+          "Material_id": "000000000110000711",
+          "Batch_id": "RM-MET-05043",
+          "Plant_id": "EP04",
+          "inspection_origin": "01_GOODS_RECEIPT",
+          "quantity": 110,
+          "Creation_date": "2010-01-16",
+          "inspection_start_date": "2010-01-16",
+          "inspection_completion_date": "2010-01-17",
+          "status": "COMPLETED",
+          "events": [
+            {
+              "event_type": "InspectionLotCreated"
+            },
+            {
+              "event_type": "QualityLotReleased"
+            }
+          ]
+        },
+        "sampling": {
+          "Sample_id": "SMP-RM-MET-05043-01",
+          "inspection_lot_id": "0100004500012345",
+          "Material_id": "000000000110000711",
+          "Batch_id": "RM-MET-05043",
+          "sample_quantity": 0.5,
+          "sample_UOM": "KG",
+          "sample_date": "2010-01-16",
+          "status": "SAMPLE_DRAWN_AND_ANALYZED",
+          "events": [
+            {
+              "event_type": "SampleDrawn"
+            },
+            {
+              "event_type": "SampleConfirmed"
+            }
+          ]
+        },
+        "inspection_result": {
+          "inspection_result_id": "RES-0100004500012345-01",
+          "inspection_lot_id": "0100004500012345",
+          "sample_id": "SMP-RM-MET-05043-01",
+          "Material_id": "000000000110000711",
+          "batch_id": "RM-MET-05043",
+          "inspection_characteristic_id": "CHAR-ASSAY-API",
+          "result_value": 99.8,
+          "UOM": "%",
+          "result_status": "PASSED",
+          "record_date": "2010-01-17",
+          "events": [
+            {
+              "event_type": "InspectionResultRecorded"
+            },
+            {
+              "event_type": "InspectionResultApproved"
+            }
+          ]
+        },
+        "usage_decision": {
+          "usage_decision_id": "UD-0100004500012345",
+          "inspection_lot_id": "0100004500012345",
+          "Material_id": "000000000110000711",
+          "Batch_id": "RM-MET-05043",
+          "Plant_id": "EP04",
+          "decision_code": "A",
+          "desion_status": "ACCEPTED",
+          "decison_date": "2010-01-18",
+          "events": [
+            {
+              "event_type": "UsageDecisionMade"
+            },
+            {
+              "event_type": "QualityDecisionRecorded"
+            }
+          ]
+        },
+        "reservation": {
+          "reservation_id": "2000029081",
+          "item_id": "0002",
+          "Material_id": "000000000110000711",
+          "Plant_id": "EP04",
+          "storage_location": "RMS",
+          "reservation_quantity": 0.768,
+          "UOM": "KG",
+          "requirement_date": "2010-02-02",
+          "movement_type": "261",
+          "process_order_id": "400000000643",
+          "events": [
+            {
+              "event_type": "ReservationCreated"
+            },
+            {
+              "event_type": "ReservationReleased"
+            }
+          ]
+        },
+        "batch_determination": {
+          "determination_id": "BD-400000000643-02",
+          "Material_id": "000000000110000711",
+          "Batch_id": "RM-MET-05043",
+          "process_order_id": "400000000643",
+          "quantity": 0.768,
+          "UOM": "KG",
+          "status": "ALLOCATED",
+          "events": [
+            {
+              "event_type": "BatchDetermined"
+            },
+            {
+              "event_type": "BatchAssigned"
+            }
+          ]
+        },
+        "material_consumption": {
+          "Material_document_id": "4900000004",
+          "material_document_year": "2025",
+          "process_order_id": "400000000643",
+          "Batch_id": "RM-MET-05043",
+          "Plant_id": "EP04",
+          "storage_location_id": "RMS",
+          "consumed_quantity": 0.768,
+          "UOM": "KG",
+          "posting_date": "2010-02-02",
+          "movement_type": "261",
+          "status": "Issued",
+          "events": [
+            {
+              "event_type": "MaterialConsumptionPosted"
+            },
+            {
+              "event_type": "MaterialConsumptionAdjusted"
+            }
+          ]
+        },
+        "process_order": {
+          "process_order_id": "400000000643",
+          "order_type": "EOBK",
+          "Material_id": "000000000210250096",
+          "Plant_id": "EP04",
+          "planned_id": "",
+          "planned_quantity": 104.034,
+          "UOM": "KG",
+          "basic_start_date": "2010-02-02",
+          "basic_finish_date": "2010-02-02",
+          "actual_start_date": "",
+          "actual_finish_date": "",
+          "status": "CLOSED",
+          "production_version_id": "",
+          "input_batches": [
+            "RM-MET-05043"
+          ],
+          "output_batches": [
+            "PF05043"
+          ],
+          "consumed_batches": [
+            {
+              "batch_id": "RM-MET-05043",
+              "material_id": "000000000110000711",
+              "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+              "stage": "RAW_MATERIAL_INPUT",
+              "consumed_quantity": 0.768,
+              "uom": "KG"
+            }
+          ],
+          "produced_product": {
+            "batch_id": "PF05043",
+            "material_id": "000000000210250096",
+            "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+            "stage": "FINISHED_PRODUCT",
+            "produced_quantity": 104.034,
+            "uom": "KG"
+          },
+          "events": [
+            {
+              "event_type": "ProcessOrderCreated"
+            },
+            {
+              "event_type": "ProcessOrderReleased"
+            },
+            {
+              "event_type": "ProcessOrderClosed"
+            }
+          ]
+        },
+        "batch_transformation": {
+          "transformation_id": "TRANS-RM-MET-05043",
+          "process_order_id": "400000000643",
+          "input_batch_id": "RM-MET-05043",
+          "output_batch_id": "PF05043",
+          "Material_id": "000000000210250096",
+          "transformation_type": "MANUFACTURING_PROCESS_ORDER_CONSUMPTION",
+          "quantity": 104.034,
+          "UOM": "KG",
+          "status": "COMPLETED",
+          "input_batches": [
+            "RM-MET-05043"
+          ],
+          "output_batches": [
+            "PF05043"
+          ],
+          "events": [
+            {
+              "event_type": "BatchTransformationCreated"
+            },
+            {
+              "event_type": "BatchTransformationCompleted"
+            }
+          ]
+        },
+        "finished_product_output": {
+          "batch_id": "PF05043",
+          "material_id": "000000000210250096",
+          "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+          "stage": "FINISHED_PRODUCT_OUTPUT",
+          "produced_quantity": 104.034,
+          "uom": "KG"
+        },
+        "sales_order": {
+          "sales_order_id": "1100809985",
+          "order_type": "TA",
+          "Customer_id": "0000400860",
+          "company_code": "1000",
+          "order_date": "2010-02-15",
+          "request_delivery_date": "2010-02-18",
+          "currency": "INR",
+          "status": "COMPLETE",
+          "events": null
+        },
+        "outbound_delivery": {
+          "delivery_id": "2100084439",
+          "sales_order_id": "1100809985",
+          "customer_id": "0000400860",
+          "delivery_type": "LF",
+          "delivery_date": "2010-02-18",
+          "planned_goods_issue_date": "2010-02-18",
+          "actual_goods_issue_date": "2010-02-18",
+          "status": "COMPLETED",
+          "events": null
+        },
+        "billing_document": {
+          "billing_document_id": "5402100863",
+          "billing_type": "F2",
+          "coustomer_id": "0000400860",
+          "sales_order_id": "1100809985",
+          "delivery_id": "2100084439",
+          "billing_date": "2010-02-20",
+          "currency": "INR",
+          "net_value": 100000,
+          "tax_value": 18000,
+          "gross_value": 118000,
+          "status": "PAID",
+          "events": null
+        },
+        "customer_or_cfa": {
+          "Customer_id": "0000400860",
+          "customer_name": "Apollo Hospitals Enterprise Ltd - Central Pharmacy",
+          "customer_type": "PHARMACEUTICAL_HOSPITAL_CHAIN",
+          "customer_group": "DOMESTIC_HEALTHCARE",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "postal_code": "600006",
+          "address_id": "ADDR-CUST-400860",
+          "email": "procurement@apollohospitals.com",
+          "status": "ACTIVE",
+          "company_code": "1000",
+          "events": null
+        },
+        "storage_location": {
+          "storage_location_id": "RMS",
+          "description": "Raw Material Store \u0026 Active Ingredient Holding"
+        },
+        "plant": {
+          "plant_id": "EP04",
+          "plant_name": "Active Pharmaceutical Ingredient Formulation Unit EP04"
+        }
+      },
+      "coating_raw_material_flow": {
+        "material": {
+          "material_id": "000000000110000714",
+          "material_description": "OPADRY FILM COATING SUSPENSION IP/USP (COATING RAW MATERIAL)",
+          "material_type": "RAW_MATERIAL",
+          "plant_id": "EP04",
+          "UOM": "KG",
+          "status": "ACTIVE",
+          "events": [
+            {
+              "event_type": "MaterialCreated"
+            },
+            {
+              "event_type": "MaterialUpdated"
+            },
+            {
+              "event_type": "MaterialUnblocked"
+            }
+          ]
+        },
+        "batch": {
+          "batch_id": "RM-COAT-05043",
+          "material_id": "000000000110000714",
+          "batch_type": "RAW_MATERIAL",
+          "Plant_id": "EP04",
+          "Manufacturing_date": "2010-01-16",
+          "expiery_date": "2014-01-15",
+          "status": "Received",
+          "events": [
+            {
+              "event_type": "ProductionBatchCreated"
+            },
+            {
+              "event_type": "ProductionBatchUpdated"
+            },
+            {
+              "event_type": "BatchReceived"
+            }
+          ]
+        },
+        "supplier_or_source": {
+          "Supplier_or_Source_id": "0000400865",
+          "Source_Name": "Colorcon Asia Pvt Ltd - Coating Systems",
+          "Source_type": "APPROVED_VENDOR",
+          "Country": "India",
+          "region": "Maharashtra",
+          "postal_code": "400001",
+          "address_id": "ADDR-0000400865",
+          "email": "supply@pharma-vendor.com",
+          "status": "ACTIVE",
+          "Company_code": "1000",
+          "valid": true,
+          "events": [
+            {
+              "event_type": "SupplierSourceCreated"
+            },
+            {
+              "event_type": "SupplierSourceUpdated"
+            }
+          ]
+        },
+        "purchase_requisition": {
+          "purchase_requisition_id": "1000037529",
+          "item_id": "0010",
+          "Material_id": "000000000110000714",
+          "material_description": "OPADRY FILM COATING SUSPENSION IP/USP (COATING RAW MATERIAL)",
+          "Plant_id": "EP04",
+          "requested_quantity": 110,
+          "UOM": "KG",
+          "requested_delivery_date": "2010-01-12",
+          "events": [
+            {
+              "event_type": "PurchaseRequisitionCreated"
+            },
+            {
+              "event_type": "PurchaseRequisitionUpdated"
+            },
+            {
+              "event_type": "PurchaseRequisitionReleased"
+            }
+          ]
+        },
+        "purchase_order": {
+          "purchase_order_id": "4500012480",
+          "Supplier_or_Source_id": "0000400865",
+          "Company_code": "1000",
+          "order_date": "2010-01-05",
+          "document_type": "STANDARD_PO",
+          "item": {
+            "item_id": "0010",
+            "material_id": "000000000110000714",
+            "description": "OPADRY FILM COATING SUSPENSION IP/USP (COATING RAW MATERIAL)",
+            "order_quantity": 110,
+            "plant_id": "EP04",
+            "storage_location_id": "RMS",
+            "delevery_date": "2010-01-15",
+            "UOM": "KG"
+          },
+          "events": [
+            {
+              "event_type": "PurchaseOrderCreated"
+            },
+            {
+              "event_type": "PurchaseOrderUpdated"
+            },
+            {
+              "event_type": "PurchaseOrderReleased"
+            }
+          ]
+        },
+        "material_movement": {
+          "material_document_id": "5000012480",
+          "material_document_year": "2010",
+          "movement_type": "101",
+          "Material_id": "000000000110000714",
+          "Batch_id": "RM-COAT-05043",
+          "stroage_location": "RMS",
+          "quantity": 110,
+          "UOM": "KG",
+          "posting_date": "2010-01-16",
+          "document_date": "2010-01-16",
+          "reference_document_id": "",
+          "purchase_order_id": "4500012480",
+          "process_order_id": null,
+          "events": [
+            {
+              "event_type": "GoodsReceiptPosted"
+            },
+            {
+              "event_type": "BatchReceived"
+            }
+          ]
+        },
+        "inventory_stock": {
+          "Material_id": "000000000110000714",
+          "Plant_id": "EP04",
+          "stroage_location": "RMS",
+          "UOM": "KG",
+          "stock_status": "Unrestricted",
+          "batch_id": "RM-COAT-05043",
+          "stock_quantity": 109.466,
+          "unrestricted": 109.466,
+          "events": [
+            {
+              "event_type": "StockIncreased"
+            },
+            {
+              "event_type": "StockDecreased"
+            },
+            {
+              "event_type": "StockStatusChanged"
+            }
+          ]
+        },
+        "quality_inspection_lot": {
+          "inspection_lot_id": "0100004500012480",
+          "Material_id": "000000000110000714",
+          "Batch_id": "RM-COAT-05043",
+          "Plant_id": "EP04",
+          "inspection_origin": "01_GOODS_RECEIPT",
+          "quantity": 110,
+          "Creation_date": "2010-01-16",
+          "inspection_start_date": "2010-01-16",
+          "inspection_completion_date": "2010-01-17",
+          "status": "COMPLETED",
+          "events": [
+            {
+              "event_type": "InspectionLotCreated"
+            },
+            {
+              "event_type": "QualityLotReleased"
+            }
+          ]
+        },
+        "sampling": {
+          "Sample_id": "SMP-RM-COAT-05043-01",
+          "inspection_lot_id": "0100004500012480",
+          "Material_id": "000000000110000714",
+          "Batch_id": "RM-COAT-05043",
+          "sample_quantity": 0.5,
+          "sample_UOM": "KG",
+          "sample_date": "2010-01-16",
+          "status": "SAMPLE_DRAWN_AND_ANALYZED",
+          "events": [
+            {
+              "event_type": "SampleDrawn"
+            },
+            {
+              "event_type": "SampleConfirmed"
+            }
+          ]
+        },
+        "inspection_result": {
+          "inspection_result_id": "RES-0100004500012480-01",
+          "inspection_lot_id": "0100004500012480",
+          "sample_id": "SMP-RM-COAT-05043-01",
+          "Material_id": "000000000110000714",
+          "batch_id": "RM-COAT-05043",
+          "inspection_characteristic_id": "CHAR-ASSAY-API",
+          "result_value": 99.8,
+          "UOM": "%",
+          "result_status": "PASSED",
+          "record_date": "2010-01-17",
+          "events": [
+            {
+              "event_type": "InspectionResultRecorded"
+            },
+            {
+              "event_type": "InspectionResultApproved"
+            }
+          ]
+        },
+        "usage_decision": {
+          "usage_decision_id": "UD-0100004500012480",
+          "inspection_lot_id": "0100004500012480",
+          "Material_id": "000000000110000714",
+          "Batch_id": "RM-COAT-05043",
+          "Plant_id": "EP04",
+          "decision_code": "A",
+          "desion_status": "ACCEPTED",
+          "decison_date": "2010-01-18",
+          "events": [
+            {
+              "event_type": "UsageDecisionMade"
+            },
+            {
+              "event_type": "QualityDecisionRecorded"
+            }
+          ]
+        },
+        "reservation": {
+          "reservation_id": "RES-COAT-001",
+          "item_id": "0002",
+          "Material_id": "000000000110000714",
+          "Plant_id": "EP04",
+          "storage_location": "RMS",
+          "reservation_quantity": 0.534,
+          "UOM": "KG",
+          "requirement_date": "2010-02-02",
+          "movement_type": "261",
+          "process_order_id": "400000014001",
+          "events": [
+            {
+              "event_type": "ReservationCreated"
+            },
+            {
+              "event_type": "ReservationReleased"
+            }
+          ]
+        },
+        "batch_determination": {
+          "determination_id": "BD-400000014001-02",
+          "Material_id": "000000000110000714",
+          "Batch_id": "RM-COAT-05043",
+          "process_order_id": "400000014001",
+          "quantity": 0.534,
+          "UOM": "KG",
+          "status": "ALLOCATED",
+          "events": [
+            {
+              "event_type": "BatchDetermined"
+            },
+            {
+              "event_type": "BatchAssigned"
+            }
+          ]
+        },
+        "material_consumption": {
+          "Material_document_id": "4900000007",
+          "material_document_year": "2025",
+          "process_order_id": "400000014001",
+          "Batch_id": "RM-COAT-05043",
+          "Plant_id": "EP04",
+          "storage_location_id": "RMS",
+          "consumed_quantity": 0.534,
+          "UOM": "KG",
+          "posting_date": "2010-02-02",
+          "movement_type": "261",
+          "status": "Issued",
+          "events": [
+            {
+              "event_type": "MaterialConsumptionPosted"
+            },
+            {
+              "event_type": "MaterialConsumptionAdjusted"
+            }
+          ]
+        },
+        "process_order": {
+          "process_order_id": "400000014001",
+          "order_type": "EOBK",
+          "Material_id": "000000000210250096",
+          "Plant_id": "EP04",
+          "planned_id": "",
+          "planned_quantity": 104.034,
+          "UOM": "KG",
+          "basic_start_date": "2010-02-02",
+          "basic_finish_date": "2010-02-02",
+          "actual_start_date": "",
+          "actual_finish_date": "",
+          "status": "CLOSED",
+          "production_version_id": "",
+          "input_batches": [
+            "RM-COAT-05043"
+          ],
+          "output_batches": [
+            "PF05043"
+          ],
+          "consumed_batches": [
+            {
+              "batch_id": "RM-COAT-05043",
+              "material_id": "000000000110000714",
+              "material_description": "OPADRY FILM COATING SUSPENSION IP/USP (COATING RAW MATERIAL)",
+              "stage": "RAW_MATERIAL_INPUT",
+              "consumed_quantity": 0.534,
+              "uom": "KG"
+            }
+          ],
+          "produced_product": {
+            "batch_id": "PF05043",
+            "material_id": "000000000210250096",
+            "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+            "stage": "FINISHED_PRODUCT",
+            "produced_quantity": 104.034,
+            "uom": "KG"
+          },
+          "events": [
+            {
+              "event_type": "ProcessOrderCreated"
+            },
+            {
+              "event_type": "ProcessOrderReleased"
+            },
+            {
+              "event_type": "ProcessOrderClosed"
+            }
+          ]
+        },
+        "batch_transformation": {
+          "transformation_id": "TRANS-RM-COAT-05043",
+          "process_order_id": "400000014001",
+          "input_batch_id": "RM-COAT-05043",
+          "output_batch_id": "PF05043",
+          "Material_id": "000000000210250096",
+          "transformation_type": "MANUFACTURING_PROCESS_ORDER_CONSUMPTION",
+          "quantity": 104.034,
+          "UOM": "KG",
+          "status": "COMPLETED",
+          "input_batches": [
+            "RM-COAT-05043"
+          ],
+          "output_batches": [
+            "PF05043"
+          ],
+          "events": [
+            {
+              "event_type": "BatchTransformationCreated"
+            },
+            {
+              "event_type": "BatchTransformationCompleted"
+            }
+          ]
+        },
+        "finished_product_output": {
+          "batch_id": "PF05043",
+          "material_id": "000000000210250096",
+          "material_description": "METFORMIN HCL TABLETS USP 500MG (FILM COATED)",
+          "stage": "FINISHED_PRODUCT_OUTPUT",
+          "produced_quantity": 104.034,
+          "uom": "KG"
+        },
+        "sales_order": {
+          "sales_order_id": "1100809985",
+          "order_type": "TA",
+          "Customer_id": "0000400860",
+          "company_code": "1000",
+          "order_date": "2010-02-15",
+          "request_delivery_date": "2010-02-18",
+          "currency": "INR",
+          "status": "COMPLETE",
+          "events": null
+        },
+        "outbound_delivery": {
+          "delivery_id": "2100084439",
+          "sales_order_id": "1100809985",
+          "customer_id": "0000400860",
+          "delivery_type": "LF",
+          "delivery_date": "2010-02-18",
+          "planned_goods_issue_date": "2010-02-18",
+          "actual_goods_issue_date": "2010-02-18",
+          "status": "COMPLETED",
+          "events": null
+        },
+        "billing_document": {
+          "billing_document_id": "5402100863",
+          "billing_type": "F2",
+          "coustomer_id": "0000400860",
+          "sales_order_id": "1100809985",
+          "delivery_id": "2100084439",
+          "billing_date": "2010-02-20",
+          "currency": "INR",
+          "net_value": 100000,
+          "tax_value": 18000,
+          "gross_value": 118000,
+          "status": "PAID",
+          "events": null
+        },
+        "customer_or_cfa": {
+          "Customer_id": "0000400860",
+          "customer_name": "Apollo Hospitals Enterprise Ltd - Central Pharmacy",
+          "customer_type": "PHARMACEUTICAL_HOSPITAL_CHAIN",
+          "customer_group": "DOMESTIC_HEALTHCARE",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "postal_code": "600006",
+          "address_id": "ADDR-CUST-400860",
+          "email": "procurement@apollohospitals.com",
+          "status": "ACTIVE",
+          "company_code": "1000",
+          "events": null
+        },
+        "storage_location": {
+          "storage_location_id": "RMS",
+          "description": "Raw Material Store \u0026 Active Ingredient Holding"
+        },
+        "plant": {
+          "plant_id": "EP04",
+          "plant_name": "Active Pharmaceutical Ingredient Formulation Unit EP04"
+        }
+      }
+    },
+    "relationships": [
+      {
+        "from": "Planning Requirement",
+        "to": "Planned Order",
+        "relationship": "PLANS_FOR",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "Planned Order",
+        "to": "Purchase Requisition",
+        "relationship": "CREATES_PROCUREMENT_REQUIREMENT",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "Purchase Requisition",
+        "to": "Purchase Order",
+        "relationship": "CONVERTED_TO",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "Purchase Order",
+        "to": "Material Movement",
+        "relationship": "RECEIVED_BY",
+        "join_fields": [
+          "purchase_order_id",
+          "reference_document_id"
+        ]
+      },
+      {
+        "from": "Material Movement",
+        "to": "Input Batch",
+        "relationship": "CREATES_OR_RECEIVES",
+        "join_fields": [
+          "material_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Input Batch",
+        "to": "Inventory / Stock",
+        "relationship": "STORED_IN",
+        "join_fields": [
+          "material_id",
+          "plant_id",
+          "storage_location"
+        ]
+      },
+      {
+        "from": "Reservation",
+        "to": "Process Order",
+        "relationship": "RESERVED_FOR",
+        "join_fields": [
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "Process Order",
+        "to": "BOM",
+        "relationship": "USES",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "Process Order",
+        "to": "Recipe",
+        "relationship": "USES",
+        "join_fields": [
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "Process Order",
+        "to": "Production Version",
+        "relationship": "USES",
+        "join_fields": [
+          "production_version_id"
+        ]
+      },
+      {
+        "from": "Batch Determination",
+        "to": "Material Consumption",
+        "relationship": "DETERMINES_BATCH_FOR_CONSUMPTION",
+        "join_fields": [
+          "batch_id",
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "Material Consumption",
+        "to": "Process Order",
+        "relationship": "CONSUMED_IN",
+        "join_fields": [
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "Material Consumption",
+        "to": "Input Batch",
+        "relationship": "CONSUMES",
+        "join_fields": [
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Process Order",
+        "to": "Production Confirmation",
+        "relationship": "CONFIRMED_BY",
+        "join_fields": [
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "Process Order",
+        "to": "Yield",
+        "relationship": "PRODUCES_YIELD",
+        "join_fields": [
+          "process_order_id"
+        ]
+      },
+      {
+        "from": "Input Batch",
+        "to": "Batch Transformation",
+        "relationship": "INPUT_BATCH",
+        "join_fields": [
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Batch Transformation",
+        "to": "Batch",
+        "relationship": "PRODUCES",
+        "join_fields": [
+          "output_batch_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Raw Material Batch",
+        "to": "Batch Transformation (Semi-Finished)",
+        "relationship": "TRANSFORMS_TO_SEMIFINISHED",
+        "join_fields": [
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Batch Transformation (Semi-Finished)",
+        "to": "Semi-Finished Batch",
+        "relationship": "PRODUCES_SEMIFINISHED_BATCH",
+        "join_fields": [
+          "output_batch_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Semi-Finished Batch",
+        "to": "Batch Transformation (Finished)",
+        "relationship": "TRANSFORMS_TO_FINISHED_PRODUCT",
+        "join_fields": [
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Batch",
+        "to": "Quality Inspection Lot",
+        "relationship": "INSPECTED_BY",
+        "join_fields": [
+          "batch_id",
+          "material_id",
+          "plant_id"
+        ]
+      },
+      {
+        "from": "Quality Inspection Lot",
+        "to": "Sampling",
+        "relationship": "SAMPLED_BY",
+        "join_fields": [
+          "inspection_lot_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Sampling",
+        "to": "Inspection Result",
+        "relationship": "PRODUCES_RESULT",
+        "join_fields": [
+          "sample_id",
+          "inspection_lot_id"
+        ]
+      },
+      {
+        "from": "Inspection Result",
+        "to": "Usage Decision",
+        "relationship": "SUPPORTS",
+        "join_fields": [
+          "inspection_lot_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Batch",
+        "to": "Sales Batch Allocation",
+        "relationship": "ALLOCATED_TO",
+        "join_fields": [
+          "batch_id",
+          "material_id"
+        ]
+      },
+      {
+        "from": "Sales Batch Allocation",
+        "to": "Delivery Item",
+        "relationship": "ALLOCATED_FOR",
+        "join_fields": [
+          "delivery_id",
+          "delivery_item_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Delivery Item",
+        "to": "Outbound Delivery",
+        "relationship": "PART_OF",
+        "join_fields": [
+          "delivery_id"
+        ]
+      },
+      {
+        "from": "Delivery Item",
+        "to": "Material Movement",
+        "relationship": "GOODS_ISSUE",
+        "join_fields": [
+          "batch_id",
+          "material_id"
+        ]
+      },
+      {
+        "from": "Outbound Delivery",
+        "to": "Billing Document",
+        "relationship": "BILLED_BY",
+        "join_fields": [
+          "delivery_id"
+        ]
+      },
+      {
+        "from": "Billing Document",
+        "to": "Customer or CFA",
+        "relationship": "BILLED_TO",
+        "join_fields": [
+          "coustomer_id"
+        ]
+      },
+      {
+        "from": "Customer or CFA",
+        "to": "Sales Return",
+        "relationship": "RETURNS",
+        "join_fields": [
+          "customer_id"
+        ]
+      },
+      {
+        "from": "Sales Return",
+        "to": "Batch",
+        "relationship": "RETURNS_BATCH",
+        "join_fields": [
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Raw Material Supplier",
+        "to": "Raw Material Purchase Order",
+        "relationship": "PURCHASED_FROM",
+        "join_fields": [
+          "vendor_id"
+        ]
+      },
+      {
+        "from": "Raw Material Purchase Order",
+        "to": "Raw Material Goods Receipt (101)",
+        "relationship": "RECEIVED_INTO_STOCK",
+        "join_fields": [
+          "purchase_order_id",
+          "material_document_id"
+        ]
+      },
+      {
+        "from": "Raw Material Goods Receipt (101)",
+        "to": "Raw Material Batch",
+        "relationship": "RECEIVES_BATCH",
+        "join_fields": [
+          "batch_id",
+          "material_id"
+        ]
+      },
+      {
+        "from": "Raw Material Batch",
+        "to": "Raw Material Quality Inspection",
+        "relationship": "INSPECTED_BY",
+        "join_fields": [
+          "batch_id",
+          "inspection_lot_id"
+        ]
+      },
+      {
+        "from": "Raw Material Batch",
+        "to": "Raw Material Stock (RMS)",
+        "relationship": "STORED_IN",
+        "join_fields": [
+          "material_id",
+          "plant_id",
+          "storage_location"
+        ]
+      },
+      {
+        "from": "Raw Material Stock (RMS)",
+        "to": "Raw Material Reservation",
+        "relationship": "RESERVED_FROM_STOCK",
+        "join_fields": [
+          "reservation_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Raw Material Reservation",
+        "to": "Raw Material Consumption (261)",
+        "relationship": "CONSUMED_VIA_RESERVATION",
+        "join_fields": [
+          "reservation_id",
+          "reservation_item_id",
+          "material_document_id"
+        ]
+      },
+      {
+        "from": "Raw Material Consumption (261)",
+        "to": "Process Order",
+        "relationship": "CONSUMED_IN_FINISHED_PROCESS_ORDER",
+        "join_fields": [
+          "process_order_id",
+          "batch_id",
+          "material_id"
+        ]
+      },
+      {
+        "from": "Coating Supplier",
+        "to": "Coating Purchase Order",
+        "relationship": "PURCHASED_FROM",
+        "join_fields": [
+          "vendor_id"
+        ]
+      },
+      {
+        "from": "Coating Purchase Order",
+        "to": "Coating Goods Receipt (101)",
+        "relationship": "RECEIVED_INTO_STOCK",
+        "join_fields": [
+          "purchase_order_id",
+          "material_document_id"
+        ]
+      },
+      {
+        "from": "Coating Goods Receipt (101)",
+        "to": "Coating Raw Material Batch",
+        "relationship": "RECEIVES_BATCH",
+        "join_fields": [
+          "batch_id",
+          "material_id"
+        ]
+      },
+      {
+        "from": "Coating Raw Material Batch",
+        "to": "Coating Quality Inspection",
+        "relationship": "INSPECTED_BY",
+        "join_fields": [
+          "batch_id",
+          "inspection_lot_id"
+        ]
+      },
+      {
+        "from": "Coating Raw Material Batch",
+        "to": "Coating Stock (RMS)",
+        "relationship": "STORED_IN",
+        "join_fields": [
+          "material_id",
+          "plant_id",
+          "storage_location"
+        ]
+      },
+      {
+        "from": "Coating Stock (RMS)",
+        "to": "Coating Reservation",
+        "relationship": "RESERVED_FROM_STOCK",
+        "join_fields": [
+          "reservation_id",
+          "batch_id"
+        ]
+      },
+      {
+        "from": "Coating Reservation",
+        "to": "Coating Consumption (261)",
+        "relationship": "CONSUMED_VIA_RESERVATION",
+        "join_fields": [
+          "reservation_id",
+          "reservation_item_id",
+          "material_document_id"
+        ]
+      },
+      {
+        "from": "Coating Consumption (261)",
+        "to": "Process Order",
+        "relationship": "CO_CONSUMED_IN_FINISHED_PROCESS_ORDER",
+        "join_fields": [
+          "process_order_id",
+          "batch_id",
+          "material_id"
+        ]
+      }
+    ]
+  }
+}

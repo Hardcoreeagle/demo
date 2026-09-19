@@ -1,0 +1,11 @@
+﻿MANDT,SPRAS,ROUTE,BEZEI
+"000","D","",""
+"000","D","000001","Nordroute"
+"000","D","000002","Südroute"
+"000","D","000003","Ostroute"
+"000","D","000004","Westroute"
+"000","D","000012","Nord-Südroute"
+"000","D","000021","Süd-Nordroute"
+"000","D","000034","Ost-Westroute"
+"000","D","000043","West-Ostroute"
+"000","E","000001","Northern Route"

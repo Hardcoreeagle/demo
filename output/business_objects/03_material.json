@@ -1,0 +1,110 @@
+[
+  {
+    "material_id": "000000000110002173",
+    "material_description": "MICROCRYSTALLINE CELLULOSE PH-102 (EXCIPIENT)",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "MICROCRYSTALLINE CELLULOSE PH-102 (EXCIPIENT)"
+  },
+  {
+    "material_id": "000000000110002174",
+    "material_description": "POVIDONE K-30 BINDER USP/BP",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "POVIDONE K-30 BINDER USP/BP"
+  },
+  {
+    "material_id": "000000000110002175",
+    "material_description": "MAGNESIUM STEARATE LUBRICANT VEG",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "MAGNESIUM STEARATE LUBRICANT VEG"
+  },
+  {
+    "material_id": "000000000110002563",
+    "material_description": "OPADRY II WHITE FILM COATING SYSTEM",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "OPADRY II WHITE FILM COATING SYSTEM"
+  },
+  {
+    "material_id": "000000000110002564",
+    "material_description": "PHARMACEUTICAL FORMULATION MAT #110002564",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "PHARMACEUTICAL FORMULATION MAT #110002564"
+  },
+  {
+    "material_id": "000000000110003010",
+    "material_description": "PHARMACEUTICAL FORMULATION MAT #110003010",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "G",
+    "status": "Active",
+    "material_name": "PHARMACEUTICAL FORMULATION MAT #110003010"
+  },
+  {
+    "material_id": "000000000110010894",
+    "material_description": "PHARMACEUTICAL FORMULATION MAT #110010894",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "PHARMACEUTICAL FORMULATION MAT #110010894"
+  },
+  {
+    "material_id": "000000000110010896",
+    "material_description": "PHARMACEUTICAL FORMULATION MAT #110010896",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "PHARMACEUTICAL FORMULATION MAT #110010896"
+  },
+  {
+    "material_id": "000000000110010901",
+    "material_description": "PHARMACEUTICAL FORMULATION MAT #110010901",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "PHARMACEUTICAL FORMULATION MAT #110010901"
+  },
+  {
+    "material_id": "000000000110010902",
+    "material_description": "PHARMACEUTICAL FORMULATION MAT #110010902",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "PHARMACEUTICAL FORMULATION MAT #110010902"
+  },
+  {
+    "material_id": "000000000210250095",
+    "material_description": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+    "material_type": "HALB",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)"
+  },
+  {
+    "material_id": "000000000110000711",
+    "material_description": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)",
+    "material_type": "ROH",
+    "plant_id": "EP04",
+    "uom": "KG",
+    "status": "Active",
+    "material_name": "METFORMIN HYDROCHLORIDE IP/USP (API RAW MATERIAL)"
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "recipe_id": "10050078",
+    "material_id": "000000000210006216",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10050078-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10054265",
+    "material_id": "000000000210006372",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10054265-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10055533",
+    "material_id": "000000000210006372",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10055533-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061068",
+    "material_id": "000000000210006372",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061068-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061082",
+    "material_id": "000000000210006374",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061082-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061100",
+    "material_id": "000000000210006374",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061100-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061213",
+    "material_id": "000000000210006375",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061213-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061267",
+    "material_id": "000000000210006375",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061267-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061270",
+    "material_id": "000000000420004456",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061270-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "10061291",
+    "material_id": "000000000420004456",
+    "plant_id": "EP04",
+    "recipe_type": "Q",
+    "recipe_group": "01",
+    "recipe_status": "4",
+    "operations": [
+      {
+        "operation_id": "OP-10061291-0010",
+        "operation_number": "0010",
+        "operation_description": "Standard Pharmaceutical Batch Processing \u0026 Blending",
+        "work_center_id": "WC-PROD-01",
+        "control_key": "PI01",
+        "operation_quantity": 100,
+        "uom": "KG",
+        "operation_sequence": "0010"
+      }
+    ]
+  },
+  {
+    "recipe_id": "REC-210250095-01",
+    "material_id": "000000000210250095",
+    "plant_id": "EP04",
+    "recipe_type": "2",
+    "recipe_group": "01",
+    "recipe_status": "04",
+    "operations": [
+      {
+        "operation_id": "OP-0010",
+        "operation_number": "0010",
+        "operation_description": "High Shear Granulation and Drying",
+        "work_center_id": "WC-GRAN-01",
+        "control_key": "PI01",
+        "operation_quantity": 120,
+        "uom": "MIN",
+        "operation_sequence": ""
+      },
+      {
+        "operation_id": "OP-0020",
+        "operation_number": "0020",
+        "operation_description": "Rotary Tablet Compression (500mg Uncoated Core)",
+        "work_center_id": "WC-COMP-01",
+        "control_key": "PI01",
+        "operation_quantity": 180,
+        "uom": "MIN",
+        "operation_sequence": ""
+      }
+    ]
+  }
+]

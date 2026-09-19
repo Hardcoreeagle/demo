@@ -1,0 +1,112 @@
+[
+  {
+    "work_centre_id": "10000003",
+    "work_centre_name": "GRANUL",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000002",
+    "cost_centre": "CC-PROD-GRANUL",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000004",
+    "work_centre_name": "DRYING",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000003",
+    "cost_centre": "CC-PROD-DRYING",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000005",
+    "work_centre_name": "COMPRESS",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000004",
+    "cost_centre": "CC-PROD-COMPRESS",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000006",
+    "work_centre_name": "COATING",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000005",
+    "cost_centre": "CC-PROD-COATING",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000007",
+    "work_centre_name": "INSPECT",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000006",
+    "cost_centre": "CC-PROD-INSPECT",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000008",
+    "work_centre_name": "STRIP_PK",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000007",
+    "cost_centre": "CC-PROD-STRIP_PK",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000009",
+    "work_centre_name": "BLIST_PK",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000008",
+    "cost_centre": "CC-PROD-BLIST_PK",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000010",
+    "work_centre_name": "BTL_PK",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000009",
+    "cost_centre": "CC-PROD-BTL_PK",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000011",
+    "work_centre_name": "SEC_PKG",
+    "plant_id": "EP01",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000010",
+    "cost_centre": "CC-PROD-SEC_PKG",
+    "location": "PLANT-EP04-PROD"
+  },
+  {
+    "work_centre_id": "10000012",
+    "work_centre_name": "GRANUL",
+    "plant_id": "EP04",
+    "work_centre_category": "0008",
+    "valid_from": "2004-08-17",
+    "valid_to": "9999-12-31",
+    "capacity_id": "10000011",
+    "cost_centre": "CC-PROD-GRANUL",
+    "location": "PLANT-EP04-PROD"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "inspection_plan_id": "10050078",
+    "material_id": "000000000110002173",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "5",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10050078-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10054265",
+    "material_id": "000000000110002174",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10054265-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10055533",
+    "material_id": "000000000110002175",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10055533-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061068",
+    "material_id": "000000000110002563",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061068-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061082",
+    "material_id": "000000000110002564",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061082-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061100",
+    "material_id": "000000000110003010",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061100-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061213",
+    "material_id": "000000000110010894",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061213-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061267",
+    "material_id": "000000000110010896",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "5",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061267-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061270",
+    "material_id": "000000000110010901",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061270-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  },
+  {
+    "inspection_plan_id": "10061291",
+    "material_id": "000000000110010902",
+    "plant_id": "EP04",
+    "plan_group": "01",
+    "plan_usage": "7",
+    "status": "4",
+    "operations": [
+      {
+        "operation_id": "QOP-10061291-0010",
+        "operation_number": "0010",
+        "description": "Quality Analytical Testing \u0026 Chemical Assay",
+        "group": "01",
+        "work_center_id": "WC-QC-LAB-01",
+        "inspection_characteristic_id": "CHAR-QC-ASSAY-01"
+      }
+    ]
+  }
+]

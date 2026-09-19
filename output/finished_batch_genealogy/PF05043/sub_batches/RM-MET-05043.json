@@ -1,0 +1,311 @@
+{
+  "batch_id": "RM-MET-05043",
+  "material_id": "000000000110000711",
+  "material_description": "METFORMIN HCL RAW MATERIAL API 99.8%",
+  "plant_id": "EP04",
+  "batch_type": "RAW_MATERIAL",
+  "status": "Received",
+  "manufacturing_date": "2010-01-16",
+  "expiry_date": "2014-01-14",
+  "process_orders": [
+    {
+      "process_order_id": "4000000004001",
+      "order_type": "EOBK",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "planned_id": "2000000004001",
+      "planned_quantity": 105.07434,
+      "uom": "KG",
+      "basic_start_date": "2010-02-02",
+      "basic_finish_date": "2010-02-02",
+      "actual_start_date": "2010-02-02",
+      "actual_finish_date": "2010-02-02",
+      "status": "CLOSED",
+      "production_version_id": "01",
+      "batch_id": "PF05043-CORE",
+      "date": "2010-02-02",
+      "reservation_id": "RES-4000000004001"
+    }
+  ],
+  "planned_orders": [
+    {
+      "plan_order_id": "2000000004001",
+      "material_id": "000000000210250095",
+      "plant_id": "EP04",
+      "order_quantity": 105.07434,
+      "start_date": "2010-02-02",
+      "finish_date": "2010-02-02",
+      "order_type": "EOBK",
+      "material_name": "METFORMIN HCL TABLETS 500MG (UNCOATED CORE)",
+      "procurement_type": "E",
+      "process_order_id": "4000000004001",
+      "storage_location": "0002"
+    }
+  ],
+  "production_confirmations": [
+    {
+      "confirmation_id": "CONF-400000000846-01",
+      "process_order_id": "4000000004001",
+      "operation_id": "OP-0010",
+      "work_center_id": "WC-GRAN-01",
+      "confirmed_quantity": 105.07434,
+      "uom": "KG",
+      "confirmation_date": "2010-02-01",
+      "confirmation_time": "16:00:00",
+      "status": "CONFIRMED",
+      "operation_number": "0010",
+      "actual_start_date": "2010-02-01",
+      "actual_finish_date": "2010-02-01",
+      "yield_quantity": 104.5,
+      "scrap_quantity": 0.57434
+    }
+  ],
+  "yields": [
+    {
+      "process_order_id": "4000000004001",
+      "master_id": "000000000210250095",
+      "batch_id": "PF05043-CORE",
+      "material_document_id": "MATDOC-101-SFG-001",
+      "yield_quantity": 104.5,
+      "scrap_quantity": 0.57434,
+      "uom": "KG",
+      "posting_date": "2010-02-02",
+      "status": "CONFIRMED",
+      "yield_type": "Semi-Finished Core Tablet Yield",
+      "scrap_type": "Compression Scrap"
+    }
+  ],
+  "transformations_as_input": [
+    {
+      "transformation_id": "TRANS-SFG-001",
+      "process_order_id": "4000000004001",
+      "input_batch_id": "RM-MET-05043",
+      "output_batch_id": "PF05043-CORE",
+      "material_id": "000000000210250095",
+      "transformation_type": "GRANULATION_AND_COMPRESSION",
+      "quantity": 105.07434,
+      "uom": "KG",
+      "status": "COMPLETED",
+      "plant_id": "",
+      "transformation_date": ""
+    }
+  ],
+  "material_consumptions": [
+    {
+      "material_document_id": "4900000004",
+      "material_document_year": "2025",
+      "process_order_id": "400000000643",
+      "batch_id": "RM-MET-05043",
+      "plant_id": "EP04",
+      "storage_location_id": "RMS",
+      "consumed_quantity": 0.768,
+      "uom": "KG",
+      "posting_date": "2005-10-06",
+      "movement_type": "261",
+      "status": "Issued",
+      "reservation_id": "2000029081",
+      "reservation_item_id": "0002",
+      "cost_centre": "CC-PROD-410301"
+    }
+  ],
+  "reservations": [
+    {
+      "reservation_id": "2000029081",
+      "item_id": "0002",
+      "material_id": "000000000110000711",
+      "plant_id": "EP04",
+      "storage_location": "RMS",
+      "reservation_quantity": 0.768,
+      "uom": "KG",
+      "requirement_date": "2005-10-06",
+      "movement_type": "261",
+      "process_order_id": "400000000643",
+      "batch_id": "RM-MET-05043",
+      "cost_centre": ""
+    }
+  ],
+  "quality_inspection_lots": [
+    {
+      "inspection_lot_id": "010000004001",
+      "material_id": "000000000110000711",
+      "batch_id": "RM-MET-05043",
+      "plant_id": "EP04",
+      "inspection_origin": "01_GOODS_RECEIPT",
+      "quantity": 110,
+      "creation_date": "2010-01-16",
+      "inspection_start_date": "",
+      "inspection_completion_date": "",
+      "status": "COMPLETED",
+      "inspection_type": "",
+      "inspection_quantity": 0,
+      "purchase_order_id": "4500012345",
+      "purchase_order_item_id": "",
+      "uom": "KG",
+      "supplier_id": "0000400860",
+      "process_order": "",
+      "material_document_id": "",
+      "material_document_year": "",
+      "inspection_plan_id": "",
+      "production_version_id": "",
+      "sample_quantity": 0
+    }
+  ],
+  "samplings": [
+    {
+      "sample_id": "SMP-RM-01",
+      "inspection_lot_id": "010000004001",
+      "material_id": "000000000110000711",
+      "batch_id": "RM-MET-05043",
+      "sample_quantity": 0.5,
+      "sample_uom": "KG",
+      "sample_date": "2010-01-16",
+      "status": "Sample Drawn \u0026 Analyzed"
+    }
+  ],
+  "inspection_results": [
+    {
+      "inspection_result_id": "RES-RM-01",
+      "inspection_lot_id": "010000004001",
+      "sample_id": "SMP-RM-01",
+      "material_id": "000000000110000711",
+      "batch_id": "RM-MET-05043",
+      "inspection_characteristic_id": "CHAR-ASSAY-API",
+      "result_value": "99.8",
+      "uom": "%",
+      "result_status": "A",
+      "record_date": "2010-01-16"
+    }
+  ],
+  "usage_decisions": [
+    {
+      "usage_decision_id": "UD-010000004001",
+      "inspection_lot_id": "010000004001",
+      "material_id": "000000000110000711",
+      "batch_id": "RM-MET-05043",
+      "plant_id": "EP04",
+      "decision_code": "A",
+      "decision_status": "A",
+      "decision_date": "2010-01-16"
+    }
+  ],
+  "inventory_stocks": [
+    {
+      "material_id": "000000000110000711",
+      "plant_id": "EP04",
+      "storage_location": "RMS",
+      "uom": "KG",
+      "stock_status": "Unrestricted",
+      "batch_id": "RM-MET-05043",
+      "stock_quantity": 109.232,
+      "unrestricted": 109.232,
+      "quality_inspection": 0,
+      "blocked": 0,
+      "restricted": 0,
+      "return": 0,
+      "in_transfer": 0
+    }
+  ],
+  "material_movements": [
+    {
+      "material_document_id": "5000012345",
+      "material_document_year": "2010",
+      "movement_type": "101",
+      "material_id": "000000000110000711",
+      "batch_id": "RM-MET-05043",
+      "storage_location": "RMS",
+      "quantity": 110,
+      "uom": "KG",
+      "posting_date": "2010-01-16",
+      "document_date": "",
+      "reference_document_id": "",
+      "purchase_order_id": "4500012345",
+      "process_order_id": "",
+      "reservation_id": "",
+      "plant_id": ""
+    }
+  ],
+  "goods_receipts": [
+    {
+      "grn_id": "5000012345",
+      "grn_year": 0,
+      "grn_item_id": "",
+      "material_id": "000000000110000711",
+      "plant_id": "",
+      "storage_location_id": "RMS",
+      "batch_id": "RM-MET-05043",
+      "received_quantity": 110,
+      "unit_of_measure": "KG",
+      "movement_type": "101",
+      "purchase_order_id": "4500012345",
+      "purchase_order_item_id": "",
+      "supplier_id": "",
+      "posting_date": "2010-01-16",
+      "document_date": "",
+      "stock_type": "",
+      "delivery_completed": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EVT-RM-001",
+      "event_name": "PurchaseOrderCreated",
+      "business_object": "Purchase Order",
+      "entity_key": "4500012345",
+      "material_id": "000000000110000711",
+      "status": "Created",
+      "description": "Purchase order issued to approved vendor"
+    },
+    {
+      "event_id": "EVT-RM-002",
+      "event_name": "GRNPosted",
+      "business_object": "Goods Receipt",
+      "entity_key": "5000012345",
+      "batch_id": "RM-MET-05043",
+      "material_id": "000000000110000711",
+      "movement_type": "101",
+      "status": "Posted",
+      "description": "Goods receipt posted for incoming raw material batch"
+    },
+    {
+      "event_id": "EVT-RM-003",
+      "event_name": "InspectionLotCreated",
+      "business_object": "Quality Inspection Lot",
+      "entity_key": "010000004001",
+      "batch_id": "RM-MET-05043",
+      "material_id": "000000000110000711",
+      "status": "Created",
+      "description": "Quality inspection lot created for incoming active raw material"
+    },
+    {
+      "event_id": "EVT-RM-004",
+      "event_name": "QualityDecisionRecorded",
+      "business_object": "Usage Decision",
+      "entity_key": "UD-010000004001",
+      "batch_id": "RM-MET-05043",
+      "material_id": "000000000110000711",
+      "status": "Approved",
+      "description": "Usage decision approved to release raw material for production"
+    },
+    {
+      "event_id": "EVT-RM-005",
+      "event_name": "ReservationCreated",
+      "business_object": "Reservation",
+      "entity_key": "2000029081",
+      "batch_id": "RM-MET-05043",
+      "process_order_id": "400000000643",
+      "material_id": "000000000110000711",
+      "status": "Reserved",
+      "description": "Raw material reserved for process order consumption"
+    },
+    {
+      "event_id": "EVT-RM-006",
+      "event_name": "MaterialConsumptionPosted",
+      "business_object": "Material Consumption",
+      "entity_key": "4900000004",
+      "batch_id": "RM-MET-05043",
+      "process_order_id": "400000000643",
+      "status": "Consumed",
+      "description": "Raw material batch directly consumed into process order (Movement 261, Loc RMS)"
+    }
+  ]
+}

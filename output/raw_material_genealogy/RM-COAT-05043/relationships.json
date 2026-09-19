@@ -1,0 +1,150 @@
+[
+  {
+    "from": "supplier_or_source",
+    "to": "purchase_order",
+    "relationship": "Supplier fulfills Purchase Order",
+    "join_fields": [
+      "supplier_or_source_id"
+    ]
+  },
+  {
+    "from": "purchase_requisition",
+    "to": "purchase_order",
+    "relationship": "Purchase Requisition converted to Purchase Order",
+    "join_fields": [
+      "purchase_requisition_id"
+    ]
+  },
+  {
+    "from": "purchase_order",
+    "to": "material_movement",
+    "relationship": "Purchase Order received via Goods Receipt (GRN Movement 101)",
+    "join_fields": [
+      "purchase_order_id"
+    ]
+  },
+  {
+    "from": "material_movement",
+    "to": "inventory_stock",
+    "relationship": "Material Movement places stock into Raw Material Store (RMS)",
+    "join_fields": [
+      "storage_location",
+      "batch_id"
+    ]
+  },
+  {
+    "from": "material_movement",
+    "to": "quality_inspection_lot",
+    "relationship": "Goods Receipt triggers Incoming Quality Inspection Lot",
+    "join_fields": [
+      "inspection_lot_id"
+    ]
+  },
+  {
+    "from": "quality_inspection_lot",
+    "to": "sampling",
+    "relationship": "Quality Inspection Lot draws QC sample for testing",
+    "join_fields": [
+      "inspection_lot_id",
+      "sample_id"
+    ]
+  },
+  {
+    "from": "sampling",
+    "to": "inspection_result",
+    "relationship": "QC Sample analyzed for chemical assay, LOD and purity",
+    "join_fields": [
+      "sample_id",
+      "inspection_result_id"
+    ]
+  },
+  {
+    "from": "quality_inspection_lot",
+    "to": "usage_decision",
+    "relationship": "Quality Lot valuated and Usage Decision approved",
+    "join_fields": [
+      "inspection_lot_id",
+      "usage_decision_id"
+    ]
+  },
+  {
+    "from": "inventory_stock",
+    "to": "reservation",
+    "relationship": "Unrestricted RMS stock reserved for manufacturing Process Order",
+    "join_fields": [
+      "batch_id",
+      "reservation_id"
+    ]
+  },
+  {
+    "from": "reservation",
+    "to": "batch_determination",
+    "relationship": "Reservation selects batch via Batch Determination",
+    "join_fields": [
+      "reservation_id",
+      "determination_id"
+    ]
+  },
+  {
+    "from": "batch_determination",
+    "to": "material_consumption",
+    "relationship": "Determined batch issued via Movement Type 261",
+    "join_fields": [
+      "batch_id",
+      "material_document_id"
+    ]
+  },
+  {
+    "from": "material_consumption",
+    "to": "process_order",
+    "relationship": "Raw Material consumed into Manufacturing Process Order",
+    "join_fields": [
+      "material_document_id",
+      "process_order_id"
+    ]
+  },
+  {
+    "from": "process_order",
+    "to": "batch_transformation",
+    "relationship": "Process Order transforms Raw Material to Finished Product Batch",
+    "join_fields": [
+      "process_order_id",
+      "transformation_id"
+    ]
+  },
+  {
+    "from": "batch_transformation",
+    "to": "finished_product_output",
+    "relationship": "Batch Transformation produces Finished Batch",
+    "join_fields": [
+      "output_batch_id"
+    ]
+  },
+  {
+    "from": "finished_product_output",
+    "to": "outbound_delivery",
+    "relationship": "Finished Batch dispatched via Outbound Delivery",
+    "join_fields": [
+      "batch_id",
+      "delivery_id"
+    ]
+  },
+  {
+    "from": "outbound_delivery",
+    "to": "billing_document",
+    "relationship": "Outbound Delivery invoiced via Billing Document",
+    "join_fields": [
+      "delivery_id",
+      "billing_document_id"
+    ]
+  },
+  {
+    "from": "billing_document",
+    "to": "customer_or_cfa",
+    "relationship": "Commercial Invoice settled by Customer",
+    "join_fields": [
+      "payer_id",
+      "customer_id"
+    ]
+  }
+]

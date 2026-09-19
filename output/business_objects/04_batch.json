@@ -1,0 +1,533 @@
+[
+  {
+    "batch_id": "GL0402",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04040",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04041",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04042",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04043",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04044",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04073",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04074",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04075",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "POA04077",
+    "material_id": "000000000420000615",
+    "batch_type": "Finished Good Batch",
+    "plant_id": "EAP1",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "LAA04001",
+    "material_id": "000000000210000020",
+    "batch_type": "Material Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "LAC04004",
+    "material_id": "000000000210000039",
+    "batch_type": "Material Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "LAC04005",
+    "material_id": "000000000210000039",
+    "batch_type": "Material Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "LAC04006",
+    "material_id": "000000000210000039",
+    "batch_type": "Material Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "EPJEM16020",
+    "material_id": "000000000210000098",
+    "batch_type": "Material Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "LCO0410",
+    "material_id": "000000000210000111",
+    "batch_type": "Material Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF05043",
+    "material_id": "000000000210250096",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2010-05-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF05048",
+    "material_id": "000000000210250067",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-04-29",
+    "expiry_date": "2010-05-18",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF06035",
+    "material_id": "000000000210250096",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2010-06-15",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF06036",
+    "material_id": "000000000210250096",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2010-06-15",
+    "status": "Released"
+  },
+  {
+    "batch_id": "TE07096",
+    "material_id": "000000000210270017",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-06-29",
+    "expiry_date": "2010-07-15",
+    "status": "Released"
+  },
+  {
+    "batch_id": "TE07097",
+    "material_id": "000000000210270017",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-06-29",
+    "expiry_date": "2010-07-15",
+    "status": "Released"
+  },
+  {
+    "batch_id": "TE07143",
+    "material_id": "000000000210270040",
+    "batch_type": "Production Output Batch",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-09-29",
+    "expiry_date": "2010-09-29",
+    "status": "Released"
+  },
+  {
+    "batch_id": "EDA07017",
+    "material_id": "000000000421110027",
+    "batch_type": "Movement Batch",
+    "plant_id": "ERA1",
+    "manufacturing_date": "2007-02-01",
+    "expiry_date": "2009-01-31",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "EDA07025",
+    "material_id": "000000000421110027",
+    "batch_type": "Movement Batch",
+    "plant_id": "EWB1",
+    "manufacturing_date": "2007-03-01",
+    "expiry_date": "2009-02-28",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "COR07014",
+    "material_id": "000000000421110081",
+    "batch_type": "Movement Batch",
+    "plant_id": "EBI1",
+    "manufacturing_date": "2007-09-01",
+    "expiry_date": "2009-02-28",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "EDA07002",
+    "material_id": "000000000421110030",
+    "batch_type": "Movement Batch",
+    "plant_id": "EKA1",
+    "manufacturing_date": "2007-08-01",
+    "expiry_date": "2009-01-31",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "EDA07018",
+    "material_id": "000000000421110027",
+    "batch_type": "Movement Batch",
+    "plant_id": "EWB1",
+    "manufacturing_date": "2007-03-01",
+    "expiry_date": "2009-02-28",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "LAA07007",
+    "material_id": "000000000421110325",
+    "batch_type": "Movement Batch",
+    "plant_id": "EMP2",
+    "manufacturing_date": "2007-09-07",
+    "expiry_date": "2009-08-31",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "PGA07007",
+    "material_id": "000000000420001690",
+    "batch_type": "Movement Batch",
+    "plant_id": "EMP2",
+    "manufacturing_date": "2007-10-01",
+    "expiry_date": "2009-09-30",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "LAA08001",
+    "material_id": "000000000421110364",
+    "batch_type": "Movement Batch",
+    "plant_id": "EMP2",
+    "manufacturing_date": "2008-03-26",
+    "expiry_date": "2010-02-28",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "PDA08004",
+    "material_id": "000000000421110012",
+    "batch_type": "Movement Batch",
+    "plant_id": "EAS1",
+    "manufacturing_date": "2008-02-01",
+    "expiry_date": "2010-07-31",
+    "status": "Unrestricted"
+  },
+  {
+    "batch_id": "ZZA07002",
+    "material_id": "000000000423330191",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZDE1",
+    "manufacturing_date": "2007-07-01",
+    "expiry_date": "2009-06-30",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "AZA08026",
+    "material_id": "000000000423330170",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZBI1",
+    "manufacturing_date": "2008-07-20",
+    "expiry_date": "2010-06-30",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "ZVB08011",
+    "material_id": "000000000423330066",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZCH1",
+    "manufacturing_date": "2008-05-01",
+    "expiry_date": "2010-10-31",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "AZA08021",
+    "material_id": "000000000423330170",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZMP1",
+    "manufacturing_date": "2008-06-16",
+    "expiry_date": "2010-05-31",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "AZA08030",
+    "material_id": "000000000423330170",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZMH2",
+    "manufacturing_date": "2008-07-09",
+    "expiry_date": "2010-06-30",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "ZVB08010",
+    "material_id": "000000000423330066",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZBI1",
+    "manufacturing_date": "2008-05-01",
+    "expiry_date": "2010-10-31",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "AZA08027",
+    "material_id": "000000000423330170",
+    "batch_type": "Delivery Batch",
+    "plant_id": "ZRA1",
+    "manufacturing_date": "2008-07-20",
+    "expiry_date": "2010-06-30",
+    "status": "Allocated"
+  },
+  {
+    "batch_id": "16A12002",
+    "material_id": "000000000424440068",
+    "batch_type": "Inspection Batch",
+    "plant_id": "EMHA",
+    "manufacturing_date": "2013-08-26",
+    "expiry_date": "2012-02-01",
+    "status": "In Inspection"
+  },
+  {
+    "batch_id": "16A11004",
+    "material_id": "000000000424440092",
+    "batch_type": "Inspection Batch",
+    "plant_id": "EMHA",
+    "manufacturing_date": "2012-11-29",
+    "expiry_date": "2012-02-01",
+    "status": "In Inspection"
+  },
+  {
+    "batch_id": "LAA11002",
+    "material_id": "000000000421110776",
+    "batch_type": "Inspection Batch",
+    "plant_id": "EMHA",
+    "manufacturing_date": "2012-12-14",
+    "expiry_date": "2012-02-01",
+    "status": "In Inspection"
+  },
+  {
+    "batch_id": "16A12004",
+    "material_id": "000000000424440004",
+    "batch_type": "Inspection Batch",
+    "plant_id": "EMHA",
+    "manufacturing_date": "2012-12-29",
+    "expiry_date": "2012-02-01",
+    "status": "In Inspection"
+  },
+  {
+    "batch_id": "LAA11006",
+    "material_id": "000000000421110124",
+    "batch_type": "Inspection Batch",
+    "plant_id": "EMHA",
+    "manufacturing_date": "2013-01-23",
+    "expiry_date": "2012-02-01",
+    "status": "In Inspection"
+  },
+  {
+    "batch_id": "16A11005",
+    "material_id": "000000000424440087",
+    "batch_type": "Inspection Batch",
+    "plant_id": "EMHA",
+    "manufacturing_date": "2013-02-19",
+    "expiry_date": "2012-02-01",
+    "status": "In Inspection"
+  },
+  {
+    "batch_id": "PF05043-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF05048-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF06035-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "PF06036-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "TE07096-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "TE07097-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "TE07143-CORE",
+    "material_id": "000000000210250095",
+    "batch_type": "SEMI_FINISHED",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-02-02",
+    "expiry_date": "2012-02-01",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-MET-05043",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-MET-05048",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-MET-06035",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-MET-06036",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-TEL-07096",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-TEL-07097",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  },
+  {
+    "batch_id": "RM-TEL-07143",
+    "material_id": "000000000110000711",
+    "batch_type": "RAW_MATERIAL",
+    "plant_id": "EP04",
+    "manufacturing_date": "2010-01-15",
+    "expiry_date": "2014-01-14",
+    "status": "Released"
+  }
+]
