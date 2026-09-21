@@ -180,5 +180,5 @@ This specification documents the **106 Field-Level Entity Relationships** spanni
 
 ## Output Artifacts
 
-- [output/relationship_catalog.json](file:///c:/Users/Lenovo/OneDrive/Desktop/build/output/relationship_catalog.json): 106 complete relationship definitions with metadata and join criteria.
-- [output/resolved_relationships.json](file:///c:/Users/Lenovo/OneDrive/Desktop/build/output/resolved_relationships.json): 900 instance-level resolved links.
+- [output/relationship_catalog.json](./build/output/relationship_catalog.json): 106 complete relationship definitions with metadata and join criteria.
+- [output/resolved_relationships.json](./build/output/resolved_relationships.json): 900 instance-level resolved links.

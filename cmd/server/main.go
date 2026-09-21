@@ -1,11 +1,15 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
+
+	"supply-bo-builder/pkg/blockchain"
 )
 
 func main() {
@@ -21,6 +25,29 @@ func main() {
 	if _, err := os.Stat(webDir); os.IsNotExist(err) {
 		log.Fatalf("Web directory '%s' does not exist", webDir)
 	}
+
+	// --- Blockchain verification service (read-only VeChainThor) ---
+	// Reads the anchoring metadata the Blockchain Engine already wrote and
+	// proxies live read-only contract calls. All paths/URLs are overridable
+	// via env so the same binary works across machines and networks.
+	deploymentsDir := envOr("BLOCKCHAIN_DEPLOYMENTS_DIR",
+		filepath.Join("ENGINE", "BLOCKCHAIN ENGINE", "deployments"))
+	gs1OutputDir := envOr("GS1_OUTPUT_DIR",
+		filepath.Join("ENGINE", "GS1 ENGINE", "output"))
+	rpcURL := envOr("VECHAIN_RPC_URL", "https://testnet.vechain.org")
+	network := envOr("VECHAIN_NETWORK", "vechain_testnet")
+	explorerBase := envOr("VECHAIN_EXPLORER_BASE", "https://explore.vechain.org")
+	// Trust the corporate CA (TLS interception) so live VeChain reads work
+	// without any extra command/env. Prefer an explicit env, then fall back to
+	// the CA bundled in the repo.
+	caCertPath := os.Getenv("NODE_EXTRA_CA_CERTS")
+	if caCertPath == "" {
+		defaultCA := filepath.Join("ENGINE", "BLOCKCHAIN ENGINE", "corporate-ca.pem")
+		if _, err := os.Stat(defaultCA); err == nil {
+			caCertPath = defaultCA
+		}
+	}
+	bcService := blockchain.NewService(deploymentsDir, gs1OutputDir, rpcURL, network, explorerBase, caCertPath)
 
 	mux := http.NewServeMux()
 
@@ -100,6 +127,46 @@ func main() {
 		w.Write([]byte(fmt.Sprintf(`{"raw_batches":%s}`, toJSONSlice(rawList))))
 	})
 
+	// --- Blockchain verification API ---------------------------------------
+
+	// Frontend config: network + explorer base URL.
+	mux.HandleFunc("/api/blockchain/config", func(w http.ResponseWriter, r *http.Request) {
+		writeCORS(w)
+		if r.Method == http.MethodOptions {
+			return
+		}
+		writeJSON(w, http.StatusOK, bcService.Config())
+	})
+
+	// List batches that have on-chain anchoring metadata.
+	mux.HandleFunc("/api/blockchain/batches", func(w http.ResponseWriter, r *http.Request) {
+		writeCORS(w)
+		if r.Method == http.MethodOptions {
+			return
+		}
+		writeJSON(w, http.StatusOK, map[string][]string{"batches": bcService.AvailableBatches()})
+	})
+
+	// Per-batch verification payload: GET /api/blockchain/{batchId}.
+	mux.HandleFunc("/api/blockchain/", func(w http.ResponseWriter, r *http.Request) {
+		writeCORS(w)
+		if r.Method == http.MethodOptions {
+			return
+		}
+		batchID := strings.TrimPrefix(r.URL.Path, "/api/blockchain/")
+		batchID = strings.Trim(batchID, "/")
+		if batchID == "" || strings.Contains(batchID, "/") {
+			writeJSON(w, http.StatusBadRequest, map[string]string{"error": "batch id required"})
+			return
+		}
+		view, err := bcService.GetBatchView(batchID)
+		if err != nil {
+			writeJSON(w, http.StatusNotFound, map[string]string{"error": err.Error()})
+			return
+		}
+		writeJSON(w, http.StatusOK, view)
+	})
+
 	fmt.Printf("==================================================================\n")
 	fmt.Printf(" SAP S/4HANA & ECC Traceability 360° Portal Server\n")
 	fmt.Printf(" Serving static UI from : ./%s\n", webDir)
@@ -110,6 +177,25 @@ func main() {
 	if err := http.ListenAndServe(":"+port, mux); err != nil {
 		log.Fatalf("Server failed: %v", err)
 	}
+}
+
+func envOr(key, fallback string) string {
+	if v := strings.TrimSpace(os.Getenv(key)); v != "" {
+		return v
+	}
+	return fallback
+}
+
+func writeCORS(w http.ResponseWriter) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+}
+
+func writeJSON(w http.ResponseWriter, status int, payload interface{}) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(status)
+	_ = json.NewEncoder(w).Encode(payload)
 }
 
 func toJSONSlice(items []string) string {

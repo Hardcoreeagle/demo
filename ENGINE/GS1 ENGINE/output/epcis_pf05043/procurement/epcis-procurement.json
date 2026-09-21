@@ -1,0 +1,152 @@
+{
+  "@context": [
+    "https://ref.gs1.org/epcis/epcis-context.jsonld"
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "1970-01-01T00:00:00Z",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000625",
+        "eventTime": "2012-11-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440092:16A11004"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000628",
+        "eventTime": "2012-12-14T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000421110776:LAA11002"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000631",
+        "eventTime": "2012-12-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000421110070:LAA11002"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000634",
+        "eventTime": "2012-12-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440004:16A12004"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000637",
+        "eventTime": "2013-01-23T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000421110124:LAA11006"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000640",
+        "eventTime": "2013-02-18T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440131:16A11004"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000643",
+        "eventTime": "2013-02-19T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440087:16A11005"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000646",
+        "eventTime": "2013-04-23T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440131:16A11005"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000649",
+        "eventTime": "2013-06-18T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440065:16A11004"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000622",
+        "eventTime": "2013-08-26T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "ADD",
+        "bizStep": "urn:epcglobal:cbv:bizstep:receiving",
+        "epcList": [
+          "urn:internal:batch:000000000424440068:16A12002"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMHA"
+        }
+      }
+    ]
+  }
+}

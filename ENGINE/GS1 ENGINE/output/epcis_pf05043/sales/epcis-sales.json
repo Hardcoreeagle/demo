@@ -1,0 +1,152 @@
+{
+  "@context": [
+    "https://ref.gs1.org/epcis/epcis-context.jsonld"
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "1970-01-01T00:00:00Z",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000212",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110027:EDA07017"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:ERA1"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000214",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110027:EDA07017"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:ERA1"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000216",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110027:EDA07025"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EWB1"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000218",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110081:COR07014"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EBI1"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000220",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110030:EDA07002"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EKA1"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000222",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110027:EDA07018"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EWB1"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000224",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110325:LAA07007"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMP2"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000226",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000420001690:PGA07007"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMP2"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000228",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110364:LAA08001"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EMP2"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000230",
+        "eventTime": "2008-04-29T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+        "epcList": [
+          "urn:internal:batch:000000000421110012:PDA08004"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EAS1"
+        }
+      }
+    ]
+  }
+}

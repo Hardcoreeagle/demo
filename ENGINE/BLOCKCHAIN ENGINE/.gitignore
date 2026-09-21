@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+artifacts/
+cache/
+coverage/
+coverage.json
+typechain-types/
+dist/
+
+# Environment - never commit credentials
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+
+# Deployment records (regenerated per run)
+deployments/
+.pgdata/
+.tmp-*
+*.log
+
+# Corporate CA bundle generated locally for NODE_EXTRA_CA_CERTS (machine-specific)
+corporate-ca.pem
+zscaler-ca.pem
+*-ca.pem

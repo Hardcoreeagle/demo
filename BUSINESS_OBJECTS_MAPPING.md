@@ -39,7 +39,7 @@ In SAP S/4HANA, the legacy material document header table (`MKPF`) and material 
 | Customer Number | — | `MSEG-KUNNR` | `MATDOC-KUNNR` | #8 Material Movement |
 
 ### Implementation in Codebase
-1. **Zero Legacy MKPF/MSEG Loading**: In [cmd/main.go](file:///c:/Users/Lenovo/OneDrive/Desktop/build/cmd/main.go) and [pkg/builder/builder_test.go](file:///c:/Users/Lenovo/OneDrive/Desktop/build/pkg/builder/builder_test.go), neither `MKPF.csv` nor `MSEG.csv` are loaded into memory.
+1. **Zero Legacy MKPF/MSEG Loading**: In [cmd/main.go](./build/cmd/main.go) and [pkg/builder/builder_test.go](./build/pkg/builder/builder_test.go), neither `MKPF.csv` nor `MSEG.csv` are loaded into memory.
 2. **Unified Querying via MATDOC**: All inventory movements, goods receipts, production consumption, batch transformation links, and yields are read directly from `MATDOC`.
 3. **No Logistic Tables Policy**: Goods Receipt (GRN) utilizes `MATDOC` directly without touching Logistics Execution tables (`LIKP`, `LIPS`, `VTTK`, `VTTP`, `VEKP`, `VEPO`, `EKES`).
 

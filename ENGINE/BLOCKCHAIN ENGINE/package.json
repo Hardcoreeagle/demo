@@ -1,0 +1,56 @@
+{
+  "name": "@pharma-trace/blockchain-engine",
+  "version": "1.0.0",
+  "description": "Immutable batch integrity anchoring on VeChainThor (BatchIntegrityAnchor) for GS1 EPCIS 2.0.1 pharmaceutical traceability",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "hardhat test test/BatchIntegrityAnchor.test.ts test/BatchIntegrityAnchor.security.test.ts test/BatchIntegrityAnchor.property.test.ts test/EventIntegrityAnchor.test.ts test/IntegrityEngine.test.ts test/unit/BatchIntegrityAnchorClient.test.ts",
+    "test:e2e": "hardhat test test/e2e/gs1-epcis-pipeline.e2e.test.ts",
+    "test:e2e:solo": "hardhat test test/e2e/gs1-epcis-pipeline.e2e.test.ts --network vechain_solo",
+    "test:e2e:testnet": "hardhat test test/e2e/gs1-epcis-pipeline.e2e.test.ts --network vechain_testnet",
+    "check:testnet": "hardhat run scripts/check-testnet.ts --network vechain_testnet",
+    "test:solo": "hardhat test test/e2e/gs1-epcis-pipeline.e2e.test.ts test/integration/vechain-solo.test.ts --network vechain_solo",
+    "test:coverage": "hardhat coverage",
+    "deploy:solo": "hardhat run scripts/deploy.ts --network vechain_solo",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network vechain_testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network vechain_mainnet",
+    "roles:grant": "hardhat run scripts/configure-roles.ts --network vechain_testnet",
+    "roles:check": "hardhat run scripts/configure-roles.ts",
+    "verify:anchor": "hardhat run scripts/verify-anchor.ts",
+    "anchor:batch": "hardhat run scripts/anchor-batch.ts",
+    "anchor:events": "hardhat run scripts/anchor-events.ts",
+    "view:event": "hardhat run scripts/view-event.ts",
+    "check:gs1-flow": "ts-node scripts/check-gs1-flow.ts",
+    "size": "hardhat size-contracts",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@embedded-postgres/windows-x64": "^17.10.0-beta.17",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/chai": "^4.3.16",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.23.1",
+    "@vechain/sdk-hardhat-plugin": "^2.1.0",
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "embedded-postgres": "^17.10.0-beta.17",
+    "eslint": "^8.57.0",
+    "hardhat": "^2.26.2",
+    "prettier": "^3.3.2",
+    "solidity-coverage": "^0.8.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.6.1",
+    "pg": "^8.23.0"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://ref.gs1.org/epcis/epcis-context.jsonld"
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "1970-01-01T00:00:00Z",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000497",
+        "eventTime": "2010-01-20T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "epcList": [
+          "urn:internal:batch:000000000110000711:RM-MET-05043"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000481",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "disposition": "urn:epcglobal:cbv:disp:active",
+        "epcList": [
+          "urn:internal:batch:000000000210250095:PF05043-CORE"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000482",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "epcList": [
+          "urn:internal:batch:000000000210250095:PF05043-CORE"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000493",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "epcList": [
+          "urn:internal:batch:000000000210250095:PF05043-CORE"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000508",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "disposition": "urn:epcglobal:cbv:disp:sellable_accessible",
+        "epcList": [
+          "urn:internal:batch:000000000210250095:PF05043-CORE"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000509",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "disposition": "urn:epcglobal:cbv:disp:sellable_accessible",
+        "epcList": [
+          "urn:internal:batch:000000000210250095:PF05043-CORE"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000520",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "disposition": "urn:epcglobal:cbv:disp:sellable_accessible",
+        "epcList": [
+          "urn:internal:batch:000000000210250095:PF05043-CORE"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000494",
+        "eventTime": "2010-02-03T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "epcList": [
+          "urn:internal:batch:000000000210250096:PF05043"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "ObjectEvent",
+        "eventID": "urn:uuid:gs1-engine:evt-000489",
+        "eventTime": "2011-05-20T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "action": "OBSERVE",
+        "bizStep": "urn:epcglobal:cbv:bizstep:quality_testing",
+        "epcList": [
+          "urn:internal:batch:000000000110010894:PF05043"
+        ],
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      }
+    ]
+  }
+}

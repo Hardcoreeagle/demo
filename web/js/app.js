@@ -1891,177 +1891,286 @@ class AppController {
     const container = document.getElementById('blockchainContainer');
     if (!container) return;
 
-    const bId = this.currentBatchId;
-    const bo = this.currentBatchPkg?.finished_genealogy?.batch_genealogy?.business_objects || {};
-    const coreBatchId = this.currentBatchPkg?.finished_genealogy?.batch_genealogy?.core_batch?.batch_id || 'CORE-' + bId;
-    const rawBatchId = 'RAW-2023-B109';
-    const supp = bo.supplier_or_source?.Source_Name || 'Aarti Drugs Limited';
-    const sfgOrder = this.currentBatchPkg?.finished_genealogy?.batch_genealogy?.core_batch?.process_order?.order_id || '1004921';
-    const fgOrder = bo.process_order?.order_id || '1005112';
-    const deliv = bo.outbound_delivery?.delivery_id || '2100084439';
-    const inv = bo.billing_document?.billing_document_id || '5402100863';
+    const bId = this.currentBatchId || (window.dataService && window.dataService.activeBatchId) || 'PF05043';
 
-    // Simple deterministic hash generator for audit demonstration
-    const makeHash = (str) => {
-      let hash = 0;
-      for (let i = 0; i < str.length; i++) {
-        hash = ((hash << 5) - hash) + str.charCodeAt(i);
-        hash |= 0;
-      }
-      const hex1 = Math.abs(hash).toString(16).padStart(8, '0');
-      const hex2 = Math.abs(hash * 31 + 17).toString(16).padStart(8, '0');
-      const hex3 = Math.abs(hash * 127 + 89).toString(16).padStart(8, '0');
-      const hex4 = Math.abs(hash * 8191 + 101).toString(16).padStart(8, '0');
-      const hex5 = Math.abs(hash * 131071 + 3).toString(16).padStart(8, '0');
-      const hex6 = Math.abs(hash * 524287 + 19).toString(16).padStart(8, '0');
-      const hex7 = Math.abs(hash * 2147483647 + 7).toString(16).padStart(8, '0');
-      const hex8 = Math.abs(hash * 37 + 43).toString(16).padStart(8, '0');
-      return `0x${hex1}${hex2}${hex3}${hex4}${hex5}${hex6}${hex7}${hex8}`.toLowerCase();
-    };
-
-    const genesisPrev = "0x0000000000000000000000000000000000000000000000000000000000000000";
-    const block0Hash = makeHash(`GENESIS-${rawBatchId}-${supp}-MATDOC500192`);
-    const block1Hash = makeHash(`STAGE1-${coreBatchId}-${sfgOrder}-${block0Hash}`);
-    const block2Hash = makeHash(`STAGE2-${bId}-${fgOrder}-QM99281-${block1Hash}`);
-    const block3Hash = makeHash(`STAGE3-${deliv}-${inv}-CUST-${block2Hash}`);
-
-    const blocks = [
-      {
-        num: "00",
-        name: "Genesis / Raw Material Ingestion",
-        badge: "Raw Batch",
-        time: "2023-11-04 09:15:22 UTC",
-        prevHash: genesisPrev,
-        blockHash: block0Hash,
-        merkleRoot: makeHash(`MERKLE-0-${rawBatchId}`),
-        records: [
-          { k: "Raw Batch ID", v: rawBatchId },
-          { k: "Supplier", v: supp },
-          { k: "Material Doc", v: "MATDOC-50019283 (GRN 101)" },
-          { k: "QM Lot", v: "LOT-892100 (Accepted)" }
-        ]
-      },
-      {
-        num: "01",
-        name: "Semi-Finished Core Compression",
-        badge: "SFG Core",
-        time: "2023-11-18 14:30:00 UTC",
-        prevHash: block0Hash,
-        blockHash: block1Hash,
-        merkleRoot: makeHash(`MERKLE-1-${coreBatchId}`),
-        records: [
-          { k: "Core Batch ID", v: coreBatchId },
-          { k: "SFG Process Order", v: sfgOrder },
-          { k: "BOM Component", v: "Ciprofloxacin HCl API (101.40 KG)" },
-          { k: "In-Process Control", v: "IPC Hardness & Friability PASS" }
-        ]
-      },
-      {
-        num: "02",
-        name: "Finished Product Coating & QM Release",
-        badge: "Finished Batch",
-        time: "2023-12-02 11:45:10 UTC",
-        prevHash: block1Hash,
-        blockHash: block2Hash,
-        merkleRoot: makeHash(`MERKLE-2-${bId}`),
-        records: [
-          { k: "Finished Batch ID", v: bId },
-          { k: "FG Process Order", v: fgOrder },
-          { k: "Inspection Lot", v: bo.inspection_lot?.lot_id || "40000088192" },
-          { k: "Usage Decision (UD)", v: "CODE: A (RELEASED TO UNRESTRICTED)" }
-        ]
-      },
-      {
-        num: "03",
-        name: "Commercial Outbound & Sales Custody",
-        badge: "Delivery / Custody",
-        time: "2023-12-10 16:20:45 UTC",
-        prevHash: block2Hash,
-        blockHash: block3Hash,
-        merkleRoot: makeHash(`MERKLE-3-${deliv}`),
-        records: [
-          { k: "Outbound Delivery", v: deliv },
-          { k: "Billing Document", v: inv },
-          { k: "PGI (Mvt 601)", v: "Goods Issue Confirmed" },
-          { k: "Customer Recipient", v: "Apollo Healthcare Logistics" }
-        ]
-      }
-    ];
-
-    let html = `
+    // Back button + live-loading shell (verification is async against VeChain).
+    container.innerHTML = `
       <div style="margin-bottom: 1.25rem;">
         <button class="home-btn-secondary" onclick="window.app.switchView('viewHome', '/home')" style="font-size: 0.85rem; padding: 6px 14px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
-          <span>⬅️</span>
-          <span>Back to Home</span>
+          <span>⬅️</span><span>Back to Home</span>
         </button>
       </div>
+      <div class="card" style="margin-bottom: 20px;">
+        <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-emerald);">⛓️ GS1 EPCIS Blockchain Verification</h2>
+        <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+          Live read-only verification of batch <strong>${bId}</strong> against VeChainThor. Each GS1 EPCIS event is anchored as its own transaction and linked under one batch Merkle root.
+        </p>
+      </div>
+      <div id="bcLiveArea" style="padding: 28px; text-align: center; color: var(--text-muted); font-size: 14px;">
+        <span class="spinner" style="display:inline-block;">⏳</span> Reading on-chain state from VeChainThor…
+      </div>
+    `;
 
-      <div class="card" style="margin-bottom: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
-          <div>
-            <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-emerald);">
-              ⛓️ Cryptographic Blockchain Audit Ledger
-            </h2>
-            <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px; max-width: 800px;">
-              Every phase in the lifecycle of batch <strong>${bId}</strong> is cryptographically signed into an immutable Merkle ledger. 
-              Changes to any upstream record (raw supplier GRN, core compression parameters, or QA test result) invalidate subsequent block hashes.
-            </p>
+    this._loadBlockchainVerification(bId);
+  }
+
+  /** Fetch live verification from the Go proxy and render the /blockchain UI. */
+  async _loadBlockchainVerification(bId) {
+    const area = document.getElementById('bcLiveArea');
+    if (!area || !window.veChainVerifier) return;
+
+    let view;
+    try {
+      view = await window.veChainVerifier.verifyBatch(bId);
+    } catch (e) {
+      area.innerHTML = this._bcError(`Verification service error: ${escapeHtml(e.message)}`);
+      return;
+    }
+
+    if (!view) {
+      area.innerHTML = this._bcError(
+        `Batch <strong>${escapeHtml(bId)}</strong> has not been anchored on the blockchain yet. Run the anchoring pipeline to see it here.`
+      );
+      return;
+    }
+
+    const cfg = await window.veChainVerifier.getConfig();
+    const V = window.VeChainVerifier;
+    const short = V.short;
+
+    const allOk = view.allVerified && view.merkleRootMatches && view.anchoredByAuthorized;
+    const trustColor = allOk ? '#10b981' : (view.chainError ? '#f59e0b' : '#f43f5e');
+
+    // ---- Trust banner: plain-language "is this genuine?" answer ----
+    const bannerHeadline = allOk
+      ? 'This batch is authentic and tamper-proof'
+      : (view.chainError ? 'Live blockchain check temporarily unavailable' : 'This batch needs attention');
+    const bannerSub = allOk
+      ? `${view.totalGs1Events} GS1 EPCIS supply-chain events for ${escapeHtml(view.batchId)} are recorded, and the ${view.events.length} key production events are anchored on the VeChain public blockchain and match their original records. Nothing has been altered.`
+      : (view.chainError
+          ? 'Showing the recorded supply-chain events. The live cryptographic re-check could not reach the blockchain node right now.'
+          : 'One or more events could not be confirmed against the blockchain. See the flagged events below.');
+
+    const banner = `
+      <div class="card" style="margin-bottom:20px; border:1px solid ${trustColor}66; background:linear-gradient(90deg, ${trustColor}14, transparent);">
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <div style="width:52px; height:52px; border-radius:50%; background:${trustColor}22; border:2px solid ${trustColor}; display:flex; align-items:center; justify-content:center; font-size:26px;">
+            ${allOk ? '✅' : (view.chainError ? '⏳' : '⚠️')}
           </div>
-          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 8px 16px; border-radius: 8px; text-align: right;">
-            <div style="font-size: 11px; color: #10b981; font-weight: 600; text-transform: uppercase;">LEDGER INTEGRITY</div>
-            <div style="font-size: 14px; font-weight: 700; color: #fff; font-family: var(--font-mono);">100% VALID & VERIFIED</div>
+          <div style="flex:1; min-width:240px;">
+            <div style="font-size:18px; font-weight:800; color:#fff;">${bannerHeadline}</div>
+            <div style="font-size:13px; color:var(--text-secondary); margin-top:3px; max-width:760px;">${bannerSub}</div>
+          </div>
+          <div style="text-align:center; background:rgba(0,0,0,.25); border:1px solid var(--border-subtle); border-radius:10px; padding:10px 16px;">
+            <div style="font-size:22px; font-weight:800; color:${trustColor}; font-family:var(--font-mono);">${view.onChainEventCount}/${view.expectedEventCount}</div>
+            <div style="font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted);">Events Verified</div>
           </div>
         </div>
       </div>
-
-      <div class="blockchain-grid">
     `;
 
-    blocks.forEach(blk => {
-      html += `
-        <div class="block-card">
-          <div class="block-header">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <span class="block-num">BLOCK #${blk.num}</span>
-              <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);">${blk.name}</span>
-            </div>
-            <span style="font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan); font-weight: 600;">${blk.badge}</span>
-          </div>
+    // ---- Compliance / provenance summary (GS1 + blockchain facts) ----
+    const rootMatchBadge = view.merkleRootMatches
+      ? `<span style="color:#10b981;">✓ matches</span>` : `<span style="color:#f43f5e;">✕ differs</span>`;
+    const authBadge = view.anchoredByAuthorized
+      ? `<span style="color:#10b981;">✓ authorized signer</span>` : `<span style="color:#f59e0b;">⚠ unconfirmed</span>`;
+    const rootTxLink = view.batchRootTx
+      ? `<a href="${escapeHtml(view.batchRootExplorerUrl)}" target="_blank" rel="noopener" style="color:var(--accent-cyan); font-family:var(--font-mono);">${short(view.batchRootTx)} ↗</a>`
+      : '<span style="color:var(--text-muted);">not anchored</span>';
 
-          <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
-            Timestamp: <strong>${blk.time}</strong>
-          </div>
-
-          <div class="hash-row">
-            <div class="hash-label">PREVIOUS BLOCK HASH</div>
-            <div class="prev-hash-val">${blk.prevHash}</div>
-          </div>
-
-          <div class="hash-row">
-            <div class="hash-label">BLOCK STATE HASH (SHA-256)</div>
-            <div class="hash-val">${blk.blockHash}</div>
-          </div>
-
-          <div class="hash-row" style="margin-bottom: 16px;">
-            <div class="hash-label">MERKLE TREE ROOT</div>
-            <div class="hash-val" style="color: var(--accent-purple);">${blk.merkleRoot}</div>
-          </div>
-
-          <div style="background: rgba(15, 23, 42, 0.5); border-radius: 6px; padding: 10px 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
-            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 6px;">Payload State Snapshot</div>
-            ${blk.records.map(r => `
-              <div style="display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.05);">
-                <span style="color: var(--text-secondary);">${r.k}</span>
-                <span style="font-weight: 600; font-family: var(--font-mono); color: var(--text-primary);">${r.v}</span>
-              </div>
-            `).join('')}
-          </div>
+    const summaryCard = `
+      <div class="card" style="margin-bottom:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+          <div style="font-size:14px; font-weight:700; color:#fff;">📋 GS1 EPCIS 2.0 Compliance & Provenance</div>
+          <span style="font-size:11px; padding:3px 10px; border-radius:999px; background:rgba(56,189,248,.15); color:var(--accent-cyan); border:1px solid rgba(56,189,248,.3); font-weight:700;">EPCIS 2.0 · CBV</span>
         </div>
-      `;
-    });
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px 24px; font-size:12px;">
+          <div><div style="color:var(--text-muted);">Product Batch (GS1 lot)</div><div style="color:var(--text-primary); font-weight:600;">${escapeHtml(view.batchId)}</div></div>
+          <div><div style="color:var(--text-muted);">Standard</div><div style="color:var(--text-primary); font-weight:600;">GS1 EPCIS 2.0 (Core Business Vocabulary)</div></div>
+          <div><div style="color:var(--text-muted);">Blockchain Network</div><div style="color:var(--text-primary); font-weight:600;">VeChainThor · ${escapeHtml(view.network || cfg.network)}</div></div>
+          <div><div style="color:var(--text-muted);">Data on-chain</div><div style="color:var(--text-primary); font-weight:600;">SHA-256 hashes only — no personal or business data exposed</div></div>
+          <div title="${escapeHtml(view.merkleRoot)}"><div style="color:var(--text-muted);">Dataset Merkle Root</div><div style="font-family:var(--font-mono); color:var(--accent-purple);">${short(view.merkleRoot)} ${rootMatchBadge}</div></div>
+          <div title="${escapeHtml(view.anchoredBy)}"><div style="color:var(--text-muted);">Recorded By</div><div style="font-family:var(--font-mono); color:var(--text-primary);">${short(view.anchoredBy)} ${authBadge}</div></div>
+          <div title="${escapeHtml(view.contractAddress)}"><div style="color:var(--text-muted);">Smart Contract</div><div style="font-family:var(--font-mono); color:var(--text-primary);">${short(view.contractAddress)}</div></div>
+          <div><div style="color:var(--text-muted);">Batch Link Transaction</div><div>${rootTxLink}</div></div>
+        </div>
+      </div>
+    `;
 
-    html += `</div>`;
-    container.innerHTML = html;
+    const chainWarn = view.chainError
+      ? `<div class="card" style="margin-bottom:16px; border:1px solid rgba(245,158,11,.4); background:rgba(245,158,11,.08); color:#f59e0b; font-size:12px; padding:10px 14px;">
+           ⚠ Live chain read partially unavailable (${escapeHtml(view.chainError)}). Showing recorded supply-chain data; explorer links remain valid.
+         </div>` : '';
+
+    // ---- Full GS1 EPCIS journey, grouped by lifecycle phase ----
+    const gs1 = Array.isArray(view.gs1Events) ? view.gs1Events : [];
+    const phaseOrder = ['procurement', 'production', 'quality', 'sales'];
+    const phaseMeta = {
+      procurement: { label: 'Procurement', icon: '📥', color: '#38bdf8' },
+      production:  { label: 'Production',  icon: '🏭', color: '#a78bfa' },
+      quality:     { label: 'Quality',     icon: '🔬', color: '#f59e0b' },
+      sales:       { label: 'Sales & Distribution', icon: '🚚', color: '#10b981' },
+    };
+
+    const phaseCounts = view.phaseCounts || {};
+    const totalEvents = view.totalGs1Events || gs1.length;
+
+    // Phase filter chips + counts.
+    const chips = phaseOrder
+      .filter((p) => (phaseCounts[p] || 0) > 0)
+      .map((p) => {
+        const m = phaseMeta[p];
+        return `<button class="bc-phase-chip" data-phase="${p}" style="cursor:pointer; font-size:12px; padding:5px 12px; border-radius:999px; background:${m.color}1a; color:${m.color}; border:1px solid ${m.color}55; font-weight:700;">
+          ${m.icon} ${m.label} <span style="opacity:.8;">(${phaseCounts[p] || 0})</span>
+        </button>`;
+      }).join('');
+
+    const eventCard = (g, index) => {
+      const anchored = !!g.anchored;
+      const status = anchored ? (g.anchorStatus || 'VERIFIED') : 'RECORDED';
+      const st = anchored
+        ? V.statusStyle(status)
+        : { label: 'Recorded (dataset-hashed)', icon: '◈', color: '#64748b', bg: 'rgba(100,116,139,.12)', border: 'rgba(100,116,139,.3)' };
+
+      const typeLabel = V.eventTypeLabel(g.type);
+      const when = g.eventTime ? new Date(g.eventTime).toUTCString() : '—';
+      const where = V.locationLabel(g.bizLocation);
+      const why = V.bizStepLabel(g.bizStep);
+      const disp = g.disposition ? V.dispositionLabel(g.disposition) : '';
+
+      const hasFlow = (g.inputQuantityList && g.inputQuantityList.length) || (g.outputQuantityList && g.outputQuantityList.length);
+      let flowBlock = '';
+      if (hasFlow) {
+        const inputs = (g.inputQuantityList || []).map(q =>
+          `<div style="display:flex; justify-content:space-between; gap:10px; font-size:12px; padding:2px 0;">
+             <span style="color:var(--text-secondary);">${escapeHtml(V.epcLabel(q.epcClass))}</span>
+             <span style="font-family:var(--font-mono); color:#f59e0b;">${escapeHtml(String(q.quantity))} ${escapeHtml(q.uom || '')}</span>
+           </div>`).join('') || '<div style="font-size:12px; color:var(--text-muted);">—</div>';
+        const outputs = (g.outputQuantityList || []).map(q =>
+          `<div style="display:flex; justify-content:space-between; gap:10px; font-size:12px; padding:2px 0;">
+             <span style="color:var(--text-secondary);">${escapeHtml(V.epcLabel(q.epcClass))}</span>
+             <span style="font-family:var(--font-mono); color:#10b981;">${escapeHtml(String(q.quantity))} ${escapeHtml(q.uom || '')}</span>
+           </div>`).join('') || '<div style="font-size:12px; color:var(--text-muted);">—</div>';
+        flowBlock = `
+          <div style="margin-top:12px; display:grid; grid-template-columns:1fr auto 1fr; gap:12px; align-items:center;">
+            <div style="background:rgba(245,158,11,.07); border:1px solid rgba(245,158,11,.25); border-radius:8px; padding:8px 10px;">
+              <div style="font-size:10px; text-transform:uppercase; color:#f59e0b; font-weight:700; margin-bottom:4px;">Consumed (input)</div>${inputs}
+            </div>
+            <div style="font-size:20px; color:var(--text-muted);">➜</div>
+            <div style="background:rgba(16,185,129,.07); border:1px solid rgba(16,185,129,.25); border-radius:8px; padding:8px 10px;">
+              <div style="font-size:10px; text-transform:uppercase; color:#10b981; font-weight:700; margin-bottom:4px;">Produced (output)</div>${outputs}
+            </div>
+          </div>`;
+      }
+
+      // Blockchain proof strip: on-chain for anchored, dataset note otherwise.
+      let proof;
+      if (anchored) {
+        const txLink = g.transactionId
+          ? `<a href="${escapeHtml(g.explorerUrl)}" target="_blank" rel="noopener" style="color:var(--accent-cyan); font-family:var(--font-mono);" title="${escapeHtml(g.transactionId)}">${short(g.transactionId)} ↗</a>`
+          : '<span style="color:var(--text-muted);">—</span>';
+        proof = `
+          <div style="margin-top:12px; background:rgba(15,23,42,.5); border:1px solid ${st.color}44; border-radius:8px; padding:9px 12px;">
+            <div style="font-size:10px; text-transform:uppercase; color:${st.color}; font-weight:700; margin-bottom:6px;">⛓️ Anchored on VeChain</div>
+            <div style="display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font-size:12px;">
+              <span style="color:var(--text-muted);">Event fingerprint</span>
+              <span style="font-family:var(--font-mono); color:var(--accent-purple);" title="${escapeHtml(g.eventHash)}">${short(g.eventHash)}</span>
+              <span style="color:var(--text-muted);">Transaction</span><span>${txLink}</span>
+              <span style="color:var(--text-muted);">Live check</span>
+              <span style="color:${st.color}; font-weight:600;">${status === 'VERIFIED' ? 'Confirmed on VeChain — unaltered' : (status === 'MISMATCH' ? 'On-chain fingerprint differs — tampered' : 'Not confirmed')}</span>
+            </div>
+          </div>`;
+      } else {
+        proof = `
+          <div style="margin-top:12px; background:rgba(15,23,42,.35); border:1px dashed rgba(255,255,255,.12); border-radius:8px; padding:8px 12px; font-size:11px; color:var(--text-muted);">
+            ◈ Covered by the batch dataset hash on-chain (not anchored as an individual transaction).
+          </div>`;
+      }
+
+      return `
+        <div class="block-card" style="border-left:4px solid ${st.color};">
+          <div class="block-header" style="align-items:center;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="block-num">#${index}</span>
+              <span style="font-size:14px; font-weight:700; color:#fff;">${escapeHtml(typeLabel)}</span>
+            </div>
+            <span style="font-size:11px; padding:4px 11px; border-radius:999px; background:${st.bg}; color:${st.color}; border:1px solid ${st.border}; font-weight:700;">
+              ${st.icon} ${st.label}
+            </span>
+          </div>
+          <div style="margin-top:6px; font-size:11px; color:var(--text-muted); font-family:var(--font-mono);" title="${escapeHtml(g.eventID)}">${escapeHtml(g.eventID || '')}</div>
+          <div style="margin-top:12px; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
+            <div><div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); letter-spacing:.04em;">Business Step (why)</div><div style="font-size:13px; font-weight:600; color:var(--text-primary);">${escapeHtml(why)}${disp ? ` · ${escapeHtml(disp)}` : ''}</div></div>
+            <div><div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); letter-spacing:.04em;">When</div><div style="font-size:13px; font-weight:600; color:var(--text-primary);">${escapeHtml(when)}</div></div>
+            <div><div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); letter-spacing:.04em;">Where (location)</div><div style="font-size:13px; font-weight:600; color:var(--text-primary);">${escapeHtml(where)}</div></div>
+            ${g.transformationID ? `<div><div style="font-size:10px; text-transform:uppercase; color:var(--text-muted); letter-spacing:.04em;">Process Ref</div><div style="font-size:13px; font-weight:600; color:var(--text-primary);">${escapeHtml(g.transformationID)}</div></div>` : ''}
+          </div>
+          ${flowBlock}
+          ${proof}
+        </div>`;
+    };
+
+    // Build one section per phase.
+    let counter = 0;
+    const sections = phaseOrder
+      .filter((p) => (phaseCounts[p] || 0) > 0)
+      .map((p) => {
+        const m = phaseMeta[p];
+        const evs = gs1.filter((g) => g.phase === p);
+        const cards = evs.map((g) => { counter += 1; return eventCard(g, counter); }).join('');
+        const anchoredInPhase = evs.filter((g) => g.anchored).length;
+        return `
+          <div class="bc-phase-section" data-phase-section="${p}" style="margin-bottom:22px;">
+            <div style="display:flex; align-items:center; gap:10px; margin:6px 2px 12px; padding-bottom:8px; border-bottom:2px solid ${m.color}44;">
+              <span style="font-size:18px;">${m.icon}</span>
+              <span style="font-size:15px; font-weight:800; color:#fff;">${m.label}</span>
+              <span style="font-size:12px; color:var(--text-muted);">${evs.length} event${evs.length === 1 ? '' : 's'}${anchoredInPhase ? ` · ${anchoredInPhase} anchored on-chain` : ''}</span>
+            </div>
+            <div class="blockchain-grid">${cards}</div>
+          </div>`;
+      }).join('');
+
+    area.innerHTML = `
+      ${banner}
+      ${chainWarn}
+      ${summaryCard}
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin:4px 2px 14px;">
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted); font-weight:700;">
+          Complete GS1 EPCIS Journey — ${totalEvents} events across ${Object.keys(phaseCounts).length} lifecycle phases
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">${chips}</div>
+      </div>
+      ${sections || '<div style="color:var(--text-muted); font-size:13px;">No GS1 EPCIS events found for this batch.</div>'}
+      <div style="margin-top:16px; font-size:11px; color:var(--text-muted); text-align:center;">
+        GS1 EPCIS 2.0 compliant · key events anchored & verified live on the VeChain public ledger · only cryptographic hashes are stored on-chain
+      </div>
+    `;
+
+    // Phase chip filtering (client-side show/hide).
+    area.querySelectorAll('.bc-phase-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const target = chip.dataset.phase;
+        const sections = area.querySelectorAll('.bc-phase-section');
+        const active = chip.classList.toggle('bc-chip-active');
+        // If this chip becomes the sole active filter, show only its section;
+        // toggling it off again reveals all.
+        const anyActive = area.querySelector('.bc-phase-chip.bc-chip-active');
+        sections.forEach((sec) => {
+          if (!anyActive) { sec.style.display = ''; return; }
+          sec.style.display = (sec.dataset.phaseSection === target && active) ? '' : (sec.dataset.phaseSection === (anyActive && anyActive.dataset.phase) ? '' : 'none');
+        });
+        // Simpler: recompute from all active chips.
+        const activePhases = Array.from(area.querySelectorAll('.bc-phase-chip.bc-chip-active')).map((c) => c.dataset.phase);
+        sections.forEach((sec) => {
+          sec.style.display = (activePhases.length === 0 || activePhases.includes(sec.dataset.phaseSection)) ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  /** Small helper to render an error/empty state inside the live area. */
+  _bcError(msgHtml) {
+    return `<div class="card" style="padding:24px; text-align:center; color:var(--text-secondary); font-size:14px;">${msgHtml}</div>`;
   }
 
   /**
@@ -2283,3 +2392,14 @@ window.app = new AppController();
 window.addEventListener('DOMContentLoaded', () => {
   window.app.init();
 });
+
+/** Escape a string for safe insertion into HTML text/attribute contexts. */
+function escapeHtml(value) {
+  if (value === null || value === undefined) return '';
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}

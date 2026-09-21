@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://ref.gs1.org/epcis/epcis-context.jsonld"
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "1970-01-01T00:00:00Z",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "TransformationEvent",
+        "eventID": "urn:uuid:gs1-engine:transformation:TRANS-SFG-001",
+        "eventTime": "2010-02-01T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "bizStep": "urn:epcglobal:cbv:bizstep:commissioning",
+        "inputQuantityList": [
+          {
+            "epcClass": "urn:internal:batch:000000000110000711:RM-MET-05043",
+            "quantity": 105.07434,
+            "uom": "KG"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "urn:internal:batch:000000000210250095:PF05043-CORE",
+            "quantity": 105.07434,
+            "uom": "KG"
+          }
+        ],
+        "transformationID": "TRANS-SFG-001",
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      },
+      {
+        "type": "TransformationEvent",
+        "eventID": "urn:uuid:gs1-engine:transformation:TRANS-PF05043",
+        "eventTime": "2010-02-02T00:00:00Z",
+        "eventTimeZoneOffset": "+00:00",
+        "bizStep": "urn:epcglobal:cbv:bizstep:commissioning",
+        "inputQuantityList": [
+          {
+            "epcClass": "urn:internal:batch:000000000210250095:PF05043-CORE",
+            "quantity": 105.07434,
+            "uom": "KG"
+          },
+          {
+            "epcClass": "urn:internal:batch:000000000110000711:RM-MET-05043",
+            "quantity": 0.768,
+            "uom": "KG"
+          },
+          {
+            "epcClass": "urn:internal:batch:000000000110000714:RM-COAT-05043",
+            "quantity": 0.534,
+            "uom": "KG"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "urn:internal:batch:000000000210250096:PF05043",
+            "quantity": 104.034,
+            "uom": "KG"
+          }
+        ],
+        "transformationID": "TRANS-PF05043",
+        "bizLocation": {
+          "id": "urn:internal:plant:EP04"
+        }
+      }
+    ]
+  }
+}
