@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAP S/4HANA & ECC Supply Chain Traceability 360° (Business Objects Architecture)</title>
-  <meta name="description" content="Enterprise Supply Chain Traceability by Business Objects - End-to-end batch genealogy across 37 SAP Business Objects from planning to sales and returns.">
+  <title>Supply Chain Traceability Portal</title>
+  <meta name="description" content="End-to-end supply chain batch traceability and verification across procurement, production, quality, and distribution.">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="css/styles.css?v=4.1">
-  <link rel="stylesheet" href="css/graph.css?v=4.1">
+  <link rel="stylesheet" href="css/styles.css?v=4.3">
+  <link rel="stylesheet" href="css/graph.css?v=4.3">
 </head>
 <body>
 
@@ -18,9 +18,9 @@
        ========================================================================= -->
   <header class="header">
     <div class="brand-section" onclick="window.app.switchView('viewHome', '/home')" style="cursor: pointer;" title="Return to Home Overview">
-      <div class="brand-logo">BO</div>
+      <div class="brand-logo" style="letter-spacing: normal;">SC</div>
       <div class="brand-title-group">
-        <h1>SAP Traceability 360°</h1>
+        <h1>Traceability Portal</h1>
       </div>
     </div>
 
@@ -60,7 +60,7 @@
       </button>
       <div style="font-size: 1.1rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; margin-left: 8px;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <span>Traceability 360° Workspace</span>
+        <span>Batch Traceability Workspace</span>
       </div>
     </div>
   </nav>
@@ -237,7 +237,7 @@
       </div>
     </section>
 
-    <!-- VIEW 1: TRACEABILITY 360° (Dedicated Batch Workspace with Search, Recent Batches, Graphs & Event Audit) -->
+    <!-- VIEW 1: TRACEABILITY WORKSPACE (Dedicated Batch Workspace with Search, Recent Batches, Graphs & Event Audit) -->
     <section id="viewPipeline" class="view-panel">
       <div class="trace-control-panel">
         <div class="trace-search-row">
@@ -250,8 +250,8 @@
           </div>
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
             <div class="batch-category-tabs" id="batchCategoryTabs" style="display: flex; gap: 6px;">
-              <button class="cat-btn active" id="btnCatFinished" data-cat="finished">Finished Batches (FG)</button>
-              <button class="cat-btn" id="btnCatRaw" data-cat="raw">Raw Material Batches (RM)</button>
+              <button class="cat-btn active" id="btnCatFinished" data-cat="finished">Finished Batches</button>
+              <button class="cat-btn" id="btnCatRaw" data-cat="raw">Raw Materials</button>
             </div>
             <div class="batch-pills-list" id="batchPillsList">
               <!-- Populated dynamically -->
@@ -259,45 +259,45 @@
           </div>
         </div>
 
-        <!-- In-Traceability Sub Navigation (Lifecycle BOs, Graph Visualizer, Audit Events, Transformation) -->
+        <!-- In-Traceability Sub Navigation (Lifecycle, Visual Map, Activity Log, Yield & Balance) -->
         <div class="trace-subnav-bar">
           <button class="trace-subnav-btn active" data-subview="subStages">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            <span>Lifecycle Trace</span>
+            <span>Lifecycle Stages</span>
           </button>
           <button class="trace-subnav-btn" data-subview="subGraph">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            <span>Genealogy Graph</span>
+            <span>Traceability Graph</span>
           </button>
           <button class="trace-subnav-btn" data-subview="subEvents">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span>Audit Trail Events</span>
+            <span>Activity Log</span>
           </button>
           <button class="trace-subnav-btn" data-subview="subTransform">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            <span>Multi-Tier Mass Balance</span>
+            <span>Production & Yield</span>
           </button>
         </div>
       </div>
 
       <!-- Traceability Subview 1: Lifecycle Stages Grid -->
       <div id="traceSubStages" class="trace-subview-panel active">
-        <!-- Flow Switcher for Finished Batches: Lifecycle vs Direct Raw Material Flow -->
+        <!-- Flow Switcher: Complete Product Flow vs Raw Material Flows -->
         <div id="flowSwitcherContainer" style="display: flex; gap: 0.5rem; align-items: center; background: rgba(0,0,0,0.25); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.5rem 0.85rem; margin-bottom: 1rem; flex-wrap: wrap;">
-          <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Genealogy Stream:</span>
-          <button class="flow-pill-btn active" id="btnFlowFinished" data-flow="finished">Finished Goods Full Lifecycle</button>
-          <button class="flow-pill-btn" id="btnFlowDirectRM" data-flow="direct_rm">Raw Material 1: RM-MET-05043</button>
-          <button class="flow-pill-btn" id="btnFlowCoatRM" data-flow="coat_rm">Raw Material 2: RM-COAT-05043</button>
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">View Flow:</span>
+          <button class="flow-pill-btn active" id="btnFlowFinished" data-flow="finished">Complete Product Lifecycle</button>
+          <button class="flow-pill-btn" id="btnFlowDirectRM" data-flow="direct_rm">Raw Material: Active Ingredient (RM-MET-05043)</button>
+          <button class="flow-pill-btn" id="btnFlowCoatRM" data-flow="coat_rm">Raw Material: Coating Agent (RM-COAT-05043)</button>
         </div>
 
-        <!-- BO Domain Filtering Pills -->
+        <!-- Stage Category Filtering Pills -->
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
-          <button class="filter-btn bo-filter-btn active" data-bofilter="all">All</button>
+          <button class="filter-btn bo-filter-btn active" data-bofilter="all">All Stages</button>
           <button class="filter-btn bo-filter-btn" data-bofilter="planning">Planning</button>
-          <button class="filter-btn bo-filter-btn" data-bofilter="procurement">Procurement</button>
-          <button class="filter-btn bo-filter-btn" data-bofilter="manufacturing">Manufacturing</button>
-          <button class="filter-btn bo-filter-btn" data-bofilter="quality">Quality</button>
-          <button class="filter-btn bo-filter-btn" data-bofilter="commercial">Commercial</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="procurement">Sourcing</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="manufacturing">Production</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="quality">Quality & Lab</button>
+          <button class="filter-btn bo-filter-btn" data-bofilter="commercial">Sales & Logistics</button>
         </div>
 
         <div class="stages-grid" id="stagesGrid">
@@ -305,12 +305,12 @@
         </div>
       </div>
 
-      <!-- Traceability Subview 2: Embedded Genealogy DAG Network Graph -->
+      <!-- Traceability Subview 2: Embedded Genealogy Network Graph -->
       <div id="traceSubGraph" class="trace-subview-panel" style="display: none;">
         <div class="view-header" style="margin-bottom: 1rem;">
           <div class="view-title-group">
-            <h3>Genealogy DAG</h3>
-            <p class="view-description">Interactive node-link graph of parent-child intermediate and finished objects.</p>
+            <h3>Traceability Network Graph</h3>
+            <p class="view-description">Interactive visual map showing connections between raw materials, intermediate stages, and finished products.</p>
           </div>
         </div>
         <div class="graph-viewport-wrapper" id="graphContainer">
@@ -318,21 +318,21 @@
         </div>
       </div>
 
-      <!-- Traceability Subview 3: Embedded Business Events Audit Trail -->
+      <!-- Traceability Subview 3: Embedded Activity Events Trail -->
       <div id="traceSubEvents" class="trace-subview-panel" style="display: none;">
         <div class="view-header" style="margin-bottom: 1rem;">
           <div class="view-title-group">
-            <h3>Batch Business Events Audit Trail</h3>
-            <p class="view-description">Chronological event-driven audit log for the current active finished batch.</p>
+            <h3>Batch Activity Log</h3>
+            <p class="view-description">Chronological record of events and status updates for the active batch.</p>
           </div>
         </div>
         <div class="events-toolbar">
           <div class="event-filter-btns">
-            <button class="filter-btn active" data-filter="all">All Events</button>
-            <button class="filter-btn" data-filter="batch">Batch Events</button>
-            <button class="filter-btn" data-filter="order">Order Events</button>
-            <button class="filter-btn" data-filter="quality">Quality Events</button>
-            <button class="filter-btn" data-filter="movement">Goods Movements</button>
+            <button class="filter-btn active" data-filter="all">All Activities</button>
+            <button class="filter-btn" data-filter="batch">Batch Updates</button>
+            <button class="filter-btn" data-filter="order">Production Orders</button>
+            <button class="filter-btn" data-filter="quality">Quality & Testing</button>
+            <button class="filter-btn" data-filter="movement">Inventory Movements</button>
           </div>
         </div>
         <div class="timeline-list" id="timelineList">
@@ -362,12 +362,12 @@
       </div>
     </section>
 
-    <!-- VIEW 4: INTERACTIVE GENEALOGY DAG NETWORK -->
+    <!-- VIEW 4: INTERACTIVE GENEALOGY NETWORK -->
     <section id="viewGraph" class="view-panel">
       <div class="view-header">
         <div class="view-title-group">
-          <h2>Genealogy DAG</h2>
-          <p class="view-description">Interactive node-link graph showing relationships and resolved connections.</p>
+          <h2>Traceability Network Graph</h2>
+          <p class="view-description">Visual map showing relationships and connections across production stages.</p>
         </div>
       </div>
 
@@ -376,12 +376,12 @@
       </div>
     </section>
 
-    <!-- VIEW 3: MULTI-TIER TRANSFORMATION & MASS BALANCE -->
+    <!-- VIEW 3: PRODUCTION YIELD & MATERIAL BALANCE -->
     <section id="viewTransform" class="view-panel">
       <div class="view-header">
         <div class="view-title-group">
-          <h2>Multi-Tier Transformation Accounting</h2>
-          <p class="view-description">Stage 1 (Granulation & Core Compression) and Stage 2 (Film Coating & Final Packing) operational accounting.</p>
+          <h2>Production Yield & Material Balance</h2>
+          <p class="view-description">Stage 1 (Granulation & Core Compression) and Stage 2 (Film Coating & Final Packaging) operational yield summary.</p>
         </div>
       </div>
 
@@ -390,22 +390,22 @@
       </div>
     </section>
 
-    <!-- VIEW 5: BUSINESS EVENTS AUDIT TRAIL -->
+    <!-- VIEW 5: ACTIVITY LOG -->
     <section id="viewEvents" class="view-panel">
       <div class="view-header">
         <div class="view-title-group">
-          <h2>Audit Trail Events</h2>
-          <p class="view-description">Event-driven stream for complete lifecycle verification.</p>
+          <h2>Activity Log</h2>
+          <p class="view-description">Event-driven activity stream for complete lifecycle verification.</p>
         </div>
       </div>
 
       <div class="events-toolbar">
         <div class="event-filter-btns">
-          <button class="filter-btn active" data-filter="all">All Events</button>
-          <button class="filter-btn" data-filter="batch">Batch Events</button>
-          <button class="filter-btn" data-filter="order">Order Events</button>
-          <button class="filter-btn" data-filter="quality">Quality Events</button>
-          <button class="filter-btn" data-filter="movement">Goods Movements</button>
+          <button class="filter-btn active" data-filter="all">All Activities</button>
+          <button class="filter-btn" data-filter="batch">Batch Updates</button>
+          <button class="filter-btn" data-filter="order">Production Orders</button>
+          <button class="filter-btn" data-filter="quality">Quality & Testing</button>
+          <button class="filter-btn" data-filter="movement">Inventory Movements</button>
         </div>
       </div>
 
@@ -423,8 +423,8 @@
     <div class="drawer-panel" id="drawerPanel">
       <div class="drawer-header">
         <div class="drawer-title-group">
-          <h3 id="drawerTitle">Entity Details</h3>
-          <div class="drawer-subtitle" id="drawerSubtitle">SAP S/4HANA Entity Inspector</div>
+          <h3 id="drawerTitle">Record Details</h3>
+          <div class="drawer-subtitle" id="drawerSubtitle">Record Overview</div>
         </div>
         <button class="drawer-close-btn" id="drawerCloseBtn" title="Close">✕</button>
       </div>
@@ -438,18 +438,18 @@
        Footer
        ========================================================================= -->
   <footer class="footer">
-    <div>SAP S/4HANA Supply Chain Traceability 360° Portal</div>
+    <div>Supply Chain Traceability Platform</div>
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data-bundle.js?v=4.1"></script>
-  <script src="js/blockchain-bundle.js?v=4.1"></script>
-  <script src="js/data-service.js?v=4.1"></script>
-  <script src="js/vechain-verify.js?v=4.1"></script>
-  <script src="js/drawer.js?v=4.1"></script>
-  <script src="js/graph.js?v=4.1"></script>
-  <script src="js/timeline.js?v=4.1"></script>
-  <script src="js/app.js?v=4.1"></script>
+  <script src="js/data-bundle.js?v=4.3"></script>
+  <script src="js/blockchain-bundle.js?v=4.3"></script>
+  <script src="js/data-service.js?v=4.3"></script>
+  <script src="js/vechain-verify.js?v=4.3"></script>
+  <script src="js/drawer.js?v=4.3"></script>
+  <script src="js/graph.js?v=4.3"></script>
+  <script src="js/timeline.js?v=4.3"></script>
+  <script src="js/app.js?v=4.3"></script>
 
 </body>
 </html>

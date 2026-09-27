@@ -55,7 +55,7 @@ class EventsTimeline {
     if (this.filteredEvents.length === 0) {
       this.container.innerHTML = `
         <div style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
-          No SAP business events matching the current criteria.
+          No activity events matching the current criteria.
         </div>
       `;
       return;
@@ -71,6 +71,8 @@ class EventsTimeline {
         badgeClass = 'active-purple';
       }
 
+      const cleanBo = (ev.business_object || 'Record').replace(/^BO\s*#?\d+\s*:?\s*/i, '');
+
       html += `
         <div class="timeline-item" data-event-id="${ev.event_id || ''}" style="cursor: pointer;">
           <div class="timeline-dot"></div>
@@ -79,7 +81,7 @@ class EventsTimeline {
             <span class="timeline-date">${ev.timestamp || '-'}</span>
           </div>
           <div style="display: flex; gap: 0.5rem; align-items: center; margin: 0.35rem 0;">
-            <span class="pill-badge ${badgeClass}">${ev.business_object || 'SAP Entity'}</span>
+            <span class="pill-badge ${badgeClass}">${cleanBo}</span>
             <span class="sap-key" style="color: var(--text-highlight);">${ev.entity_key || ''}</span>
           </div>
           <p class="timeline-desc">${ev.description || ''}</p>
@@ -94,7 +96,8 @@ class EventsTimeline {
       el.addEventListener('click', () => {
         const ev = this.filteredEvents[idx];
         if (ev && window.detailDrawer) {
-          window.detailDrawer.open(ev.event_name, `Event ID: ${ev.event_id || '-'}`, ev, `Event Source: ${ev.business_object}`);
+          const cleanBo = (ev.business_object || 'Record').replace(/^BO\s*#?\d+\s*:?\s*/i, '');
+          window.detailDrawer.open(ev.event_name, `Event ID: ${ev.event_id || '-'}`, ev, `Activity Category: ${cleanBo}`);
         }
       });
     });

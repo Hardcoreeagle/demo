@@ -29,14 +29,14 @@ class DetailDrawer {
     if (!this.backdrop) return;
 
     this.titleEl.textContent = title;
-    this.subtitleEl.textContent = subtitle || 'SAP S/4HANA Entity Details';
+    this.subtitleEl.textContent = subtitle || 'Record Details';
 
     let html = '';
 
     if (sapTableInfo) {
       html += `
         <div style="background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: 8px; padding: 0.85rem 1rem;">
-          <div style="font-size: 0.72rem; color: var(--cyan-400); font-weight: 700; text-transform: uppercase;">SAP Source Table Mapping</div>
+          <div style="font-size: 0.72rem; color: var(--cyan-400); font-weight: 700; text-transform: uppercase;">Data Source & Lineage</div>
           <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; color: #fff; margin-top: 0.25rem;">${sapTableInfo}</div>
         </div>
       `;
@@ -84,7 +84,7 @@ class DetailDrawer {
       html += `
         <div>
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-            <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em;">Complete SAP Object Payload</h4>
+            <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em;">Record Data (JSON)</h4>
             <button id="copyJsonBtn" class="pill-badge" style="cursor: pointer;">Copy JSON</button>
           </div>
           <pre class="json-viewer-box">${this.escapeHtml(JSON.stringify(data, null, 2))}</pre>

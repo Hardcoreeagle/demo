@@ -467,20 +467,20 @@ class AppController {
 
     if (batchIdEl) batchIdEl.textContent = this.currentBatchId;
     if (statusEl) statusEl.textContent = bo.batch?.status || 'RELEASED';
-    if (matEl) matEl.textContent = bo.material?.material_description || (isRaw ? 'RAW MATERIAL API / EXCIPIENT' : 'PHARMACEUTICAL FINISHED PRODUCT');
+    if (matEl) matEl.textContent = bo.material?.material_description || (isRaw ? 'Raw Material / Active Ingredient' : 'Pharmaceutical Product');
 
     if (isRaw) {
       const stockQty = Number(bo.inventory_stock?.unrestricted_stock || bo.material_movement?.quantity || 110.0);
       const consumedQty = Number(bo.material_consumption?.consumed_quantity || 0.768);
       const uom = bo.material_movement?.UOM || 'KG';
-      if (yieldEl) yieldEl.textContent = `RMS Stock: ${stockQty.toFixed(1)} ${uom} (Consumed: ${consumedQty.toFixed(3)} ${uom})`;
+      if (yieldEl) yieldEl.textContent = `Stock: ${stockQty.toFixed(1)} ${uom} (Issued: ${consumedQty.toFixed(3)} ${uom})`;
 
       const suppName = bo.supplier_or_source?.Source_Name || 'Aarti Drugs Limited';
       if (supplierEl) supplierEl.textContent = suppName;
 
       const poId = bo.process_order?.process_order_id || '400000000643';
       const fgBatch = bo.finished_product_output?.batch_id || bo.batch_transformation?.output_batch_id || 'PF05043';
-      if (salesEl) salesEl.textContent = `Consumed in PO ${poId} ➔ FG ${fgBatch}`;
+      if (salesEl) salesEl.textContent = `Issued to Order #${poId} ➔ Batch ${fgBatch}`;
     } else {
       const producedQty = Number(bo.yield?.yield_quantity || bo.produced_product?.produced_quantity || bo.process_order?.produced_product?.produced_quantity || 104.034);
       const uom = bo.yield?.UOM || bo.produced_product?.uom || bo.process_order?.UOM || 'KG';
@@ -491,12 +491,140 @@ class AppController {
 
       const delivId = bo.outbound_delivery?.delivery_id || '2100084439';
       const invId = bo.billing_document?.billing_document_id || bo.billing_document?.invoice_id || '5402100863';
-      if (salesEl) salesEl.textContent = `Delivery ${delivId} | Inv ${invId} (Clean)`;
+      if (salesEl) salesEl.textContent = `Delivered (#${delivId}) | Invoiced (#${invId})`;
     }
   }
 
+  formatKeyLabel(keyName) {
+    if (!keyName) return 'Reference ID';
+    const map = {
+      planning_requirement_id: 'Requirement ID',
+      plan_order_id: 'Planned Order #',
+      Supplier_or_Source_id: 'Supplier ID',
+      purchase_requisition_id: 'Requisition #',
+      purchase_order_id: 'Purchase Order #',
+      grn_id: 'Goods Receipt #',
+      material_document_id: 'Document #',
+      Material_document_id: 'Document #',
+      inventory_id: 'Storage Location',
+      reservation_id: 'Reservation #',
+      bom_id: 'Formula (BOM) #',
+      recipe_id: 'Master Recipe #',
+      production_version_id: 'Production Version',
+      determination_id: 'Batch Allocation #',
+      process_order_id: 'Production Order #',
+      work_centre_id: 'Work Station Code',
+      confermation_id: 'Confirmation #',
+      transformation_id: 'Transformation ID',
+      yield_id: 'Yield Record #',
+      batch_id: 'Batch Number',
+      material_id: 'Material Code',
+      inspection_plan_id: 'Testing Plan #',
+      inspection_characteristic_id: 'Inspection Characteristic',
+      inspection_parameter_id: 'Testing Parameter',
+      inspection_lot_id: 'Inspection Lot #',
+      sample_id: 'Sample ID',
+      inspection_result_id: 'Lab Result #',
+      usage_decision_id: 'Usage Decision #',
+      Customer_id: 'Customer Account #',
+      sales_order_id: 'Sales Order #',
+      item_id: 'Order Item #',
+      delivery_id: 'Delivery Note #',
+      billing_document_id: 'Invoice #',
+      status: 'Return Audit Status'
+    };
+    if (map[keyName]) return map[keyName];
+    return keyName.replace(/_/g, ' ').replace(/\bid\b/gi, 'ID').replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  formatFlowRelation(rel) {
+    if (!rel) return 'Proceeds to Next Stage';
+    const map = {
+      'PLANS_FOR': 'Generates Planned Order',
+      'CONVERTED_TO_ORDER & CREATES_PROCUREMENT': 'Converts to Production & Procurement',
+      'SUPPLIES_MATERIAL_FOR': 'Supplies Raw Material',
+      'CONVERTED_TO': 'Approved into Purchase Order',
+      'RECEIVED_BY': 'Inbound Receiving & Inspection',
+      'POSTS_MOVEMENT': 'Posts Inbound Goods Receipt',
+      'POSTS_MOVEMENT_TO': 'Posts Inbound Goods Receipt',
+      'STOCKS_BATCH_INTO': 'Allocated to Warehouse Inventory',
+      'ALLOCATED_BY': 'Reserved for Production Order',
+      'STRUCTURES_FORMULA_FOR': 'Structures Product Recipe',
+      'DEFINES_OPERATIONS_FOR': 'Defines Manufacturing Steps',
+      'SELECTS_RECIPE_BOM_FOR': 'Applies Formula to Production Order',
+      'DETERMINES_INPUT_BATCH': 'Allocates Input Batch',
+      'DETERMINES_ALLOCATION_FOR': 'Allocates Batch for Order',
+      'EXECUTES_OPERATIONS_VIA': 'Executed on Factory Floor',
+      'CONSUMES_BATCH_FOR': 'Consumed into Manufacturing',
+      'CONSUMES_INTO_PROCESS_ORDER': 'Consumed into Production Order',
+      'CONSUMED_DIRECTLY_INTO_FINISHED_PROCESS_ORDER': 'Direct Issue to Production Order',
+      'CONSUMED_VIA_MOVEMENT_261': 'Issued Directly to Production',
+      'OPERATES_ON': 'Processed at Work Station',
+      'CONFIRMS_COMPLETION_TO': 'Confirms Operation Completion',
+      'TRANSFORMS_INTERMEDIATE_TO': 'Transforms into Product Batch',
+      'TRANSFORMS_VIA': 'Transforms via Manufacturing',
+      'PRODUCES_FINISHED_BATCH': 'Yields Finished Product Batch',
+      'RECORDS_MASS_BALANCE_FOR': 'Reconciles Output Yield & Balance',
+      'INSPECTED_BY': 'Assigned for Quality Inspection',
+      'DEFINES_SPECIFICATION_FOR': 'Defines Quality Inspection Standard',
+      'GOVERNS_INSPECTION_FOR': 'Governs Testing Protocol',
+      'MEASURED_IN': 'Measured in Lab Testing',
+      'APPLIED_TO': 'Applied to Inspection Lot',
+      'SAMPLED_BY': 'Representative Sample Taken',
+      'TESTED_FOR': 'Undergoes Laboratory Testing',
+      'EVALUATED_BY': 'Evaluated by Quality Control',
+      'RELEASES_BATCH_TO_SALES': 'Approved for Distribution & Sale',
+      'RELEASES_STOCK_TO_RESERVATION': 'Approved and Released for Production',
+      'ALLOCATED_TO_COMMERCIAL_SALES': 'Allocated to Commercial Orders',
+      'PLACES_ORDER_VIA': 'Places Customer Order',
+      'CONTAINS_LINE_ITEM': 'Contains Item Line',
+      'ALLOCATES_BATCH_VIA': 'Allocates Batch to Shipment',
+      'CONFIRMS_PICKING_INTO': 'Picked & Packed for Shipment',
+      'SHIPS_ITEMS_VIA': 'Dispatched via Outbound Delivery',
+      'FULFILLED_BY_OUTBOUND_DELIVERY': 'Fulfilled via Outbound Shipment',
+      'INVOICED_BY': 'Billed to Customer',
+      'AUDITED_FOR_RETURNS_IN': 'Post-Delivery Audit Verified',
+      'END_OF_LIFECYCLE': 'Completed Lifecycle'
+    };
+    return map[rel] || rel.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  formatDataSource(tables) {
+    if (!tables) return 'Enterprise System';
+    if (tables.includes('PBIM') || tables.includes('PBED')) return 'Production Planning';
+    if (tables.includes('PLAF')) return 'Material Planning';
+    if (tables.includes('LFA1')) return 'Supplier Registry';
+    if (tables.includes('EBAN')) return 'Requisition Records';
+    if (tables.includes('EKKO')) return 'Purchase Order System';
+    if (tables.includes('MATDOC') && tables.includes('101')) return 'Inbound Receipt Ledger';
+    if (tables.includes('MATDOC') && tables.includes('261')) return 'Material Issue Ledger';
+    if (tables.includes('MATDOC')) return 'Inventory Movement Ledger';
+    if (tables.includes('MCHB') || tables.includes('MARD')) return 'Warehouse Inventory';
+    if (tables.includes('RESB')) return 'Production Reservations';
+    if (tables.includes('STKO')) return 'Formula & Bill of Materials';
+    if (tables.includes('PLKO') && tables.includes('PLNTY')) return 'Quality Inspection Protocol';
+    if (tables.includes('PLKO')) return 'Manufacturing Recipe';
+    if (tables.includes('MKAL')) return 'Production Version';
+    if (tables.includes('CRHD')) return 'Work Station Registry';
+    if (tables.includes('AFRU')) return 'Production Confirmation';
+    if (tables.includes('AFKO') || tables.includes('AUFK')) return 'Manufacturing Execution';
+    if (tables.includes('AFPO')) return 'Batch Transformation';
+    if (tables.includes('MCHA') || tables.includes('MCH1')) return 'Batch Master Registry';
+    if (tables.includes('MARA')) return 'Product Master Catalog';
+    if (tables.includes('QPMK') || tables.includes('QMAT')) return 'Quality Specifications';
+    if (tables.includes('QALS')) return 'Quality Inspection Logs';
+    if (tables.includes('QASE')) return 'Sample & Test Records';
+    if (tables.includes('QAMR')) return 'Analytical Test Results';
+    if (tables.includes('QAVE')) return 'Quality Release Certificate';
+    if (tables.includes('KNA1')) return 'Customer Directory';
+    if (tables.includes('VBAK') || tables.includes('VBAP')) return 'Sales Order Management';
+    if (tables.includes('LIKP') || tables.includes('LIPS')) return 'Dispatch & Logistics';
+    if (tables.includes('VBRK') || tables.includes('VBRP')) return 'Billing & Invoicing';
+    return tables.replace(/SAP Tables:\s*/gi, '');
+  }
+
   /**
-   * CORE TRACEABILITY ENGINE: Structured directly by Business Objects (BO #01 to BO #37).
+   * CORE TRACEABILITY ENGINE: Structured by clear end-to-end supply chain stages.
    */
   renderBusinessObjectsTraceability() {
     const container = document.getElementById('stagesGrid');
@@ -533,15 +661,15 @@ class AppController {
       const rawBoTraceabilityChain = [
         {
           boNum: "05",
-          name: "Supplier or Source",
+          name: "Verified Supplier",
           domain: "procurement",
-          domainLabel: "Procurement Vendor",
+          domainLabel: "Verified Supplier",
           keyName: "Supplier_or_Source_id",
           keyVal: activeBo.supplier_or_source?.Supplier_or_Source_id || "0000400860",
           relationship: "SUPPLIES_MATERIAL_FOR",
-          nextBO: "BO #06: Purchase Requisition",
+          nextBO: "Purchase Requisition",
           sapTables: "LFA1, LFB1, ADRC, EORD",
-          summary: `${activeBo.supplier_or_source?.Source_Name || 'Aarti Drugs Ltd'} | Status: ${activeBo.supplier_or_source?.status || 'ACTIVE'}`,
+          summary: `${activeBo.supplier_or_source?.Source_Name || 'Aarti Drugs Ltd'} | Status: Active & Qualified`,
           events: activeBo.supplier_or_source?.events || [{ event_type: "SupplierAudited" }, { event_type: "SupplierApproved" }],
           data: activeBo.supplier_or_source
         },
@@ -549,13 +677,13 @@ class AppController {
           boNum: "06",
           name: "Purchase Requisition",
           domain: "procurement",
-          domainLabel: "Procurement PR",
+          domainLabel: "Requisition",
           keyName: "purchase_requisition_id",
           keyVal: `${activeBo.purchase_requisition?.purchase_requisition_id || '1000037529'} / ${activeBo.purchase_requisition?.item_id || '0010'}`,
           relationship: "CONVERTED_TO",
-          nextBO: "BO #07: Purchase Order",
+          nextBO: "Purchase Order",
           sapTables: "EBAN",
-          summary: `Material: ${activeBo.purchase_requisition?.material_description || 'API RAW MATERIAL'} | Req Qty: ${activeBo.purchase_requisition?.requested_quantity || 110} KG`,
+          summary: `Material: ${activeBo.purchase_requisition?.material_description || 'Raw Material API'} | Requested Qty: ${activeBo.purchase_requisition?.requested_quantity || 110} KG`,
           events: activeBo.purchase_requisition?.events || [{ event_type: "PurchaseRequisitionCreated" }],
           data: activeBo.purchase_requisition
         },
@@ -563,181 +691,181 @@ class AppController {
           boNum: "07",
           name: "Purchase Order",
           domain: "procurement",
-          domainLabel: "Purchasing PO",
+          domainLabel: "Purchase Order",
           keyName: "purchase_order_id",
           keyVal: `${activeBo.purchase_order?.purchase_order_id || '4500012345'} / Item ${activeBo.purchase_order?.item?.item_id || '0010'}`,
           relationship: "RECEIVED_BY",
-          nextBO: "BO #37: Goods Receipt (GRN)",
+          nextBO: "Inbound Goods Receipt",
           sapTables: "EKKO, EKPO, EKET",
-          summary: `Vendor: ${activeBo.purchase_order?.Supplier_or_Source_id || '0000400860'} | Order Date: ${activeBo.purchase_order?.order_date || '2010-01-05'}`,
+          summary: `Supplier Account: ${activeBo.purchase_order?.Supplier_or_Source_id || '0000400860'} | Order Date: ${activeBo.purchase_order?.order_date || '2010-01-05'}`,
           events: activeBo.purchase_order?.events || [{ event_type: "PurchaseOrderCreated" }, { event_type: "PurchaseOrderApproved" }],
           data: activeBo.purchase_order
         },
         {
           boNum: "37",
-          name: "Goods Receipt (GRN)",
+          name: "Inbound Goods Receipt",
           domain: "procurement",
-          domainLabel: "Inbound Goods Receipt",
+          domainLabel: "Inbound Receiving",
           keyName: "material_document_id",
-          keyVal: `MATDOC ${activeBo.material_movement?.material_document_id || '5000012345'} (Movement 101)`,
+          keyVal: `Receipt #${activeBo.material_movement?.material_document_id || '5000012345'}`,
           relationship: "POSTS_MOVEMENT_TO",
-          nextBO: "BO #08: Material Movement",
+          nextBO: "Warehouse Movement",
           sapTables: "MATDOC (Movement 101)",
-          summary: `Received: ${activeBo.material_movement?.quantity || 110.0} ${activeBo.material_movement?.UOM || 'KG'} to RMS Warehouse Stock`,
+          summary: `Received: ${activeBo.material_movement?.quantity || 110.0} ${activeBo.material_movement?.UOM || 'KG'} into Raw Material Storage`,
           events: [{ event_type: "GRNCreated" }, { event_type: "GRNPosted" }],
           data: activeBo.material_movement
         },
         {
           boNum: "08",
-          name: "Material Movement",
+          name: "Warehouse Movement",
           domain: "procurement",
           domainLabel: "Inventory Movement",
           keyName: "material_document_id",
           keyVal: activeBo.material_movement?.material_document_id || "5000012345",
           relationship: "STOCKS_BATCH_INTO",
-          nextBO: "BO #09: Inventory / Stock",
+          nextBO: "Warehouse Inventory",
           sapTables: "MATDOC Unified Journal",
-          summary: `Movement Type: ${activeBo.material_movement?.movement_type || '101'} | Storage Location: ${activeBo.material_movement?.storage_location_id || 'RMS'}`,
+          summary: `Movement: Inbound Receipt (101) | Location: Raw Material Storage`,
           events: activeBo.material_movement?.events || [],
           data: activeBo.material_movement
         },
         {
           boNum: "09",
-          name: "Inventory / Stock",
+          name: "Warehouse Inventory",
           domain: "procurement",
-          domainLabel: "Raw Material Warehouse",
+          domainLabel: "Raw Material Storage",
           keyName: "inventory_id",
-          keyVal: `Plant ${activeBo.inventory_stock?.plant_id || 'EP04'} / Loc ${activeBo.inventory_stock?.storage_location_id || 'RMS'}`,
+          keyVal: `Plant ${activeBo.inventory_stock?.plant_id || 'EP04'} / Raw Material Storage`,
           relationship: "MAINTAINS_BATCH",
-          nextBO: "BO #04: Batch (Raw Material Master)",
+          nextBO: "Raw Material Batch",
           sapTables: "MCHB, MARD, MARA",
-          summary: `Unrestricted Stock: ${activeBo.inventory_stock?.unrestricted_stock || 110.0} KG in Raw Material Store (RMS)`,
+          summary: `Available Stock: ${activeBo.inventory_stock?.unrestricted_stock || 110.0} KG in Raw Material Storage`,
           events: activeBo.inventory_stock?.events || [],
           data: activeBo.inventory_stock
         },
         {
           boNum: "04",
-          name: "Batch (Raw Material Master)",
+          name: "Raw Material Batch",
           domain: "manufacturing",
-          domainLabel: "Batch Master",
+          domainLabel: "Raw Material Batch",
           keyName: "batch_id",
           keyVal: activeBo.batch?.batch_id || activeRawBatchId,
           relationship: "INSPECTED_BY",
-          nextBO: "BO #24: Quality Inspection Lot",
+          nextBO: "Quality Inspection Lot",
           sapTables: "MCHA, MCH1",
-          summary: `Batch: ${activeBo.batch?.batch_id || activeRawBatchId} | Type: RAW_MATERIAL | Status: ${activeBo.batch?.status || 'RELEASED'} | Exp: ${activeBo.batch?.expiery_date || '2012-05-14'}`,
+          summary: `Batch: ${activeBo.batch?.batch_id || activeRawBatchId} | Type: Raw Material | Status: ${activeBo.batch?.status || 'RELEASED'} | Exp: ${activeBo.batch?.expiery_date || '2012-05-14'}`,
           events: activeBo.batch?.events || [],
           data: activeBo.batch
         },
         {
           boNum: "24",
-          name: "Quality Inspection Lot",
+          name: "Quality Inspection",
           domain: "quality",
-          domainLabel: "Quality Control",
+          domainLabel: "Quality Inspection",
           keyName: "inspection_lot_id",
           keyVal: activeBo.quality_inspection_lot?.inspection_lot_id || "01000012345",
           relationship: "SAMPLED_BY",
-          nextBO: "BO #25: Sampling",
+          nextBO: "Laboratory Sampling",
           sapTables: "QALS (Origin 01: Goods Receipt Inspection)",
-          summary: `Origin: 01 (Inbound GR) | Qty: ${activeBo.quality_inspection_lot?.lot_quantity || 110.0} KG | Status: ${activeBo.quality_inspection_lot?.status || 'COMPLETED'}`,
+          summary: `Inspection: Inbound Receipt | Quantity: ${activeBo.quality_inspection_lot?.lot_quantity || 110.0} KG | Status: Completed`,
           events: activeBo.quality_inspection_lot?.events || [],
           data: activeBo.quality_inspection_lot
         },
         {
           boNum: "25",
-          name: "Sampling",
+          name: "Laboratory Sampling",
           domain: "quality",
-          domainLabel: "Quality Control",
+          domainLabel: "Sample Collection",
           keyName: "sample_id",
           keyVal: activeBo.sampling?.sample_id || "SMP-01000012345-01",
           relationship: "TESTED_FOR",
-          nextBO: "BO #26: Inspection Result",
+          nextBO: "Analytical Lab Result",
           sapTables: "QASE, QALS",
-          summary: `Sample Taken: ${activeBo.sampling?.sample_quantity || 0.5} ${activeBo.sampling?.sample_UOM || 'KG'} | Status: ${activeBo.sampling?.status || 'COMPLETED'}`,
+          summary: `Sample Drawn: ${activeBo.sampling?.sample_quantity || 0.5} ${activeBo.sampling?.sample_UOM || 'KG'} | Status: Completed`,
           events: activeBo.sampling?.events || [],
           data: activeBo.sampling
         },
         {
           boNum: "26",
-          name: "Inspection Result",
+          name: "Analytical Lab Result",
           domain: "quality",
-          domainLabel: "Quality Control",
+          domainLabel: "Laboratory Analysis",
           keyName: "inspection_result_id",
           keyVal: activeBo.inspection_result?.inspection_result_id || "RES-01000012345-01",
           relationship: "EVALUATED_BY",
-          nextBO: "BO #27: Usage Decision",
+          nextBO: "Quality Usage Decision",
           sapTables: "QAMR, QASE",
-          summary: `HPLC Assay: ${activeBo.inspection_result?.result_value || 99.8}% | Valuation: ${activeBo.inspection_result?.result_status || 'PASSED'}`,
+          summary: `Purity Assay: ${activeBo.inspection_result?.result_value || 99.8}% | Quality Evaluation: Approved`,
           events: activeBo.inspection_result?.events || [],
           data: activeBo.inspection_result
         },
         {
           boNum: "27",
-          name: "Usage Decision (UD)",
+          name: "Quality Usage Decision",
           domain: "quality",
-          domainLabel: "Quality Release",
+          domainLabel: "Quality Approval",
           keyName: "usage_decision_id",
           keyVal: activeBo.usage_decision?.usage_decision_id || "UD-01000012345",
           relationship: "RELEASES_STOCK_TO_RESERVATION",
-          nextBO: "BO #10: Reservation",
+          nextBO: "Production Reservation",
           sapTables: "QAVE, QALS",
-          summary: `Decision: ${activeBo.usage_decision?.decision_code || 'ACCEPT'} (Unrestricted Release to RMS)`,
+          summary: `Decision: Approved (Released for Production)`,
           events: activeBo.usage_decision?.events || [],
           data: activeBo.usage_decision
         },
         {
           boNum: "10",
-          name: "Reservation",
+          name: "Production Reservation",
           domain: "manufacturing",
-          domainLabel: "Manufacturing Reservation",
+          domainLabel: "Material Reservation",
           keyName: "reservation_id",
           keyVal: `${activeBo.reservation?.reservation_id || '2000029081'} / Item ${activeBo.reservation?.reservation_item_id || '0002'}`,
           relationship: "DETERMINES_ALLOCATION_FOR",
-          nextBO: "BO #15: Batch Determination",
+          nextBO: "Batch Allocation",
           sapTables: "RESB, RKPF",
-          summary: `Req Qty: ${activeBo.reservation?.requirement_quantity || 0.768} KG | Movement: ${activeBo.reservation?.movement_type || '261'} for Process Order ${activeBo.reservation?.process_order_id || '400000000643'}`,
+          summary: `Reserved: ${activeBo.reservation?.requirement_quantity || 0.768} KG for Production Order ${activeBo.reservation?.process_order_id || '400000000643'}`,
           events: activeBo.reservation?.events || [],
           data: activeBo.reservation
         },
         {
           boNum: "15",
-          name: "Batch Determination",
+          name: "Batch Allocation",
           domain: "manufacturing",
-          domainLabel: "Batch Allocation",
+          domainLabel: "Material Allocation",
           keyName: "determination_id",
           keyVal: activeBo.batch_determination?.determination_id || "DET-RES-2000029081",
           relationship: "CONSUMED_VIA_MOVEMENT_261",
-          nextBO: "BO #16: Material Consumption",
+          nextBO: "Direct Material Issue",
           sapTables: "RESB, MCHB, AFPO",
-          summary: `Determined Raw Material Batch [${activeBo.batch_determination?.determined_batch_id || activeRawBatchId}] for Process Order`,
+          summary: `Allocated Raw Material Batch [${activeBo.batch_determination?.determined_batch_id || activeRawBatchId}] for Production Order`,
           events: activeBo.batch_determination?.events || [],
           data: activeBo.batch_determination
         },
         {
           boNum: "16",
-          name: "Material Consumption",
+          name: "Direct Material Issue",
           domain: "manufacturing",
-          domainLabel: "Direct Production Movement",
+          domainLabel: "Material Issue",
           keyName: "Material_document_id",
-          keyVal: `MATDOC ${activeBo.material_consumption?.Material_document_id || '4900000004'}`,
+          keyVal: `Issue Doc #${activeBo.material_consumption?.Material_document_id || '4900000004'}`,
           relationship: "CONSUMES_INTO_PROCESS_ORDER",
-          nextBO: "BO #11: Process Order",
+          nextBO: "Production Order",
           sapTables: "MATDOC (Movement 261 from RMS)",
-          summary: `Consumed: ${activeBo.material_consumption?.consumed_quantity || 0.768} KG | Storage Loc: RMS | Process Order: ${activeBo.material_consumption?.Process_order_id || '400000000643'}`,
+          summary: `Issued: ${activeBo.material_consumption?.consumed_quantity || 0.768} KG from Storage to Production Order ${activeBo.material_consumption?.Process_order_id || '400000000643'}`,
           events: activeBo.material_consumption?.events || [],
           data: activeBo.material_consumption
         },
         {
           boNum: "11",
-          name: "Process Order",
+          name: "Production Order",
           domain: "manufacturing",
-          domainLabel: "Manufacturing Execution",
+          domainLabel: "Manufacturing Order",
           keyName: "process_order_id",
-          keyVal: `PO ${activeBo.process_order?.process_order_id || '400000000643'}`,
+          keyVal: `Order #${activeBo.process_order?.process_order_id || '400000000643'}`,
           relationship: "TRANSFORMS_VIA",
-          nextBO: "BO #18: Batch Transformation",
+          nextBO: "Batch Transformation",
           sapTables: "AFKO, AFPO, AUFK",
-          summary: `Finished Process Order consuming this Raw Material | Planned Qty: ${activeBo.process_order?.planned_quantity || 104.03} KG`,
+          summary: `Manufacturing Order producing finished product | Target Qty: ${activeBo.process_order?.planned_quantity || 104.03} KG`,
           events: activeBo.process_order?.events || [],
           data: activeBo.process_order
         },
@@ -745,39 +873,39 @@ class AppController {
           boNum: "18",
           name: "Batch Transformation",
           domain: "manufacturing",
-          domainLabel: "Manufacturing Transformation",
+          domainLabel: "Material Processing",
           keyName: "transformation_id",
           keyVal: activeBo.batch_transformation?.transformation_id || "TRANS-STAGE2",
           relationship: "PRODUCES_FINISHED_BATCH",
-          nextBO: "BO #04: Downstream Finished Batch",
+          nextBO: "Finished Product Batch",
           sapTables: "AFPO, RESB, MATDOC",
-          summary: `Input Raw Material [${activeRawBatchId}] ➔ Output Finished Batch [${activeBo.finished_product_output?.batch_id || activeBo.batch_transformation?.output_batch_id || 'PF05043'}]`,
+          summary: `Input Raw Material [${activeRawBatchId}] ➔ Finished Batch [${activeBo.finished_product_output?.batch_id || activeBo.batch_transformation?.output_batch_id || 'PF05043'}]`,
           events: activeBo.batch_transformation?.events || [],
           data: activeBo.batch_transformation
         },
         {
           boNum: "04",
-          name: "Downstream Finished Batch",
+          name: "Finished Product Batch",
           domain: "manufacturing",
-          domainLabel: "Finished Product",
+          domainLabel: "Finished Batch",
           keyName: "batch_id",
           keyVal: activeBo.finished_product_output?.batch_id || activeBo.batch_transformation?.output_batch_id || "PF05043",
           relationship: "ALLOCATED_TO_COMMERCIAL_SALES",
-          nextBO: "BO #29: Sales Order",
+          nextBO: "Sales Order",
           sapTables: "MCHA, MCH1, MARA",
-          summary: `Produced Batch: ${activeBo.finished_product_output?.batch_id || 'PF05043'} | Qty: ${activeBo.finished_product_output?.produced_quantity || 104.03} KG | ${activeBo.finished_product_output?.material_description || 'Finished Product'}`,
+          summary: `Produced Batch: ${activeBo.finished_product_output?.batch_id || 'PF05043'} | Quantity: ${activeBo.finished_product_output?.produced_quantity || 104.03} KG | ${activeBo.finished_product_output?.material_description || 'Finished Product'}`,
           events: [{ event_type: "BatchReleased" }],
           data: activeBo.finished_product_output
         },
         {
           boNum: "28",
-          name: "Customer or CFA",
+          name: "Customer Account",
           domain: "commercial",
-          domainLabel: "Sales Customer",
+          domainLabel: "Distributor",
           keyName: "Customer_id",
           keyVal: activeBo.customer_or_cfa?.Customer_id || "0000400860",
           relationship: "PLACES_ORDER_VIA",
-          nextBO: "BO #29: Sales Order",
+          nextBO: "Sales Order",
           sapTables: "KNA1, ADRC",
           summary: `${activeBo.customer_or_cfa?.customer_name || 'Central Healthcare Distribution Services'}`,
           events: activeBo.customer_or_cfa?.events || [],
@@ -787,11 +915,11 @@ class AppController {
           boNum: "29",
           name: "Sales Order",
           domain: "commercial",
-          domainLabel: "Commercial Flow",
+          domainLabel: "Sales Order",
           keyName: "sales_order_id",
-          keyVal: `SO ${activeBo.sales_order?.sales_order_id || '1100809985'}`,
+          keyVal: `Sales Order #${activeBo.sales_order?.sales_order_id || '1100809985'}`,
           relationship: "FULFILLED_BY_OUTBOUND_DELIVERY",
-          nextBO: "BO #32: Outbound Delivery",
+          nextBO: "Outbound Shipment",
           sapTables: "VBAK, VBAP",
           summary: `Order Date: ${activeBo.sales_order?.order_date || '2010-05-17'} | Status: ${activeBo.sales_order?.status || 'COMPLETED'}`,
           events: activeBo.sales_order?.events || [],
@@ -799,29 +927,29 @@ class AppController {
         },
         {
           boNum: "32",
-          name: "Outbound Delivery",
+          name: "Outbound Shipment",
           domain: "commercial",
-          domainLabel: "Commercial Logistics",
+          domainLabel: "Shipping & Logistics",
           keyName: "delivery_id",
-          keyVal: `Deliv: ${activeBo.outbound_delivery?.delivery_id || '2100084439'}`,
+          keyVal: `Shipment #${activeBo.outbound_delivery?.delivery_id || '2100084439'}`,
           relationship: "INVOICED_BY",
-          nextBO: "BO #34: Billing Document",
+          nextBO: "Commercial Invoice",
           sapTables: "LIKP, LIPS",
-          summary: `Goods Issue: ${activeBo.outbound_delivery?.actual_goods_issue_date || '2010-05-19'} | Shipped to Customer`,
+          summary: `Dispatched: ${activeBo.outbound_delivery?.actual_goods_issue_date || '2010-05-19'} | Shipped to Customer`,
           events: activeBo.outbound_delivery?.events || [],
           data: activeBo.outbound_delivery
         },
         {
           boNum: "34",
-          name: "Billing Document (Invoice)",
+          name: "Commercial Invoice",
           domain: "commercial",
           domainLabel: "Commercial Billing",
           keyName: "billing_document_id",
-          keyVal: `Inv: ${activeBo.billing_document?.billing_document_id || '5402100863'}`,
+          keyVal: `Invoice #${activeBo.billing_document?.billing_document_id || '5402100863'}`,
           relationship: "END_OF_LIFECYCLE",
-          nextBO: "Customer Payment & Clearance",
+          nextBO: "Payment & Clearance",
           sapTables: "VBRK, VBRP",
-          summary: `Net: ${activeBo.billing_document?.net_value || 100000} INR | Status: POSTED (Complete Traceability Cleared)`,
+          summary: `Amount: ${activeBo.billing_document?.net_value || 100000} INR | Status: Cleared & Verified`,
           events: activeBo.billing_document?.events || [],
           data: activeBo.billing_document
         }
@@ -841,14 +969,14 @@ class AppController {
           <div style="grid-column: 1 / -1; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); padding: 0.85rem 1.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
-                <span style="color: #34d399; font-weight: 800; font-size: 0.95rem; font-family: 'Outfit', sans-serif;">RAW MATERIAL 2: COATING EXCIPIENT GENEALOGY (RM-COAT-05043)</span>
-                <span class="pill-badge active-emerald" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">COATING RAW MATERIAL</span>
+                <span style="color: #34d399; font-weight: 800; font-size: 0.95rem; font-family: 'Outfit', sans-serif;">RAW MATERIAL: COATING AGENT (RM-COAT-05043)</span>
+                <span class="pill-badge active-emerald" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">Coating Excipient</span>
               </div>
               <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 0;">
-                Canonical Business Object schemas instantiated for Opadry Film Coating Excipient consumed directly into Process Order <strong style="color: #38bdf8;">${procOrder}</strong> of Finished Batch <strong style="color: #38bdf8;">${batchId}</strong> (Movement 261, Storage Loc: RMS, Res: ${resId}, MatDoc: ${matDoc}, Supplier: Colorcon Asia).
+                Film coating material supplied by Colorcon Asia, verified and issued to production order <strong style="color: #38bdf8;">${procOrder}</strong> for finished product <strong style="color: #38bdf8;">${batchId}</strong>.
               </p>
             </div>
-            <button class="flow-pill-btn" onclick="document.getElementById('btnFlowFinished').click()" style="background: rgba(6, 182, 212, 0.15); border-color: var(--cyan-400); color: var(--cyan-400);">← Back to Finished Lifecycle</button>
+            <button class="flow-pill-btn" onclick="document.getElementById('btnFlowFinished').click()" style="background: rgba(6, 182, 212, 0.15); border-color: var(--cyan-400); color: var(--cyan-400);">← Back to Complete Lifecycle</button>
           </div>
         `;
       } else if (!isRaw && this.activeTraceFlow === 'direct_rm') {
@@ -859,14 +987,14 @@ class AppController {
           <div style="grid-column: 1 / -1; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-sm); padding: 0.85rem 1.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
-                <span style="color: #fbbf24; font-weight: 800; font-size: 0.95rem; font-family: 'Outfit', sans-serif;">RAW MATERIAL 1: API GENEALOGY (RM-MET-05043)</span>
-                <span class="pill-badge active-amber">API RAW MATERIAL</span>
+                <span style="color: #fbbf24; font-weight: 800; font-size: 0.95rem; font-family: 'Outfit', sans-serif;">RAW MATERIAL: ACTIVE INGREDIENT (RM-MET-05043)</span>
+                <span class="pill-badge active-amber">Active Pharmaceutical Ingredient</span>
               </div>
               <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 0;">
-                Canonical Business Object schemas instantiated for Metformin HCl API consumed directly into Process Order <strong style="color: #38bdf8;">${procOrder}</strong> of Finished Batch <strong style="color: #38bdf8;">${batchId}</strong> (Movement 261, Storage Loc: RMS, Res: ${resId}, MatDoc: ${matDoc}, Supplier: Aarti Drugs).
+                Active pharmaceutical ingredient supplied by Aarti Drugs, verified and issued to production order <strong style="color: #38bdf8;">${procOrder}</strong> for finished product <strong style="color: #38bdf8;">${batchId}</strong>.
               </p>
             </div>
-            <button class="flow-pill-btn" onclick="document.getElementById('btnFlowFinished').click()" style="background: rgba(6, 182, 212, 0.15); border-color: var(--cyan-400); color: var(--cyan-400);">← Back to Finished Lifecycle</button>
+            <button class="flow-pill-btn" onclick="document.getElementById('btnFlowFinished').click()" style="background: rgba(6, 182, 212, 0.15); border-color: var(--cyan-400); color: var(--cyan-400);">← Back to Complete Lifecycle</button>
           </div>
         `;
       }
@@ -874,19 +1002,19 @@ class AppController {
       return this.renderBoChainCards(container, filteredChain, customHeader);
     }
 
-    // Complete canonical Business Objects Traceability Chain from Planning to Sales
+    // Complete canonical Traceability Chain from Planning to Customer Delivery
     const boTraceabilityChain = [
       {
         boNum: "01",
-        name: "Planning Requirement",
+        name: "Planning Demand",
         domain: "planning",
         domainLabel: "Demand Planning",
         keyName: "planning_requirement_id",
         keyVal: bo.planning_requirement?.planning_requirement_id || "PRQ-210250096-01",
         relationship: "PLANS_FOR",
-        nextBO: "BO #02: Planned Order",
+        nextBO: "Planned Order",
         sapTables: "PBIM, PBED, T001W",
-        summary: `Qty: ${bo.planning_requirement?.requirement_quantity || 105.07} KG | Date: ${bo.planning_requirement?.requirement_date || '2010-02-02'}`,
+        summary: `Target Quantity: ${bo.planning_requirement?.requirement_quantity || 105.07} KG | Date: ${bo.planning_requirement?.requirement_date || '2010-02-02'}`,
         events: bo.planning_requirement?.events || [],
         data: bo.planning_requirement
       },
@@ -894,27 +1022,27 @@ class AppController {
         boNum: "02",
         name: "Planned Order",
         domain: "planning",
-        domainLabel: "Demand Planning",
+        domainLabel: "Production Planning",
         keyName: "plan_order_id",
-        keyVal: bo.planned_order?.plan_order_id || "2000307022",
+        keyVal: `Planned Order #${bo.planned_order?.plan_order_id || '2000307022'}`,
         relationship: "CONVERTED_TO_ORDER & CREATES_PROCUREMENT",
-        nextBO: "BO #06: Purchase Requisition",
+        nextBO: "Purchase Requisition",
         sapTables: "PLAF, MAKT",
-        summary: `Order Qty: ${bo.planned_order?.order_quantity || 104.03} KG | Type: ${bo.planned_order?.order_type || 'EOBK'}`,
+        summary: `Planned Quantity: ${bo.planned_order?.order_quantity || 104.03} KG | Order Type: Standard Production`,
         events: bo.planned_order?.events || [],
         data: bo.planned_order
       },
       {
         boNum: "05",
-        name: "Supplier or Source",
+        name: "Verified Supplier",
         domain: "procurement",
-        domainLabel: "Procurement",
+        domainLabel: "Supplier Sourcing",
         keyName: "Supplier_or_Source_id",
         keyVal: bo.supplier_or_source?.Supplier_or_Source_id || "0000400860",
         relationship: "SUPPLIES_MATERIAL_FOR",
-        nextBO: "BO #06: Purchase Requisition",
+        nextBO: "Purchase Requisition",
         sapTables: "LFA1, LFB1, ADRC, EORD",
-        summary: `${bo.supplier_or_source?.Source_Name || 'Aarti Drugs Ltd'} | Status: ${bo.supplier_or_source?.status || 'ACTIVE'}`,
+        summary: `${bo.supplier_or_source?.Source_Name || 'Aarti Drugs Ltd'} | Status: Active & Qualified Supplier`,
         events: bo.supplier_or_source?.events || [],
         data: bo.supplier_or_source
       },
@@ -922,13 +1050,13 @@ class AppController {
         boNum: "06",
         name: "Purchase Requisition",
         domain: "procurement",
-        domainLabel: "Procurement",
+        domainLabel: "Requisition",
         keyName: "purchase_requisition_id",
         keyVal: `${bo.purchase_requisition?.purchase_requisition_id || '1000037529'} / ${bo.purchase_requisition?.item_id || '0010'}`,
         relationship: "CONVERTED_TO",
-        nextBO: "BO #07: Purchase Order",
+        nextBO: "Purchase Order",
         sapTables: "EBAN",
-        summary: `Material: ${bo.purchase_requisition?.material_description || 'API RAW MATERIAL'} | Qty: ${bo.purchase_requisition?.requested_quantity || 110} KG`,
+        summary: `Material: ${bo.purchase_requisition?.material_description || 'Active Pharmaceutical Ingredient'} | Requested: ${bo.purchase_requisition?.requested_quantity || 110} KG`,
         events: bo.purchase_requisition?.events || [],
         data: bo.purchase_requisition
       },
@@ -936,97 +1064,97 @@ class AppController {
         boNum: "07",
         name: "Purchase Order",
         domain: "procurement",
-        domainLabel: "Procurement",
+        domainLabel: "Purchasing",
         keyName: "purchase_order_id",
-        keyVal: `${bo.purchase_order?.purchase_order_id || '4500012345'} / Item ${bo.purchase_order?.item?.item_id || '0010'}`,
+        keyVal: `Purchase Order #${bo.purchase_order?.purchase_order_id || '4500012345'}`,
         relationship: "RECEIVED_BY",
-        nextBO: "BO #37: Goods Receipt (GRN)",
+        nextBO: "Inbound Goods Receipt",
         sapTables: "EKKO, EKPO, EKET",
-        summary: `Vendor: ${bo.purchase_order?.Supplier_or_Source_id || '0000400860'} | Order Date: ${bo.purchase_order?.order_date || '2010-01-05'}`,
+        summary: `Supplier Account: ${bo.purchase_order?.Supplier_or_Source_id || '0000400860'} | Order Date: ${bo.purchase_order?.order_date || '2010-01-05'}`,
         events: bo.purchase_order?.events || [],
         data: bo.purchase_order
       },
       {
         boNum: "37",
-        name: "Goods Receipt (GRN)",
+        name: "Inbound Goods Receipt",
         domain: "procurement",
-        domainLabel: "Procurement (MATDOC)",
+        domainLabel: "Inbound Receiving",
         keyName: "grn_id",
-        keyVal: "MATDOC 5000012345 (Item 0001)",
+        keyVal: `Receipt #${bo.material_movement?.material_document_id || '5000012345'}`,
         relationship: "POSTS_MOVEMENT",
-        nextBO: "BO #08: Material Movement",
-        sapTables: "MATDOC (Strictly Zero Logistic Tables)",
-        summary: `Movement 101 | Received: 110.00 KG to Storage Location 'RMS'`,
+        nextBO: "Warehouse Movement",
+        sapTables: "MATDOC (Movement 101)",
+        summary: `Received: 110.00 KG into Raw Material Storage (Location: RMS)`,
         events: [{ event_type: "GRNCreated" }, { event_type: "GRNPosted" }],
         data: { grn_id: "5000012345", po_id: "4500012345", movement_type: "101", storage_location: "RMS", quantity: 110 }
       },
       {
         boNum: "08",
-        name: "Material Movement",
+        name: "Warehouse Movement",
         domain: "procurement",
         domainLabel: "Inventory Movement",
         keyName: "material_document_id",
-        keyVal: bo.material_movement?.material_document_id || "MATDOC-5000012345",
+        keyVal: `Doc #${bo.material_movement?.material_document_id || '5000012345'}`,
         relationship: "STOCKS_BATCH_INTO",
-        nextBO: "BO #09: Inventory / Stock",
+        nextBO: "Warehouse Inventory",
         sapTables: "MATDOC Unified S/4HANA Journal",
-        summary: `Movement Type: ${bo.material_movement?.movement_type || '101'} | Quantity: ${bo.material_movement?.quantity || 110} KG`,
+        summary: `Movement: Inbound Receipt (101) | Received Quantity: ${bo.material_movement?.quantity || 110} KG`,
         events: bo.material_movement?.events || [],
         data: bo.material_movement
       },
       {
         boNum: "09",
-        name: "Inventory / Stock",
+        name: "Warehouse Inventory",
         domain: "procurement",
-        domainLabel: "Inventory Master",
+        domainLabel: "Warehouse Stock",
         keyName: "inventory_id",
-        keyVal: `Stock: Plant ${bo.inventory_stock?.plant_id || 'EP04'} / Loc ${bo.inventory_stock?.storage_location_id || 'RMS'}`,
+        keyVal: `Plant ${bo.inventory_stock?.plant_id || 'EP04'} / Raw Material Storage`,
         relationship: "ALLOCATED_BY",
-        nextBO: "BO #10: Reservation",
+        nextBO: "Production Reservation",
         sapTables: "MCHB, MARD, MARA",
-        summary: `Unrestricted Stock: ${bo.inventory_stock?.unrestricted_stock || 110} KG | Status: Unrestricted`,
+        summary: `Available Stock: ${bo.inventory_stock?.unrestricted_stock || 110} KG in Raw Material Storage`,
         events: bo.inventory_stock?.events || [],
         data: bo.inventory_stock
       },
       {
         boNum: "10",
-        name: "Reservation",
+        name: "Production Reservation",
         domain: "manufacturing",
-        domainLabel: "Manufacturing Master",
+        domainLabel: "Material Reservation",
         keyName: "reservation_id",
-        keyVal: bo.reservation?.reservation_id || "RES-400000014001",
+        keyVal: `Reservation #${bo.reservation?.reservation_id || '400000014001'}`,
         relationship: "RESERVED_FOR",
-        nextBO: "BO #11: Process Order",
+        nextBO: "Production Order",
         sapTables: "RESB, RKPF",
-        summary: `Req Date: ${bo.reservation?.requirement_date || '2010-02-02'} | Movement Type: ${bo.reservation?.movement_type || '261'}`,
+        summary: `Requirement Date: ${bo.reservation?.requirement_date || '2010-02-02'} | Reserved for Order Execution`,
         events: bo.reservation?.events || [],
         data: bo.reservation
       },
       {
         boNum: "12",
-        name: "Bill of Materials (BOM)",
+        name: "Product Formulation (BOM)",
         domain: "manufacturing",
-        domainLabel: "Manufacturing Master",
+        domainLabel: "Product Formulation",
         keyName: "bom_id",
-        keyVal: bo.bom?.bom_id || "BOM-210250096-01",
+        keyVal: `Formula #${bo.bom?.bom_id || 'BOM-210250096-01'}`,
         relationship: "STRUCTURES_FORMULA_FOR",
-        nextBO: "BO #13: Recipe",
+        nextBO: "Master Production Recipe",
         sapTables: "STKO, STPO, MAST",
-        summary: `Alternative BOM: ${bo.bom?.alternative_bom || '01'} | Components: ${bo.bom?.Components?.length || 2} materials`,
+        summary: `Active Formula Specification: Version ${bo.bom?.alternative_bom || '01'} | Components: ${bo.bom?.Components?.length || 2} materials`,
         events: bo.bom?.events || [],
         data: bo.bom
       },
       {
         boNum: "13",
-        name: "Recipe (Routing)",
+        name: "Master Production Recipe",
         domain: "manufacturing",
-        domainLabel: "Manufacturing Master",
+        domainLabel: "Manufacturing Recipe",
         keyName: "recipe_id",
-        keyVal: bo.recipe?.recipe_id || "RCP-210250096-01",
+        keyVal: `Recipe #${bo.recipe?.recipe_id || 'RCP-210250096-01'}`,
         relationship: "DEFINES_OPERATIONS_FOR",
-        nextBO: "BO #14: Production Version",
+        nextBO: "Production Version",
         sapTables: "PLKO, PLPO, MAPL",
-        summary: `Operations: ${bo.recipe?.operations?.length || 2} phases | Status: ACTIVE`,
+        summary: `Standard Operations: ${bo.recipe?.operations?.length || 2} phases | Status: Approved`,
         events: bo.recipe?.events || [],
         data: bo.recipe
       },
@@ -1034,41 +1162,41 @@ class AppController {
         boNum: "14",
         name: "Production Version",
         domain: "manufacturing",
-        domainLabel: "Manufacturing Master",
+        domainLabel: "Production Version",
         keyName: "production_version_id",
         keyVal: `Version ${bo.production_version?.production_version_id || '00'}`,
         relationship: "SELECTS_RECIPE_BOM_FOR",
-        nextBO: "BO #11: Process Order",
+        nextBO: "Production Order",
         sapTables: "MKAL",
-        summary: `BOM: ${bo.production_version?.bom_id || 'BOM-210250096-01'} | Recipe: ${bo.production_version?.recipe_id || 'RCP-210250096-01'}`,
+        summary: `Approved Formulation & Standard Operating Procedure Validated`,
         events: bo.production_version?.events || [],
         data: bo.production_version
       },
       {
         boNum: "15",
-        name: "Batch Determination",
+        name: "Batch Allocation",
         domain: "manufacturing",
-        domainLabel: "Batch Allocation",
+        domainLabel: "Material Allocation",
         keyName: "determination_id",
-        keyVal: bo.batch_determination?.determination_id || "DET-RES-001",
+        keyVal: `Allocation #${bo.batch_determination?.determination_id || 'DET-RES-001'}`,
         relationship: "DETERMINES_INPUT_BATCH",
-        nextBO: "BO #16: Material Consumption",
+        nextBO: "Material Consumption",
         sapTables: "RESB, MCHB, AFPO",
-        summary: `Selected Input Batch: ${bo.batch_determination?.determined_batch_id || 'PF05043-CORE'} | Qty: ${bo.batch_determination?.allocated_quantity || 105.07} KG`,
+        summary: `Allocated Core Batch: ${bo.batch_determination?.determined_batch_id || 'PF05043-CORE'} | Allocated: ${bo.batch_determination?.allocated_quantity || 105.07} KG`,
         events: bo.batch_determination?.events || [],
         data: bo.batch_determination
       },
       {
         boNum: "11",
-        name: "Process Order",
+        name: "Production Order",
         domain: "manufacturing",
-        domainLabel: "Order Execution",
+        domainLabel: "Manufacturing Execution",
         keyName: "process_order_id",
-        keyVal: bo.process_order?.process_order_id || "400000014001",
+        keyVal: `Production Order #${bo.process_order?.process_order_id || '400000014001'}`,
         relationship: "EXECUTES_OPERATIONS_VIA",
-        nextBO: "BO #17: Production Confirmation",
+        nextBO: "Production Confirmation",
         sapTables: "AFKO, AFPO, AUFK",
-        summary: `Planned Qty: ${bo.process_order?.planned_quantity || 104.03} KG | Order Type: ${bo.process_order?.order_type || 'EOBK'} | Status: ${bo.process_order?.status || 'Created/Released'}`,
+        summary: `Planned Target: ${bo.process_order?.planned_quantity || 104.03} KG | Order Status: Released & In Progress`,
         events: bo.process_order?.events || [],
         data: bo.process_order
       },
@@ -1076,41 +1204,41 @@ class AppController {
         boNum: "16",
         name: "Material Consumption",
         domain: "manufacturing",
-        domainLabel: "Production Movement",
+        domainLabel: "Material Consumption",
         keyName: "Material_document_id",
-        keyVal: bo.material_consumption?.Material_document_id || "MATDOC-261-002",
+        keyVal: `Issue Doc #${bo.material_consumption?.Material_document_id || 'MATDOC-261-002'}`,
         relationship: "CONSUMES_BATCH_FOR",
-        nextBO: "BO #18: Batch Transformation",
+        nextBO: "Batch Transformation",
         sapTables: "MATDOC (Movement 261)",
-        summary: `Batch Consumed: ${bo.material_consumption?.Batch_id || 'PF05043-CORE'} | Qty: ${bo.material_consumption?.consumed_quantity || 105.07} KG`,
+        summary: `Consumed Core Batch: ${bo.material_consumption?.Batch_id || 'PF05043-CORE'} | Quantity: ${bo.material_consumption?.consumed_quantity || 105.07} KG`,
         events: bo.material_consumption?.events || [],
         data: bo.material_consumption
       },
       {
         boNum: "16",
-        name: "Direct Raw Material Consumption",
+        name: "Direct Material Consumption",
         domain: "manufacturing",
-        domainLabel: "Direct RM Movement (RMS)",
+        domainLabel: "Direct Material Issue",
         keyName: "Material_document_id",
-        keyVal: `MATDOC ${bo.direct_raw_material_flow?.material_consumption?.Material_document_id || '4900000004'}`,
+        keyVal: `Issue Doc #${bo.direct_raw_material_flow?.material_consumption?.Material_document_id || '4900000004'}`,
         relationship: "CONSUMED_DIRECTLY_INTO_FINISHED_PROCESS_ORDER",
-        nextBO: "BO #11: Process Order",
+        nextBO: "Production Order",
         sapTables: "MATDOC (Movement 261 from RMS), RESB",
-        summary: `Raw Material Batch: ${bo.direct_raw_material_flow?.material_consumption?.Batch_id || ('RM-MET-' + batchId.replace('PF',''))} | Consumed: ${bo.direct_raw_material_flow?.material_consumption?.consumed_quantity || 0.768} KG | Res: ${bo.direct_raw_material_flow?.material_consumption?.reservation_id || '2000029081'} | Order: ${bo.process_order?.process_order_id || '400000000643'}`,
+        summary: `Raw Material Batch: ${bo.direct_raw_material_flow?.material_consumption?.Batch_id || ('RM-MET-' + batchId.replace('PF',''))} | Issued: ${bo.direct_raw_material_flow?.material_consumption?.consumed_quantity || 0.768} KG to Order #${bo.process_order?.process_order_id || '400000000643'}`,
         events: bo.direct_raw_material_flow?.material_consumption?.events || [{ event_type: "MaterialConsumptionPosted" }],
         data: bo.direct_raw_material_flow?.material_consumption || { Material_document_id: "4900000004", batch_id: "RM-MET-05043", consumed_quantity: 0.768, movement_type: "261", storage_location: "RMS", reservation_id: "2000029081", process_order_id: "400000000643" }
       },
       {
         boNum: "36",
-        name: "Work Centre",
+        name: "Production Work Station",
         domain: "manufacturing",
-        domainLabel: "Manufacturing Resource",
+        domainLabel: "Manufacturing Facility",
         keyName: "work_centre_id",
-        keyVal: bo.work_centre?.work_centre_id || "WC-COAT-01",
+        keyVal: `Station ${bo.work_centre?.work_centre_id || 'WC-COAT-01'}`,
         relationship: "OPERATES_ON",
-        nextBO: "BO #17: Production Confirmation",
+        nextBO: "Production Confirmation",
         sapTables: "CRHD",
-        summary: `Name: ${bo.work_centre?.work_centre_name || 'COATING & PACKAGING SUITE'} | Cost Center: ${bo.work_centre?.cost_centre || 'CC-PROD-01'}`,
+        summary: `Facility: Coating & Packaging Suite | Cost Center: ${bo.work_centre?.cost_centre || 'CC-PROD-01'}`,
         events: bo.work_centre?.events || [],
         data: bo.work_centre
       },
@@ -1118,13 +1246,13 @@ class AppController {
         boNum: "17",
         name: "Production Confirmation",
         domain: "manufacturing",
-        domainLabel: "Operational Confirmation",
+        domainLabel: "Operation Confirmation",
         keyName: "confermation_id",
-        keyVal: bo.production_confirmation?.confermation_id || "CONF-400000014001-01",
+        keyVal: `Confirmation #${bo.production_confirmation?.confermation_id || 'CONF-400000014001-01'}`,
         relationship: "CONFIRMS_COMPLETION_TO",
-        nextBO: "BO #19: Yield",
+        nextBO: "Production Yield",
         sapTables: "AFRU, AFVC, CRHD",
-        summary: `Confirmed Qty: ${bo.production_confirmation?.confirmed_quantity || 104.03} KG | Work Center: ${bo.production_confirmation?.work_center_id || 'WC-COAT-01'}`,
+        summary: `Confirmed Quantity: ${bo.production_confirmation?.confirmed_quantity || 104.03} KG | Work Station: ${bo.production_confirmation?.work_center_id || 'WC-COAT-01'}`,
         events: bo.production_confirmation?.events || [],
         data: bo.production_confirmation
       },
@@ -1132,167 +1260,167 @@ class AppController {
         boNum: "18",
         name: "Batch Transformation",
         domain: "manufacturing",
-        domainLabel: "Multi-Tier Transformation",
+        domainLabel: "Batch Transformation",
         keyName: "transformation_id",
-        keyVal: bo.batch_transformation?.transformation_id || "TRANS-PF05043",
+        keyVal: `Transformation ID: ${bo.batch_transformation?.transformation_id || 'TRANS-PF05043'}`,
         relationship: "TRANSFORMS_INTERMEDIATE_TO",
-        nextBO: "BO #04: Batch",
+        nextBO: "Finished Product Batch",
         sapTables: "AFPO, RESB, MATDOC",
-        summary: `Input [${bo.batch_transformation?.input_batch_id || 'PF05043-CORE'}] ➔ Output [${bo.batch_transformation?.output_batch_id || batchId}]`,
+        summary: `Input Intermediate [${bo.batch_transformation?.input_batch_id || 'PF05043-CORE'}] ➔ Output Finished Product [${bo.batch_transformation?.output_batch_id || batchId}]`,
         events: bo.batch_transformation?.events || [],
         data: bo.batch_transformation
       },
       {
         boNum: "19",
-        name: "Yield & Scrap",
+        name: "Production Yield",
         domain: "manufacturing",
         domainLabel: "Yield Accounting",
         keyName: "material_document_id",
-        keyVal: bo.yield?.material_document_id || "YLD-400000014001",
+        keyVal: `Yield Record #${bo.yield?.material_document_id || 'YLD-400000014001'}`,
         relationship: "RECORDS_MASS_BALANCE_FOR",
-        nextBO: "BO #04: Batch",
+        nextBO: "Finished Product Batch",
         sapTables: "AFRU, AFPO, MATDOC",
-        summary: `Yield Qty: ${bo.yield?.yield_quantity || 104.03} KG (99.01%) | Scrap: ${bo.yield?.scrap_quantity || 1.04} KG`,
+        summary: `Yield Quantity: ${bo.yield?.yield_quantity || 104.03} KG (99.01%) | Process Loss / Scrap: ${bo.yield?.scrap_quantity || 1.04} KG`,
         events: bo.yield?.events || [],
         data: bo.yield
       },
       {
         boNum: "04",
-        name: "Batch (Master)",
+        name: "Finished Product Batch",
         domain: "manufacturing",
-        domainLabel: "Batch Master",
+        domainLabel: "Finished Batch",
         keyName: "batch_id",
-        keyVal: bo.batch?.batch_id || batchId,
+        keyVal: `Batch ${bo.batch?.batch_id || batchId}`,
         relationship: "INSPECTED_BY",
-        nextBO: "BO #24: Quality Inspection Lot",
+        nextBO: "Quality Inspection",
         sapTables: "MCHA, MCH1",
-        summary: `Type: ${bo.batch?.batch_type || 'FINISHED_PRODUCT'} | Status: ${bo.batch?.status || 'Released'} | Exp: ${bo.batch?.expiery_date || '2010-05-14'}`,
+        summary: `Type: Finished Product | Status: ${bo.batch?.status || 'Released'} | Expiration: ${bo.batch?.expiery_date || '2010-05-14'}`,
         events: bo.batch?.events || [],
         data: bo.batch
       },
       {
         boNum: "03",
-        name: "Material Master",
+        name: "Product Master Specification",
         domain: "manufacturing",
-        domainLabel: "Material Master",
+        domainLabel: "Product Specification",
         keyName: "material_id",
-        keyVal: bo.material?.material_id || "000000000210250096",
+        keyVal: `Product Code #${bo.material?.material_id || '000000000210250096'}`,
         relationship: "DEFINES_SPECIFICATION_FOR",
-        nextBO: "BO #22: Inspection Plan",
+        nextBO: "Quality Inspection Plan",
         sapTables: "MARA, MAKT, MARC",
-        summary: `${bo.material?.material_description || 'METFORMIN HCL TABLETS USP 500MG'} | Type: ${bo.material?.material_type || 'FINISHED_PRODUCT'}`,
+        summary: `${bo.material?.material_description || 'Metformin HCl Tablets USP 500mg'} | Category: Finished Product`,
         events: bo.material?.events || [],
         data: bo.material
       },
       {
         boNum: "22",
-        name: "Inspection Plan",
+        name: "Quality Inspection Plan",
         domain: "quality",
-        domainLabel: "QM Master Data",
+        domainLabel: "Inspection Protocol",
         keyName: "inspection_plan_id",
-        keyVal: bo.inspection_plan?.inspection_plan_id || "PLN-QM-001",
+        keyVal: `Plan #${bo.inspection_plan?.inspection_plan_id || 'PLN-QM-001'}`,
         relationship: "GOVERNS_INSPECTION_FOR",
-        nextBO: "BO #24: Quality Inspection Lot",
+        nextBO: "Quality Inspection",
         sapTables: "PLKO, PLPO, PLMK (PLNTY = 'Q')",
-        summary: `Plan Usage: 04 (Production Goods Receipt) | Status: APPROVED`,
+        summary: `Testing Protocol: Finished Goods Clearance | Status: Approved`,
         events: bo.inspection_plan?.events || [],
         data: bo.inspection_plan
       },
       {
         boNum: "21",
-        name: "Inspection Characteristic",
+        name: "Quality Specification",
         domain: "quality",
-        domainLabel: "QM Specification",
+        domainLabel: "Test Standards",
         keyName: "inspection_characteristic_id",
-        keyVal: bo.inspection_characteristic?.inspection_characteristic_id || "MIC-ASSAY-01",
+        keyVal: `Spec #${bo.inspection_characteristic?.inspection_characteristic_id || 'MIC-ASSAY-01'}`,
         relationship: "MEASURED_IN",
-        nextBO: "BO #26: Inspection Result",
+        nextBO: "Analytical Lab Result",
         sapTables: "QPMK, PLMK",
-        summary: `Characteristic: Chemical Assay (HPLC) | Spec: 98.0% - 102.0%`,
+        summary: `Chemical Assay (HPLC) | Release Range: 98.0% - 102.0%`,
         events: bo.inspection_characteristic?.events || [],
         data: bo.inspection_characteristic
       },
       {
         boNum: "23",
-        name: "Inspection Parameter",
+        name: "Testing Parameters",
         domain: "quality",
-        domainLabel: "QM Parameter",
+        domainLabel: "Test Parameters",
         keyName: "inspection_parameter_id",
-        keyVal: bo.inspection_parameter?.inspection_parameter_id || "PARAM-01",
+        keyVal: `Parameter #${bo.inspection_parameter?.inspection_parameter_id || 'PARAM-01'}`,
         relationship: "APPLIED_TO",
-        nextBO: "BO #24: Quality Inspection Lot",
+        nextBO: "Quality Inspection",
         sapTables: "QMAT, QAMV",
-        summary: `Param: Dissolution Rate, Hardness & Uniformity | Sampling Type: 100%`,
+        summary: `Tests: Dissolution Rate, Hardness & Uniformity of Dosage Units`,
         events: bo.inspection_parameter?.events || [],
         data: bo.inspection_parameter
       },
       {
         boNum: "24",
-        name: "Quality Inspection Lot",
+        name: "Quality Inspection",
         domain: "quality",
-        domainLabel: "Quality Control",
+        domainLabel: "Quality Inspection",
         keyName: "inspection_lot_id",
-        keyVal: bo.quality_inspection_lot?.inspection_lot_id || "08000014001",
+        keyVal: `Inspection Lot #${bo.quality_inspection_lot?.inspection_lot_id || '08000014001'}`,
         relationship: "SAMPLED_BY",
-        nextBO: "BO #25: Sampling",
+        nextBO: "Laboratory Sampling",
         sapTables: "QALS",
-        summary: `Origin: 04 (Goods Receipt) | Qty: ${bo.quality_inspection_lot?.lot_quantity || 104.03} KG | Status: ${bo.quality_inspection_lot?.status || 'RELEASED'}`,
+        summary: `Inspection: Finished Goods Testing | Lot Size: ${bo.quality_inspection_lot?.lot_quantity || 104.03} KG | Status: Released`,
         events: bo.quality_inspection_lot?.events || [],
         data: bo.quality_inspection_lot
       },
       {
         boNum: "25",
-        name: "Sampling",
+        name: "Laboratory Sampling",
         domain: "quality",
-        domainLabel: "Quality Control",
+        domainLabel: "Sample Collection",
         keyName: "sample_id",
-        keyVal: bo.sampling?.sample_id || "SMP-08000014001-01",
+        keyVal: `Sample #${bo.sampling?.sample_id || 'SMP-08000014001-01'}`,
         relationship: "TESTED_FOR",
-        nextBO: "BO #26: Inspection Result",
+        nextBO: "Analytical Lab Result",
         sapTables: "QASE, QALS",
-        summary: `Sample Qty: ${bo.sampling?.sample_quantity || 0.5} ${bo.sampling?.sample_UOM || 'KG'} | Status: ${bo.sampling?.status || 'COMPLETED'}`,
+        summary: `Sample Drawn: ${bo.sampling?.sample_quantity || 0.5} ${bo.sampling?.sample_UOM || 'KG'} | Status: Completed`,
         events: bo.sampling?.events || [],
         data: bo.sampling
       },
       {
         boNum: "26",
-        name: "Inspection Result",
+        name: "Analytical Lab Result",
         domain: "quality",
-        domainLabel: "Quality Control",
+        domainLabel: "Laboratory Analysis",
         keyName: "inspection_result_id",
-        keyVal: bo.inspection_result?.inspection_result_id || "RES-08000014001-01",
+        keyVal: `Lab Result #${bo.inspection_result?.inspection_result_id || 'RES-08000014001-01'}`,
         relationship: "EVALUATED_BY",
-        nextBO: "BO #27: Usage Decision",
+        nextBO: "Quality Usage Decision",
         sapTables: "QAMR, QASE, QALS",
-        summary: `Assay Result: ${bo.inspection_result?.result_value || 99.8}% | Valuation: ${bo.inspection_result?.result_status || 'PASSED'}`,
+        summary: `Assay Result: ${bo.inspection_result?.result_value || 99.8}% | Evaluation: Passed & Certified`,
         events: bo.inspection_result?.events || [],
         data: bo.inspection_result
       },
       {
         boNum: "27",
-        name: "Usage Decision (UD)",
+        name: "Quality Usage Decision",
         domain: "quality",
-        domainLabel: "Quality Release",
+        domainLabel: "Quality Approval",
         keyName: "usage_decision_id",
-        keyVal: bo.usage_decision?.usage_decision_id || "UD-08000014001",
+        keyVal: `Decision #${bo.usage_decision?.usage_decision_id || 'UD-08000014001'}`,
         relationship: "RELEASES_BATCH_TO_SALES",
-        nextBO: "BO #31: Sales Batch Allocation",
+        nextBO: "Sales Batch Allocation",
         sapTables: "QAVE, QALS",
-        summary: `Decision Code: ${bo.usage_decision?.decision_code || 'ACCEPT'} | Status: ${bo.usage_decision?.desion_status || 'APPROVED'} (Stock Unrestricted)`,
+        summary: `Decision: Approved (Certified for Commercial Release)`,
         events: bo.usage_decision?.events || [],
         data: bo.usage_decision
       },
       {
         boNum: "28",
-        name: "Customer or CFA",
+        name: "Customer Account",
         domain: "commercial",
-        domainLabel: "Sales Master",
+        domainLabel: "Distributor",
         keyName: "Customer_id",
-        keyVal: bo.customer_or_cfa?.Customer_id || "0000400860",
+        keyVal: `Customer #${bo.customer_or_cfa?.Customer_id || '0000400860'}`,
         relationship: "PLACES_ORDER_VIA",
-        nextBO: "BO #29: Sales Order",
+        nextBO: "Sales Order",
         sapTables: "KNA1, KNB1, ADRC",
-        summary: `${bo.customer_or_cfa?.customer_name || 'Central Healthcare Distribution Services'} | Group: ${bo.customer_or_cfa?.customer_group || 'DISTRIBUTOR'}`,
+        summary: `${bo.customer_or_cfa?.customer_name || 'Central Healthcare Distribution Services'} | Tier: Regional Distributor`,
         events: bo.customer_or_cfa?.events || [],
         data: bo.customer_or_cfa
       },
@@ -1300,13 +1428,13 @@ class AppController {
         boNum: "29",
         name: "Sales Order",
         domain: "commercial",
-        domainLabel: "Commercial Flow",
+        domainLabel: "Sales Order",
         keyName: "sales_order_id",
-        keyVal: bo.sales_order?.sales_order_id || "1100809985",
+        keyVal: `Sales Order #${bo.sales_order?.sales_order_id || '1100809985'}`,
         relationship: "CONTAINS_LINE_ITEM",
-        nextBO: "BO #30: Sales Order Item",
+        nextBO: "Sales Order Item",
         sapTables: "VBAK, VBUK",
-        summary: `Order Date: ${bo.sales_order?.order_date || '2010-05-17'} | Status: ${bo.sales_order?.status || 'COMPLETED'} | Currency: ${bo.sales_order?.currency || 'INR'}`,
+        summary: `Order Date: ${bo.sales_order?.order_date || '2010-05-17'} | Status: Completed | Currency: ${bo.sales_order?.currency || 'INR'}`,
         events: bo.sales_order?.events || [],
         data: bo.sales_order
       },
@@ -1314,11 +1442,11 @@ class AppController {
         boNum: "30",
         name: "Sales Order Item",
         domain: "commercial",
-        domainLabel: "Commercial Flow",
+        domainLabel: "Order Item",
         keyName: "item_id",
-        keyVal: `SO ${bo.sales_order_item?.sales_order_id || '1100809985'} / Line ${bo.sales_order_item?.item_id || '000010'}`,
+        keyVal: `Order #${bo.sales_order_item?.sales_order_id || '1100809985'} / Line ${bo.sales_order_item?.item_id || '000010'}`,
         relationship: "ALLOCATES_BATCH_VIA",
-        nextBO: "BO #31: Sales Batch Allocation",
+        nextBO: "Sales Batch Allocation",
         sapTables: "VBAP, VBAK",
         summary: `Ordered: ${bo.sales_order_item?.ordered_quantity || 100} KG | Confirmed: ${bo.sales_order_item?.confirmed_quantity || 100} KG`,
         events: bo.sales_order_item?.events || [],
@@ -1328,69 +1456,69 @@ class AppController {
         boNum: "31",
         name: "Sales Batch Allocation",
         domain: "commercial",
-        domainLabel: "Commercial Flow",
+        domainLabel: "Batch Allocation",
         keyName: "delivery_id",
-        keyVal: `Delivery ${bo.sales_batch_allocation?.delivery_id || '2100084439'} / Line ${bo.sales_batch_allocation?.delivery_item_id || '900055'}`,
+        keyVal: `Shipment #${bo.sales_batch_allocation?.delivery_id || '2100084439'} / Line ${bo.sales_batch_allocation?.delivery_item_id || '900055'}`,
         relationship: "CONFIRMS_PICKING_INTO",
-        nextBO: "BO #32: Outbound Delivery",
+        nextBO: "Outbound Shipment",
         sapTables: "LIPS, VBAP, VBFA",
-        summary: `Allocated Batch: ${bo.sales_batch_allocation?.Batch_id || batchId} | Status: ${bo.sales_batch_allocation?.allocated_status || 'CONFIRMED'}`,
+        summary: `Allocated Batch: ${bo.sales_batch_allocation?.Batch_id || batchId} | Status: Allocation Confirmed`,
         events: bo.sales_batch_allocation?.events || [],
         data: bo.sales_batch_allocation
       },
       {
         boNum: "32",
-        name: "Outbound Delivery",
+        name: "Outbound Shipment",
         domain: "commercial",
-        domainLabel: "Shipping & Fulfillment",
+        domainLabel: "Shipping & Logistics",
         keyName: "delivery_id",
-        keyVal: bo.outbound_delivery?.delivery_id || "2100084439",
+        keyVal: `Shipment #${bo.outbound_delivery?.delivery_id || '2100084439'}`,
         relationship: "SHIPS_ITEMS_VIA",
-        nextBO: "BO #33: Delivery Item",
+        nextBO: "Delivery Note Item",
         sapTables: "LIKP, LIPS",
-        summary: `Delivery Type: ${bo.outbound_delivery?.delivery_type || 'STANDARD_OUTBOUND'} | Goods Issue: ${bo.outbound_delivery?.actual_goods_issue_date || '2010-05-19'}`,
+        summary: `Dispatch Date: ${bo.outbound_delivery?.actual_goods_issue_date || '2010-05-19'} | Shipped to Customer`,
         events: bo.outbound_delivery?.events || [],
         data: bo.outbound_delivery
       },
       {
         boNum: "33",
-        name: "Delivery Item",
+        name: "Delivery Note Item",
         domain: "commercial",
-        domainLabel: "Shipping & Fulfillment",
+        domainLabel: "Shipping & Logistics",
         keyName: "item_id",
-        keyVal: `Delivery ${bo.delivery_item?.delivery_id || '2100084439'} / Item ${bo.delivery_item?.item_id || '900055'}`,
+        keyVal: `Shipment #${bo.delivery_item?.delivery_id || '2100084439'} / Item ${bo.delivery_item?.item_id || '900055'}`,
         relationship: "INVOICED_BY",
-        nextBO: "BO #34: Billing Document",
+        nextBO: "Commercial Invoice",
         sapTables: "LIPS",
-        summary: `Shipped Batch: ${bo.delivery_item?.Batch_id || batchId} | Qty: ${bo.delivery_item?.delivery_quantity || 104.03} KG | Loc: SFS`,
+        summary: `Delivered Batch: ${bo.delivery_item?.Batch_id || batchId} | Quantity: ${bo.delivery_item?.delivery_quantity || 104.03} KG`,
         events: bo.delivery_item?.events || [],
         data: bo.delivery_item
       },
       {
         boNum: "34",
-        name: "Billing Document (Invoice)",
+        name: "Commercial Invoice",
         domain: "commercial",
         domainLabel: "Commercial Billing",
         keyName: "billing_document_id",
-        keyVal: bo.billing_document?.billing_document_id || "5402100863",
+        keyVal: `Invoice #${bo.billing_document?.billing_document_id || '5402100863'}`,
         relationship: "AUDITED_FOR_RETURNS_IN",
-        nextBO: "BO #35: Sales Return",
+        nextBO: "Sales Return Audit",
         sapTables: "VBRK, VBRP",
-        summary: `Net: ${bo.billing_document?.net_value || 100000} INR | Gross: ${bo.billing_document?.gross_value || 118000} INR | Status: ${bo.billing_document?.status || 'POSTED'}`,
+        summary: `Net Value: ${bo.billing_document?.net_value || 100000} INR | Gross: ${bo.billing_document?.gross_value || 118000} INR | Status: Settled & Posted`,
         events: bo.billing_document?.events || [],
         data: bo.billing_document
       },
       {
         boNum: "35",
-        name: "Sales Return",
+        name: "Sales Return Audit",
         domain: "commercial",
-        domainLabel: "Post-Sales Audit",
+        domainLabel: "Post-Delivery Audit",
         keyName: "status",
-        keyVal: "Status: NO_RETURN",
+        keyVal: "Verified (No Returns)",
         relationship: "END_OF_LIFECYCLE",
-        nextBO: "Fully Verified Clean",
+        nextBO: "Completed Verification",
         sapTables: "VBRK, VBRP, VBAP, VBFA",
-        summary: `Returns Status: Verified NO_RETURN | 0 complaints or credit memos recorded`,
+        summary: `Status: Verified (No Returns) | Zero complaints, defects or credit memos recorded`,
         events: bo.sales_return?.events || [],
         data: bo.sales_return || { status: "NO_RETURN", customer_id: bo.customer_or_cfa?.Customer_id, batch_id: batchId }
       }
@@ -1415,12 +1543,16 @@ class AppController {
       else if (item.domain === 'quality') domainBadgeColor = 'active-green';
       else if (item.domain === 'commercial') domainBadgeColor = 'active-cyan';
 
+      const keyLabel = this.formatKeyLabel(item.keyName);
+      const cleanRel = this.formatFlowRelation(item.relationship);
+      const sourceLabel = this.formatDataSource(item.sapTables);
+
       html += `
         <div class="stage-card bo-trace-card" data-bo-num="${item.boNum}">
           <div class="stage-card-header">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-                <span class="stage-num-badge" style="background: var(--cyan-bg); color: var(--cyan-400); font-weight: 800;">BO #${item.boNum}</span>
+                <span class="stage-num-badge" style="background: var(--cyan-bg); color: var(--cyan-400); font-weight: 800;">Step ${idx + 1}</span>
                 <span class="pill-badge ${domainBadgeColor}" style="font-size: 0.68rem;">${item.domainLabel}</span>
               </div>
               <h3 class="stage-title">${item.name}</h3>
@@ -1429,20 +1561,20 @@ class AppController {
           </div>
 
           <div style="background: rgba(0,0,0,0.3); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin: 0.25rem 0;">
-            <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Instance Key (${item.keyName})</div>
+            <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">${keyLabel}</div>
             <div class="sap-key" style="font-size: 0.92rem; color: var(--text-highlight);">${item.keyVal}</div>
           </div>
 
           <p class="stage-meta">${item.summary}</p>
 
           <div style="background: rgba(6, 182, 212, 0.05); border: 1px dashed var(--cyan-border); padding: 0.4rem 0.6rem; border-radius: var(--radius-sm); font-size: 0.72rem; display: flex; align-items: center; justify-content: space-between;">
-            <span style="color: var(--text-muted); font-weight: 600;">Relationship:</span>
-            <span style="color: var(--cyan-400); font-family: 'JetBrains Mono', monospace; font-weight: 700;">➔ ${item.relationship}</span>
+            <span style="color: var(--text-muted); font-weight: 600;">Next Process:</span>
+            <span style="color: var(--cyan-400); font-family: 'Outfit', sans-serif; font-weight: 700;">➔ ${cleanRel}</span>
           </div>
 
           <div class="sap-table-source">
-            <span>SAP Tables:</span>
-            <span>${item.sapTables}</span>
+            <span>Data Source:</span>
+            <span>${sourceLabel}</span>
           </div>
         </div>
       `;
@@ -1455,11 +1587,12 @@ class AppController {
       card.addEventListener('click', () => {
         const item = filteredChain[idx];
         if (window.detailDrawer) {
+          const cleanNext = (item.nextBO || '').replace(/BO\s*#\d+:\s*/gi, '');
           window.detailDrawer.open(
-            `BO #${item.boNum}: ${item.name}`,
-            `Traceability Node: ${item.keyVal}`,
+            `Step ${idx + 1}: ${item.name}`,
+            `Reference: ${item.keyVal}`,
             item.data,
-            `SAP Source Tables: ${item.sapTables} | Relationship: ${item.relationship} ➔ ${item.nextBO}`
+            `Data Source: ${this.formatDataSource(item.sapTables)} | Next: ${this.formatFlowRelation(item.relationship)} ➔ ${cleanNext}`
           );
         }
       });
@@ -1491,71 +1624,71 @@ class AppController {
       container.innerHTML = `
         <div class="mass-balance-card">
           <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
-            <span>Raw Material Batch Traceability & Downstream Consumption (${rawBatch})</span>
-            <span class="pill-badge active-green">BO #10, BO #16 & BO #18 Consumption</span>
+            <span>Raw Material Traceability & Downstream Production (${rawBatch})</span>
+            <span class="pill-badge active-green">Material Consumption & Yield</span>
           </h3>
 
           <div class="tier-block">
             <div class="tier-header">
               <div class="tier-title">
-                <span>Warehouse Stock in RMS ➔ Movement 261 Consumption ➔ Process Order Execution</span>
+                <span>Warehouse Stock ➔ Direct Material Issue ➔ Production Order Execution</span>
               </div>
-              <span class="sap-key">Reservation: ${resId} (Item ${resItem}) | Movement: 261 | Storage Loc: RMS</span>
+              <span class="sap-key">Reservation: ${resId} | Issue Type: Direct Production Issue | Storage: Raw Material Storage</span>
             </div>
             <div class="tier-flow">
               <div class="flow-box">
-                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">BO #04 Raw Material Batch</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Raw Material Batch</div>
                 <div class="sap-key" style="font-size: 1rem; color: var(--amber-400); margin: 0.35rem 0;">${rawBatch}</div>
                 <div style="font-size: 0.78rem; color: var(--text-secondary);">${rawMatDesc.slice(0, 36)}</div>
-                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">BO #09 Initial Stock: ${stockQty.toFixed(1)} KG</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Initial Stock: ${stockQty.toFixed(1)} KG</div>
               </div>
               <div class="flow-arrow">
                 <span style="font-size: 1.4rem;">➔</span>
-                <span style="font-size: 0.7rem;">BO #16 MATDOC 261</span>
+                <span style="font-size: 0.7rem;">Direct Issue</span>
               </div>
               <div class="flow-box" style="border-left: 3px solid var(--cyan-400);">
-                <div style="font-size: 0.72rem; color: var(--cyan-400); font-weight: 700; text-transform: uppercase;">BO #16 Direct Consumption</div>
-                <div class="sap-key" style="font-size: 1rem; color: var(--cyan-400); margin: 0.35rem 0;">MATDOC ${matDoc}</div>
-                <div style="font-size: 0.78rem; color: var(--text-secondary);">Issued from Storage Loc RMS to Process Order</div>
+                <div style="font-size: 0.72rem; color: var(--cyan-400); font-weight: 700; text-transform: uppercase;">Direct Material Issue</div>
+                <div class="sap-key" style="font-size: 1rem; color: var(--cyan-400); margin: 0.35rem 0;">Issue Doc #${matDoc}</div>
+                <div style="font-size: 0.78rem; color: var(--text-secondary);">Issued from Raw Material Storage to Production Order</div>
                 <div style="font-size: 0.8rem; font-weight: 600; color: var(--emerald-400); margin-top: 0.4rem;">Consumed: ${consumedQty.toFixed(3)} KG (Remaining: ${remainQty.toFixed(1)} KG)</div>
               </div>
               <div class="flow-arrow">
                 <span style="font-size: 1.4rem;">➔</span>
-                <span style="font-size: 0.7rem;">BO #18 TRANS</span>
+                <span style="font-size: 0.7rem;">Manufacturing</span>
               </div>
               <div class="flow-box">
-                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Downstream BO #04 Output</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Finished Product Output</div>
                 <div class="sap-key" style="font-size: 1rem; color: var(--purple-400); margin: 0.35rem 0;">${fgBatch}</div>
                 <div style="font-size: 0.78rem; color: var(--text-secondary);">${fgMatDesc.slice(0, 35)}</div>
-                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Order ${poId}: ${fgQty.toFixed(2)} KG Produced</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Order #${poId}: ${fgQty.toFixed(2)} KG Produced</div>
               </div>
             </div>
           </div>
 
           <div style="margin-top: 1.5rem;">
-            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; letter-spacing: 0.05em;">SAP Consumption Audit Trail (Table MATDOC & RESB)</h4>
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; letter-spacing: 0.05em;">Material Consumption Audit Trail</h4>
             <div class="modern-table-wrapper">
               <table class="modern-table">
                 <thead>
                   <tr>
                     <th>Raw Batch ID</th>
                     <th>Material</th>
-                    <th>Storage Loc</th>
-                    <th>Reservation</th>
-                    <th>Movement</th>
-                    <th>MATDOC ID</th>
+                    <th>Storage Area</th>
+                    <th>Reservation #</th>
+                    <th>Issue Movement</th>
+                    <th>Material Document #</th>
                     <th>Consumed Qty</th>
-                    <th>Process Order</th>
-                    <th>Downstream FG Batch</th>
+                    <th>Production Order #</th>
+                    <th>Downstream Finished Batch</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="sap-key">${rawBatch}</td>
                     <td>${rawMatDesc.slice(0, 24)}</td>
-                    <td><span class="pill-badge active-blue">RMS</span></td>
+                    <td><span class="pill-badge active-blue">Raw Material Storage</span></td>
                     <td class="sap-key">${resId} / ${resItem}</td>
-                    <td><span class="pill-badge active-green">261</span></td>
+                    <td><span class="pill-badge active-green">Production Issue (261)</span></td>
                     <td class="sap-key">${matDoc}</td>
                     <td style="font-weight: 700; color: var(--emerald-400);">${consumedQty.toFixed(3)} KG</td>
                     <td class="sap-key">${poId}</td>
@@ -1629,39 +1762,39 @@ class AppController {
     const coatRawBatch = fbo.process_order?.consumed_batches?.[1]?.batch_id
       || (batchId.startsWith('TE') ? `RM-COAT-${batchId.replace('TE', '')}` : `RM-COAT-${batchId.replace('PF', '')}`);
     const coatConsumeQty = Number(fbo.process_order?.consumed_batches?.[1]?.consumed_quantity || 0.534);
-    const coatMatDesc = fbo.process_order?.consumed_batches?.[1]?.material_description || 'OPADRY Film Coating Suspension IP/USP';
+    const coatMatDesc = fbo.process_order?.consumed_batches?.[1]?.material_description || 'Film Coating Suspension IP/USP';
 
     container.innerHTML = `
       <div class="mass-balance-card">
         <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
-          <span>Business Objects Multi-Tier Manufacturing Transformation (${batchId})</span>
-          <span class="pill-badge active-green">BO #18 & BO #19 Mass Balance</span>
+          <span>Manufacturing Transformation & Material Balance (${batchId})</span>
+          <span class="pill-badge active-green">Mass Balance & Reconciliation</span>
         </h3>
 
         <!-- Tier 1 -->
         <div class="tier-block">
           <div class="tier-header">
             <div class="tier-title">
-              <span>Stage 1: BO #04 (Raw API Batch) ➔ BO #11 (Process Order 1) ➔ BO #04 (Semi-Finished Core)</span>
+              <span>Stage 1: Raw Active Ingredient ➔ Granulation Order ➔ Core Intermediate Tablets</span>
             </div>
-            <span class="sap-key">Order: ${sfgProcessID} | BO #36 Work Center: WC-GRAN-01</span>
+            <span class="sap-key">Production Order: ${sfgProcessID} | Work Station: Granulation Suite (WC-GRAN-01)</span>
           </div>
           <div class="tier-flow">
             <div class="flow-box">
-              <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">BO #04 Input API Batch</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Input Active Ingredient</div>
               <div class="sap-key" style="font-size: 1rem; color: var(--amber-400); margin: 0.35rem 0;">${rawBatch}</div>
-              <div style="font-size: 0.78rem; color: var(--text-secondary);">BO #03 Material: ${rawMatDesc.slice(0, 35)}</div>
-              <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">BO #16 Consumed: ${sfgConsumeQty.toFixed(3)} KG</div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">Material: ${rawMatDesc.slice(0, 35)}</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Consumed Qty: ${sfgConsumeQty.toFixed(3)} KG</div>
             </div>
             <div class="flow-arrow">
               <span style="font-size: 1.4rem;">➔</span>
-              <span style="font-size: 0.7rem;">BO #18 TRANS</span>
+              <span style="font-size: 0.7rem;">Granulation</span>
             </div>
             <div class="flow-box">
-              <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">BO #04 Output Semi-Finished</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Intermediate Core Batch</div>
               <div class="sap-key" style="font-size: 1rem; color: var(--purple-400); margin: 0.35rem 0;">${coreBatch}</div>
-              <div style="font-size: 0.78rem; color: var(--text-secondary);">Uncoated Core Tablet intermediate</div>
-              <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">BO #19 Produced: ${sfgYieldQty.toFixed(3)} KG</div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">Uncoated core tablets intermediate</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Produced Qty: ${sfgYieldQty.toFixed(3)} KG</div>
             </div>
           </div>
         </div>
@@ -1670,53 +1803,53 @@ class AppController {
         <div class="tier-block">
           <div class="tier-header">
             <div class="tier-title">
-              <span>Stage 2: BO #04 (Core Batch) + BO #04 (Coating RM) ➔ BO #11 (Process Order 2) ➔ BO #04 (Finished Product)</span>
+              <span>Stage 2: Core Tablets + Coating Excipient ➔ Coating Order ➔ Finished Packaged Product</span>
             </div>
-            <span class="sap-key">Order: ${fgProcessID} | BO #36 Work Center: WC-COAT-01</span>
+            <span class="sap-key">Production Order: ${fgProcessID} | Work Station: Coating Suite (WC-COAT-01)</span>
           </div>
           <div class="tier-flow">
             <div style="display: flex; flex-direction: column; gap: 0.6rem;">
               <div class="flow-box">
-                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">BO #04 Input Semi-Finished</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Input Semi-Finished Tablets</div>
                 <div class="sap-key" style="font-size: 1rem; color: var(--purple-400); margin: 0.35rem 0;">${coreBatch}</div>
-                <div style="font-size: 0.78rem; color: var(--text-secondary);">Uncoated Core Tablets</div>
-                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">BO #16 Consumed: ${fgConsumeQty.toFixed(3)} KG</div>
+                <div style="font-size: 0.78rem; color: var(--text-secondary);">Uncoated core tablets</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Consumed Qty: ${fgConsumeQty.toFixed(3)} KG</div>
               </div>
               <div class="flow-box" style="border-left: 3px solid var(--amber-400);">
-                <div style="font-size: 0.72rem; color: var(--amber-400); font-weight: 700; text-transform: uppercase;">BO #04 Co-Consumed Raw Material</div>
+                <div style="font-size: 0.72rem; color: var(--amber-400); font-weight: 700; text-transform: uppercase;">Co-Consumed Coating Agent</div>
                 <div class="sap-key" style="font-size: 1rem; color: var(--amber-400); margin: 0.35rem 0;">${coatRawBatch}</div>
                 <div style="font-size: 0.78rem; color: var(--text-secondary);">${coatMatDesc.slice(0, 36)}</div>
-                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">BO #16 Consumed: ${coatConsumeQty.toFixed(3)} KG</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: #fff; margin-top: 0.4rem;">Consumed Qty: ${coatConsumeQty.toFixed(3)} KG</div>
               </div>
             </div>
             <div class="flow-arrow">
               <span style="font-size: 1.4rem;">➔</span>
-              <span style="font-size: 0.7rem;">BO #18 TRANS</span>
+              <span style="font-size: 0.7rem;">Film Coating</span>
             </div>
             <div class="flow-box">
-              <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">BO #04 Output Finished Batch</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Finished Packaged Batch</div>
               <div class="sap-key" style="font-size: 1rem; color: var(--cyan-400); margin: 0.35rem 0;">${finishBatch}</div>
               <div style="font-size: 0.78rem; color: var(--text-secondary);">${fgMatDesc.slice(0, 35)}</div>
-              <div style="font-size: 0.8rem; font-weight: 600; color: var(--emerald-400); margin-top: 0.4rem;">BO #19 Yield: ${fgYieldQty.toFixed(3)} ${fgUom} (${fgYieldPct}%)</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: var(--emerald-400); margin-top: 0.4rem;">Final Yield: ${fgYieldQty.toFixed(3)} ${fgUom} (${fgYieldPct}%)</div>
             </div>
           </div>
         </div>
 
         <!-- Scrap & Reconciliation Table -->
         <div style="margin-top: 1.5rem;">
-          <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; letter-spacing: 0.05em;">Business Objects Mass Balance Reconciliation (BO #16, #17, #19)</h4>
+          <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; letter-spacing: 0.05em;">Production Mass Balance & Yield Reconciliation</h4>
           <div class="modern-table-wrapper">
             <table class="modern-table">
               <thead>
                 <tr>
-                  <th>Stage</th>
-                  <th>BO #16 Input Batch</th>
-                  <th>Input Qty</th>
-                  <th>BO #04 Output Batch</th>
-                  <th>BO #19 Output Qty</th>
-                  <th>Scrap Loss</th>
+                  <th>Production Stage</th>
+                  <th>Input Batch</th>
+                  <th>Input Quantity</th>
+                  <th>Output Batch</th>
+                  <th>Output Quantity</th>
+                  <th>Process Loss / Scrap</th>
                   <th>Yield %</th>
-                  <th>BO #17 Confirmation</th>
+                  <th>Confirmation #</th>
                 </tr>
               </thead>
               <tbody>
@@ -1731,7 +1864,7 @@ class AppController {
                   <td class="sap-key">${sfgConfId}</td>
                 </tr>
                 <tr>
-                  <td>Stage 2: Film Coating (Core)</td>
+                  <td>Stage 2: Film Coating (Core Tablets)</td>
                   <td class="sap-key">${coreBatch}</td>
                   <td>${fgConsumeQty.toFixed(3)} KG</td>
                   <td class="sap-key">${finishBatch}</td>
@@ -1741,7 +1874,7 @@ class AppController {
                   <td class="sap-key">${fgConfId}</td>
                 </tr>
                 <tr>
-                  <td>Stage 2: Film Coating (Coating RM)</td>
+                  <td>Stage 2: Film Coating (Coating Agent)</td>
                   <td class="sap-key">${coatRawBatch}</td>
                   <td>${coatConsumeQty.toFixed(3)} KG</td>
                   <td class="sap-key">${finishBatch}</td>
@@ -1769,7 +1902,7 @@ class AppController {
       html += `
         <div class="bo-card" data-filename="${bo.filename}">
           <div class="bo-card-top">
-            <span class="bo-index">BO #${bo.index}</span>
+            <span class="bo-index">Record Set #${bo.index}</span>
             <span class="bo-count-badge">${bo.record_count} Records</span>
           </div>
           <div class="bo-title">${cleanName}</div>
@@ -1784,7 +1917,7 @@ class AppController {
       card.addEventListener('click', () => {
         const fn = card.dataset.filename;
         if (window.detailDrawer) {
-          window.detailDrawer.open(`Business Object: ${fn}`, `Independent SAP Business Object`, { filename: fn, location: `output/business_objects/${fn}` }, `SAP Standard Schema`);
+          window.detailDrawer.open(`Data Registry: ${cleanName || fn}`, `Enterprise Master Record`, { filename: fn, location: `output/business_objects/${fn}` }, `Standard Data Schema`);
         }
       });
     });
