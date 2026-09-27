@@ -1,0 +1,17 @@
+[build]
+  publish = "web"
+  functions = "netlify/functions"
+  command = "node scripts/build-blockchain-bundle.js"
+
+[functions]
+  included_files = ["ENGINE/BLOCKCHAIN ENGINE/deployments/**", "ENGINE/GS1 ENGINE/output/**"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/traceability/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

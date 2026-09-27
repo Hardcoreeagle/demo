@@ -31,7 +31,7 @@
         console.warn('[VeChainVerifier] config fetch failed:', e);
       }
       if (!this._config) {
-        this._config = {
+        this._config = window.BLOCKCHAIN_BUNDLE?.config || {
           network: 'vechain_testnet',
           explorerBase: 'https://explore.vechain.org',
         };
@@ -44,14 +44,17 @@
      * Returns null when the batch has no on-chain anchoring metadata.
      */
     async verifyBatch(batchId) {
-      const res = await fetch(
-        '/api/blockchain/' + encodeURIComponent(batchId)
-      );
-      if (res.status === 404) return null;
-      if (!res.ok) {
-        throw new Error('Verification request failed: HTTP ' + res.status);
+      try {
+        const res = await fetch(
+          '/api/blockchain/' + encodeURIComponent(batchId)
+        );
+        if (res.status === 404) return null;
+        if (res.ok) return res.json();
+      } catch (e) {
+        console.warn('[VeChainVerifier] API unavailable; using build-time snapshot:', e);
       }
-      return res.json();
+
+      return window.BLOCKCHAIN_BUNDLE?.batches?.[batchId] || null;
     }
 
     /** Build a VeChain explorer transaction URL. */

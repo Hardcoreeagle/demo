@@ -1903,7 +1903,7 @@ class AppController {
       <div class="card" style="margin-bottom: 20px;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-emerald);">⛓️ GS1 EPCIS Blockchain Verification</h2>
         <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
-          Live read-only verification of batch <strong>${bId}</strong> against VeChainThor. Each GS1 EPCIS event is anchored as its own transaction and linked under one batch Merkle root.
+          ${window.BLOCKCHAIN_BUNDLE?.batches?.[bId]?.staticSnapshot ? 'Build-time verification snapshot for' : 'Live read-only verification of'} batch <strong>${bId}</strong> against VeChainThor. Each GS1 EPCIS event is anchored as its own transaction and linked under one batch Merkle root.
         </p>
       </div>
       <div id="bcLiveArea" style="padding: 28px; text-align: center; color: var(--text-muted); font-size: 14px;">
@@ -1946,7 +1946,7 @@ class AppController {
       ? 'This batch is authentic and tamper-proof'
       : (view.chainError ? 'Live blockchain check temporarily unavailable' : 'This batch needs attention');
     const bannerSub = allOk
-      ? `${view.totalGs1Events} GS1 EPCIS supply-chain events for ${escapeHtml(view.batchId)} are recorded, and the ${view.events.length} key production events are anchored on the VeChain public blockchain and match their original records. Nothing has been altered.`
+      ? `${view.totalGs1Events} GS1 EPCIS supply-chain events for ${escapeHtml(view.batchId)} are recorded, and the ${view.events.length} key production events are anchored on the VeChain public blockchain and match their original records${view.staticSnapshot ? ' in the latest repository snapshot' : ''}. Nothing has been altered.`
       : (view.chainError
           ? 'Showing the recorded supply-chain events. The live cryptographic re-check could not reach the blockchain node right now.'
           : 'One or more events could not be confirmed against the blockchain. See the flagged events below.');
@@ -2142,7 +2142,7 @@ class AppController {
       </div>
       ${sections || '<div style="color:var(--text-muted); font-size:13px;">No GS1 EPCIS events found for this batch.</div>'}
       <div style="margin-top:16px; font-size:11px; color:var(--text-muted); text-align:center;">
-        GS1 EPCIS 2.0 compliant · key events anchored & verified live on the VeChain public ledger · only cryptographic hashes are stored on-chain
+        GS1 EPCIS 2.0 compliant · key events anchored${view.staticSnapshot ? ' in the build-time verification snapshot' : ' & verified live on the VeChain public ledger'} · only cryptographic hashes are stored on-chain
       </div>
     `;
 
