@@ -5,6 +5,14 @@ const root = path.resolve(__dirname, '..');
 const deployments = path.join(root, 'ENGINE', 'BLOCKCHAIN ENGINE', 'deployments');
 const gs1Root = path.join(root, 'ENGINE', 'GS1 ENGINE', 'output');
 const anchorDir = path.join(deployments, 'event-anchor-records');
+
+// Deployment artifacts are intentionally ignored by the blockchain engine.
+// Netlify can use the committed snapshot when those local-only files are absent.
+if (!fs.existsSync(anchorDir)) {
+  console.log('Blockchain anchor artifacts are not in this checkout; keeping the committed static snapshot.');
+  process.exit(0);
+}
+
 const anchorFile = fs.readdirSync(anchorDir)
   .filter((name) => name.endsWith('.json') && !name.endsWith('-latest.json'))
   .sort()
