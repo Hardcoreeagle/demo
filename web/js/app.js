@@ -14,6 +14,9 @@ class AppController {
     this.allCatalog = [];
     this.allEvents = [];
     this.boManifest = [];
+    this.demoRole = 'Quality Auditor';
+    this.demoUser = 'auditor@supplychain.demo';
+    this.isAuthenticated = false;
   }
 
   async init() {
@@ -252,10 +255,22 @@ class AppController {
       tabsNav.style.display = (viewId === 'viewPipeline') ? 'flex' : 'none';
     }
 
-    // Update header auth button display
+    // Update header navigation and session display
+    const authBtn = document.getElementById('authBtn');
     const authLabel = document.getElementById('authLabel');
-    if (authLabel) {
-      authLabel.textContent = (viewId === 'viewLogin') ? 'Exit Login' : 'Admin Login';
+    const authIcon = document.getElementById('authIcon');
+    const searchBox = document.querySelector('.search-box');
+
+    if (viewId === 'viewLogin') {
+      if (searchBox) searchBox.style.display = 'none';
+      if (authBtn) authBtn.style.display = 'none';
+    } else {
+      if (searchBox) searchBox.style.display = 'flex';
+      if (authBtn) {
+        authBtn.style.display = 'flex';
+        if (authLabel) authLabel.textContent = `${this.demoRole || 'Auditor'} • Sign Out`;
+        if (authIcon) authIcon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
+      }
     }
 
     // Render corresponding view dynamically
@@ -1826,7 +1841,7 @@ class AppController {
             </div>
           </div>
           <div style="font-size: 0.85rem; color: var(--text-muted);">
-            💡 Select an action from the side options panel or the navigation bar above to begin verification.
+            Select an action from the side options panel or the navigation bar above to begin verification.
           </div>
         </div>
 
@@ -1834,8 +1849,8 @@ class AppController {
         <div class="home-side-options">
           <!-- Option 1: Traceability 360° -->
           <div class="home-side-card" onclick="window.app.switchView('viewPipeline', '/tracibility')">
-            <div class="home-side-icon" style="background: var(--cyan-bg); color: var(--cyan-400); border: 1px solid var(--cyan-border);">
-              🔍
+            <div class="home-side-icon" style="background: var(--cyan-bg); color: var(--cyan-400); border: 1px solid var(--cyan-border); display: flex; align-items: center; justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </div>
             <div class="home-side-content">
               <div class="home-side-title">
@@ -1850,8 +1865,8 @@ class AppController {
 
           <!-- Option 2: Anti-Counterfeit Shield -->
           <div class="home-side-card" onclick="window.app.switchView('viewCounterfeit', '/counterfeit')">
-            <div class="home-side-icon" style="background: var(--rose-bg); color: var(--rose-400); border: 1px solid var(--rose-border);">
-              🛡️
+            <div class="home-side-icon" style="background: var(--rose-bg); color: var(--rose-400); border: 1px solid var(--rose-border); display: flex; align-items: center; justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
             <div class="home-side-content">
               <div class="home-side-title">
@@ -1866,8 +1881,8 @@ class AppController {
 
           <!-- Option 3: GS1 Blockchain Verification -->
           <div class="home-side-card" onclick="window.app.switchView('viewBlockchain', '/blockchain')">
-            <div class="home-side-icon" style="background: var(--emerald-bg); color: var(--emerald-400); border: 1px solid var(--emerald-border);">
-              ⛓️
+            <div class="home-side-icon" style="background: var(--emerald-bg); color: var(--emerald-400); border: 1px solid var(--emerald-border); display: flex; align-items: center; justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
             </div>
             <div class="home-side-content">
               <div class="home-side-title">
@@ -1897,17 +1912,18 @@ class AppController {
     container.innerHTML = `
       <div style="margin-bottom: 1.25rem;">
         <button class="home-btn-secondary" onclick="window.app.switchView('viewHome', '/home')" style="font-size: 0.85rem; padding: 6px 14px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
-          <span>⬅️</span><span>Back to Home</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
         </button>
       </div>
       <div class="card" style="margin-bottom: 20px;">
-        <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-emerald);">⛓️ GS1 EPCIS Blockchain Verification</h2>
+        <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-emerald);">GS1 EPCIS Blockchain Verification</h2>
         <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
           ${window.BLOCKCHAIN_BUNDLE?.batches?.[bId]?.staticSnapshot ? 'Build-time verification snapshot for' : 'Live read-only verification of'} batch <strong>${bId}</strong> against VeChainThor. Each GS1 EPCIS event is anchored as its own transaction and linked under one batch Merkle root.
         </p>
       </div>
       <div id="bcLiveArea" style="padding: 28px; text-align: center; color: var(--text-muted); font-size: 14px;">
-        <span class="spinner" style="display:inline-block;">⏳</span> Reading on-chain state from VeChainThor…
+        <span class="spinner" style="display:inline-block;">●</span> Reading on-chain state from VeChainThor…
       </div>
     `;
 
@@ -1954,8 +1970,14 @@ class AppController {
     const banner = `
       <div class="card" style="margin-bottom:20px; border:1px solid ${trustColor}66; background:linear-gradient(90deg, ${trustColor}14, transparent);">
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-          <div style="width:52px; height:52px; border-radius:50%; background:${trustColor}22; border:2px solid ${trustColor}; display:flex; align-items:center; justify-content:center; font-size:26px;">
-            ${allOk ? '✅' : (view.chainError ? '⏳' : '⚠️')}
+          <div style="width:52px; height:52px; border-radius:50%; background:${trustColor}22; border:2px solid ${trustColor}; display:flex; align-items:center; justify-content:center; color:${trustColor};">
+            ${allOk 
+              ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
+              : (view.chainError 
+                  ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
+                  : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
+                )
+            }
           </div>
           <div style="flex:1; min-width:240px;">
             <div style="font-size:18px; font-weight:800; color:#fff;">${bannerHeadline}</div>
@@ -1973,7 +1995,7 @@ class AppController {
     const rootMatchBadge = view.merkleRootMatches
       ? `<span style="color:#10b981;">✓ matches</span>` : `<span style="color:#f43f5e;">✕ differs</span>`;
     const authBadge = view.anchoredByAuthorized
-      ? `<span style="color:#10b981;">✓ authorized signer</span>` : `<span style="color:#f59e0b;">⚠ unconfirmed</span>`;
+      ? `<span style="color:#10b981;">✓ authorized signer</span>` : `<span style="color:#f59e0b;">unconfirmed</span>`;
     const rootTxLink = view.batchRootTx
       ? `<a href="${escapeHtml(view.batchRootExplorerUrl)}" target="_blank" rel="noopener" style="color:var(--accent-cyan); font-family:var(--font-mono);">${short(view.batchRootTx)} ↗</a>`
       : '<span style="color:var(--text-muted);">not anchored</span>';
@@ -1981,7 +2003,7 @@ class AppController {
     const summaryCard = `
       <div class="card" style="margin-bottom:20px;">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
-          <div style="font-size:14px; font-weight:700; color:#fff;">📋 GS1 EPCIS 2.0 Compliance & Provenance</div>
+          <div style="font-size:14px; font-weight:700; color:#fff;">GS1 EPCIS 2.0 Compliance & Provenance</div>
           <span style="font-size:11px; padding:3px 10px; border-radius:999px; background:rgba(56,189,248,.15); color:var(--accent-cyan); border:1px solid rgba(56,189,248,.3); font-weight:700;">EPCIS 2.0 · CBV</span>
         </div>
         <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px 24px; font-size:12px;">
@@ -1999,17 +2021,17 @@ class AppController {
 
     const chainWarn = view.chainError
       ? `<div class="card" style="margin-bottom:16px; border:1px solid rgba(245,158,11,.4); background:rgba(245,158,11,.08); color:#f59e0b; font-size:12px; padding:10px 14px;">
-           ⚠ Live chain read partially unavailable (${escapeHtml(view.chainError)}). Showing recorded supply-chain data; explorer links remain valid.
+           Notice: Live chain read partially unavailable (${escapeHtml(view.chainError)}). Showing recorded supply-chain data; explorer links remain valid.
          </div>` : '';
 
     // ---- Full GS1 EPCIS journey, grouped by lifecycle phase ----
     const gs1 = Array.isArray(view.gs1Events) ? view.gs1Events : [];
     const phaseOrder = ['procurement', 'production', 'quality', 'sales'];
     const phaseMeta = {
-      procurement: { label: 'Procurement', icon: '📥', color: '#38bdf8' },
-      production:  { label: 'Production',  icon: '🏭', color: '#a78bfa' },
-      quality:     { label: 'Quality',     icon: '🔬', color: '#f59e0b' },
-      sales:       { label: 'Sales & Distribution', icon: '🚚', color: '#10b981' },
+      procurement: { label: 'Procurement', color: '#38bdf8' },
+      production:  { label: 'Production',  color: '#a78bfa' },
+      quality:     { label: 'Quality',     color: '#f59e0b' },
+      sales:       { label: 'Sales & Distribution', color: '#10b981' },
     };
 
     const phaseCounts = view.phaseCounts || {};
@@ -2021,7 +2043,7 @@ class AppController {
       .map((p) => {
         const m = phaseMeta[p];
         return `<button class="bc-phase-chip" data-phase="${p}" style="cursor:pointer; font-size:12px; padding:5px 12px; border-radius:999px; background:${m.color}1a; color:${m.color}; border:1px solid ${m.color}55; font-weight:700;">
-          ${m.icon} ${m.label} <span style="opacity:.8;">(${phaseCounts[p] || 0})</span>
+          ${m.label} <span style="opacity:.8;">(${phaseCounts[p] || 0})</span>
         </button>`;
       }).join('');
 
@@ -2071,7 +2093,10 @@ class AppController {
           : '<span style="color:var(--text-muted);">—</span>';
         proof = `
           <div style="margin-top:12px; background:rgba(15,23,42,.5); border:1px solid ${st.color}44; border-radius:8px; padding:9px 12px;">
-            <div style="font-size:10px; text-transform:uppercase; color:${st.color}; font-weight:700; margin-bottom:6px;">⛓️ Anchored on VeChain</div>
+            <div style="font-size:10px; text-transform:uppercase; color:${st.color}; font-weight:700; margin-bottom:6px; display:inline-flex; align-items:center; gap:5px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              Anchored on VeChain
+            </div>
             <div style="display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font-size:12px;">
               <span style="color:var(--text-muted);">Event fingerprint</span>
               <span style="font-family:var(--font-mono); color:var(--accent-purple);" title="${escapeHtml(g.eventHash)}">${short(g.eventHash)}</span>
@@ -2190,14 +2215,14 @@ class AppController {
     container.innerHTML = `
       <div style="margin-bottom: 1.25rem;">
         <button class="home-btn-secondary" onclick="window.app.switchView('viewHome', '/home')" style="font-size: 0.85rem; padding: 6px 14px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
-          <span>⬅️</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           <span>Back to Home</span>
         </button>
       </div>
 
       <div class="card" style="margin-bottom: 24px;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-rose);">
-          🛡️ Anti-Counterfeit Authentication Shield
+          Anti-Counterfeit Authentication Shield
         </h2>
         <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px; max-width: 800px;">
           Authenticity verification engine combining SAP S/4HANA canonical batch signatures, GS1 Digital Link serialization, and cryptographic seal verification.
@@ -2207,7 +2232,7 @@ class AppController {
       <div class="shield-panel">
         <div class="guard-card">
           <div class="guard-indicator authentic">
-            <span style="font-size: 24px;">✅</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             <span>VERIFIED AUTHENTIC SAP PRODUCT</span>
           </div>
 
@@ -2252,7 +2277,7 @@ class AppController {
         <!-- Interactive Batch Verifier -->
         <div class="guard-card" style="text-align: left;">
           <h3 style="font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
-            🔍 Real-Time Serial & Batch Verifier
+            Real-Time Serial & Batch Verifier
           </h3>
           <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
             Test any batch ID against the SAP ERP database to detect counterfeit, expired, or unverified market samples.
@@ -2317,7 +2342,7 @@ class AppController {
           vResult.style.borderColor = 'rgba(239, 68, 68, 0.5)';
           vResult.innerHTML = `
             <div style="font-weight: 700; color: #ef4444; font-size: 14px; margin-bottom: 4px;">
-              ⚠️ ALERT: COUNTERFEIT OR UNREGISTERED BATCH DETECTED (${val})
+              ALERT: COUNTERFEIT OR UNREGISTERED BATCH DETECTED (${val})
             </div>
             <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
               No cryptographic match exists in the SAP ERP or Blockchain Ledger for this batch ID. 
@@ -2330,60 +2355,249 @@ class AppController {
   }
 
   /**
-   * 0. LOGIN & AUTHENTICATION SCREEN VIEW
+   * 0. CLEAN & PROFESSIONAL DEMO LOGIN VIEW
+   * Modern, jargon-free authentication screen tailored for demonstration.
    */
   renderLoginView() {
     const container = document.getElementById('loginContainer');
     if (!container) return;
 
+    const currentRole = this.demoRole || 'Quality Auditor';
+    const currentEmail = this.demoUser || 'auditor@supplychain.demo';
+
     container.innerHTML = `
-      <div class="login-screen-wrapper">
-        <div class="login-header-logo">🔐</div>
-        <h2 class="login-title">Enterprise SAP SSO Login</h2>
-        <p class="login-subtitle">
-          Authenticate with your SAP S/4HANA credentials or Corporate Active Directory (Azure AD / Okta) to access end-to-end supply chain genealogy, GS1 hashes, and anti-counterfeit protection.
-        </p>
-
-        <form id="loginForm" onsubmit="event.preventDefault(); window.app.handleLoginSubmit();">
-          <div class="login-form-group">
-            <label class="login-form-label">SAP User ID / Email</label>
-            <input type="text" id="loginUsername" class="login-form-input" value="S4_AUDITOR_ADMIN" placeholder="e.g. S4_AUDITOR_ADMIN" required>
+      <div class="login-view-wrapper">
+        <div class="login-backdrop-glow"></div>
+        <div class="login-card">
+          <!-- Brand Badge & Header -->
+          <div class="login-brand-header">
+            <div class="login-logo-badge">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h1 class="login-title">Sign in to your account</h1>
+            <p class="login-subtitle">
+              Welcome back. Choose a demo profile or sign in to explore the platform.
+            </p>
           </div>
 
-          <div class="login-form-group">
-            <label class="login-form-label">Security Password / Token</label>
-            <input type="password" id="loginPassword" class="login-form-input" value="••••••••••••" placeholder="Enter Password" required>
+          <!-- Quick Demo Profile Selector -->
+          <div class="login-roles-container">
+            <div class="login-roles-label">Demo Profile</div>
+            <div class="login-role-pills" role="radiogroup" aria-label="Demo role selector">
+              <button type="button" class="login-role-pill ${currentRole === 'Quality Auditor' ? 'active' : ''}" onclick="window.app.selectDemoRole('Quality Auditor', 'auditor@supplychain.demo')">
+                <span class="role-icon" style="display: flex; align-items: center;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <span class="role-text">Quality Auditor</span>
+              </button>
+              <button type="button" class="login-role-pill ${currentRole === 'Supply Chain Manager' ? 'active' : ''}" onclick="window.app.selectDemoRole('Supply Chain Manager', 'manager@supplychain.demo')">
+                <span class="role-icon" style="display: flex; align-items: center;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </span>
+                <span class="role-text">Supply Chain Manager</span>
+              </button>
+              <button type="button" class="login-role-pill ${currentRole === 'Plant Supervisor' ? 'active' : ''}" onclick="window.app.selectDemoRole('Plant Supervisor', 'supervisor@supplychain.demo')">
+                <span class="role-icon" style="display: flex; align-items: center;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </span>
+                <span class="role-text">Plant Supervisor</span>
+              </button>
+            </div>
           </div>
 
-          <div class="login-form-group">
-            <label class="login-form-label">SAP System Client & Role</label>
-            <select class="login-form-input" style="cursor: pointer;">
-              <option>Client 100 - Quality & Supply Chain Auditor (Full Access)</option>
-              <option>Client 200 - Plant Production Supervisor</option>
-              <option>Client 300 - Logistics & Fulfillment Manager</option>
-            </select>
+          <!-- Sign-In Form -->
+          <form id="loginForm" class="login-form" onsubmit="event.preventDefault(); window.app.handleLoginSubmit();" autocomplete="on">
+            <!-- Email / Username Field -->
+            <div class="login-field-group">
+              <label for="loginUsername" class="login-field-label">Email or Username</label>
+              <div class="login-input-box">
+                <span class="login-field-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </span>
+                <input 
+                  type="text" 
+                  id="loginUsername" 
+                  name="username" 
+                  class="login-input" 
+                  value="${escapeHtml(currentEmail)}" 
+                  placeholder="name@company.com" 
+                  autocomplete="username" 
+                  required
+                >
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="login-field-group">
+              <div class="login-field-label-row">
+                <label for="loginPassword" class="login-field-label">Password</label>
+                <button type="button" class="login-link-btn" onclick="window.app.showDemoPasswordHint()">Need help?</button>
+              </div>
+              <div class="login-input-box">
+                <span class="login-field-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <input 
+                  type="password" 
+                  id="loginPassword" 
+                  name="password" 
+                  class="login-input" 
+                  value="password123" 
+                  placeholder="Enter your password" 
+                  autocomplete="current-password" 
+                  required
+                >
+                <button 
+                  type="button" 
+                  id="passwordToggleBtn" 
+                  class="login-password-toggle-btn" 
+                  title="Toggle password visibility" 
+                  aria-label="Toggle password visibility" 
+                  onclick="window.app.togglePasswordVisibility()"
+                >
+                  <svg id="eyeIconOpen" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg id="eyeIconClosed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Remember me & Demo Badge Row -->
+            <div class="login-meta-row">
+              <label class="login-remember-checkbox">
+                <input type="checkbox" id="rememberMe" checked>
+                <span>Remember me for 30 days</span>
+              </label>
+              <span class="login-demo-pill">Demo Mode</span>
+            </div>
+
+            <!-- Primary Submit Action -->
+            <button type="submit" id="loginSubmitBtn" class="login-primary-btn">
+              <span id="loginSubmitText">Sign In</span>
+              <span id="loginSubmitSpinner" class="login-spinner" style="display: none;" aria-hidden="true"></span>
+              <svg id="loginSubmitArrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <!-- Clean Divider -->
+            <div class="login-divider">
+              <span>or</span>
+            </div>
+
+            <!-- One-Click Instant Demo Access -->
+            <button type="button" class="login-instant-btn" onclick="window.app.quickDemoSignIn()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span>Instant Demo Access</span>
+            </button>
+          </form>
+
+          <!-- Notification Toast Box -->
+          <div id="loginToast" class="login-toast" style="display: none;"></div>
+
+          <!-- Clean Footer Badge -->
+          <div class="login-footer-badge">
+            <span class="badge-dot"></span>
+            <span>Interactive Demo Workspace &bull; Pre-configured and ready to explore</span>
           </div>
-
-          <button type="submit" class="login-submit-btn">
-            Sign In & Access Home Portal ➔
-          </button>
-        </form>
-
-        <div class="login-demo-badge">
-          <strong>Demo Authorization:</strong> Pre-filled with executive auditor credentials. Click <em>"Sign In"</em> to land on <code>http://localhost:8080/home</code> or navigate directly to any authorized module.
         </div>
       </div>
     `;
   }
 
-  handleLoginSubmit() {
-    // Show logged-in indicator
-    const authLabel = document.getElementById('authLabel');
-    if (authLabel) {
-      authLabel.textContent = 'Auditor (Active)';
+  selectDemoRole(roleName, roleEmail) {
+    this.demoRole = roleName;
+    this.demoUser = roleEmail;
+    const userInput = document.getElementById('loginUsername');
+    if (userInput) {
+      userInput.value = roleEmail;
     }
 
-    // Redirect to Home Overview page
+    document.querySelectorAll('.login-role-pill').forEach(pill => {
+      const text = pill.querySelector('.role-text')?.textContent || '';
+      pill.classList.toggle('active', text === roleName);
+    });
+  }
+
+  togglePasswordVisibility() {
+    const passwordInput = document.getElementById('loginPassword');
+    const eyeOpen = document.getElementById('eyeIconOpen');
+    const eyeClosed = document.getElementById('eyeIconClosed');
+    if (!passwordInput) return;
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      if (eyeOpen) eyeOpen.style.display = 'none';
+      if (eyeClosed) eyeClosed.style.display = 'block';
+    } else {
+      passwordInput.type = 'password';
+      if (eyeOpen) eyeOpen.style.display = 'block';
+      if (eyeClosed) eyeClosed.style.display = 'none';
+    }
+  }
+
+  showDemoPasswordHint() {
+    const toast = document.getElementById('loginToast');
+    if (!toast) return;
+    toast.textContent = 'Demo Mode: Any credentials are valid. Click "Sign In" or "Instant Demo Access" to enter.';
+    toast.style.display = 'block';
+    setTimeout(() => {
+      if (toast) toast.style.display = 'none';
+    }, 4000);
+  }
+
+  handleLoginSubmit() {
+    const submitBtn = document.getElementById('loginSubmitBtn');
+    const submitText = document.getElementById('loginSubmitText');
+    const submitSpinner = document.getElementById('loginSubmitSpinner');
+    const submitArrow = document.getElementById('loginSubmitArrow');
+    const userInput = document.getElementById('loginUsername');
+
+    if (userInput && userInput.value.trim()) {
+      this.demoUser = userInput.value.trim();
+    }
+
+    // Set brief loading indicator for feedback
+    if (submitBtn) submitBtn.disabled = true;
+    if (submitText) submitText.textContent = 'Signing in...';
+    if (submitSpinner) submitSpinner.style.display = 'inline-block';
+    if (submitArrow) submitArrow.style.display = 'none';
+
+    this.isAuthenticated = true;
+
+    setTimeout(() => {
+      const authLabel = document.getElementById('authLabel');
+      if (authLabel) {
+        authLabel.textContent = `${this.demoRole || 'Auditor'} • Sign Out`;
+      }
+      this.switchView('viewHome', '/home');
+    }, 300);
+  }
+
+  quickDemoSignIn() {
+    this.isAuthenticated = true;
+    const authLabel = document.getElementById('authLabel');
+    if (authLabel) {
+      authLabel.textContent = `${this.demoRole || 'Auditor'} • Sign Out`;
+    }
     this.switchView('viewHome', '/home');
   }
 }

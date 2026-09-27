@@ -67,6 +67,9 @@ func main() {
 	// Static frontend with SPA route fallback (/home, /login, /tracibility, /blockchain, /counterfeit)
 	fsWeb := http.FileServer(http.Dir(webDir))
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
+		w.Header().Set("Pragma", "no-cache")
+		w.Header().Set("Expires", "0")
 		path := filepath.Join(webDir, filepath.Clean(r.URL.Path))
 		if info, err := os.Stat(path); err == nil && !info.IsDir() {
 			fsWeb.ServeHTTP(w, r)
@@ -81,6 +84,21 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		fmt.Fprintf(w, `{"status":"online","service":"SAP S/4HANA & ECC Traceability 360 Explorer","port":"%s"}`, port)
+	})
+
+	// Demo auth session endpoint (pure Go standard library, no external auth framework needed)
+	mux.HandleFunc("/api/auth/demo", func(w http.ResponseWriter, r *http.Request) {
+		writeCORS(w)
+		if r.Method == http.MethodOptions {
+			return
+		}
+		writeJSON(w, http.StatusOK, map[string]interface{}{
+			"status":        "online",
+			"mode":          "demo",
+			"authenticated": true,
+			"user":          "Demo Auditor",
+			"role":          "Quality Auditor",
+		})
 	})
 
 	// List available finished batches
